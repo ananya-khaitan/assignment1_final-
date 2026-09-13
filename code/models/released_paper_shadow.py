@@ -24,6 +24,7 @@ import pandas as pd
 from sklearn.exceptions import ConvergenceWarning
 from sklearn.linear_model import Lasso
 from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import TimeSeriesSplit
 from sklearn.preprocessing import StandardScaler
 
 
@@ -170,6 +171,69 @@ def released_lasso_selection(
         fallback_column = "target_1" if "target_1" in frame.columns else str(frame.columns[1])
         selected = (fallback_column,)
         fallback = True
+    return ReleasedLassoSelection(
+        alpha=best_alpha,
+        validation_mse=float(scores[best_index]),
+        selected_columns=selected,
+        coefficients=coefficients,
+        used_empty_selection_fallback=fallback,
+    )
+
+
+def causal_lasso_selection(frame: pd.DataFrame, *, cv_folds: int = 5) -> ReleasedLassoSelection:
+    """Apply train-only scaler and temporally-honest alpha selection.
+    
+    This function repairs the non-causal global scaling present in the released
+    paper's LASSO implementation.
+    """
+    if "target" not in frame.columns:
+        raise ValueError("Released LASSO frame must contain a 'target' column")
+    if frame.shape[1] < 2:
+        raise ValueError("Released LASSO frame must contain at least one feature")
+        
+    outer = static_holdout_split(len(frame), 0.20)
+    train_frame = frame.iloc[: outer.train_stop]
+    
+    x_train_raw = train_frame.drop(columns="target")
+    y_train_raw = train_frame["target"]
+    
+    # Fit scaler on train only
+    x_scaler = StandardScaler().fit(x_train_raw)
+    x_train_scaled = x_scaler.transform(x_train_raw)
+    x_train = pd.DataFrame(x_train_scaled, index=x_train_raw.index, columns=x_train_raw.columns)
+    
+    # TimeSeriesSplit for alpha selection within train
+    splitter = TimeSeriesSplit(n_splits=cv_folds)
+    candidates = np.geomspace(1e-4, 1.0, num=30)
+    scores: list[float] = []
+    
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", ConvergenceWarning)
+        for alpha in candidates:
+            fold_errors = []
+            for train_idx, val_idx in splitter.split(x_train):
+                candidate = Lasso(alpha=float(alpha))
+                candidate.fit(x_train.iloc[train_idx], y_train_raw.iloc[train_idx])
+                preds = candidate.predict(x_train.iloc[val_idx])
+                fold_errors.append(float(mean_squared_error(y_train_raw.iloc[val_idx], preds)))
+            scores.append(float(np.mean(fold_errors)))
+            
+    best_index = int(np.argmin(scores))
+    best_alpha = float(candidates[best_index])
+    
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", ConvergenceWarning)
+        model = Lasso(alpha=best_alpha).fit(x_train, y_train_raw)
+        
+    coefficients = pd.Series(model.coef_, index=x_train.columns, dtype=float)
+    selected = tuple(coefficients[coefficients != 0.0].abs().sort_values(ascending=False).index.tolist())
+
+    fallback = False
+    if not selected:
+        fallback_column = "target_1" if "target_1" in frame.columns else str(frame.columns[1])
+        selected = (fallback_column,)
+        fallback = True
+        
     return ReleasedLassoSelection(
         alpha=best_alpha,
         validation_mse=float(scores[best_index]),

@@ -1,0 +1,19 @@
+# Local Python environments and interpreter caches
+.venv/
+.venv-wsl/
+__pycache__/
+*.py[cod]
+
+# Local setup state and editor workspace state
+.wsl-install.log
+.wsl-install.pid
+.vscode/
+
+# Disposable working and rendering artifacts
+tmp/
+outputs/run_logs/
+outputs/papers/qa_render/
+
+outputs/
+*.zip
+*.bundle

@@ -1,0 +1,10 @@
+{
+  "Freeport-McMoRan": "north_america",
+  "Albemarle": "north_america",
+  "Glencore": "europe",
+  "Anglo American": "europe",
+  "BHP Group": "developed_ex_us",
+  "Rio Tinto": "developed_ex_us",
+  "Zijin Mining": "emerging_monthly",
+  "Ganfeng Lithium": "emerging_monthly"
+}

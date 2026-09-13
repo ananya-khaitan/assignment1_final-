@@ -1,0 +1,118 @@
+{
+  "sample_start": "2011-05-01",
+  "sample_end": "2026-03-20",
+  "retrieval_script": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data_sources/download_public_inputs.py",
+  "refinitiv_prices": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/Top Critical Mineral Companies & Stock Price 2026.xlsx",
+    "sha256": "681c20d44f36a05918ed5ccc66e33fed0251aafda1994b15013f705e289b9e32",
+    "retrieved_at_utc": "2026-08-12T14:47:49.988480+00:00",
+    "source": "Project-provided workbook"
+  },
+  "mvis_benchmark": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/MVIS Global Rare Earth OR Strategic Metals (Pr) Index_Benchmark Index.xlsx",
+    "sha256": "a18c8505f3af2a1384ab4400ca246450bb15cf1d634c7442d548a38f81756de1",
+    "retrieved_at_utc": "2026-08-12T14:47:49.997289+00:00",
+    "source": "Project-provided workbook"
+  },
+  "yahoo_macro": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/Bulk_Yahoo_Historical_Data.csv",
+    "sha256": "6f9b39b214de2adfc23edd9f5ce9c6aff66e733f6bd6eee5205a030a28009491",
+    "retrieved_at_utc": "2026-08-12T14:47:52.545424+00:00",
+    "source": "Yahoo Finance queried through yfinance",
+    "symbols": {
+      "^GSPC": "SP500",
+      "000001.SS": "Shanghai_Index",
+      "CL=F": "Crude_Oil",
+      "^VIX": "VIX",
+      "DX-Y.NYB": "US_Dollar_Index"
+    },
+    "field": "Close, unadjusted",
+    "sample_start": "2011-05-01",
+    "sample_end": "2026-03-20"
+  },
+  "aligned_macro": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/aligned_dataset.csv",
+    "sha256": "2416eed2261776206c353f5604d15076ac75ba2286bfdb72db7d37367230ddc2",
+    "retrieved_at_utc": "2026-08-12T14:47:52.578672+00:00",
+    "source": "Derived solely from yahoo_macro",
+    "fields": {
+      "VIX": "^VIX Close",
+      "US_Dollar_Index": "DX-Y.NYB Close"
+    }
+  },
+  "sf_fed_sentiment": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/news_sentiment_data.xlsx",
+    "sha256": "f15c833b545835625675520a8c9027301940423dd8e31a9a9e2a56b5383dbccd",
+    "retrieved_at_utc": "2026-08-12T14:47:53.028898+00:00",
+    "source": "https://www.frbsf.org/wp-content/uploads/news_sentiment_data.xlsx",
+    "sheet": "Data",
+    "expected_columns": [
+      "date",
+      "News Sentiment"
+    ]
+  },
+  "google_trends": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/rare_earth_trends.csv",
+    "sha256": "8d5125b458cba605b7e2227d0c0bfa77bc58d94e97b03068e4509ecdeb921d41",
+    "retrieved_at_utc": "2026-08-12T14:47:57.144660+00:00",
+    "source": "https://trends.google.com/trends/explore",
+    "query": {
+      "term": "rare earth",
+      "geo": "",
+      "category": 0,
+      "property": ""
+    },
+    "timeframe": "2011-05-01 2026-03-20",
+    "notes": "Worldwide Google web-search indexed interest at the frequency returned by Google Trends."
+  },
+  "ken_french_north_america": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/factors/north_america_ff5.csv",
+    "sha256": "70783b854d4e5589b30f9d895040695424e761170e5671dfff8f7937823b00f2",
+    "retrieved_at_utc": "2026-08-13T01:55:47.945667+00:00",
+    "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/North_America_5_Factors_Daily_CSV.zip",
+    "frequency": "daily",
+    "companies": [
+      "Freeport-McMoRan",
+      "Albemarle"
+    ]
+  },
+  "ken_french_europe": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/factors/europe_ff5.csv",
+    "sha256": "a52095335c0de97e445e3bc0504097960f14ae18d8cb75c2055baa5da99ee2ff",
+    "retrieved_at_utc": "2026-08-13T01:55:49.930085+00:00",
+    "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Europe_5_Factors_Daily_CSV.zip",
+    "frequency": "daily",
+    "companies": [
+      "Glencore",
+      "Anglo American"
+    ]
+  },
+  "ken_french_developed_ex_us": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/factors/developed_ex_us_ff5.csv",
+    "sha256": "db2bd5853e040ef8e400805e49aa583e947a8ec2af54bc778daacb65ccbb4fdc",
+    "retrieved_at_utc": "2026-08-13T01:55:51.879388+00:00",
+    "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Developed_ex_US_5_Factors_Daily_CSV.zip",
+    "frequency": "daily",
+    "companies": [
+      "BHP Group",
+      "Rio Tinto"
+    ]
+  },
+  "ken_french_emerging_monthly": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/factors/emerging_monthly_ff5.csv",
+    "sha256": "dfbee7abadf861083ceead9f14b1126680e30f42cedfc454993757b3136df804",
+    "retrieved_at_utc": "2026-08-13T01:55:53.173860+00:00",
+    "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Emerging_5_Factors_CSV.zip",
+    "frequency": "monthly",
+    "companies": [
+      "Zijin Mining",
+      "Ganfeng Lithium"
+    ]
+  },
+  "factor_region_map": {
+    "path": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/code/data/factors/company_factor_regions.json",
+    "sha256": "316fe71c210c5ff9bc8532ebc9711de5384d97d0235b72b5248cd08c44ca5f35",
+    "retrieved_at_utc": "2026-08-13T01:55:53.181902+00:00",
+    "source": "Research-design mapping"
+  }
+}

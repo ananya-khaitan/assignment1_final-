@@ -1,0 +1,17 @@
+column,feature_block,unit,definition
+Target_Close,forecast_target,native price units,Current target close
+Cross_Lithium_Close,cross_lithium,native price units,Other lithium market's latest available close
+Albemarle_Close,lithium_equities,native listed currency,ALB close
+Ganfeng_Lithium_Close,lithium_equities,native listed currency,002460.SZ close
+Trends_lithium,lithium_attention,Google index 0-100,lithium
+Trends_lithium_price,lithium_attention,Google index 0-100,lithium price
+Trends_lithium_carbonate,lithium_attention,Google index 0-100,lithium carbonate
+Trends_lithium_hydroxide,lithium_attention,Google index 0-100,lithium hydroxide
+Trends_lithium_battery,lithium_attention,Google index 0-100,lithium battery
+News_Article_Count,lithium_news,headlines/day,Validated lithium headline count
+News_TextBlob_Polarity,lithium_news,"[-1, 1]",Mean headline TextBlob polarity
+News_FinBERT_Score,lithium_news,"[-1, 1]",Signed mean FinBERT confidence
+SP500,market_controls,index points,S&P 500 close
+VIX,market_controls,index points,CBOE volatility index close
+US_Dollar_Index,market_controls,index points,US dollar index close
+MVIS_Critical_Minerals,market_controls,index points,MVIS strategic-metals benchmark close

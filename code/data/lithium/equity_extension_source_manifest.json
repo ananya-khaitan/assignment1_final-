@@ -1,0 +1,97 @@
+{
+  "study": "AMDR-Li lithium-producer equity extension",
+  "generated_at_utc": "2026-08-29T19:28:25.010597+00:00",
+  "protocol_classification": "noncausal static 80:20 retrospective prediction",
+  "common_sample": {
+    "start": "2023-05-06",
+    "end": "2026-03-12"
+  },
+  "targets": {
+    "albemarle_equity": {
+      "label": "Albemarle (ALB) adjusted close proxy",
+      "processed": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\processed\\albemarle_equity_liu_panel.csv",
+      "modes": 9,
+      "coverage": {
+        "rows": 722,
+        "first_valid_date": "2023-05-09",
+        "last_valid_date": "2026-03-12",
+        "missing_by_column": {
+          "Target_Close": 0,
+          "Lithium_Carbonate_Close": 0,
+          "Lithium_Hydroxide_Close": 0,
+          "Ganfeng_Lithium_Close": 0,
+          "Trends_lithium": 0,
+          "Trends_lithium_price": 0,
+          "Trends_lithium_carbonate": 0,
+          "Trends_lithium_hydroxide": 0,
+          "Trends_lithium_battery": 0,
+          "News_Article_Count": 0,
+          "News_TextBlob_Polarity": 0,
+          "News_FinBERT_Score": 0,
+          "SP500": 0,
+          "VIX": 0,
+          "US_Dollar_Index": 0,
+          "MVIS_Critical_Minerals": 0,
+          "Shanghai_Composite": 0,
+          "USD_CNY": 0
+        }
+      }
+    },
+    "ganfeng_equity": {
+      "label": "Ganfeng Lithium (002460.SZ) close",
+      "processed": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\processed\\ganfeng_equity_liu_panel.csv",
+      "modes": 9,
+      "coverage": {
+        "rows": 722,
+        "first_valid_date": "2023-05-09",
+        "last_valid_date": "2026-03-12",
+        "missing_by_column": {
+          "Target_Close": 0,
+          "Lithium_Carbonate_Close": 0,
+          "Lithium_Hydroxide_Close": 0,
+          "Albemarle_Close": 0,
+          "Trends_lithium": 0,
+          "Trends_lithium_price": 0,
+          "Trends_lithium_carbonate": 0,
+          "Trends_lithium_hydroxide": 0,
+          "Trends_lithium_battery": 0,
+          "News_Article_Count": 0,
+          "News_TextBlob_Polarity": 0,
+          "News_FinBERT_Score": 0,
+          "SP500": 0,
+          "VIX": 0,
+          "US_Dollar_Index": 0,
+          "MVIS_Critical_Minerals": 0,
+          "Shanghai_Composite": 0,
+          "USD_CNY": 0
+        }
+      }
+    }
+  },
+  "feature_design": {
+    "price_links": [
+      "Lithium_Carbonate_Close",
+      "Lithium_Hydroxide_Close"
+    ],
+    "producer_equity": "other producer close only; own historical information enters through target lags",
+    "equity_controls": [
+      "SP500",
+      "VIX",
+      "US_Dollar_Index",
+      "MVIS_Critical_Minerals",
+      "Shanghai_Composite",
+      "USD_CNY"
+    ],
+    "unstructured": [
+      "five Google Trends series",
+      "three lithium-news aggregates"
+    ]
+  },
+  "source_files": {
+    "usd_cny_fred_dexchus": {
+      "path": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\external\\usd_cny_fred_dexchus.csv",
+      "sha256": "ebe161fadd471dc676a21012d663a82b47d47253e5fe0cb5d4ecf6daef9aa1fc"
+    }
+  },
+  "alignment": "Latest available values are aligned to each target calendar; the model then shifts all external predictors by one observation."
+}

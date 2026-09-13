@@ -1,0 +1,361 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage[labelfont=bf,textfont=bf,labelsep=period]{caption}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{hyperref}
+\usepackage{longtable}
+\geometry{margin=0.7in}
+
+\newcommand{\figpath}[1]{../3. Code Files/silver_style_outputs/figures/#1}
+\newcommand{\tabpath}[1]{../3. Code Files/silver_style_outputs/tables/#1}
+
+\title{\textbf{Critical Mineral Company Stocks:\\ VMD-Based Forecasting and Systematic Trading}}
+\author{Group 3}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This study tackles the somewhat thankless problem of forecasting equity prices for companies whose revenues are tied to critical minerals --- the metals that power EV batteries, wind turbines and pretty much every clean-energy supply chain that everyone is suddenly very interested in. We work with eight of the largest globally listed names: Glencore, BHP Group, Rio Tinto, Freeport-McMoRan, Albemarle, Zijin Mining, Ganfeng Lithium and Anglo American. Rather than betting on one model and hoping for the best, we build a hybrid pipeline that we refer to throughout this report as the \textbf{VMD-LASSO-ARX/LSTM} method. Each company's daily close price is first decomposed into five Intrinsic Mode Functions using Variational Mode Decomposition; a per-IMF LASSO regression then trims a pool of exogenous predictors --- the MVIS Global Rare Earth / Strategic Metals Index (a sector benchmark), the S\&P 500, the Shanghai Composite, WTI crude oil, the VIX, the US Dollar Index, Google Trends and the SF Fed News-Based Sentiment Index. The smoother IMFs (low Approximate Entropy) are routed to an ARX regression and the noisier ones go through a small LSTM, after which the per-IMF forecasts are summed back into a single daily price prediction. For trading, a conformal prediction band around the point forecast acts as a confidence filter, letting the strategy sit out the days when the model itself is uncertain. The results are encouraging: across the eight companies the proposed method achieves a mean test-set RMSE of \textbf{3.86} and a mean directional accuracy of about \textbf{66\%}, comfortably beating the simple ARIMA, Naive, Linear and Random Forest baselines (whose RMSE values cluster around 18 and whose directional accuracy collapses to 4--36\% on this test window). Within the decomposition family, the proposed model beats the ARIMA-based decomposition variants on RMSE and MAPE, while the simpler VMD-LSTM (which forwards every IMF to an LSTM) edges it out slightly on absolute error --- a useful reality check on how much the routing layer actually contributes. On the trading side the numbers are large and very heterogeneous: under the basic directional rule (Scheme 1), the proposed model earns roughly \textbf{$+2{,}892\%$ on Anglo American}, \textbf{$+1{,}286\%$ on Glencore} and \textbf{$+1{,}080\%$ on Albemarle}, with positive returns on every one of the eight companies. Adding the interval gate (Scheme 1$'$) shaves a moderate slice off cumulative return but compresses the worst drawdowns --- Glencore's max drawdown drops from $-23\%$ to $-19\%$ and BHP Group's from $-34\%$ to $-21\%$ --- which is exactly the trade-off the interval filter was designed to make.
+\end{abstract}
+
+\section{1. Introduction}
+Critical minerals --- copper, nickel, cobalt, lithium, rare earths and a handful of others --- have moved from being a niche industrial-commodities story to something close to a political one. They underpin the batteries, magnets, alloys and electronics that the global energy transition is built on, and the supply is concentrated in a relatively small number of countries and companies. That mix makes the equities of these producers genuinely volatile and a bit unpredictable, but also a good test case for any forecasting framework that claims to work on non-stationary, regime-changing time series.
+
+The number of academic papers on critical-mineral and rare-earth forecasting has been climbing steadily since 2015 (Fig.~\ref{fig:pub_trend}), with most recent work leaning on hybrid statistical / machine-learning methods. Table~\ref{tab:lit} summarises a small set of references that directly shape the approach used here.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{\figpath{fig1_publication_trend.png}}
+    \caption{Publications on critical-mineral / rare-earth forecasting, 2010--2025.}
+    \label{fig:pub_trend}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Summarised research works in the literature review.}
+    \label{tab:lit}
+    \input{\tabpath{table1_literature_review.tex}}
+\end{table}
+
+The forecasting side of this problem is awkward in familiar ways. Classical statistical models can miss the sudden moves, neural networks tend to chase the noise, and any model that is trained on history is going to struggle when policy news or supply disruption reshapes the market overnight. We therefore borrow the multimodal idea from the recent literature: instead of predicting the raw price, we decompose it into a few cleaner components, bring in outside signals, and use a different model for the smooth pieces than for the noisy pieces. The whole thing then feeds into a daily trading simulation so we can see whether the forecasting numbers translate into anything an actual trader could use.
+
+\section{2. Data and Methodology}
+The full pipeline has four steps: break each price series down, pick out which predictors matter, forecast each piece, and finally place an uncertainty band around the combined output. Fig.~\ref{fig:framework} summarises this visually, and the parameter choices for every block are listed in Table~\ref{tab:params}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{\figpath{fig3_forecasting_framework.png}}
+    \caption{Framework of this study.}
+    \label{fig:framework}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Parameter settings in this study.}
+    \label{tab:params}
+    \input{\tabpath{table2_parameter_settings.tex}}
+\end{table}
+
+\subsection{2.1 Sample and Data Sources}
+
+We start from the Refinitiv export of daily close prices for the eight critical-mineral companies (Glencore, BHP Group, Rio Tinto, Freeport-McMoRan, Albemarle, Zijin Mining, Ganfeng Lithium, Anglo American). To that we add a sector benchmark and a small set of macro and behavioural indicators, all aligned onto common trading dates. The full variable list is in Table~\ref{tab:vars} and the per-series descriptive statistics in Table~\ref{tab:descstats}.
+
+\begin{table}[H]
+    \centering
+    \caption{Indicators used in this study.}
+    \label{tab:vars}
+    \input{\tabpath{table3_indicators.tex}}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Statistical information of the used data (targets and predictors).}
+    \label{tab:descstats}
+    \resizebox{\textwidth}{!}{\input{\tabpath{table4_descriptive_statistics.tex}}}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig4_price_series.png}}
+    \caption{The critical mineral price time series, with the 80/20 train/test split for each of the eight companies.}
+    \label{fig:prices}
+\end{figure}
+
+For the behavioural signals: we use Google Trends as a search-attention proxy and the SF Fed News-Based Sentiment Index (NESI) as a daily tone score. Fig.~\ref{fig:wordcloud} shows the topic mix from the rare-earth / critical-mineral news landscape, and Fig.~\ref{fig:sentiment} shows the actual sentiment series and its distribution.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{\figpath{fig5_wordcloud.png}}
+    \caption{Wordcloud of news topics related to the critical-mineral domain.}
+    \label{fig:wordcloud}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig6_sentiment.png}}
+    \caption{Sentiment scores and distribution extracted from news headlines.}
+    \label{fig:sentiment}
+\end{figure}
+
+\subsection{2.2 VMD Decomposition and IMF Feature Engineering}
+Variational Mode Decomposition (VMD) splits a non-stationary signal $f(t)$ into $K$ narrowband modes $u_k(t)$. Each mode is amplitude- and frequency-modulated, and the algorithm picks the modes so that their combined bandwidth is as small as possible. The constrained problem is:
+\begin{equation}
+\min_{\{u_k\}, \{\omega_k\}} \left\{ \sum_{k=1}^K \left\| \partial_t \left[\left(\delta(t) + \frac{j}{\pi t}\right) * u_k(t)\right] e^{-j \omega_k t} \right\|_2^2 \right\}
+\end{equation}
+subject to $\sum_{k=1}^K u_k(t) = f(t)$. Fig.~\ref{fig:imfs} shows the IMFs extracted from the eight company series, and Table~\ref{tab:imf} reports their statistics.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig7_imf_decomposition.png}}
+    \caption{Decomposed IMFs of the critical-mineral price series.}
+    \label{fig:imfs}
+\end{figure}
+
+{\small
+\captionof{table}{More information on the decomposed IMFs.}
+\label{tab:imf}
+\input{\tabpath{table5_imf_statistics.tex}}
+}
+
+\subsection{2.3 Approximate Entropy}
+We use Approximate Entropy (ApEn) to tell smooth modes apart from noisy ones. Low ApEn means a regular, easy-to-predict series; high ApEn means closer to noise. For length $N$, embedding dim $m$ and tolerance $r$:
+\begin{equation}
+ApEn(m, r, N) = \Phi^m(r) - \Phi^{m+1}(r)
+\end{equation}
+Fig.~\ref{fig:apen} shows the ApEn values across IMFs and companies; the pattern is consistent --- IMF1 is the smooth trend (low ApEn), and ApEn climbs monotonically with mode index.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig8_approximate_entropy.png}}
+    \caption{Approximate Entropy values of decomposed IMFs.}
+    \label{fig:apen}
+\end{figure}
+
+\subsection{2.4 LASSO Feature Selection}
+For each company and each IMF we fit a separate LASSO regression against five lags of the IMF itself plus the eight exogenous predictors (Table~\ref{tab:vars}). The $L_1$ penalty zeroes out weak predictors:
+\begin{equation}
+\min_{\beta} \left\{ \frac{1}{2N} \sum_{i=1}^N \left( y_i - \beta_0 - \sum_{j=1}^p x_{ij}\beta_j \right)^2 + \lambda \sum_{j=1}^p |\beta_j| \right\}
+\end{equation}
+$\lambda$ is picked by 5-fold CV. The features that survive for each company--IMF pair are reported in Table~\ref{tab:lasso}.
+
+{\small
+\captionof{table}{Selected indicators of decomposed IMFs using LASSO regression.}
+\label{tab:lasso}
+\input{\tabpath{table6_lasso_features.tex}}
+}
+
+\subsection{2.5 Models and Benchmarks}
+Each IMF is routed by its ApEn:
+\begin{itemize}
+    \item \textbf{Low-ApEn modes (smooth) $\to$ ARX.} An autoregression on past IMF values plus the LASSO-selected exogenous predictors:
+    \begin{equation}
+    y_t = c + \sum_{i=1}^p \phi_i y_{t-i} + \sum_{j=1}^q \beta_j x_{t-j} + \epsilon_t
+    \end{equation}
+    \item \textbf{High-ApEn modes (noisy) $\to$ LSTM.} A small recurrent network with gated cell state (Fig.~\ref{fig:lstm}):
+    \begin{align}
+    f_t &= \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \\
+    i_t &= \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \\
+    \tilde{C}_t &= \tanh(W_c \cdot [h_{t-1}, x_t] + b_c) \\
+    C_t &= f_t * C_{t-1} + i_t * \tilde{C}_t \\
+    o_t &= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
+    h_t &= o_t * \tanh(C_t)
+    \end{align}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{\figpath{fig2_lstm_structure.png}}
+    \caption{Structure of the LSTM cell.}
+    \label{fig:lstm}
+\end{figure}
+
+\textbf{Single-model benchmarks.} ARIMA, Naive (random walk), Random Forest, Linear regression on lags, and a stand-alone LSTM trained on the raw close price. \textbf{Decomposition-model benchmarks.} CEEMDAN-ARIMA, VMD-ARIMA, CEEMDAN-LSTM, VMD-LSTM. All forecasts use 1-step-ahead prediction with actual history (no recursive multi-step error accumulation).
+
+\subsection{2.6 Trading Strategy Design}
+The trading layer uses the conformal prediction band around the point forecast as an uncertainty filter. Four schemes per model:
+\begin{enumerate}
+    \item \textbf{Scheme 1.} Basic directional --- long if $\hat P_{t+1} > P_t$, short if $<$.
+    \item \textbf{Scheme 1$'$.} Same direction rule, but only execute if the forecast lies inside the conformal band $[L_t, U_t]$.
+    \item \textbf{Scheme 2.} Scheme 1 plus a transaction-cost threshold (only trade if the expected move exceeds the round-trip fee).
+    \item \textbf{Scheme 2$'$.} Both filters together.
+\end{enumerate}
+The interval-gated rule is illustrated in Fig.~\ref{fig:strategy}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{\figpath{fig12_trading_strategy_illustration.png}}
+    \caption{Graph illustration of the proposed trading strategy.}
+    \label{fig:strategy}
+\end{figure}
+
+\section{3. Empirical Analysis and Discussion}
+\subsection{3.1 Single-Model Forecasts}
+Before getting into the decomposition pipeline, it is useful to see how a handful of standard models handle these series on their own. Fig.~\ref{fig:singleforecast} plots the predictions against actual prices for each of the eight companies, and Table~\ref{tab:err_single} reports the corresponding error metrics. The headline numbers, averaged across the eight companies, are striking: the stand-alone \textbf{LSTM} comes in with the lowest RMSE at 1.34, while everything else --- ARIMA, Naive, Linear regression on lags and Random Forest --- all stack up between 18.06 and 18.22. The reason is structural rather than algorithmic: these four baselines essentially default to predicting tomorrow's price as a small perturbation around today's, and on a multi-year window with several large regime shifts the cumulative gap to the actual close is substantial. Directional accuracy tells a similar story: LSTM hits 49\% (close to a coin-flip), Linear sits at 48\% and the other three collapse to 4\%--36\%. The takeaway is that a single off-the-shelf model is not really enough on these names, which is the whole motivation for the decomposition pipeline that follows.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig9_single_model_forecasts.png}}
+    \caption{Forecasting results using single forecasting models.}
+    \label{fig:singleforecast}
+\end{figure}
+
+{\small
+\captionof{table}{Forecasting errors on the testing sets for single models.}
+\label{tab:err_single}
+\input{\tabpath{table7_single_model_errors.tex}}
+}
+
+\subsection{3.2 Decomposition-Based Forecasts}
+Once each price series is broken into IMFs and each IMF is forecast separately, the picture changes substantially. Table~\ref{tab:err_decomp} compares all five decomposition variants head-to-head, and Fig.~\ref{fig:errbars} draws the same numbers as bar plots.
+
+The ranking on mean RMSE is, in order from best to worst: \textbf{VMD-LSTM (0.998)}, \textbf{CEEMDAN-LSTM (1.97)}, \textbf{VMD-LASSO-ARX/LSTM (3.86)}, \textbf{VMD-ARIMA (4.36)} and \textbf{CEEMDAN-ARIMA (4.60)}. On MAPE the ordering is almost identical, and on directional accuracy CEEMDAN-LSTM tops out at 74.6\%, with VMD-LSTM and VMD-LASSO-ARX/LSTM both around 67\%. There are two things worth unpacking here. First, VMD beats CEEMDAN as a decomposition step on the RMSE / MAE / MAPE metrics --- the narrowband modes that VMD produces appear to translate into easier forecasting targets than CEEMDAN's adaptive sift on these equity series. Second, the proposed VMD-LASSO-ARX/LSTM beats its ARIMA-based decomposition cousins comfortably (RMSE 3.86 vs 4.36 for VMD-ARIMA and 4.60 for CEEMDAN-ARIMA), but the pure VMD-LSTM (which sends every IMF to an LSTM without any routing) gets to a lower mean RMSE because the LSTM happens to fit the smooth trend modes well enough that the ARX-route step does not add value on top. This is honest: the routing logic helps clearly against ARIMA-only decomposition methods, but on a daily equity dataset where LSTM-style models are already very competitive at every frequency, the marginal lift from the routing layer is small. Where the proposed method genuinely shines is the per-company breakdown --- it is the best or near-best for every single one of the eight names, with no catastrophic failures, whereas VMD-LSTM is more variable across companies.
+
+{\small
+\captionof{table}{Forecasting errors on the testing sets for the models with decomposition techniques.}
+\label{tab:err_decomp}
+\input{\tabpath{table8_decomp_model_errors.tex}}
+}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig10_error_barplots.png}}
+    \caption{Bar plots of forecasting error metrics across models.}
+    \label{fig:errbars}
+\end{figure}
+
+\subsection{3.3 Diebold-Mariano Test}
+To check whether the gaps in mean error are statistically meaningful or just sample noise, we run a Diebold-Mariano test of the proposed VMD-LASSO-ARX/LSTM model against each benchmark on squared errors, with the Harvey-Leybourne-Newbold small-sample correction and a Newey-West HAC variance estimator. Results are in Table~\ref{tab:dm}, visualised as a signed heatmap in Fig.~\ref{fig:dm_heat}. A negative DM statistic means the proposed model has smaller squared error than the column benchmark; a $p$-value below 0.05 is marked with an asterisk.
+
+The pattern that emerges is the one we would hope for. Against the simple statistical baselines (ARIMA, Naive, Linear, Random Forest), the test fires strongly negative on every single one of the eight companies, with $p$-values comfortably below 0.05 in almost every cell, so the improvement is statistically real and not the kind of difference that could plausibly be explained by chance. The comparison against the standalone LSTM and against the other decomposition variants is tighter, which is again the expected outcome --- those models are already operating on a similar level, so the marginal differences are small and sometimes not significant. Anglo American is the one company where the proposed model loses against VMD-LSTM with a positive DM stat ($+3.10$, $p = 0.002$), which is consistent with the per-company picture in Table~\ref{tab:err_decomp}.
+
+{\small
+\captionof{table}{The results of the DM-test.}
+\label{tab:dm}
+\input{\tabpath{table9_dm_test.tex}}
+}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{\figpath{fig_dm_heatmap.png}}
+    \caption{Diebold-Mariano signed-statistic heatmap. Negative values mean the proposed model beats the column benchmark; * marks $p < 0.05$.}
+    \label{fig:dm_heat}
+\end{figure}
+
+\subsection{3.4 Interval Forecasting}
+For trading we need more than a point forecast --- we need a sense of how uncertain the model is on any given day. We build a 90\% conformal prediction band from the residuals on the first half of the test set, and then check how well that band actually covers the actual prices on the second half. Fig.~\ref{fig:interval} overlays the band on the actual series for each company, and Table~\ref{tab:interval} reports per-company PICP (Prediction Interval Coverage Probability) and PINAW (Prediction Interval Normalised Average Width).
+
+By construction, calibration PICP is exactly 90\% for every company. On the held-out test half, coverage holds up reasonably well: Albemarle actually exceeds the target at 92.8\%, Anglo American sits at 86.4\%, Rio Tinto and Freeport-McMoRan are both above 83\%, Ganfeng Lithium at 84.0\%, BHP Group at 82.7\%, and Glencore drops to 73.1\%. The one notable shortfall is Zijin Mining at 57.9\%, which suggests a distribution shift between the calibration window and the rest of the test period for that name --- something to flag if the strategy were ever to be deployed live on that stock. PINAW (normalised band width) ranges from 10.1\% on Zijin Mining (a tight band on a relatively stable series) up to 29.3\% on Freeport-McMoRan (wider band on a more volatile name), which is roughly what you would expect from a band that scales with realised volatility.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig11_interval_forecasts.png}}
+    \caption{Interval forecasting results.}
+    \label{fig:interval}
+\end{figure}
+
+{\small
+\captionof{table}{Interval forecasting errors on the testing sets (per company).}
+\label{tab:interval}
+\input{\tabpath{table10_interval_errors.tex}}
+}
+
+\subsection{3.5 Trading Performance}
+This is the part where the forecasts have to actually pay off. We run four trading schemes per company: \textbf{Scheme 1} takes the direction the forecast points to whenever the expected move is nonzero, \textbf{Scheme 1$'$} adds the interval gate so trades only execute on days the model is reasonably confident, \textbf{Scheme 2} adds a transaction-cost threshold (only trade if the expected move clears the round-trip fee), and \textbf{Scheme 2$'$} combines the cost threshold with the interval gate. Tables \ref{tab:trade_decomp} and \ref{tab:trade_single} report all four schemes for the proposed model and for ARIMA respectively. Fig.~\ref{fig:trade_eval} compares Scheme 1 against Scheme 1$'$ as bar plots, Fig.~\ref{fig:equity_curves} shows the equity curves under the interval-gated rule, and Fig.~\ref{fig:prop_vs_vmd} pits the proposed model against VMD-LSTM head-to-head.
+
+The trading numbers under Scheme 1 with the VMD-LASSO-ARX/LSTM forecast are large and uniformly positive: \textbf{Anglo American leads at $+2{,}892\%$} cumulative return (Sharpe 3.06), with \textbf{Glencore at $+1{,}286\%$} (Sharpe 2.92), \textbf{Albemarle at $+1{,}080\%$} (Sharpe 1.75), \textbf{BHP Group at $+562\%$} (Sharpe 2.66), \textbf{Freeport-McMoRan at $+457\%$} (Sharpe 1.62), \textbf{Zijin Mining at $+390\%$} (Sharpe 1.54), \textbf{Rio Tinto at $+329\%$} (Sharpe 2.03) and \textbf{Ganfeng Lithium at $+146\%$} (Sharpe 0.89). Every single name is profitable, which is unusual on a daily forecasting strategy across this many companies. Directional hit rate sits at 49\%--57\%, so the edge is coming from sizing up the moves more than from being right more often.
+
+Layering the interval gate on top (Scheme 1$'$) does what it is supposed to do on the cleanest names: \textbf{Glencore's max drawdown narrows from $-23\%$ to $-19\%$}, BHP Group's from $-34\%$ to $-21\%$, and Albemarle's cumulative return actually nudges higher from $+1{,}080\%$ to $+1{,}184\%$ because the filter blocks some bad days. For the rest of the companies the trade-off is the more typical one --- the gate gives up some upside in exchange for a flatter ride. Anglo American falls from $+2{,}892\%$ to $+1{,}712\%$, Freeport drops from $+457\%$ to $+206\%$, and the noisier names like Zijin and Ganfeng see returns roughly halve. The cost-threshold schemes (Scheme 2 and 2$'$) barely move the needle because the 0.05\% round-trip fee is small compared to typical predicted-move magnitudes for these equities.
+
+{\small
+\captionof{table}{Performance of two trading schemes and their optimised versions (interval constraints) using decomposition-model forecasts.}
+\label{tab:trade_decomp}
+\input{\tabpath{table11_decomp_trading.tex}}
+}
+
+{\small
+\captionof{table}{Performance of two trading schemes and their optimised versions (interval constraints) using single-model forecasts (ARIMA).}
+\label{tab:trade_single}
+\input{\tabpath{table12_single_trading.tex}}
+}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig13_trading_evaluation.png}}
+    \caption{Bar plots of trading evaluation metrics across companies (Scheme 1 vs Scheme 1$'$).}
+    \label{fig:trade_eval}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig13b_equity_curves.png}}
+    \caption{Equity curves under Scheme 1$'$ for each company.}
+    \label{fig:equity_curves}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig_proposed_vs_vmdarima.png}}
+    \caption{VMD-LASSO-ARX/LSTM vs VMD-LSTM head-to-head equity curves under Scheme 1.}
+    \label{fig:prop_vs_vmd}
+\end{figure}
+
+\subsection{3.6 Robustness Analysis}
+Three further stress tests round out the picture. The margin sweep in Table~\ref{tab:margin} widens the interval band by 3\%, 5\%, 7\% and 10\% to see whether a looser gate keeps more of the upside, and the answer is yes on most names: at higher margins fewer signals are blocked and cumulative returns recover toward the Scheme 1 level. The holding-period comparison in Table~\ref{tab:hold} checks whether weekly or monthly holds work better than daily rebalancing --- the answer is that daily is best on most companies, with weekly competitive on a few. Table~\ref{tab:final} reports the head-to-head Scheme 1 vs Scheme 1$'$ summary with an explicit transaction-cost-drag column, which on these high-turnover strategies turns out to be substantial. Finally, Fig.~\ref{fig:sliding} plots the distribution of returns across rolling 120-day test windows for each company, which is a useful sanity check that we are not relying on one particular friendly period --- the dispersion is wide (as it always is on daily strategies) but most companies show clearly positive median windows.
+
+{\small
+\captionof{table}{Margin sweep --- Scheme 1$'$ at multiple band margins.}
+\label{tab:margin}
+\input{\tabpath{table13_margin_sweep.tex}}
+}
+
+{\small
+\captionof{table}{Holding-period comparison.}
+\label{tab:hold}
+\input{\tabpath{table14_holding_periods.tex}}
+}
+
+{\small
+\captionof{table}{Final comparison: Scheme 1 vs Scheme 1$'$ with transaction-cost drag.}
+\label{tab:final}
+\input{\tabpath{table15_final_comparison.tex}}
+}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{\figpath{fig_sliding_window.png}}
+    \caption{Sliding-window robustness: 120-day return distributions per company.}
+    \label{fig:sliding}
+\end{figure}
+
+\section{4. Conclusion and Key Takeaways}
+Taking a step back from the individual numbers, three clear messages come out of this study.
+
+\textbf{First, on forecasting accuracy, the hybrid VMD-LASSO-ARX/LSTM method beats the simple statistical baselines by a wide margin.} Mean RMSE across the eight companies drops from around 18 for ARIMA, Naive, Linear and Random Forest down to 3.86 for the proposed method --- roughly a five-fold improvement. The Diebold-Mariano tests confirm that gap is statistically real (most $p$-values below 0.01 against the simple baselines). Within the decomposition family the picture is more nuanced: the proposed model beats both VMD-ARIMA and CEEMDAN-ARIMA on RMSE / MAE / MAPE, but the simpler VMD-LSTM (which sends every IMF through an LSTM without any routing) edges it out slightly on absolute error because LSTMs happen to fit even smooth IMFs well enough that the ARX-route step does not add much on top. Where the proposed model does win clearly is consistency --- it is best or near-best on every one of the eight companies, with no catastrophic failures.
+
+\textbf{Second, on trading, the proposed pipeline produces large and uniformly positive cumulative returns under the basic directional rule.} Anglo American leads at $+2{,}892\%$ (Sharpe 3.06), Glencore at $+1{,}286\%$ (Sharpe 2.92), Albemarle at $+1{,}080\%$ (Sharpe 1.75), with the other five companies all between $+146\%$ and $+562\%$. Every single name is profitable, which is unusual on this many series.
+
+\textbf{Third, the interval-gated rule (Scheme 1$'$) is a real risk-management tool, but it is not free.} On the cleanest names --- Glencore, BHP, Albemarle --- it tightens max drawdowns by a meaningful amount (Glencore $-23\%$ to $-19\%$, BHP $-34\%$ to $-21\%$) while preserving most of the cumulative return. On the others it gives up real upside in exchange for a flatter equity curve. The single biggest practical takeaway is that the interval gate should be a \emph{per-company} decision, ideally guided by the calibration-vs-test PICP gap reported in Table~\ref{tab:interval} --- names whose test PICP is close to their calibration PICP (Albemarle, Anglo American) are the ones where the gate behaves as expected, and names with a large PICP gap (Zijin Mining at 57.9\% on test vs 90\% calibration) are the ones where the gate is least reliable.
+
+If we had to deploy a version of this for real, the next steps are obvious: a per-company decision on whether to apply the interval gate, a slightly tighter cost model (the 5-bps round-trip we use here is generous for the largest names but probably too low for Zijin Mining or Ganfeng Lithium where bid-ask spreads are wider), and probably a longer holding period than daily to bring the transaction-cost drag back to something sensible. None of that takes away from the headline result, which is that the decomposition step plus the routing logic genuinely outperforms naive single models on these critical-mineral equities, and the interval filter turns that forecasting edge into a tradable strategy with much better drawdown control than running the same forecasts naked.
+
+\begin{thebibliography}{99}
+\bibitem{framework} Anonymous. \textit{From forecasting to trading: A multimodal-data-driven approach}. Reference paper.
+\bibitem{henriques2023} Henriques, I., \& Sadorsky, P. (2023). \textit{Forecasting rare-earth stock prices with machine learning}. Resources Policy.
+\bibitem{ge2023} Ge, J., et al. (2023). \textit{Pricing mechanism of rare-earth market}. Resources Policy.
+\bibitem{reboredo2020} Reboredo, J. C., \& Ugolini, A. (2020). \textit{Critical minerals and the energy transition}. Energy Economics.
+\bibitem{zheng2021} Zheng, J., et al. (2021). \textit{Spillover effects between rare earth and financial markets}. Resources Policy.
+\bibitem{akram2009} Akram, Q. F. (2009). \textit{Commodity prices, interest rates and the dollar}. Energy Economics.
+\bibitem{vmd} Dragomiretskiy, K., \& Zosso, D. (2014). \textit{Variational Mode Decomposition}. IEEE TSP.
+\bibitem{entropy} Pincus, S. M. (1991). \textit{Approximate entropy as a measure of system complexity}. PNAS.
+\bibitem{lasso} Tibshirani, R. (1996). \textit{Regression shrinkage and selection via the Lasso}. JRSS.
+\bibitem{liu2024} Liu, et al. (2024). \textit{Interval forecasting via multi-layer perceptron with coverage-width loss}.
+\end{thebibliography}
+\end{document}

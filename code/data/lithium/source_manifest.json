@@ -1,0 +1,123 @@
+{
+  "study": "Liu-style static lithium-price forecasting",
+  "generated_at_utc": "2026-08-17T08:50:50.875541+00:00",
+  "protocol_classification": "noncausal static retrospective prediction",
+  "common_sample": {
+    "start": "2023-05-04",
+    "end": "2026-03-12"
+  },
+  "targets": {
+    "lithium_hydroxide": {
+      "label": "COMEX Lithium Hydroxide CIF CJK continuation close",
+      "workbook": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium_hydroxide_futures_fastmarkets_comex.xlsx",
+      "processed": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\processed\\lithium_hydroxide_liu_panel.csv",
+      "modes": 9,
+      "coverage": {
+        "rows": 716,
+        "first_valid_date": "2023-05-04",
+        "last_valid_date": "2026-03-12",
+        "missing_by_column": {
+          "Lithium_Hydroxide_Close": 0
+        }
+      }
+    },
+    "lithium_carbonate": {
+      "label": "SMM battery-grade lithium carbonate domestic spot close",
+      "workbook": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium_carbonate_spot_smm.xlsx",
+      "processed": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\processed\\lithium_carbonate_liu_panel.csv",
+      "modes": 8,
+      "coverage": {
+        "rows": 692,
+        "first_valid_date": "2023-05-04",
+        "last_valid_date": "2026-03-12",
+        "missing_by_column": {
+          "Lithium_Carbonate_Close": 0
+        }
+      }
+    }
+  },
+  "feature_blocks": {
+    "lithium_equities": [
+      "Albemarle",
+      "Ganfeng Lithium"
+    ],
+    "lithium_attention": [
+      "lithium",
+      "lithium price",
+      "lithium carbonate",
+      "lithium hydroxide",
+      "lithium battery"
+    ],
+    "lithium_news_query_terms": [
+      "lithium price",
+      "lithium carbonate",
+      "lithium hydroxide",
+      "lithium market",
+      "lithium supply",
+      "lithium demand"
+    ],
+    "market_controls": [
+      "SP500",
+      "VIX",
+      "US_Dollar_Index",
+      "MVIS_Critical_Minerals"
+    ]
+  },
+  "source_files": {
+    "lithium_carbonate_workbook": {
+      "path": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium_carbonate_spot_smm.xlsx",
+      "sha256": "a92ff65574377d64caddaa318fefe30417e44c774af71e3549b14a041ce6cd82"
+    },
+    "lithium_hydroxide_workbook": {
+      "path": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium_hydroxide_futures_fastmarkets_comex.xlsx",
+      "sha256": "08e76ab111daf0f942f2aaa29f447d2850da5215153cf75eac36c6c66bea06eb"
+    },
+    "lithium_equity_workbook": {
+      "path": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\Top Critical Mineral Companies & Stock Price 2026.xlsx",
+      "sha256": "681c20d44f36a05918ed5ccc66e33fed0251aafda1994b15013f705e289b9e32"
+    },
+    "mvis_workbook": {
+      "path": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\MVIS Global Rare Earth OR Strategic Metals (Pr) Index_Benchmark Index.xlsx",
+      "sha256": "a18c8505f3af2a1384ab4400ca246450bb15cf1d634c7442d548a38f81756de1"
+    },
+    "yahoo_market_controls": {
+      "path": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\Bulk_Yahoo_Historical_Data.csv",
+      "sha256": "6f9b39b214de2adfc23edd9f5ce9c6aff66e733f6bd6eee5205a030a28009491"
+    }
+  },
+  "external_inputs": {
+    "google_trends": {
+      "path": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\external\\lithium_google_trends.csv",
+      "sha256": "f35df8a86e2b6c1cc1e9c98ef5863b37d7d7bb64de1665f46527c3b57172013c",
+      "coverage": {
+        "rows": 150,
+        "first_valid_date": "2023-05-06",
+        "last_valid_date": "2026-03-14",
+        "missing_by_column": {
+          "Trends_lithium": 0,
+          "Trends_lithium_price": 0,
+          "Trends_lithium_carbonate": 0,
+          "Trends_lithium_hydroxide": 0,
+          "Trends_lithium_battery": 0
+        }
+      }
+    },
+    "lithium_news": {
+      "path": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\external\\lithium_news_headlines.csv",
+      "sha256": "9b79db4daa39d11ff376d437a070f010ae3d348a7254951c9af4e5cc9cfcb905",
+      "headline_rows": 2018,
+      "daily_coverage": {
+        "rows": 1044,
+        "first_valid_date": "2023-05-04",
+        "last_valid_date": "2026-03-12",
+        "missing_by_column": {
+          "News_Article_Count": 0,
+          "News_TextBlob_Polarity": 0,
+          "News_FinBERT_Score": 0
+        }
+      }
+    }
+  },
+  "alignment": "Latest available observation on each target calendar; Liu runner applies the one-observation external-feature shift.",
+  "publication_ready": true
+}

@@ -38,7 +38,7 @@ CODE_ROOT = Path(__file__).resolve().parent
 if str(CODE_ROOT) not in sys.path:
     sys.path.insert(0, str(CODE_ROOT))
 
-from decomposition.causal import approximate_entropy
+from decomposition.causal import approximate_entropy, vmd_decompose_train_only, ceemdan_decompose_train_only
 from evaluation.metrics import dm_test, forecast_metrics
 from lithium_config import (
     ADAPTIVE_CEEMDAN_MAX_IMF,
@@ -57,6 +57,7 @@ from models.adaptive_routing import DecompositionSpec, adaptive_forecast
 from models.released_paper_shadow import (
     full_sample_vmd,
     released_feature_frame,
+    causal_lasso_selection,
     released_lasso_selection,
     released_lstm_predictions,
     released_pre_process,
@@ -105,7 +106,7 @@ def _load_common_panel(target: str, target_specs: dict[str, dict[str, Any]]) -> 
     return selected.pop("Target_Close").astype(float), selected.astype(float)
 
 
-def _univariate_arima_filter(y_train: np.ndarray, y_test: np.ndarray, scaler: StandardScaler) -> tuple[np.ndarray, tuple[int, int, int] | str]:
+def _univariate_arima_forecast(y_train: np.ndarray, y_test: np.ndarray, scaler: StandardScaler) -> tuple[np.ndarray, tuple[int, int, int] | str]:
     import pmdarima as pm
 
     train = np.asarray(y_train, dtype=float).reshape(-1)
@@ -119,7 +120,7 @@ def _univariate_arima_filter(y_train: np.ndarray, y_test: np.ndarray, scaler: St
         except (ValueError, np.linalg.LinAlgError):
             pass
         attempted.extend([(1, 0, 0), (0, 1, 1), (0, 0, 0)])
-        filtered = None
+        forecasted = None
         used_order: tuple[int, int, int] | None = None
         for candidate_order in dict.fromkeys(attempted):
             try:
@@ -129,22 +130,20 @@ def _univariate_arima_filter(y_train: np.ndarray, y_test: np.ndarray, scaler: St
                     enforce_stationarity=False,
                     enforce_invertibility=False,
                 ).fit(method_kwargs={"warn_convergence": False})
-                candidate_values = np.asarray(fitted.apply(test, refit=False).fittedvalues, dtype=float)
+                candidate_values = np.asarray(fitted.forecast(steps=len(test)), dtype=float)
                 if np.isfinite(candidate_values).all():
-                    filtered = candidate_values
+                    forecasted = candidate_values
                     used_order = candidate_order
                     break
             except (ValueError, np.linalg.LinAlgError):
                 continue
-        if filtered is None:
+        if forecasted is None:
             # Near-zero decomposition modes can be singular under the
-            # statespace optimizer.  Preserve the released-style observed-test
-            # filtering path with a stable persistence fallback rather than
-            # aborting the full registered experiment.
-            filtered = np.concatenate([[train[-1]], test[:-1]])
+            # statespace optimizer.  Preserve the stable persistence fallback.
+            forecasted = np.full(len(test), train[-1])
             used_order = None
     detail: tuple[int, int, int] | str = "degenerate-mode persistence fallback" if used_order is None else used_order
-    return scaler.inverse_transform(np.asarray(filtered).reshape(-1, 1)).reshape(-1), detail
+    return scaler.inverse_transform(np.asarray(forecasted).reshape(-1, 1)).reshape(-1), detail
 
 
 def _elm_predict(x_train: np.ndarray, y_train: np.ndarray, x_test: np.ndarray, *, hidden: int = 20) -> np.ndarray:
@@ -160,7 +159,7 @@ def _elm_predict(x_train: np.ndarray, y_train: np.ndarray, x_test: np.ndarray, *
 
 def _direct_predictions(price: pd.Series, exogenous: pd.DataFrame) -> tuple[dict[str, np.ndarray], pd.DatetimeIndex, pd.DataFrame]:
     frame = released_feature_frame(price.rename("target"), exogenous, lags=LIU_LAGS)
-    selection = released_lasso_selection(frame)
+    selection = causal_lasso_selection(frame)
     selected = frame[["target", *selection.selected_columns]]
     x_train, y_train, x_test, y_test, scaler_y, split = released_pre_process(selected)
     dates = pd.DatetimeIndex(selected.index[split.test_start:])
@@ -171,7 +170,7 @@ def _direct_predictions(price: pd.Series, exogenous: pd.DataFrame) -> tuple[dict
         warnings.simplefilter("ignore")
         holt = Holt(scaler_y.inverse_transform(y_train).reshape(-1), initialization_method="estimated").fit(optimized=True)
         predictions["ES"] = np.asarray(holt.forecast(len(y_test)), dtype=float)
-    predictions["ARIMA"], _ = _univariate_arima_filter(y_train, y_test, scaler_y)
+    predictions["ARIMA"], _ = _univariate_arima_forecast(y_train, y_test, scaler_y)
     for name, estimator in {
         "SVR": SVR(kernel="rbf", C=8.1, gamma=0.1),
         "RF": RandomForestRegressor(n_estimators=100, min_samples_split=2, min_samples_leaf=1, random_state=LIU_RANDOM_SEED, n_jobs=1),
@@ -217,12 +216,12 @@ def _ceemdan(values: np.ndarray, modes: int) -> np.ndarray:
 
 def _component_forecast(component: pd.Series, exogenous: pd.DataFrame, route: str) -> tuple[np.ndarray, pd.DatetimeIndex, dict[str, Any]]:
     frame = released_feature_frame(component.rename("target"), exogenous, lags=LIU_LAGS)
-    selection = released_lasso_selection(frame)
+    selection = causal_lasso_selection(frame)
     selected = frame[["target", *selection.selected_columns]]
     x_train, y_train, x_test, y_test, scaler_y, split = released_pre_process(selected)
     dates = pd.DatetimeIndex(selected.index[split.test_start:])
     if route == "ARIMA":
-        prediction, order = _univariate_arima_filter(y_train, y_test, scaler_y)
+        prediction, order = _univariate_arima_forecast(y_train, y_test, scaler_y)
     elif route == "LSTM":
         prediction = released_lstm_predictions(
             x_train,
@@ -262,9 +261,24 @@ def _decomposition_predictions(
 ]:
     modes = int(target_specs[target]["modes"])
     values = price.to_numpy(float)
+    split = static_holdout_split(len(values))
+    train_values = values[: split.train_stop]
+    
+    vmd_train = vmd_decompose_train_only(train_values, alpha=3000, tau=0, k=modes, dc=0, init=1, tol=1e-6)
+    ceemdan_train = ceemdan_decompose_train_only(train_values, trials=20, seed=LIU_RANDOM_SEED)
+    
+    # Pad to full length by carrying forward the last known state (ffill).
+    # This prevents dropna() from destroying the test set while keeping it causal.
+    def pad_components(components: np.ndarray) -> np.ndarray:
+        padded = np.full((components.shape[0], len(values)), np.nan)
+        padded[:, :split.train_stop] = components
+        for i in range(components.shape[0]):
+            padded[i, split.train_stop:] = components[i, -1]
+        return padded
+        
     decompositions = {
-        "VMD": full_sample_vmd(values, modes=modes),
-        "CEEMDAN": _ceemdan(values, modes),
+        "VMD": pad_components(vmd_train),
+        "CEEMDAN": pad_components(ceemdan_train),
     }
     forecasts: dict[str, np.ndarray] = {}
     expected_dates: pd.DatetimeIndex | None = None

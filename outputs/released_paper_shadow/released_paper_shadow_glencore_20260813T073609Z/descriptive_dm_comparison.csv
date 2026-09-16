@@ -1,0 +1,2 @@
+Company,Model A,Model B,DM Statistic,p-value,Loss Difference Definition,Interpretation
+Glencore,Released-paper-style shadow,Static random walk diagnostic,-12.00194088134317,0.0,shadow squared loss - random-walk squared loss,Descriptive only; invalid for forecasting inference because Model A is noncausal

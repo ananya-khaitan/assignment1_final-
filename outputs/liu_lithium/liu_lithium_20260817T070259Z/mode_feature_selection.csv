@@ -1,0 +1,10 @@
+Target,Ablation,Mode,Route,LASSO Alpha,LASSO Validation MSE,Selected Feature Count,Selected Features,Empty-selection Fallback,ARIMA Order
+lithium_hydroxide,history_only,1,ARIMA observed-test apply path,0.0018000000000000004,1.3479946713382728e-07,1,target_1,False,"(5, 1, 0)"
+lithium_hydroxide,history_only,2,ARIMA observed-test apply path,0.03920000000000002,1.379487799466335e-06,1,target_1,False,"(2, 2, 0)"
+lithium_hydroxide,history_only,3,LSTM source sequence-major layout,0.001,1.2962120147013597e-05,2,target_1 | target_5,False,
+lithium_hydroxide,history_only,4,LSTM source sequence-major layout,0.001,4.7943424566895934e-05,3,target_1 | target_3 | target_5,False,
+lithium_hydroxide,history_only,5,LSTM source sequence-major layout,0.001,0.000126271718017179,4,target_1 | target_2 | target_4 | target_5,False,
+lithium_hydroxide,history_only,6,LSTM source sequence-major layout,0.001,0.00025654582064383886,4,target_2 | target_4 | target_3 | target_1,False,
+lithium_hydroxide,history_only,7,LSTM source sequence-major layout,0.001,0.00033548157515671045,4,target_2 | target_1 | target_5 | target_4,False,
+lithium_hydroxide,history_only,8,LSTM source sequence-major layout,0.001,0.00018106856731204198,3,target_1 | target_2 | target_4,False,
+lithium_hydroxide,history_only,9,LSTM source sequence-major layout,0.001,0.00012060473643436995,4,target_1 | target_2 | target_3 | target_5,False,

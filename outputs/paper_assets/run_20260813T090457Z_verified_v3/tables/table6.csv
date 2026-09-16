@@ -1,0 +1,35 @@
+Company,Feature,Selection Count,Selection Rate (%)
+Albemarle,News_Sentiment,41,100.0
+Albemarle,target_lag_1,41,100.0
+Albemarle,SP500,29,70.73170731707317
+Albemarle,target_lag_5,24,58.53658536585365
+Albemarle,VIX,14,34.14634146341464
+Anglo American,target_lag_1,41,100.0
+Anglo American,SP500,7,17.073170731707318
+BHP Group,News_Sentiment,41,100.0
+BHP Group,target_lag_1,41,100.0
+BHP Group,SP500,30,73.17073170731707
+BHP Group,Crude_Oil,29,70.73170731707317
+BHP Group,Search_Index,1,2.4390243902439024
+Freeport-McMoRan,target_lag_1,41,100.0
+Freeport-McMoRan,VIX,18,43.90243902439025
+Freeport-McMoRan,SP500,17,41.46341463414634
+Freeport-McMoRan,News_Sentiment,15,36.58536585365854
+Freeport-McMoRan,Shanghai_Index,12,29.268292682926827
+Ganfeng Lithium,Crude_Oil,41,100.0
+Ganfeng Lithium,SP500,41,100.0
+Ganfeng Lithium,US_Dollar_Index,41,100.0
+Ganfeng Lithium,VIX,41,100.0
+Ganfeng Lithium,target_lag_1,41,100.0
+Glencore,Crude_Oil,41,100.0
+Glencore,target_lag_1,41,100.0
+Glencore,target_lag_4,41,100.0
+Glencore,target_lag_5,39,95.1219512195122
+Glencore,target_lag_3,15,36.58536585365854
+Rio Tinto,target_lag_1,41,100.0
+Rio Tinto,SP500,40,97.5609756097561
+Zijin Mining,SP500,41,100.0
+Zijin Mining,target_lag_1,41,100.0
+Zijin Mining,target_lag_4,40,97.5609756097561
+Zijin Mining,Search_Index,36,87.8048780487805
+Zijin Mining,target_lag_2,29,70.73170731707317

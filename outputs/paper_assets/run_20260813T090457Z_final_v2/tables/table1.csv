@@ -1,0 +1,7 @@
+Study,Focus,Methodological Contribution,Relevance to This Paper
+Dragomiretskiy and Zosso (2014),Variational mode decomposition,Signal decomposition,Introduces VMD as a variational signal-decomposition method.
+Tibshirani (1996),Least absolute shrinkage and selection operator,Feature selection,Provides the LASSO regularization used for sparse predictor selection.
+Hochreiter and Schmidhuber (1997),Long short-term memory,Sequence modelling,Introduces the recurrent architecture used by the LSTM candidates.
+Diebold and Mariano (1995),Comparing predictive accuracy,Forecast comparison,Provides the forecast-loss comparison framework.
+Liu et al. (2025),Multimodal carbon-price forecasting,"VMD, LASSO, ARIMA/LSTM and trading",Methodological reference; this study changes the target domain and enforces a causal walk-forward evaluation.
+This study,Critical-mineral equities,Causal one-step forecasting and trading,"Uses scheduled train-only decomposition, historical calibration, conformal intervals and transaction-cost evaluation."

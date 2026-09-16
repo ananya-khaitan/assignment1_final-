@@ -1,0 +1,13 @@
+Company,Model,Cost (bps),Uncertainty Filter,Threshold,Sharpe,Annualized Return,Max Drawdown (%),Turnover,Hit Rate (%)
+Glencore,ARIMA,0.0,False,0.1,0.7123395144530474,0.17288918734779024,-4.627720918271009,1.3,50.0
+Glencore,ARIMA,0.0,True,0.1,0.0,0.0,0.0,0.0,0.0
+Glencore,ARIMA,10.0,False,0.1,-0.4886557656427209,-0.1561219825251441,-5.207936827892333,1.3,50.0
+Glencore,ARIMA,10.0,True,0.1,0.0,0.0,0.0,0.0,0.0
+Glencore,Paper-Style Causal VMD-ARIMA/LSTM,0.0,False,0.5,3.173144218234245,1.2409028461684137,-3.6671368124118593,0.7,70.0
+Glencore,Paper-Style Causal VMD-ARIMA/LSTM,0.0,True,0.5,-1.6669699998991188,-0.3019616514634531,-3.3850493653032485,0.6,20.0
+Glencore,Paper-Style Causal VMD-ARIMA/LSTM,10.0,False,0.5,2.5247798197091424,0.8803096078150228,-3.8603667136812505,0.7,70.0
+Glencore,Paper-Style Causal VMD-ARIMA/LSTM,10.0,True,0.5,-2.397173074830237,-0.40018638225919145,-3.677982751622002,0.6,20.0
+Glencore,Random Walk,0.0,False,0.0,0.0,0.0,0.0,0.0,0.0
+Glencore,Random Walk,0.0,True,0.0,0.0,0.0,0.0,0.0,0.0
+Glencore,Random Walk,10.0,False,0.0,0.0,0.0,0.0,0.0,0.0
+Glencore,Random Walk,10.0,True,0.0,0.0,0.0,0.0,0.0,0.0

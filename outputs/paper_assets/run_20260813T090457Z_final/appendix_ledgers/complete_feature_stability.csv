@@ -1,0 +1,56 @@
+Company,Feature,Selection Count,Selection Rate (%)
+Albemarle,Crude_Oil,10,24.390243902439025
+Albemarle,News_Sentiment,41,100.0
+Albemarle,SP500,29,70.73170731707317
+Albemarle,Search_Index,13,31.70731707317073
+Albemarle,Shanghai_Index,9,21.951219512195124
+Albemarle,US_Dollar_Index,8,19.51219512195122
+Albemarle,VIX,14,34.14634146341464
+Albemarle,mvis_critical_minerals,4,9.75609756097561
+Albemarle,target_lag_1,41,100.0
+Albemarle,target_lag_5,24,58.53658536585365
+Anglo American,SP500,7,17.073170731707318
+Anglo American,target_lag_1,41,100.0
+BHP Group,Crude_Oil,29,70.73170731707317
+BHP Group,News_Sentiment,41,100.0
+BHP Group,SP500,30,73.17073170731707
+BHP Group,Search_Index,1,2.4390243902439024
+BHP Group,target_lag_1,41,100.0
+Freeport-McMoRan,News_Sentiment,15,36.58536585365854
+Freeport-McMoRan,SP500,17,41.46341463414634
+Freeport-McMoRan,Search_Index,7,17.073170731707318
+Freeport-McMoRan,Shanghai_Index,12,29.268292682926827
+Freeport-McMoRan,VIX,18,43.90243902439025
+Freeport-McMoRan,target_lag_1,41,100.0
+Ganfeng Lithium,Crude_Oil,41,100.0
+Ganfeng Lithium,News_Sentiment,9,21.951219512195124
+Ganfeng Lithium,SP500,41,100.0
+Ganfeng Lithium,Search_Index,21,51.21951219512195
+Ganfeng Lithium,US_Dollar_Index,41,100.0
+Ganfeng Lithium,VIX,41,100.0
+Ganfeng Lithium,mvis_critical_minerals,34,82.92682926829268
+Ganfeng Lithium,target_lag_1,41,100.0
+Ganfeng Lithium,target_lag_2,41,100.0
+Ganfeng Lithium,target_lag_3,41,100.0
+Ganfeng Lithium,target_lag_4,41,100.0
+Glencore,Crude_Oil,41,100.0
+Glencore,SP500,7,17.073170731707318
+Glencore,Search_Index,2,4.878048780487805
+Glencore,mvis_critical_minerals,3,7.317073170731707
+Glencore,target_lag_1,41,100.0
+Glencore,target_lag_3,15,36.58536585365854
+Glencore,target_lag_4,41,100.0
+Glencore,target_lag_5,39,95.1219512195122
+Rio Tinto,SP500,40,97.5609756097561
+Rio Tinto,target_lag_1,41,100.0
+Zijin Mining,Crude_Oil,2,4.878048780487805
+Zijin Mining,News_Sentiment,24,58.53658536585365
+Zijin Mining,SP500,41,100.0
+Zijin Mining,Search_Index,36,87.8048780487805
+Zijin Mining,US_Dollar_Index,4,9.75609756097561
+Zijin Mining,VIX,27,65.85365853658537
+Zijin Mining,mvis_critical_minerals,25,60.97560975609756
+Zijin Mining,target_lag_1,41,100.0
+Zijin Mining,target_lag_2,29,70.73170731707317
+Zijin Mining,target_lag_3,2,4.878048780487805
+Zijin Mining,target_lag_4,40,97.5609756097561

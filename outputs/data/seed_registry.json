@@ -1,0 +1,51 @@
+{
+  "orchestrator": {
+    "python": 42,
+    "numpy": 42,
+    "torch": 42
+  },
+  "company_workers": {
+    "Glencore": {
+      "python": 42,
+      "numpy": 42,
+      "torch": 42
+    },
+    "BHP Group": {
+      "python": 43,
+      "numpy": 43,
+      "torch": 43
+    },
+    "Rio Tinto": {
+      "python": 44,
+      "numpy": 44,
+      "torch": 44
+    },
+    "Freeport-McMoRan": {
+      "python": 45,
+      "numpy": 45,
+      "torch": 45
+    },
+    "Albemarle": {
+      "python": 46,
+      "numpy": 46,
+      "torch": 46
+    },
+    "Zijin Mining": {
+      "python": 47,
+      "numpy": 47,
+      "torch": 47
+    },
+    "Ganfeng Lithium": {
+      "python": 48,
+      "numpy": 48,
+      "torch": 48
+    },
+    "Anglo American": {
+      "python": 49,
+      "numpy": 49,
+      "torch": 49
+    }
+  },
+  "run_id": "run_20260813T090457Z",
+  "progress_log_directory": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/outputs/run_logs/run_20260813T090457Z"
+}

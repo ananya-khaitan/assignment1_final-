@@ -1,0 +1,15 @@
+Target,Model,RMSE,MAE,MASE,MAPE,sMAPE,Directional Accuracy
+lithium_carbonate,ARIMA,3612.1970,1827.0413,0.9132,1.43,1.46,69.63
+lithium_carbonate,RF,5380.3212,3231.2770,1.6150,2.55,2.59,72.59
+lithium_carbonate,LSTM,11222.0126,9516.7432,4.7566,9.56,9.04,54.81
+lithium_carbonate,SVR,24629.9992,18864.5712,9.4288,21.87,18.25,56.30
+lithium_carbonate,ELM,41457.7667,34950.9727,17.4690,36.01,28.29,58.52
+lithium_carbonate,MLP,45712.4002,37502.1294,18.7441,40.06,30.61,48.15
+lithium_carbonate,ES,200226.2914,180239.9823,90.0866,165.22,86.50,54.07
+lithium_hydroxide,ARIMA,0.6437,0.2395,1.3159,1.76,1.92,29.29
+lithium_hydroxide,ELM,0.6542,0.2573,1.4138,1.71,1.79,28.57
+lithium_hydroxide,MLP,0.6766,0.4589,2.5212,3.52,3.54,35.00
+lithium_hydroxide,SVR,0.7060,0.5847,3.2129,4.95,4.83,38.57
+lithium_hydroxide,LSTM,0.7220,0.4668,2.5646,3.46,3.46,30.71
+lithium_hydroxide,RF,1.3033,0.8864,4.8704,6.01,5.76,37.14
+lithium_hydroxide,ES,4.8948,3.3720,18.5273,21.47,26.45,35.00

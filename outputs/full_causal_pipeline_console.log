@@ -1,0 +1,1333 @@
+============================================================
+BUILD MASTER: CAUSAL CRITICAL-MINERAL INPUTS
+============================================================
+Refinitiv: (3751, 8); 2011-05-19 to 2026-03-20
+Saved master_daily_prices.csv: (5420, 16); 2011-05-19 to 2026-03-20
+mvis_critical_minerals    0
+SP500                     0
+Shanghai_Index            0
+Crude_Oil                 0
+VIX                       0
+US_Dollar_Index           0
+Search_Index              0
+News_Sentiment            0
+========================================================================
+CAUSAL ONE-STEP WALK-FORWARD EXPERIMENT
+========================================================================
+Live progress logs: /mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/outputs/run_logs/run_20260813T090457Z
+Running 8 independent company experiments with 2 WSL workers
+Processing BHP Group: 60 calibration + 750 final-test forecasts
+Processing Glencore: 60 calibration + 750 final-test forecasts
+  Glencore: calibration forecast 5/60
+  Glencore: calibration forecast 10/60
+  Glencore: calibration forecast 15/60
+  Glencore: calibration forecast 20/60
+  BHP Group: calibration forecast 5/60
+  BHP Group: calibration forecast 10/60
+  BHP Group: calibration forecast 15/60
+  BHP Group: calibration forecast 20/60
+  Glencore: calibration forecast 25/60
+  Glencore: calibration forecast 30/60
+  Glencore: calibration forecast 35/60
+  Glencore: calibration forecast 40/60
+  BHP Group: calibration forecast 25/60
+  BHP Group: calibration forecast 30/60
+  BHP Group: calibration forecast 35/60
+  BHP Group: calibration forecast 40/60
+  Glencore: calibration forecast 45/60
+  Glencore: calibration forecast 50/60
+  Glencore: calibration forecast 55/60
+  Glencore: calibration forecast 60/60
+  BHP Group: calibration forecast 45/60
+  BHP Group: calibration forecast 50/60
+  BHP Group: calibration forecast 55/60
+  BHP Group: calibration forecast 60/60
+  Glencore: test forecast 5/750
+  Glencore: test forecast 10/750
+  Glencore: test forecast 15/750
+  Glencore: test forecast 20/750
+  BHP Group: test forecast 5/750
+  BHP Group: test forecast 10/750
+  BHP Group: test forecast 15/750
+  BHP Group: test forecast 20/750
+  Glencore: test forecast 25/750
+  Glencore: test forecast 30/750
+  Glencore: test forecast 35/750
+  Glencore: test forecast 40/750
+  BHP Group: test forecast 25/750
+  BHP Group: test forecast 30/750
+  BHP Group: test forecast 35/750
+  BHP Group: test forecast 40/750
+  Glencore: test forecast 45/750
+  Glencore: test forecast 50/750
+  Glencore: test forecast 55/750
+  Glencore: test forecast 60/750
+  BHP Group: test forecast 45/750
+  BHP Group: test forecast 50/750
+  BHP Group: test forecast 55/750
+  BHP Group: test forecast 60/750
+  Glencore: test forecast 65/750
+  Glencore: test forecast 70/750
+  Glencore: test forecast 75/750
+  Glencore: test forecast 80/750
+  BHP Group: test forecast 65/750
+  BHP Group: test forecast 70/750
+  BHP Group: test forecast 75/750
+  BHP Group: test forecast 80/750
+  Glencore: test forecast 85/750
+  Glencore: test forecast 90/750
+  Glencore: test forecast 95/750
+  Glencore: test forecast 100/750
+  BHP Group: test forecast 85/750
+  BHP Group: test forecast 90/750
+  BHP Group: test forecast 95/750
+  BHP Group: test forecast 100/750
+  Glencore: test forecast 105/750
+  Glencore: test forecast 110/750
+  Glencore: test forecast 115/750
+  Glencore: test forecast 120/750
+  BHP Group: test forecast 105/750
+  BHP Group: test forecast 110/750
+  BHP Group: test forecast 115/750
+  BHP Group: test forecast 120/750
+  Glencore: test forecast 125/750
+  Glencore: test forecast 130/750
+  Glencore: test forecast 135/750
+  Glencore: test forecast 140/750
+  BHP Group: test forecast 125/750
+  BHP Group: test forecast 130/750
+  BHP Group: test forecast 135/750
+  BHP Group: test forecast 140/750
+  Glencore: test forecast 145/750
+  Glencore: test forecast 150/750
+  Glencore: test forecast 155/750
+  Glencore: test forecast 160/750
+  BHP Group: test forecast 145/750
+  BHP Group: test forecast 150/750
+  BHP Group: test forecast 155/750
+  BHP Group: test forecast 160/750
+  Glencore: test forecast 165/750
+  Glencore: test forecast 170/750
+  Glencore: test forecast 175/750
+  Glencore: test forecast 180/750
+  BHP Group: test forecast 165/750
+  BHP Group: test forecast 170/750
+  BHP Group: test forecast 175/750
+  BHP Group: test forecast 180/750
+  Glencore: test forecast 185/750
+  Glencore: test forecast 190/750
+  Glencore: test forecast 195/750
+  Glencore: test forecast 200/750
+  BHP Group: test forecast 185/750
+  BHP Group: test forecast 190/750
+  BHP Group: test forecast 195/750
+  BHP Group: test forecast 200/750
+  Glencore: test forecast 205/750
+  Glencore: test forecast 210/750
+  Glencore: test forecast 215/750
+  Glencore: test forecast 220/750
+  Glencore: test forecast 225/750
+  BHP Group: test forecast 205/750
+  Glencore: test forecast 230/750
+  BHP Group: test forecast 210/750
+  Glencore: test forecast 235/750
+  BHP Group: test forecast 215/750
+  Glencore: test forecast 240/750
+  BHP Group: test forecast 220/750
+  Glencore: test forecast 245/750
+  Glencore: test forecast 250/750
+  Glencore: test forecast 255/750
+  Glencore: test forecast 260/750
+  BHP Group: test forecast 225/750
+  BHP Group: test forecast 230/750
+  BHP Group: test forecast 235/750
+  BHP Group: test forecast 240/750
+  Glencore: test forecast 265/750
+  Glencore: test forecast 270/750
+  Glencore: test forecast 275/750
+  Glencore: test forecast 280/750
+  BHP Group: test forecast 245/750
+  BHP Group: test forecast 250/750
+  BHP Group: test forecast 255/750
+  BHP Group: test forecast 260/750
+  Glencore: test forecast 285/750
+  Glencore: test forecast 290/750
+  Glencore: test forecast 295/750
+  Glencore: test forecast 300/750
+  BHP Group: test forecast 265/750
+  BHP Group: test forecast 270/750
+  BHP Group: test forecast 275/750
+  BHP Group: test forecast 280/750
+  Glencore: test forecast 305/750
+  Glencore: test forecast 310/750
+  Glencore: test forecast 315/750
+  Glencore: test forecast 320/750
+  BHP Group: test forecast 285/750
+  BHP Group: test forecast 290/750
+  BHP Group: test forecast 295/750
+  BHP Group: test forecast 300/750
+  Glencore: test forecast 325/750
+  Glencore: test forecast 330/750
+  Glencore: test forecast 335/750
+  Glencore: test forecast 340/750
+  BHP Group: test forecast 305/750
+  BHP Group: test forecast 310/750
+  BHP Group: test forecast 315/750
+  BHP Group: test forecast 320/750
+  Glencore: test forecast 345/750
+  Glencore: test forecast 350/750
+  Glencore: test forecast 355/750
+  Glencore: test forecast 360/750
+  BHP Group: test forecast 325/750
+  BHP Group: test forecast 330/750
+  BHP Group: test forecast 335/750
+  BHP Group: test forecast 340/750
+  Glencore: test forecast 365/750
+  Glencore: test forecast 370/750
+  Glencore: test forecast 375/750
+  Glencore: test forecast 380/750
+  BHP Group: test forecast 345/750
+  BHP Group: test forecast 350/750
+  BHP Group: test forecast 355/750
+  BHP Group: test forecast 360/750
+  Glencore: test forecast 385/750
+  Glencore: test forecast 390/750
+  Glencore: test forecast 395/750
+  Glencore: test forecast 400/750
+  BHP Group: test forecast 365/750
+  BHP Group: test forecast 370/750
+  BHP Group: test forecast 375/750
+  BHP Group: test forecast 380/750
+  Glencore: test forecast 405/750
+  Glencore: test forecast 410/750
+  Glencore: test forecast 415/750
+  Glencore: test forecast 420/750
+  BHP Group: test forecast 385/750
+  BHP Group: test forecast 390/750
+  BHP Group: test forecast 395/750
+  BHP Group: test forecast 400/750
+  Glencore: test forecast 425/750
+  Glencore: test forecast 430/750
+  Glencore: test forecast 435/750
+  Glencore: test forecast 440/750
+  BHP Group: test forecast 405/750
+  BHP Group: test forecast 410/750
+  BHP Group: test forecast 415/750
+  BHP Group: test forecast 420/750
+  Glencore: test forecast 445/750
+  Glencore: test forecast 450/750
+  Glencore: test forecast 455/750
+  Glencore: test forecast 460/750
+  BHP Group: test forecast 425/750
+  BHP Group: test forecast 430/750
+  BHP Group: test forecast 435/750
+  BHP Group: test forecast 440/750
+  Glencore: test forecast 465/750
+  Glencore: test forecast 470/750
+  Glencore: test forecast 475/750
+  Glencore: test forecast 480/750
+  BHP Group: test forecast 445/750
+  BHP Group: test forecast 450/750
+  BHP Group: test forecast 455/750
+  BHP Group: test forecast 460/750
+  Glencore: test forecast 485/750
+  Glencore: test forecast 490/750
+  Glencore: test forecast 495/750
+  Glencore: test forecast 500/750
+  BHP Group: test forecast 465/750
+  BHP Group: test forecast 470/750
+  BHP Group: test forecast 475/750
+  BHP Group: test forecast 480/750
+  Glencore: test forecast 505/750
+  Glencore: test forecast 510/750
+  Glencore: test forecast 515/750
+  Glencore: test forecast 520/750
+  BHP Group: test forecast 485/750
+  BHP Group: test forecast 490/750
+  BHP Group: test forecast 495/750
+  BHP Group: test forecast 500/750
+  Glencore: test forecast 525/750
+  Glencore: test forecast 530/750
+  Glencore: test forecast 535/750
+  Glencore: test forecast 540/750
+  BHP Group: test forecast 505/750
+  BHP Group: test forecast 510/750
+  BHP Group: test forecast 515/750
+  BHP Group: test forecast 520/750
+  Glencore: test forecast 545/750
+  Glencore: test forecast 550/750
+  Glencore: test forecast 555/750
+  Glencore: test forecast 560/750
+  BHP Group: test forecast 525/750
+  BHP Group: test forecast 530/750
+  BHP Group: test forecast 535/750
+  BHP Group: test forecast 540/750
+  Glencore: test forecast 565/750
+  Glencore: test forecast 570/750
+  Glencore: test forecast 575/750
+  Glencore: test forecast 580/750
+  BHP Group: test forecast 545/750
+  BHP Group: test forecast 550/750
+  BHP Group: test forecast 555/750
+  BHP Group: test forecast 560/750
+  Glencore: test forecast 585/750
+  Glencore: test forecast 590/750
+  Glencore: test forecast 595/750
+  Glencore: test forecast 600/750
+  BHP Group: test forecast 565/750
+  BHP Group: test forecast 570/750
+  BHP Group: test forecast 575/750
+  BHP Group: test forecast 580/750
+  Glencore: test forecast 605/750
+  Glencore: test forecast 610/750
+  Glencore: test forecast 615/750
+  Glencore: test forecast 620/750
+  BHP Group: test forecast 585/750
+  BHP Group: test forecast 590/750
+  BHP Group: test forecast 595/750
+  BHP Group: test forecast 600/750
+  Glencore: test forecast 625/750
+  Glencore: test forecast 630/750
+  Glencore: test forecast 635/750
+  Glencore: test forecast 640/750
+  BHP Group: test forecast 605/750
+  BHP Group: test forecast 610/750
+  BHP Group: test forecast 615/750
+  BHP Group: test forecast 620/750
+  Glencore: test forecast 645/750
+  Glencore: test forecast 650/750
+  Glencore: test forecast 655/750
+  Glencore: test forecast 660/750
+  BHP Group: test forecast 625/750
+  BHP Group: test forecast 630/750
+  BHP Group: test forecast 635/750
+  BHP Group: test forecast 640/750
+  Glencore: test forecast 665/750
+  Glencore: test forecast 670/750
+  Glencore: test forecast 675/750
+  Glencore: test forecast 680/750
+  BHP Group: test forecast 645/750
+  Glencore: test forecast 685/750
+  BHP Group: test forecast 650/750
+  Glencore: test forecast 690/750
+  BHP Group: test forecast 655/750
+  Glencore: test forecast 695/750
+  BHP Group: test forecast 660/750
+  Glencore: test forecast 700/750
+  Glencore: test forecast 705/750
+  Glencore: test forecast 710/750
+  Glencore: test forecast 715/750
+  Glencore: test forecast 720/750
+  BHP Group: test forecast 665/750
+  BHP Group: test forecast 670/750
+  BHP Group: test forecast 675/750
+  BHP Group: test forecast 680/750
+  Glencore: test forecast 725/750
+  Glencore: test forecast 730/750
+  Glencore: test forecast 735/750
+  Glencore: test forecast 740/750
+  BHP Group: test forecast 685/750
+  BHP Group: test forecast 690/750
+  BHP Group: test forecast 695/750
+  BHP Group: test forecast 700/750
+  Glencore: test forecast 745/750
+  Glencore: test forecast 750/750
+Completed Glencore
+Processing Rio Tinto: 60 calibration + 750 final-test forecasts
+  BHP Group: test forecast 705/750
+  BHP Group: test forecast 710/750
+  BHP Group: test forecast 715/750
+  BHP Group: test forecast 720/750
+  Rio Tinto: calibration forecast 5/60
+  Rio Tinto: calibration forecast 10/60
+  Rio Tinto: calibration forecast 15/60
+  Rio Tinto: calibration forecast 20/60
+  BHP Group: test forecast 725/750
+  BHP Group: test forecast 730/750
+  BHP Group: test forecast 735/750
+  BHP Group: test forecast 740/750
+  Rio Tinto: calibration forecast 25/60
+  Rio Tinto: calibration forecast 30/60
+  Rio Tinto: calibration forecast 35/60
+  Rio Tinto: calibration forecast 40/60
+  BHP Group: test forecast 745/750
+  BHP Group: test forecast 750/750
+Completed BHP Group
+Processing Freeport-McMoRan: 60 calibration + 750 final-test forecasts
+  Rio Tinto: calibration forecast 45/60
+  Rio Tinto: calibration forecast 50/60
+  Rio Tinto: calibration forecast 55/60
+  Rio Tinto: calibration forecast 60/60
+  Freeport-McMoRan: calibration forecast 5/60
+  Freeport-McMoRan: calibration forecast 10/60
+  Freeport-McMoRan: calibration forecast 15/60
+  Freeport-McMoRan: calibration forecast 20/60
+  Rio Tinto: test forecast 5/750
+  Rio Tinto: test forecast 10/750
+  Rio Tinto: test forecast 15/750
+  Rio Tinto: test forecast 20/750
+  Freeport-McMoRan: calibration forecast 25/60
+  Freeport-McMoRan: calibration forecast 30/60
+  Freeport-McMoRan: calibration forecast 35/60
+  Freeport-McMoRan: calibration forecast 40/60
+  Rio Tinto: test forecast 25/750
+  Rio Tinto: test forecast 30/750
+  Rio Tinto: test forecast 35/750
+  Rio Tinto: test forecast 40/750
+  Freeport-McMoRan: calibration forecast 45/60
+  Freeport-McMoRan: calibration forecast 50/60
+  Freeport-McMoRan: calibration forecast 55/60
+  Freeport-McMoRan: calibration forecast 60/60
+  Rio Tinto: test forecast 45/750
+  Rio Tinto: test forecast 50/750
+  Rio Tinto: test forecast 55/750
+  Rio Tinto: test forecast 60/750
+  Freeport-McMoRan: test forecast 5/750
+  Freeport-McMoRan: test forecast 10/750
+  Freeport-McMoRan: test forecast 15/750
+  Freeport-McMoRan: test forecast 20/750
+  Rio Tinto: test forecast 65/750
+  Rio Tinto: test forecast 70/750
+  Rio Tinto: test forecast 75/750
+  Rio Tinto: test forecast 80/750
+  Freeport-McMoRan: test forecast 25/750
+  Freeport-McMoRan: test forecast 30/750
+  Freeport-McMoRan: test forecast 35/750
+  Freeport-McMoRan: test forecast 40/750
+  Rio Tinto: test forecast 85/750
+  Rio Tinto: test forecast 90/750
+  Rio Tinto: test forecast 95/750
+  Rio Tinto: test forecast 100/750
+  Freeport-McMoRan: test forecast 45/750
+  Freeport-McMoRan: test forecast 50/750
+  Freeport-McMoRan: test forecast 55/750
+  Freeport-McMoRan: test forecast 60/750
+  Rio Tinto: test forecast 105/750
+  Rio Tinto: test forecast 110/750
+  Rio Tinto: test forecast 115/750
+  Rio Tinto: test forecast 120/750
+  Freeport-McMoRan: test forecast 65/750
+  Freeport-McMoRan: test forecast 70/750
+  Freeport-McMoRan: test forecast 75/750
+  Freeport-McMoRan: test forecast 80/750
+  Rio Tinto: test forecast 125/750
+  Rio Tinto: test forecast 130/750
+  Rio Tinto: test forecast 135/750
+  Rio Tinto: test forecast 140/750
+  Freeport-McMoRan: test forecast 85/750
+  Freeport-McMoRan: test forecast 90/750
+  Freeport-McMoRan: test forecast 95/750
+  Freeport-McMoRan: test forecast 100/750
+  Rio Tinto: test forecast 145/750
+  Rio Tinto: test forecast 150/750
+  Rio Tinto: test forecast 155/750
+  Rio Tinto: test forecast 160/750
+  Freeport-McMoRan: test forecast 105/750
+  Freeport-McMoRan: test forecast 110/750
+  Freeport-McMoRan: test forecast 115/750
+  Freeport-McMoRan: test forecast 120/750
+  Rio Tinto: test forecast 165/750
+  Rio Tinto: test forecast 170/750
+  Rio Tinto: test forecast 175/750
+  Rio Tinto: test forecast 180/750
+  Freeport-McMoRan: test forecast 125/750
+  Freeport-McMoRan: test forecast 130/750
+  Freeport-McMoRan: test forecast 135/750
+  Freeport-McMoRan: test forecast 140/750
+  Rio Tinto: test forecast 185/750
+  Rio Tinto: test forecast 190/750
+  Rio Tinto: test forecast 195/750
+  Rio Tinto: test forecast 200/750
+  Freeport-McMoRan: test forecast 145/750
+  Freeport-McMoRan: test forecast 150/750
+  Freeport-McMoRan: test forecast 155/750
+  Freeport-McMoRan: test forecast 160/750
+  Rio Tinto: test forecast 205/750
+  Rio Tinto: test forecast 210/750
+  Rio Tinto: test forecast 215/750
+  Rio Tinto: test forecast 220/750
+  Freeport-McMoRan: test forecast 165/750
+  Freeport-McMoRan: test forecast 170/750
+  Freeport-McMoRan: test forecast 175/750
+  Freeport-McMoRan: test forecast 180/750
+  Rio Tinto: test forecast 225/750
+  Rio Tinto: test forecast 230/750
+  Rio Tinto: test forecast 235/750
+  Rio Tinto: test forecast 240/750
+  Freeport-McMoRan: test forecast 185/750
+  Freeport-McMoRan: test forecast 190/750
+  Freeport-McMoRan: test forecast 195/750
+  Freeport-McMoRan: test forecast 200/750
+  Rio Tinto: test forecast 245/750
+  Rio Tinto: test forecast 250/750
+  Rio Tinto: test forecast 255/750
+  Rio Tinto: test forecast 260/750
+  Freeport-McMoRan: test forecast 205/750
+  Freeport-McMoRan: test forecast 210/750
+  Freeport-McMoRan: test forecast 215/750
+  Freeport-McMoRan: test forecast 220/750
+  Rio Tinto: test forecast 265/750
+  Rio Tinto: test forecast 270/750
+  Rio Tinto: test forecast 275/750
+  Rio Tinto: test forecast 280/750
+  Freeport-McMoRan: test forecast 225/750
+  Freeport-McMoRan: test forecast 230/750
+  Freeport-McMoRan: test forecast 235/750
+  Freeport-McMoRan: test forecast 240/750
+  Rio Tinto: test forecast 285/750
+  Rio Tinto: test forecast 290/750
+  Rio Tinto: test forecast 295/750
+  Rio Tinto: test forecast 300/750
+  Freeport-McMoRan: test forecast 245/750
+  Freeport-McMoRan: test forecast 250/750
+  Freeport-McMoRan: test forecast 255/750
+  Freeport-McMoRan: test forecast 260/750
+  Rio Tinto: test forecast 305/750
+  Rio Tinto: test forecast 310/750
+  Rio Tinto: test forecast 315/750
+  Rio Tinto: test forecast 320/750
+  Freeport-McMoRan: test forecast 265/750
+  Freeport-McMoRan: test forecast 270/750
+  Freeport-McMoRan: test forecast 275/750
+  Freeport-McMoRan: test forecast 280/750
+  Rio Tinto: test forecast 325/750
+  Rio Tinto: test forecast 330/750
+  Rio Tinto: test forecast 335/750
+  Rio Tinto: test forecast 340/750
+  Freeport-McMoRan: test forecast 285/750
+  Freeport-McMoRan: test forecast 290/750
+  Freeport-McMoRan: test forecast 295/750
+  Freeport-McMoRan: test forecast 300/750
+  Rio Tinto: test forecast 345/750
+  Rio Tinto: test forecast 350/750
+  Rio Tinto: test forecast 355/750
+  Rio Tinto: test forecast 360/750
+  Freeport-McMoRan: test forecast 305/750
+  Freeport-McMoRan: test forecast 310/750
+  Freeport-McMoRan: test forecast 315/750
+  Freeport-McMoRan: test forecast 320/750
+  Rio Tinto: test forecast 365/750
+  Rio Tinto: test forecast 370/750
+  Rio Tinto: test forecast 375/750
+  Rio Tinto: test forecast 380/750
+  Freeport-McMoRan: test forecast 325/750
+  Freeport-McMoRan: test forecast 330/750
+  Freeport-McMoRan: test forecast 335/750
+  Freeport-McMoRan: test forecast 340/750
+  Rio Tinto: test forecast 385/750
+  Rio Tinto: test forecast 390/750
+  Rio Tinto: test forecast 395/750
+  Rio Tinto: test forecast 400/750
+  Freeport-McMoRan: test forecast 345/750
+  Freeport-McMoRan: test forecast 350/750
+  Freeport-McMoRan: test forecast 355/750
+  Freeport-McMoRan: test forecast 360/750
+  Rio Tinto: test forecast 405/750
+  Rio Tinto: test forecast 410/750
+  Rio Tinto: test forecast 415/750
+  Rio Tinto: test forecast 420/750
+  Freeport-McMoRan: test forecast 365/750
+  Freeport-McMoRan: test forecast 370/750
+  Freeport-McMoRan: test forecast 375/750
+  Freeport-McMoRan: test forecast 380/750
+  Rio Tinto: test forecast 425/750
+  Rio Tinto: test forecast 430/750
+  Rio Tinto: test forecast 435/750
+  Rio Tinto: test forecast 440/750
+  Freeport-McMoRan: test forecast 385/750
+  Freeport-McMoRan: test forecast 390/750
+  Freeport-McMoRan: test forecast 395/750
+  Freeport-McMoRan: test forecast 400/750
+  Rio Tinto: test forecast 445/750
+  Rio Tinto: test forecast 450/750
+  Rio Tinto: test forecast 455/750
+  Rio Tinto: test forecast 460/750
+  Freeport-McMoRan: test forecast 405/750
+  Freeport-McMoRan: test forecast 410/750
+  Freeport-McMoRan: test forecast 415/750
+  Freeport-McMoRan: test forecast 420/750
+  Rio Tinto: test forecast 465/750
+  Rio Tinto: test forecast 470/750
+  Rio Tinto: test forecast 475/750
+  Rio Tinto: test forecast 480/750
+  Freeport-McMoRan: test forecast 425/750
+  Freeport-McMoRan: test forecast 430/750
+  Freeport-McMoRan: test forecast 435/750
+  Freeport-McMoRan: test forecast 440/750
+  Rio Tinto: test forecast 485/750
+  Rio Tinto: test forecast 490/750
+  Rio Tinto: test forecast 495/750
+  Rio Tinto: test forecast 500/750
+  Freeport-McMoRan: test forecast 445/750
+  Freeport-McMoRan: test forecast 450/750
+  Freeport-McMoRan: test forecast 455/750
+  Freeport-McMoRan: test forecast 460/750
+  Rio Tinto: test forecast 505/750
+  Rio Tinto: test forecast 510/750
+  Rio Tinto: test forecast 515/750
+  Rio Tinto: test forecast 520/750
+  Freeport-McMoRan: test forecast 465/750
+  Freeport-McMoRan: test forecast 470/750
+  Freeport-McMoRan: test forecast 475/750
+  Freeport-McMoRan: test forecast 480/750
+  Rio Tinto: test forecast 525/750
+  Rio Tinto: test forecast 530/750
+  Rio Tinto: test forecast 535/750
+  Rio Tinto: test forecast 540/750
+  Freeport-McMoRan: test forecast 485/750
+  Freeport-McMoRan: test forecast 490/750
+  Freeport-McMoRan: test forecast 495/750
+  Freeport-McMoRan: test forecast 500/750
+  Rio Tinto: test forecast 545/750
+  Rio Tinto: test forecast 550/750
+  Rio Tinto: test forecast 555/750
+  Rio Tinto: test forecast 560/750
+  Freeport-McMoRan: test forecast 505/750
+  Freeport-McMoRan: test forecast 510/750
+  Freeport-McMoRan: test forecast 515/750
+  Freeport-McMoRan: test forecast 520/750
+  Rio Tinto: test forecast 565/750
+  Rio Tinto: test forecast 570/750
+  Rio Tinto: test forecast 575/750
+  Rio Tinto: test forecast 580/750
+  Freeport-McMoRan: test forecast 525/750
+  Freeport-McMoRan: test forecast 530/750
+  Freeport-McMoRan: test forecast 535/750
+  Freeport-McMoRan: test forecast 540/750
+  Rio Tinto: test forecast 585/750
+  Rio Tinto: test forecast 590/750
+  Rio Tinto: test forecast 595/750
+  Rio Tinto: test forecast 600/750
+  Freeport-McMoRan: test forecast 545/750
+  Freeport-McMoRan: test forecast 550/750
+  Freeport-McMoRan: test forecast 555/750
+  Freeport-McMoRan: test forecast 560/750
+  Rio Tinto: test forecast 605/750
+  Rio Tinto: test forecast 610/750
+  Rio Tinto: test forecast 615/750
+  Rio Tinto: test forecast 620/750
+  Freeport-McMoRan: test forecast 565/750
+  Freeport-McMoRan: test forecast 570/750
+  Freeport-McMoRan: test forecast 575/750
+  Freeport-McMoRan: test forecast 580/750
+  Rio Tinto: test forecast 625/750
+  Rio Tinto: test forecast 630/750
+  Rio Tinto: test forecast 635/750
+  Rio Tinto: test forecast 640/750
+  Freeport-McMoRan: test forecast 585/750
+  Freeport-McMoRan: test forecast 590/750
+  Freeport-McMoRan: test forecast 595/750
+  Freeport-McMoRan: test forecast 600/750
+  Rio Tinto: test forecast 645/750
+  Rio Tinto: test forecast 650/750
+  Rio Tinto: test forecast 655/750
+  Rio Tinto: test forecast 660/750
+  Freeport-McMoRan: test forecast 605/750
+  Freeport-McMoRan: test forecast 610/750
+  Freeport-McMoRan: test forecast 615/750
+  Freeport-McMoRan: test forecast 620/750
+  Rio Tinto: test forecast 665/750
+  Rio Tinto: test forecast 670/750
+  Rio Tinto: test forecast 675/750
+  Rio Tinto: test forecast 680/750
+  Freeport-McMoRan: test forecast 625/750
+  Freeport-McMoRan: test forecast 630/750
+  Freeport-McMoRan: test forecast 635/750
+  Freeport-McMoRan: test forecast 640/750
+  Rio Tinto: test forecast 685/750
+  Rio Tinto: test forecast 690/750
+  Rio Tinto: test forecast 695/750
+  Rio Tinto: test forecast 700/750
+  Freeport-McMoRan: test forecast 645/750
+  Freeport-McMoRan: test forecast 650/750
+  Freeport-McMoRan: test forecast 655/750
+  Freeport-McMoRan: test forecast 660/750
+  Rio Tinto: test forecast 705/750
+  Rio Tinto: test forecast 710/750
+  Rio Tinto: test forecast 715/750
+  Rio Tinto: test forecast 720/750
+  Freeport-McMoRan: test forecast 665/750
+  Freeport-McMoRan: test forecast 670/750
+  Freeport-McMoRan: test forecast 675/750
+  Freeport-McMoRan: test forecast 680/750
+  Rio Tinto: test forecast 725/750
+  Rio Tinto: test forecast 730/750
+  Rio Tinto: test forecast 735/750
+  Rio Tinto: test forecast 740/750
+  Freeport-McMoRan: test forecast 685/750
+  Freeport-McMoRan: test forecast 690/750
+  Freeport-McMoRan: test forecast 695/750
+  Freeport-McMoRan: test forecast 700/750
+  Rio Tinto: test forecast 745/750
+  Rio Tinto: test forecast 750/750
+Completed Rio Tinto
+Processing Albemarle: 60 calibration + 750 final-test forecasts
+  Freeport-McMoRan: test forecast 705/750
+  Freeport-McMoRan: test forecast 710/750
+  Freeport-McMoRan: test forecast 715/750
+  Freeport-McMoRan: test forecast 720/750
+  Albemarle: calibration forecast 5/60
+  Albemarle: calibration forecast 10/60
+  Albemarle: calibration forecast 15/60
+  Albemarle: calibration forecast 20/60
+  Freeport-McMoRan: test forecast 725/750
+  Freeport-McMoRan: test forecast 730/750
+  Freeport-McMoRan: test forecast 735/750
+  Freeport-McMoRan: test forecast 740/750
+  Albemarle: calibration forecast 25/60
+  Albemarle: calibration forecast 30/60
+  Albemarle: calibration forecast 35/60
+  Albemarle: calibration forecast 40/60
+  Freeport-McMoRan: test forecast 745/750
+  Freeport-McMoRan: test forecast 750/750
+Completed Freeport-McMoRan
+Processing Zijin Mining: 60 calibration + 750 final-test forecasts
+  Albemarle: calibration forecast 45/60
+  Albemarle: calibration forecast 50/60
+  Albemarle: calibration forecast 55/60
+  Albemarle: calibration forecast 60/60
+  Zijin Mining: calibration forecast 5/60
+  Zijin Mining: calibration forecast 10/60
+  Zijin Mining: calibration forecast 15/60
+  Zijin Mining: calibration forecast 20/60
+  Albemarle: test forecast 5/750
+  Albemarle: test forecast 10/750
+  Albemarle: test forecast 15/750
+  Albemarle: test forecast 20/750
+  Zijin Mining: calibration forecast 25/60
+  Zijin Mining: calibration forecast 30/60
+  Zijin Mining: calibration forecast 35/60
+  Zijin Mining: calibration forecast 40/60
+  Albemarle: test forecast 25/750
+  Albemarle: test forecast 30/750
+  Albemarle: test forecast 35/750
+  Albemarle: test forecast 40/750
+  Zijin Mining: calibration forecast 45/60
+  Zijin Mining: calibration forecast 50/60
+  Zijin Mining: calibration forecast 55/60
+  Zijin Mining: calibration forecast 60/60
+  Albemarle: test forecast 45/750
+  Albemarle: test forecast 50/750
+  Albemarle: test forecast 55/750
+  Albemarle: test forecast 60/750
+  Zijin Mining: test forecast 5/750
+  Zijin Mining: test forecast 10/750
+  Zijin Mining: test forecast 15/750
+  Zijin Mining: test forecast 20/750
+  Albemarle: test forecast 65/750
+  Albemarle: test forecast 70/750
+  Albemarle: test forecast 75/750
+  Albemarle: test forecast 80/750
+  Zijin Mining: test forecast 25/750
+  Zijin Mining: test forecast 30/750
+  Zijin Mining: test forecast 35/750
+  Zijin Mining: test forecast 40/750
+  Albemarle: test forecast 85/750
+  Albemarle: test forecast 90/750
+  Albemarle: test forecast 95/750
+  Albemarle: test forecast 100/750
+  Zijin Mining: test forecast 45/750
+  Zijin Mining: test forecast 50/750
+  Zijin Mining: test forecast 55/750
+  Zijin Mining: test forecast 60/750
+  Albemarle: test forecast 105/750
+  Albemarle: test forecast 110/750
+  Albemarle: test forecast 115/750
+  Albemarle: test forecast 120/750
+  Zijin Mining: test forecast 65/750
+  Zijin Mining: test forecast 70/750
+  Zijin Mining: test forecast 75/750
+  Zijin Mining: test forecast 80/750
+  Albemarle: test forecast 125/750
+  Albemarle: test forecast 130/750
+  Albemarle: test forecast 135/750
+  Albemarle: test forecast 140/750
+  Zijin Mining: test forecast 85/750
+  Zijin Mining: test forecast 90/750
+  Zijin Mining: test forecast 95/750
+  Zijin Mining: test forecast 100/750
+  Albemarle: test forecast 145/750
+  Albemarle: test forecast 150/750
+  Albemarle: test forecast 155/750
+  Albemarle: test forecast 160/750
+  Zijin Mining: test forecast 105/750
+  Zijin Mining: test forecast 110/750
+  Zijin Mining: test forecast 115/750
+  Zijin Mining: test forecast 120/750
+  Albemarle: test forecast 165/750
+  Zijin Mining: test forecast 125/750
+  Albemarle: test forecast 170/750
+  Zijin Mining: test forecast 130/750
+  Albemarle: test forecast 175/750
+  Zijin Mining: test forecast 135/750
+  Albemarle: test forecast 180/750
+  Zijin Mining: test forecast 140/750
+  Zijin Mining: test forecast 145/750
+  Zijin Mining: test forecast 150/750
+  Zijin Mining: test forecast 155/750
+  Zijin Mining: test forecast 160/750
+  Albemarle: test forecast 185/750
+  Albemarle: test forecast 190/750
+  Albemarle: test forecast 195/750
+  Albemarle: test forecast 200/750
+  Zijin Mining: test forecast 165/750
+  Zijin Mining: test forecast 170/750
+  Zijin Mining: test forecast 175/750
+  Zijin Mining: test forecast 180/750
+  Albemarle: test forecast 205/750
+  Albemarle: test forecast 210/750
+  Albemarle: test forecast 215/750
+  Albemarle: test forecast 220/750
+  Zijin Mining: test forecast 185/750
+  Zijin Mining: test forecast 190/750
+  Zijin Mining: test forecast 195/750
+  Zijin Mining: test forecast 200/750
+  Albemarle: test forecast 225/750
+  Albemarle: test forecast 230/750
+  Albemarle: test forecast 235/750
+  Albemarle: test forecast 240/750
+  Zijin Mining: test forecast 205/750
+  Zijin Mining: test forecast 210/750
+  Zijin Mining: test forecast 215/750
+  Zijin Mining: test forecast 220/750
+  Albemarle: test forecast 245/750
+  Albemarle: test forecast 250/750
+  Albemarle: test forecast 255/750
+  Albemarle: test forecast 260/750
+  Zijin Mining: test forecast 225/750
+  Zijin Mining: test forecast 230/750
+  Zijin Mining: test forecast 235/750
+  Zijin Mining: test forecast 240/750
+  Albemarle: test forecast 265/750
+  Albemarle: test forecast 270/750
+  Albemarle: test forecast 275/750
+  Albemarle: test forecast 280/750
+  Zijin Mining: test forecast 245/750
+  Zijin Mining: test forecast 250/750
+  Zijin Mining: test forecast 255/750
+  Zijin Mining: test forecast 260/750
+  Albemarle: test forecast 285/750
+  Albemarle: test forecast 290/750
+  Albemarle: test forecast 295/750
+  Albemarle: test forecast 300/750
+  Zijin Mining: test forecast 265/750
+  Zijin Mining: test forecast 270/750
+  Zijin Mining: test forecast 275/750
+  Zijin Mining: test forecast 280/750
+  Albemarle: test forecast 305/750
+  Albemarle: test forecast 310/750
+  Albemarle: test forecast 315/750
+  Albemarle: test forecast 320/750
+  Zijin Mining: test forecast 285/750
+  Zijin Mining: test forecast 290/750
+  Zijin Mining: test forecast 295/750
+  Zijin Mining: test forecast 300/750
+  Albemarle: test forecast 325/750
+  Albemarle: test forecast 330/750
+  Albemarle: test forecast 335/750
+  Albemarle: test forecast 340/750
+  Zijin Mining: test forecast 305/750
+  Zijin Mining: test forecast 310/750
+  Zijin Mining: test forecast 315/750
+  Zijin Mining: test forecast 320/750
+  Albemarle: test forecast 345/750
+  Albemarle: test forecast 350/750
+  Albemarle: test forecast 355/750
+  Albemarle: test forecast 360/750
+  Zijin Mining: test forecast 325/750
+  Zijin Mining: test forecast 330/750
+  Zijin Mining: test forecast 335/750
+  Zijin Mining: test forecast 340/750
+  Albemarle: test forecast 365/750
+  Albemarle: test forecast 370/750
+  Albemarle: test forecast 375/750
+  Albemarle: test forecast 380/750
+  Zijin Mining: test forecast 345/750
+  Zijin Mining: test forecast 350/750
+  Zijin Mining: test forecast 355/750
+  Zijin Mining: test forecast 360/750
+  Albemarle: test forecast 385/750
+  Albemarle: test forecast 390/750
+  Albemarle: test forecast 395/750
+  Albemarle: test forecast 400/750
+  Zijin Mining: test forecast 365/750
+  Zijin Mining: test forecast 370/750
+  Zijin Mining: test forecast 375/750
+  Zijin Mining: test forecast 380/750
+  Albemarle: test forecast 405/750
+  Albemarle: test forecast 410/750
+  Albemarle: test forecast 415/750
+  Albemarle: test forecast 420/750
+  Zijin Mining: test forecast 385/750
+  Zijin Mining: test forecast 390/750
+  Zijin Mining: test forecast 395/750
+  Zijin Mining: test forecast 400/750
+  Albemarle: test forecast 425/750
+  Albemarle: test forecast 430/750
+  Albemarle: test forecast 435/750
+  Albemarle: test forecast 440/750
+  Zijin Mining: test forecast 405/750
+  Zijin Mining: test forecast 410/750
+  Zijin Mining: test forecast 415/750
+  Zijin Mining: test forecast 420/750
+  Albemarle: test forecast 445/750
+  Albemarle: test forecast 450/750
+  Albemarle: test forecast 455/750
+  Albemarle: test forecast 460/750
+  Zijin Mining: test forecast 425/750
+  Zijin Mining: test forecast 430/750
+  Zijin Mining: test forecast 435/750
+  Zijin Mining: test forecast 440/750
+  Albemarle: test forecast 465/750
+  Albemarle: test forecast 470/750
+  Albemarle: test forecast 475/750
+  Albemarle: test forecast 480/750
+  Zijin Mining: test forecast 445/750
+  Zijin Mining: test forecast 450/750
+  Zijin Mining: test forecast 455/750
+  Zijin Mining: test forecast 460/750
+  Albemarle: test forecast 485/750
+  Albemarle: test forecast 490/750
+  Albemarle: test forecast 495/750
+  Albemarle: test forecast 500/750
+  Zijin Mining: test forecast 465/750
+  Zijin Mining: test forecast 470/750
+  Zijin Mining: test forecast 475/750
+  Zijin Mining: test forecast 480/750
+  Albemarle: test forecast 505/750
+  Albemarle: test forecast 510/750
+  Albemarle: test forecast 515/750
+  Albemarle: test forecast 520/750
+  Zijin Mining: test forecast 485/750
+  Zijin Mining: test forecast 490/750
+  Zijin Mining: test forecast 495/750
+  Zijin Mining: test forecast 500/750
+  Albemarle: test forecast 525/750
+  Albemarle: test forecast 530/750
+  Albemarle: test forecast 535/750
+  Albemarle: test forecast 540/750
+  Zijin Mining: test forecast 505/750
+  Zijin Mining: test forecast 510/750
+  Zijin Mining: test forecast 515/750
+  Zijin Mining: test forecast 520/750
+  Zijin Mining: test forecast 525/750
+  Zijin Mining: test forecast 530/750
+  Albemarle: test forecast 545/750
+  Zijin Mining: test forecast 535/750
+  Albemarle: test forecast 550/750
+  Zijin Mining: test forecast 540/750
+  Albemarle: test forecast 555/750
+  Albemarle: test forecast 560/750
+  Zijin Mining: test forecast 545/750
+  Zijin Mining: test forecast 550/750
+  Zijin Mining: test forecast 555/750
+  Zijin Mining: test forecast 560/750
+  Albemarle: test forecast 565/750
+  Albemarle: test forecast 570/750
+  Albemarle: test forecast 575/750
+  Albemarle: test forecast 580/750
+  Zijin Mining: test forecast 565/750
+  Zijin Mining: test forecast 570/750
+  Zijin Mining: test forecast 575/750
+  Zijin Mining: test forecast 580/750
+  Albemarle: test forecast 585/750
+  Albemarle: test forecast 590/750
+  Albemarle: test forecast 595/750
+  Albemarle: test forecast 600/750
+  Zijin Mining: test forecast 585/750
+  Zijin Mining: test forecast 590/750
+  Zijin Mining: test forecast 595/750
+  Zijin Mining: test forecast 600/750
+  Albemarle: test forecast 605/750
+  Albemarle: test forecast 610/750
+  Albemarle: test forecast 615/750
+  Albemarle: test forecast 620/750
+  Zijin Mining: test forecast 605/750
+  Zijin Mining: test forecast 610/750
+  Zijin Mining: test forecast 615/750
+  Zijin Mining: test forecast 620/750
+  Albemarle: test forecast 625/750
+  Albemarle: test forecast 630/750
+  Albemarle: test forecast 635/750
+  Albemarle: test forecast 640/750
+  Zijin Mining: test forecast 625/750
+  Zijin Mining: test forecast 630/750
+  Zijin Mining: test forecast 635/750
+  Zijin Mining: test forecast 640/750
+  Albemarle: test forecast 645/750
+  Albemarle: test forecast 650/750
+  Albemarle: test forecast 655/750
+  Albemarle: test forecast 660/750
+  Zijin Mining: test forecast 645/750
+  Zijin Mining: test forecast 650/750
+  Zijin Mining: test forecast 655/750
+  Zijin Mining: test forecast 660/750
+  Albemarle: test forecast 665/750
+  Albemarle: test forecast 670/750
+  Albemarle: test forecast 675/750
+  Albemarle: test forecast 680/750
+  Zijin Mining: test forecast 665/750
+  Zijin Mining: test forecast 670/750
+  Zijin Mining: test forecast 675/750
+  Zijin Mining: test forecast 680/750
+  Albemarle: test forecast 685/750
+  Albemarle: test forecast 690/750
+  Albemarle: test forecast 695/750
+  Albemarle: test forecast 700/750
+  Zijin Mining: test forecast 685/750
+  Zijin Mining: test forecast 690/750
+  Zijin Mining: test forecast 695/750
+  Zijin Mining: test forecast 700/750
+  Albemarle: test forecast 705/750
+  Albemarle: test forecast 710/750
+  Albemarle: test forecast 715/750
+  Albemarle: test forecast 720/750
+  Zijin Mining: test forecast 705/750
+  Zijin Mining: test forecast 710/750
+  Zijin Mining: test forecast 715/750
+  Zijin Mining: test forecast 720/750
+  Albemarle: test forecast 725/750
+  Albemarle: test forecast 730/750
+  Albemarle: test forecast 735/750
+  Albemarle: test forecast 740/750
+  Zijin Mining: test forecast 725/750
+  Zijin Mining: test forecast 730/750
+  Zijin Mining: test forecast 735/750
+  Zijin Mining: test forecast 740/750
+  Albemarle: test forecast 745/750
+  Albemarle: test forecast 750/750
+Completed Albemarle
+Processing Ganfeng Lithium: 60 calibration + 750 final-test forecasts
+  Zijin Mining: test forecast 745/750
+  Zijin Mining: test forecast 750/750
+Completed Zijin Mining
+Processing Anglo American: 60 calibration + 750 final-test forecasts
+  Ganfeng Lithium: calibration forecast 5/60
+  Ganfeng Lithium: calibration forecast 10/60
+  Ganfeng Lithium: calibration forecast 15/60
+  Ganfeng Lithium: calibration forecast 20/60
+  Anglo American: calibration forecast 5/60
+  Anglo American: calibration forecast 10/60
+  Anglo American: calibration forecast 15/60
+  Anglo American: calibration forecast 20/60
+  Ganfeng Lithium: calibration forecast 25/60
+  Ganfeng Lithium: calibration forecast 30/60
+  Ganfeng Lithium: calibration forecast 35/60
+  Ganfeng Lithium: calibration forecast 40/60
+  Anglo American: calibration forecast 25/60
+  Anglo American: calibration forecast 30/60
+  Anglo American: calibration forecast 35/60
+  Anglo American: calibration forecast 40/60
+  Ganfeng Lithium: calibration forecast 45/60
+  Ganfeng Lithium: calibration forecast 50/60
+  Ganfeng Lithium: calibration forecast 55/60
+  Ganfeng Lithium: calibration forecast 60/60
+  Anglo American: calibration forecast 45/60
+  Anglo American: calibration forecast 50/60
+  Anglo American: calibration forecast 55/60
+  Anglo American: calibration forecast 60/60
+  Ganfeng Lithium: test forecast 5/750
+  Ganfeng Lithium: test forecast 10/750
+  Ganfeng Lithium: test forecast 15/750
+  Ganfeng Lithium: test forecast 20/750
+  Anglo American: test forecast 5/750
+  Anglo American: test forecast 10/750
+  Anglo American: test forecast 15/750
+  Anglo American: test forecast 20/750
+  Ganfeng Lithium: test forecast 25/750
+  Ganfeng Lithium: test forecast 30/750
+  Ganfeng Lithium: test forecast 35/750
+  Ganfeng Lithium: test forecast 40/750
+  Anglo American: test forecast 25/750
+  Anglo American: test forecast 30/750
+  Anglo American: test forecast 35/750
+  Anglo American: test forecast 40/750
+  Ganfeng Lithium: test forecast 45/750
+  Ganfeng Lithium: test forecast 50/750
+  Ganfeng Lithium: test forecast 55/750
+  Ganfeng Lithium: test forecast 60/750
+  Anglo American: test forecast 45/750
+  Anglo American: test forecast 50/750
+  Anglo American: test forecast 55/750
+  Anglo American: test forecast 60/750
+  Ganfeng Lithium: test forecast 65/750
+  Ganfeng Lithium: test forecast 70/750
+  Ganfeng Lithium: test forecast 75/750
+  Ganfeng Lithium: test forecast 80/750
+  Anglo American: test forecast 65/750
+  Anglo American: test forecast 70/750
+  Anglo American: test forecast 75/750
+  Anglo American: test forecast 80/750
+  Ganfeng Lithium: test forecast 85/750
+  Ganfeng Lithium: test forecast 90/750
+  Ganfeng Lithium: test forecast 95/750
+  Ganfeng Lithium: test forecast 100/750
+  Anglo American: test forecast 85/750
+  Anglo American: test forecast 90/750
+  Anglo American: test forecast 95/750
+  Anglo American: test forecast 100/750
+  Ganfeng Lithium: test forecast 105/750
+  Ganfeng Lithium: test forecast 110/750
+  Ganfeng Lithium: test forecast 115/750
+  Ganfeng Lithium: test forecast 120/750
+  Anglo American: test forecast 105/750
+  Anglo American: test forecast 110/750
+  Anglo American: test forecast 115/750
+  Anglo American: test forecast 120/750
+  Ganfeng Lithium: test forecast 125/750
+  Ganfeng Lithium: test forecast 130/750
+  Ganfeng Lithium: test forecast 135/750
+  Ganfeng Lithium: test forecast 140/750
+  Anglo American: test forecast 125/750
+  Anglo American: test forecast 130/750
+  Anglo American: test forecast 135/750
+  Anglo American: test forecast 140/750
+  Ganfeng Lithium: test forecast 145/750
+  Ganfeng Lithium: test forecast 150/750
+  Ganfeng Lithium: test forecast 155/750
+  Ganfeng Lithium: test forecast 160/750
+  Anglo American: test forecast 145/750
+  Anglo American: test forecast 150/750
+  Anglo American: test forecast 155/750
+  Anglo American: test forecast 160/750
+  Ganfeng Lithium: test forecast 165/750
+  Ganfeng Lithium: test forecast 170/750
+  Ganfeng Lithium: test forecast 175/750
+  Ganfeng Lithium: test forecast 180/750
+  Anglo American: test forecast 165/750
+  Anglo American: test forecast 170/750
+  Anglo American: test forecast 175/750
+  Anglo American: test forecast 180/750
+  Ganfeng Lithium: test forecast 185/750
+  Ganfeng Lithium: test forecast 190/750
+  Ganfeng Lithium: test forecast 195/750
+  Ganfeng Lithium: test forecast 200/750
+  Anglo American: test forecast 185/750
+  Anglo American: test forecast 190/750
+  Anglo American: test forecast 195/750
+  Anglo American: test forecast 200/750
+  Ganfeng Lithium: test forecast 205/750
+  Ganfeng Lithium: test forecast 210/750
+  Ganfeng Lithium: test forecast 215/750
+  Ganfeng Lithium: test forecast 220/750
+  Anglo American: test forecast 205/750
+  Anglo American: test forecast 210/750
+  Anglo American: test forecast 215/750
+  Anglo American: test forecast 220/750
+  Ganfeng Lithium: test forecast 225/750
+  Ganfeng Lithium: test forecast 230/750
+  Ganfeng Lithium: test forecast 235/750
+  Ganfeng Lithium: test forecast 240/750
+  Anglo American: test forecast 225/750
+  Anglo American: test forecast 230/750
+  Anglo American: test forecast 235/750
+  Anglo American: test forecast 240/750
+  Ganfeng Lithium: test forecast 245/750
+  Ganfeng Lithium: test forecast 250/750
+  Ganfeng Lithium: test forecast 255/750
+  Ganfeng Lithium: test forecast 260/750
+  Anglo American: test forecast 245/750
+  Anglo American: test forecast 250/750
+  Anglo American: test forecast 255/750
+  Anglo American: test forecast 260/750
+  Ganfeng Lithium: test forecast 265/750
+  Ganfeng Lithium: test forecast 270/750
+  Ganfeng Lithium: test forecast 275/750
+  Ganfeng Lithium: test forecast 280/750
+  Anglo American: test forecast 265/750
+  Anglo American: test forecast 270/750
+  Anglo American: test forecast 275/750
+  Anglo American: test forecast 280/750
+  Ganfeng Lithium: test forecast 285/750
+  Ganfeng Lithium: test forecast 290/750
+  Ganfeng Lithium: test forecast 295/750
+  Ganfeng Lithium: test forecast 300/750
+  Anglo American: test forecast 285/750
+  Ganfeng Lithium: test forecast 305/750
+  Anglo American: test forecast 290/750
+  Ganfeng Lithium: test forecast 310/750
+  Anglo American: test forecast 295/750
+  Ganfeng Lithium: test forecast 315/750
+  Anglo American: test forecast 300/750
+  Ganfeng Lithium: test forecast 320/750
+  Ganfeng Lithium: test forecast 325/750
+  Ganfeng Lithium: test forecast 330/750
+  Ganfeng Lithium: test forecast 335/750
+  Anglo American: test forecast 305/750
+  Ganfeng Lithium: test forecast 340/750
+  Anglo American: test forecast 310/750
+  Anglo American: test forecast 315/750
+  Anglo American: test forecast 320/750
+  Ganfeng Lithium: test forecast 345/750
+  Ganfeng Lithium: test forecast 350/750
+  Ganfeng Lithium: test forecast 355/750
+  Ganfeng Lithium: test forecast 360/750
+  Anglo American: test forecast 325/750
+  Anglo American: test forecast 330/750
+  Anglo American: test forecast 335/750
+  Anglo American: test forecast 340/750
+  Ganfeng Lithium: test forecast 365/750
+  Ganfeng Lithium: test forecast 370/750
+  Ganfeng Lithium: test forecast 375/750
+  Ganfeng Lithium: test forecast 380/750
+  Anglo American: test forecast 345/750
+  Anglo American: test forecast 350/750
+  Anglo American: test forecast 355/750
+  Anglo American: test forecast 360/750
+  Ganfeng Lithium: test forecast 385/750
+  Ganfeng Lithium: test forecast 390/750
+  Ganfeng Lithium: test forecast 395/750
+  Ganfeng Lithium: test forecast 400/750
+  Anglo American: test forecast 365/750
+  Anglo American: test forecast 370/750
+  Anglo American: test forecast 375/750
+  Anglo American: test forecast 380/750
+  Ganfeng Lithium: test forecast 405/750
+  Ganfeng Lithium: test forecast 410/750
+  Ganfeng Lithium: test forecast 415/750
+  Ganfeng Lithium: test forecast 420/750
+  Anglo American: test forecast 385/750
+  Anglo American: test forecast 390/750
+  Anglo American: test forecast 395/750
+  Anglo American: test forecast 400/750
+  Ganfeng Lithium: test forecast 425/750
+  Ganfeng Lithium: test forecast 430/750
+  Ganfeng Lithium: test forecast 435/750
+  Ganfeng Lithium: test forecast 440/750
+  Anglo American: test forecast 405/750
+  Anglo American: test forecast 410/750
+  Anglo American: test forecast 415/750
+  Anglo American: test forecast 420/750
+  Ganfeng Lithium: test forecast 445/750
+  Ganfeng Lithium: test forecast 450/750
+  Ganfeng Lithium: test forecast 455/750
+  Ganfeng Lithium: test forecast 460/750
+  Anglo American: test forecast 425/750
+  Anglo American: test forecast 430/750
+  Anglo American: test forecast 435/750
+  Anglo American: test forecast 440/750
+  Ganfeng Lithium: test forecast 465/750
+  Ganfeng Lithium: test forecast 470/750
+  Ganfeng Lithium: test forecast 475/750
+  Ganfeng Lithium: test forecast 480/750
+  Anglo American: test forecast 445/750
+  Anglo American: test forecast 450/750
+  Anglo American: test forecast 455/750
+  Anglo American: test forecast 460/750
+  Ganfeng Lithium: test forecast 485/750
+  Ganfeng Lithium: test forecast 490/750
+  Ganfeng Lithium: test forecast 495/750
+  Ganfeng Lithium: test forecast 500/750
+  Anglo American: test forecast 465/750
+  Anglo American: test forecast 470/750
+  Anglo American: test forecast 475/750
+  Anglo American: test forecast 480/750
+  Ganfeng Lithium: test forecast 505/750
+  Ganfeng Lithium: test forecast 510/750
+  Ganfeng Lithium: test forecast 515/750
+  Ganfeng Lithium: test forecast 520/750
+  Anglo American: test forecast 485/750
+  Anglo American: test forecast 490/750
+  Anglo American: test forecast 495/750
+  Anglo American: test forecast 500/750
+  Ganfeng Lithium: test forecast 525/750
+  Ganfeng Lithium: test forecast 530/750
+  Ganfeng Lithium: test forecast 535/750
+  Ganfeng Lithium: test forecast 540/750
+  Anglo American: test forecast 505/750
+  Anglo American: test forecast 510/750
+  Anglo American: test forecast 515/750
+  Anglo American: test forecast 520/750
+  Ganfeng Lithium: test forecast 545/750
+  Ganfeng Lithium: test forecast 550/750
+  Ganfeng Lithium: test forecast 555/750
+  Ganfeng Lithium: test forecast 560/750
+  Anglo American: test forecast 525/750
+  Anglo American: test forecast 530/750
+  Anglo American: test forecast 535/750
+  Anglo American: test forecast 540/750
+  Ganfeng Lithium: test forecast 565/750
+  Ganfeng Lithium: test forecast 570/750
+  Ganfeng Lithium: test forecast 575/750
+  Ganfeng Lithium: test forecast 580/750
+  Anglo American: test forecast 545/750
+  Anglo American: test forecast 550/750
+  Anglo American: test forecast 555/750
+  Anglo American: test forecast 560/750
+  Ganfeng Lithium: test forecast 585/750
+  Ganfeng Lithium: test forecast 590/750
+  Ganfeng Lithium: test forecast 595/750
+  Ganfeng Lithium: test forecast 600/750
+  Anglo American: test forecast 565/750
+  Anglo American: test forecast 570/750
+  Anglo American: test forecast 575/750
+  Anglo American: test forecast 580/750
+  Ganfeng Lithium: test forecast 605/750
+  Ganfeng Lithium: test forecast 610/750
+  Ganfeng Lithium: test forecast 615/750
+  Ganfeng Lithium: test forecast 620/750
+  Anglo American: test forecast 585/750
+  Anglo American: test forecast 590/750
+  Anglo American: test forecast 595/750
+  Anglo American: test forecast 600/750
+  Ganfeng Lithium: test forecast 625/750
+  Ganfeng Lithium: test forecast 630/750
+  Ganfeng Lithium: test forecast 635/750
+  Ganfeng Lithium: test forecast 640/750
+  Anglo American: test forecast 605/750
+  Anglo American: test forecast 610/750
+  Anglo American: test forecast 615/750
+  Anglo American: test forecast 620/750
+  Ganfeng Lithium: test forecast 645/750
+  Ganfeng Lithium: test forecast 650/750
+  Ganfeng Lithium: test forecast 655/750
+  Ganfeng Lithium: test forecast 660/750
+  Anglo American: test forecast 625/750
+  Anglo American: test forecast 630/750
+  Anglo American: test forecast 635/750
+  Anglo American: test forecast 640/750
+  Ganfeng Lithium: test forecast 665/750
+  Ganfeng Lithium: test forecast 670/750
+  Ganfeng Lithium: test forecast 675/750
+  Ganfeng Lithium: test forecast 680/750
+  Anglo American: test forecast 645/750
+  Anglo American: test forecast 650/750
+  Anglo American: test forecast 655/750
+  Anglo American: test forecast 660/750
+  Ganfeng Lithium: test forecast 685/750
+  Ganfeng Lithium: test forecast 690/750
+  Ganfeng Lithium: test forecast 695/750
+  Ganfeng Lithium: test forecast 700/750
+  Anglo American: test forecast 665/750
+  Anglo American: test forecast 670/750
+  Anglo American: test forecast 675/750
+  Anglo American: test forecast 680/750
+  Ganfeng Lithium: test forecast 705/750
+  Ganfeng Lithium: test forecast 710/750
+  Ganfeng Lithium: test forecast 715/750
+  Ganfeng Lithium: test forecast 720/750
+  Anglo American: test forecast 685/750
+  Anglo American: test forecast 690/750
+  Anglo American: test forecast 695/750
+  Anglo American: test forecast 700/750
+  Ganfeng Lithium: test forecast 725/750
+  Ganfeng Lithium: test forecast 730/750
+  Ganfeng Lithium: test forecast 735/750
+  Ganfeng Lithium: test forecast 740/750
+  Anglo American: test forecast 705/750
+  Anglo American: test forecast 710/750
+  Anglo American: test forecast 715/750
+  Anglo American: test forecast 720/750
+  Ganfeng Lithium: test forecast 745/750
+  Ganfeng Lithium: test forecast 750/750
+Completed Ganfeng Lithium
+  Anglo American: test forecast 725/750
+  Anglo American: test forecast 730/750
+  Anglo American: test forecast 735/750
+  Anglo American: test forecast 740/750
+  Anglo American: test forecast 745/750
+  Anglo American: test forecast 750/750
+Completed Anglo American
+Saved causal forecasts, accuracy tests, interval metrics, and aligned trading results.
+Exported fixed-model forecasts from the canonical one-step run.
+SPA and MCS tests completed.

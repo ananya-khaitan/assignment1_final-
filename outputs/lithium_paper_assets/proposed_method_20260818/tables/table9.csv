@@ -1,0 +1,25 @@
+Target,Benchmark,DM statistic,p-value,Direction
+lithium_carbonate,ES,-10.9885,0.0000,Proposed better
+lithium_carbonate,ELM,-8.3139,0.0000,Proposed better
+lithium_carbonate,VMD-ARIMA,-7.3929,0.0000,Proposed better
+lithium_carbonate,MLP,-7.1313,0.0000,Proposed better
+lithium_carbonate,SVR,-6.0575,0.0000,Proposed better
+lithium_carbonate,LSTM,-5.8798,0.0000,Proposed better
+lithium_carbonate,VMD-LSTM,-2.4724,0.0147,Proposed better
+lithium_carbonate,RF,-1.5777,0.1170,Proposed better
+lithium_carbonate,CEEMDAN-LSTM,0.4198,0.6753,Benchmark better
+lithium_carbonate,Random Walk,0.2038,0.8388,Benchmark better
+lithium_carbonate,ARIMA,0.1201,0.9046,Benchmark better
+lithium_carbonate,CEEMDAN-ARIMA,0.1090,0.9134,Benchmark better
+lithium_hydroxide,ES,-5.7732,0.0000,Proposed better
+lithium_hydroxide,RF,-4.3195,0.0000,Proposed better
+lithium_hydroxide,VMD-ARIMA,3.8883,0.0002,Benchmark better
+lithium_hydroxide,CEEMDAN-ARIMA,3.5153,0.0006,Benchmark better
+lithium_hydroxide,CEEMDAN-LSTM,-1.9666,0.0512,Proposed better
+lithium_hydroxide,VMD-LSTM,-1.8898,0.0608,Proposed better
+lithium_hydroxide,SVR,-1.4518,0.1488,Proposed better
+lithium_hydroxide,LSTM,-1.4003,0.1636,Proposed better
+lithium_hydroxide,MLP,-0.9658,0.3358,Proposed better
+lithium_hydroxide,ARIMA,-0.8962,0.3717,Proposed better
+lithium_hydroxide,ELM,-0.5723,0.5681,Proposed better
+lithium_hydroxide,Random Walk,-0.0748,0.9404,Proposed better

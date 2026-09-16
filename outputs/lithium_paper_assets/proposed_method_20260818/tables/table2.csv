@@ -1,0 +1,11 @@
+Parameter,Setting,Function
+Chronological split,80:20,Static training and testing sets
+Lag order,5,Lagged target and indicator features
+VMD modes,lithium_hydroxide: 9; lithium_carbonate: 8,Target-specific decomposition
+LSTM hidden units,64,One recurrent layer
+LSTM epochs,100,Training iterations
+LSTM batch size,64,Mini-batch size
+RF estimators,100,Single-model benchmark
+SVR,RBF; C=8.1; gamma=0.1,Single-model benchmark
+Interval levels,"80%, 90%, 95%",Residual-quantile intervals
+Random seed,42,Reproducibility

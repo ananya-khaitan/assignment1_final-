@@ -13,7 +13,3 @@ __pycache__/
 tmp/
 outputs/run_logs/
 outputs/papers/qa_render/
-
-outputs/
-*.zip
-*.bundle

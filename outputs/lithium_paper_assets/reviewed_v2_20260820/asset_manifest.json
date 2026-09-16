@@ -1,0 +1,111 @@
+{
+  "created_utc": "2026-08-20T13:04:52.515527+00:00",
+  "run_id": "lithium_paper_20260817T204135Z",
+  "protocol": "development-locked adaptive decomposition-routing static retrospective lithium experiment",
+  "classification": "noncausal; full-sample decomposition and observed-test ARIMA filtering",
+  "adaptive_selection": [
+    {
+      "target": "lithium_hydroxide",
+      "selected_candidate": "VMD-K9-A1500",
+      "stacking_weights": {
+        "VMD-K7-A1500": 0.0,
+        "VMD-K7-A3000": 0.0,
+        "VMD-K7-A4500": 0.0,
+        "VMD-K8-A1500": 0.20945726943150514,
+        "VMD-K8-A3000": 4.0488174878755547e-19,
+        "VMD-K8-A4500": 0.0,
+        "VMD-K9-A1500": 0.76109523162083,
+        "VMD-K9-A3000": 2.8528069663524828e-18,
+        "VMD-K9-A4500": 0.0,
+        "VMD-K10-A1500": 0.0,
+        "VMD-K10-A3000": 0.0,
+        "VMD-K10-A4500": 0.0,
+        "CEEMDAN-M7": 1.935300877886625e-17,
+        "CEEMDAN-M9": 0.029447498947664713
+      }
+    },
+    {
+      "target": "lithium_carbonate",
+      "selected_candidate": "VMD-K10-A1500",
+      "stacking_weights": {
+        "VMD-K7-A1500": 8.42298066988304e-17,
+        "VMD-K7-A3000": 0.0,
+        "VMD-K7-A4500": 1.041520757336708e-18,
+        "VMD-K8-A1500": 0.0,
+        "VMD-K8-A3000": 0.0,
+        "VMD-K8-A4500": 0.0,
+        "VMD-K9-A1500": 0.0,
+        "VMD-K9-A3000": 0.0,
+        "VMD-K9-A4500": 0.02466395881810877,
+        "VMD-K10-A1500": 0.9753360411818911,
+        "VMD-K10-A3000": 2.487561429689589e-18,
+        "VMD-K10-A4500": 6.658952753234536e-18,
+        "CEEMDAN-M7": 3.8489702239987275e-17,
+        "CEEMDAN-M9": 1.630387653324307e-17
+      }
+    }
+  ],
+  "adaptive_protocol": {
+    "route_and_stack_selection": "final 20% of the outer training sample",
+    "locked_test": "final 20% of the complete aligned sample",
+    "vmd_k": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "vmd_alpha": [
+      1500.0,
+      3000.0,
+      4500.0
+    ],
+    "ceemdan_max_imf": [
+      7,
+      9
+    ]
+  },
+  "tables": {
+    "Table 1": "Representative research works in lithium and energy-price forecasting.",
+    "Table 2": "Parameter settings used in this study.",
+    "Table 3": "Indicators used in this study.",
+    "Table 4": "Statistical information for the forecasting targets and multimodal indicators.",
+    "Table 5": "Information on the decomposed lithium-price modes.",
+    "Table 6": "Indicators selected for the decomposed modes using LASSO regression.",
+    "Table 7": "Forecasting errors on the testing sets for single models.",
+    "Table 8": "Forecasting errors on the testing sets for decomposition models.",
+    "Table 9": "Diebold-Mariano tests comparing AMDR-Li with forecasting benchmarks.",
+    "Table 10": "Interval forecasting errors on the evaluation sets.",
+    "Table 11": "Performance of two trading schemes and optimized versions based on decomposition-model forecasts.",
+    "Table 12": "Performance of two trading schemes and optimized versions based on single-model forecasts."
+  },
+  "figures": {
+    "Figure 1": "Time trend of candidate publications in lithium-price forecasting.",
+    "Figure 2": "Conceptual structure of the LSTM model.",
+    "Figure 3": "Architecture of the proposed AMDR-Li forecasting framework.",
+    "Figure 4": "Lithium-price time series used as forecasting targets.",
+    "Figure 5": "Word cloud of collected lithium-related news headlines.",
+    "Figure 6": "Lithium-news sentiment scores and distributions.",
+    "Figure 7": "Reference-parameter VMD modes of the lithium-price series.",
+    "Figure 8": "Approximate-entropy values of the reference-parameter VMD modes.",
+    "Figure 9": "Forecasting results using single forecasting models.",
+    "Figure 10": "Forecasting-error metrics across models.",
+    "Figure 11": "Interval forecasting results for AMDR-Li.",
+    "Figure 12": "Graphical illustration of the trading strategies.",
+    "Figure 13": "Trading-evaluation metrics across forecasting models."
+  },
+  "source_checksums": {
+    "experiment_registry.json": "ca583400e7a66b1a3041d6c199b4e208a218e3575a4eae7ad54d65fd562ea196",
+    "forecast_ledger.csv": "fb02ea2dd2e8c21d78bcdd4cd0480d1aa3b3373617550f55628b9b3f56f98ac9",
+    "forecast_metrics.csv": "0c67f43ace2a06b220a7aaf5fa8b8e0db024f76a61c1c06f4df346585ea3e49d",
+    "dm_tests.csv": "e9f403b2cb76cedbf5c13ec93270f4e65e6378a3d89f818c0970d22ed53c5f19",
+    "interval_ledger.csv": "6b2c9e3d7f5f9f55099442e3045d45c9f61f243b41d00e1d75859ea605c95ae1",
+    "interval_metrics.csv": "9d08bc758e6a2cd5946951a411c9e9812bdf75247b4abe2b190ae1d2b821755d",
+    "trading_metrics.csv": "c689072e4820e787362209fbb58d0d8311fb856c6872fb58766564b85ae38c33",
+    "mode_feature_selection.csv": "dcec6706fa8f51d21bd71ae5f61ee9eb4ea16e67afa5e29e2df5f7d658bbbd50",
+    "component_summary.csv": "13360ceb8037f33ff409a320d46afe7c3387c62c844672c1d313707a7d1f5886",
+    "adaptive_candidate_search.csv": "766d68c1067ef8c8e620d3e613665579114f0d63ba1ba1a1faa4e58ce4f14974",
+    "adaptive_component_routes.csv": "07c96f5200db517a4be716f22a0ea520318cc3404b4ef44a3a29a5f943ecf292",
+    "adaptive_validation_report.json": "a839e8539b51256fc2b82940d221210db7faad581f2dc73791c882e6c0299272"
+  },
+  "literature_query": "Crossref Works API query.title=lithium price forecasting; descriptive, not systematic"
+}

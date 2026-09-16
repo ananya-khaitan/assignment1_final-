@@ -1,0 +1,33 @@
+Series,Panel,N,Mean,Std. dev.,Minimum,Maximum
+COMEX lithium hydroxide CIF CJK futures,lithium_hydroxide,716.0000,16.1793,10.6226,7.9500,47.3100
+Cross_Lithium_Close,lithium_hydroxide,716.0000,117847.7654,65912.1252,59900.0000,314000.0000
+Albemarle_Close,lithium_hydroxide,716.0000,119.4812,45.8361,50.7600,243.4400
+Ganfeng_Lithium_Close,lithium_hydroxide,716.0000,6.1056,1.9515,3.5550,10.7050
+Trends_lithium,lithium_hydroxide,714.0000,56.7283,14.0280,43.0000,100.0000
+Trends_lithium_price,lithium_hydroxide,714.0000,4.0056,3.7882,2.0000,18.0000
+Trends_lithium_carbonate,lithium_hydroxide,714.0000,1.0616,0.3694,0.0000,2.0000
+Trends_lithium_hydroxide,lithium_hydroxide,714.0000,0.1933,0.3951,0.0000,1.0000
+Trends_lithium_battery,lithium_hydroxide,714.0000,17.8291,5.2784,13.0000,36.0000
+News_Article_Count,lithium_hydroxide,716.0000,2.6383,2.6123,0.0000,40.0000
+News_TextBlob_Polarity,lithium_hydroxide,716.0000,0.0521,0.1121,-0.4333,0.8000
+News_FinBERT_Score,lithium_hydroxide,716.0000,0.2116,0.3766,-0.9694,0.9512
+SP500,lithium_hydroxide,716.0000,5564.4447,841.7402,4061.2200,6978.6001
+VIX,lithium_hydroxide,716.0000,16.9312,4.3308,11.8600,52.3300
+US_Dollar_Index,lithium_hydroxide,716.0000,102.4844,3.1993,96.2200,109.9600
+MVIS_Critical_Minerals,lithium_hydroxide,716.0000,370.5107,109.0520,220.4200,674.2340
+SMM battery-grade lithium carbonate spot,lithium_carbonate,692.0000,118615.8598,67022.4813,59900.0000,314000.0000
+Cross_Lithium_Close,lithium_carbonate,692.0000,16.3008,10.7891,7.9500,47.3100
+Albemarle_Close,lithium_carbonate,692.0000,119.8822,46.3719,50.7600,243.4400
+Ganfeng_Lithium_Close,lithium_carbonate,692.0000,6.1115,1.9561,3.5550,10.7050
+Trends_lithium,lithium_carbonate,690.0000,56.4362,13.8250,43.0000,100.0000
+Trends_lithium_price,lithium_carbonate,690.0000,3.9841,3.7685,2.0000,18.0000
+Trends_lithium_carbonate,lithium_carbonate,690.0000,1.0580,0.3687,0.0000,2.0000
+Trends_lithium_hydroxide,lithium_carbonate,690.0000,0.1899,0.3925,0.0000,1.0000
+Trends_lithium_battery,lithium_carbonate,690.0000,17.7667,5.1881,13.0000,36.0000
+News_Article_Count,lithium_carbonate,692.0000,2.6214,2.6298,0.0000,40.0000
+News_TextBlob_Polarity,lithium_carbonate,692.0000,0.0522,0.1114,-0.4333,0.8000
+News_FinBERT_Score,lithium_carbonate,692.0000,0.2077,0.3783,-0.9694,0.9512
+SP500,lithium_carbonate,692.0000,5561.6697,840.7653,4061.2200,6978.6001
+VIX,lithium_carbonate,692.0000,16.8099,4.2760,11.8600,52.3300
+US_Dollar_Index,lithium_carbonate,692.0000,102.4637,3.1759,96.2200,109.9600
+MVIS_Critical_Minerals,lithium_carbonate,692.0000,370.9414,109.4896,220.4200,674.2340

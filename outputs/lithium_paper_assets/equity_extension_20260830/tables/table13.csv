@@ -1,0 +1,3 @@
+Equity target,AMDR-Li RMSE,VMD-ARIMA RMSE,Random Walk RMSE,RMSE improvement vs Random Walk (%),AMDR-Li MAE,AMDR-Li directional accuracy (%),DM p-value vs Random Walk
+Albemarle (ALB),2.328,4.107,5.026,53.670,1.692,82.394,0.000001
+Ganfeng Lithium (002460.SZ),0.190,0.191,0.312,39.029,0.154,80.282,0.000172

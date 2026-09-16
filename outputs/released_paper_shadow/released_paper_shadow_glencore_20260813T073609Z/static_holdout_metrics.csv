@@ -1,0 +1,3 @@
+Company,Model,Evaluation,RMSE,MAE,MASE,MAPE,Directional Accuracy
+Glencore,Released-paper-style shadow,Noncausal static 80:20 holdout; full-sample VMD; ARIMA filters observed test targets,0.04489813946229448,0.03468848281774309,0.442869537934084,0.6812082084919369,77.24230254350736
+Glencore,Static random walk diagnostic,Causal one-day baseline calculated only for diagnostic comparison,0.10551820179045375,0.07830213903743316,0.9996871963803757,1.5329109814603443,46.58634538152611

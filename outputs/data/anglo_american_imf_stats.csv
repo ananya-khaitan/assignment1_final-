@@ -1,0 +1,6 @@
+Company,Mode,Omega,Period (days),Variance ratio,Correlation,Mean |IMF|
+Anglo American,IMF1,0.00049,3750.0,0.8854,0.9603,7.6123
+Anglo American,IMF2,0.00501,250.0,0.0555,0.3162,1.7586
+Anglo American,IMF3,0.02031,52.8,0.0086,0.1349,0.6593
+Anglo American,IMF4,0.04576,24.7,0.0025,0.0807,0.3754
+Anglo American,IMF5,0.09231,11.5,0.001,0.0531,0.219

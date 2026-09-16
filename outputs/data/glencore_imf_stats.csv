@@ -1,0 +1,6 @@
+Company,Mode,Omega,Period (days),Variance ratio,Correlation,Mean |IMF|
+Glencore,IMF1,0.00068,3750.0,0.8829,0.9628,1.0903
+Glencore,IMF2,0.00571,208.3,0.0508,0.3258,0.2516
+Glencore,IMF3,0.02167,52.8,0.0076,0.1397,0.0926
+Glencore,IMF4,0.05329,18.7,0.0021,0.0779,0.0497
+Glencore,IMF5,0.10574,9.9,0.0009,0.0515,0.0307

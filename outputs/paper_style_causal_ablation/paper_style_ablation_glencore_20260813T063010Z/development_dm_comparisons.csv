@@ -1,0 +1,4 @@
+Reference,Candidate,DM Statistic,p-value,Loss Difference Definition
+Hybrid / Temporal LSTM / Full Exog,Hybrid / Temporal LSTM / Lag Only,0.7500751304441186,0.46239733198101973,candidate squared loss - reference squared loss
+Hybrid / Temporal LSTM / Full Exog,All LSTM / Temporal / Full Exog,0.14086099483993597,0.8894624516063752,candidate squared loss - reference squared loss
+Hybrid / Temporal LSTM / Full Exog,Hybrid / One-Step LSTM / Full Exog,1.928789187641448,0.06883253064288941,candidate squared loss - reference squared loss

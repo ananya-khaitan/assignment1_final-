@@ -1,0 +1,13 @@
+Target,Model,RMSE,MAE,MASE,MAPE,sMAPE,Directional Accuracy
+lithium_carbonate,Proposed Adaptive Decomposition-Routing Ensemble,2881.4682,1959.1156,0.9792,1.72,1.73,74.07
+lithium_carbonate,VMD-ARIMA,3151.9059,1569.3488,0.7844,1.35,1.39,78.52
+lithium_carbonate,CEEMDAN-ARIMA,3623.5469,1436.9183,0.7182,1.12,1.16,77.04
+lithium_carbonate,CEEMDAN-LSTM,3650.8523,2402.9913,1.2011,2.07,2.07,78.52
+lithium_carbonate,Fixed VMD-LASSO-ARIMA/LSTM,3858.1490,2053.9202,1.0266,1.80,1.85,77.04
+lithium_carbonate,VMD-LSTM,5587.1679,3861.8263,1.9302,3.33,3.34,74.81
+lithium_hydroxide,Proposed Adaptive Decomposition-Routing Ensemble,0.2737,0.1979,1.0875,1.49,1.50,44.29
+lithium_hydroxide,CEEMDAN-ARIMA,0.4467,0.1994,1.0955,1.54,1.66,37.86
+lithium_hydroxide,VMD-ARIMA,0.4731,0.2450,1.3463,1.92,2.03,44.29
+lithium_hydroxide,Fixed VMD-LASSO-ARIMA/LSTM,0.5825,0.3623,1.9905,2.83,2.93,39.29
+lithium_hydroxide,CEEMDAN-LSTM,0.8838,0.6088,3.3453,5.40,5.33,36.43
+lithium_hydroxide,VMD-LSTM,0.8868,0.4504,2.4750,3.76,3.50,42.14

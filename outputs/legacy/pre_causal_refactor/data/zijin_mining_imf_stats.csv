@@ -1,0 +1,6 @@
+Company,Mode,Omega,Period (days),Variance ratio,Correlation,Mean |IMF|
+Zijin Mining,IMF1,0.00039,3750.0,0.9812,0.9953,0.7308
+Zijin Mining,IMF2,0.01117,107.1,0.0056,0.1316,0.0425
+Zijin Mining,IMF3,0.03623,29.5,0.0013,0.0561,0.0191
+Zijin Mining,IMF4,0.08693,11.5,0.0003,0.032,0.0096
+Zijin Mining,IMF5,0.41063,2.4,0.0,0.0116,0.0029

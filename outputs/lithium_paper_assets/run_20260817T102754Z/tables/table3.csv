@@ -1,0 +1,16 @@
+Indicator,Definition,Data modality,Treatment
+Cross_Lithium_Close,Price of the other lithium contract/spot target,Cross Lithium,Aligned to target trading date; lagged in model frame
+Albemarle_Close,Albemarle equity close,Lithium Equities,Aligned to target trading date; lagged in model frame
+Ganfeng_Lithium_Close,Ganfeng Lithium equity close,Lithium Equities,Aligned to target trading date; lagged in model frame
+Trends_lithium,Google Trends: lithium,Lithium Attention,Aligned to target trading date; lagged in model frame
+Trends_lithium_price,Google Trends: lithium price,Lithium Attention,Aligned to target trading date; lagged in model frame
+Trends_lithium_carbonate,Google Trends: lithium carbonate,Lithium Attention,Aligned to target trading date; lagged in model frame
+Trends_lithium_hydroxide,Google Trends: lithium hydroxide,Lithium Attention,Aligned to target trading date; lagged in model frame
+Trends_lithium_battery,Google Trends: lithium battery,Lithium Attention,Aligned to target trading date; lagged in model frame
+News_Article_Count,Lithium-headline volume,Lithium News,Aligned to target trading date; lagged in model frame
+News_TextBlob_Polarity,Lexicon sentiment of lithium headlines,Lithium News,Aligned to target trading date; lagged in model frame
+News_FinBERT_Score,Financial-language sentiment of lithium headlines,Lithium News,Aligned to target trading date; lagged in model frame
+SP500,S&P 500 close,Market Controls,Aligned to target trading date; lagged in model frame
+VIX,CBOE VIX close,Market Controls,Aligned to target trading date; lagged in model frame
+US_Dollar_Index,US dollar index close,Market Controls,Aligned to target trading date; lagged in model frame
+MVIS_Critical_Minerals,MVIS Global Rare Earth/Strategic Metals index,Market Controls,Aligned to target trading date; lagged in model frame

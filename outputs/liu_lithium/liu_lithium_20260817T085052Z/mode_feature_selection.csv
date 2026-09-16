@@ -1,0 +1,120 @@
+Target,Ablation,Mode,Route,LASSO Alpha,LASSO Validation MSE,Selected Feature Count,Selected Features,Empty-selection Fallback,ARIMA Order
+lithium_hydroxide,history_only,1,ARIMA observed-test apply path,0.0018000000000000004,1.3479946713382728e-07,1,target_1,False,"(5, 1, 0)"
+lithium_hydroxide,history_only,2,ARIMA observed-test apply path,0.03920000000000002,1.379487799466335e-06,1,target_1,False,"(2, 2, 0)"
+lithium_hydroxide,history_only,3,LSTM source sequence-major layout,0.001,1.2962120147013597e-05,2,target_1 | target_5,False,
+lithium_hydroxide,history_only,4,LSTM source sequence-major layout,0.001,4.7943424566895934e-05,3,target_1 | target_3 | target_5,False,
+lithium_hydroxide,history_only,5,LSTM source sequence-major layout,0.001,0.000126271718017179,4,target_1 | target_2 | target_4 | target_5,False,
+lithium_hydroxide,history_only,6,LSTM source sequence-major layout,0.001,0.00025654582064383886,4,target_2 | target_4 | target_3 | target_1,False,
+lithium_hydroxide,history_only,7,LSTM source sequence-major layout,0.001,0.00033548157515671045,4,target_2 | target_1 | target_5 | target_4,False,
+lithium_hydroxide,history_only,8,LSTM source sequence-major layout,0.001,0.00018106856731204198,3,target_1 | target_2 | target_4,False,
+lithium_hydroxide,history_only,9,LSTM source sequence-major layout,0.001,0.00012060473643436995,4,target_1 | target_2 | target_3 | target_5,False,
+lithium_hydroxide,history_plus_cross_lithium,1,ARIMA observed-test apply path,0.0011,2.0243648543781027e-07,6,target_1 | Cross_Lithium_Close | target_5 | target_4 | target_3 | target_2,False,"(0, 0, 0)"
+lithium_hydroxide,history_plus_cross_lithium,2,ARIMA observed-test apply path,0.03920000000000002,1.379487799466335e-06,1,target_1,False,"(2, 2, 0)"
+lithium_hydroxide,history_plus_cross_lithium,3,LSTM source sequence-major layout,0.001,1.4375534430889866e-05,3,target_1 | target_5 | Cross_Lithium_Close,False,
+lithium_hydroxide,history_plus_cross_lithium,4,LSTM source sequence-major layout,0.001,4.844599845443854e-05,4,target_1 | target_3 | target_5 | Cross_Lithium_Close,False,
+lithium_hydroxide,history_plus_cross_lithium,5,LSTM source sequence-major layout,0.001,0.00012611526909052416,5,target_1 | target_2 | target_4 | target_5 | Cross_Lithium_Close,False,
+lithium_hydroxide,history_plus_cross_lithium,6,LSTM source sequence-major layout,0.001,0.00025486817321377687,5,target_2 | target_4 | target_3 | target_1 | Cross_Lithium_Close,False,
+lithium_hydroxide,history_plus_cross_lithium,7,LSTM source sequence-major layout,0.001,0.0003337299006737848,5,target_2 | target_1 | target_5 | target_4 | Cross_Lithium_Close,False,
+lithium_hydroxide,history_plus_cross_lithium,8,LSTM source sequence-major layout,0.001,0.00018053186105092592,4,target_1 | target_2 | target_4 | Cross_Lithium_Close,False,
+lithium_hydroxide,history_plus_cross_lithium,9,LSTM source sequence-major layout,0.001,0.00012029199423903048,5,target_1 | target_2 | target_3 | target_5 | Cross_Lithium_Close,False,
+lithium_hydroxide,history_plus_equities,1,ARIMA observed-test apply path,0.0017000000000000003,2.9478298109340424e-07,6,target_1 | Albemarle_Close | target_5 | target_4 | target_3 | target_2,False,"(0, 0, 0)"
+lithium_hydroxide,history_plus_equities,2,ARIMA observed-test apply path,0.03920000000000002,1.379487799466335e-06,1,target_1,False,"(2, 2, 0)"
+lithium_hydroxide,history_plus_equities,3,LSTM source sequence-major layout,0.001,1.1075584244728302e-05,3,target_1 | target_5 | Ganfeng_Lithium_Close,False,
+lithium_hydroxide,history_plus_equities,4,LSTM source sequence-major layout,0.001,4.8119901800909675e-05,4,target_1 | target_3 | target_5 | Albemarle_Close,False,
+lithium_hydroxide,history_plus_equities,5,LSTM source sequence-major layout,0.001,0.00012611852047091538,5,target_1 | target_2 | target_4 | target_5 | Albemarle_Close,False,
+lithium_hydroxide,history_plus_equities,6,LSTM source sequence-major layout,0.001,0.0002561550132875695,5,target_2 | target_4 | target_3 | target_1 | Albemarle_Close,False,
+lithium_hydroxide,history_plus_equities,7,LSTM source sequence-major layout,0.001,0.0003333205596219024,5,target_2 | target_1 | target_5 | target_4 | Albemarle_Close,False,
+lithium_hydroxide,history_plus_equities,8,LSTM source sequence-major layout,0.001,0.00018072455606563188,4,target_1 | target_2 | target_4 | Albemarle_Close,False,
+lithium_hydroxide,history_plus_equities,9,LSTM source sequence-major layout,0.001,0.00012060473643436999,4,target_1 | target_2 | target_3 | target_5,False,
+lithium_hydroxide,history_plus_attention,1,ARIMA observed-test apply path,0.0018000000000000004,1.3479946713382728e-07,1,target_1,False,"(5, 1, 0)"
+lithium_hydroxide,history_plus_attention,2,ARIMA observed-test apply path,0.03920000000000002,1.379487799466335e-06,1,target_1,False,"(2, 2, 0)"
+lithium_hydroxide,history_plus_attention,3,LSTM source sequence-major layout,0.001,1.297444189348157e-05,2,target_1 | target_5,False,
+lithium_hydroxide,history_plus_attention,4,LSTM source sequence-major layout,0.001,4.6909754323763094e-05,5,target_1 | target_3 | target_5 | Trends_lithium_carbonate | Trends_lithium,False,
+lithium_hydroxide,history_plus_attention,5,LSTM source sequence-major layout,0.001,0.00012627153851638774,4,target_1 | target_2 | target_4 | target_5,False,
+lithium_hydroxide,history_plus_attention,6,LSTM source sequence-major layout,0.001,0.00025776504006953566,6,target_2 | target_4 | target_3 | Trends_lithium_hydroxide | target_1 | Trends_lithium_carbonate,False,
+lithium_hydroxide,history_plus_attention,7,LSTM source sequence-major layout,0.001,0.00033548180472759174,4,target_2 | target_1 | target_5 | target_4,False,
+lithium_hydroxide,history_plus_attention,8,LSTM source sequence-major layout,0.001,0.0001810684970041375,3,target_1 | target_2 | target_4,False,
+lithium_hydroxide,history_plus_attention,9,LSTM source sequence-major layout,0.001,0.00012060510936136365,4,target_1 | target_2 | target_3 | target_5,False,
+lithium_hydroxide,history_plus_news,1,ARIMA observed-test apply path,0.0018000000000000004,1.3479946713382728e-07,1,target_1,False,"(5, 1, 0)"
+lithium_hydroxide,history_plus_news,2,ARIMA observed-test apply path,0.03920000000000002,1.379487799466335e-06,1,target_1,False,"(2, 2, 0)"
+lithium_hydroxide,history_plus_news,3,LSTM source sequence-major layout,0.001,1.2962204586173844e-05,2,target_1 | target_5,False,
+lithium_hydroxide,history_plus_news,4,LSTM source sequence-major layout,0.0015000000000000002,5.0931693272322366e-05,5,target_1 | target_3 | News_FinBERT_Score | News_TextBlob_Polarity | News_Article_Count,False,
+lithium_hydroxide,history_plus_news,5,LSTM source sequence-major layout,0.001,0.00013146074852120137,6,target_1 | target_2 | target_4 | target_5 | News_TextBlob_Polarity | News_Article_Count,False,
+lithium_hydroxide,history_plus_news,6,LSTM source sequence-major layout,0.001,0.000264142779034353,7,target_2 | target_4 | target_3 | target_1 | News_TextBlob_Polarity | News_Article_Count | News_FinBERT_Score,False,
+lithium_hydroxide,history_plus_news,7,LSTM source sequence-major layout,0.001,0.00038240399589935183,7,target_2 | target_1 | target_5 | target_4 | News_FinBERT_Score | News_TextBlob_Polarity | News_Article_Count,False,
+lithium_hydroxide,history_plus_news,8,LSTM source sequence-major layout,0.0015000000000000002,0.00018570246137628791,4,target_1 | target_2 | News_FinBERT_Score | News_TextBlob_Polarity,False,
+lithium_hydroxide,history_plus_news,9,LSTM source sequence-major layout,0.001,0.00012427605507340424,6,target_1 | target_2 | target_3 | target_5 | News_FinBERT_Score | News_Article_Count,False,
+lithium_hydroxide,history_plus_market_controls,1,ARIMA observed-test apply path,0.0012000000000000001,8.326898259086566e-07,6,target_1 | MVIS_Critical_Minerals | target_2 | target_3 | target_4 | target_5,False,"(0, 0, 0)"
+lithium_hydroxide,history_plus_market_controls,2,ARIMA observed-test apply path,0.03920000000000002,1.379487799466335e-06,1,target_1,False,"(2, 2, 0)"
+lithium_hydroxide,history_plus_market_controls,3,LSTM source sequence-major layout,0.001,1.0986367525967658e-05,3,target_1 | target_5 | MVIS_Critical_Minerals,False,
+lithium_hydroxide,history_plus_market_controls,4,LSTM source sequence-major layout,0.001,4.7938220020571993e-05,3,target_1 | target_3 | target_5,False,
+lithium_hydroxide,history_plus_market_controls,5,LSTM source sequence-major layout,0.0012000000000000001,0.0001765905907958067,5,target_1 | target_2 | target_4 | target_5 | VIX,False,
+lithium_hydroxide,history_plus_market_controls,6,LSTM source sequence-major layout,0.0025000000000000005,0.00031285614107345573,4,target_2 | target_4 | target_3 | VIX,False,
+lithium_hydroxide,history_plus_market_controls,7,LSTM source sequence-major layout,0.002300000000000001,0.00041338316375898475,5,target_2 | target_1 | target_5 | target_4 | VIX,False,
+lithium_hydroxide,history_plus_market_controls,8,LSTM source sequence-major layout,0.0015000000000000002,0.00018555730150020714,3,target_1 | target_2 | VIX,False,
+lithium_hydroxide,history_plus_market_controls,9,LSTM source sequence-major layout,0.001,0.00012060497878413565,4,target_1 | target_2 | target_3 | target_5,False,
+lithium_hydroxide,full_multimodal,1,ARIMA observed-test apply path,0.0012000000000000001,1.8527318683351423e-07,3,target_1 | Cross_Lithium_Close | Ganfeng_Lithium_Close,False,"(1, 0, 2)"
+lithium_hydroxide,full_multimodal,2,ARIMA observed-test apply path,0.03920000000000002,1.379487799466335e-06,1,target_1,False,"(2, 2, 0)"
+lithium_hydroxide,full_multimodal,3,LSTM source sequence-major layout,0.001,1.2962654536396382e-05,4,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,False,
+lithium_hydroxide,full_multimodal,4,LSTM source sequence-major layout,0.0015000000000000002,5.0987557804597886e-05,6,target_1 | target_3 | News_FinBERT_Score | News_TextBlob_Polarity | News_Article_Count | Cross_Lithium_Close,False,
+lithium_hydroxide,full_multimodal,5,LSTM source sequence-major layout,0.0012000000000000001,0.00017758651557111928,7,target_1 | target_2 | target_4 | target_5 | VIX | News_TextBlob_Polarity | Cross_Lithium_Close,False,
+lithium_hydroxide,full_multimodal,6,LSTM source sequence-major layout,0.0025000000000000005,0.0003123414009632301,6,target_2 | target_4 | target_3 | VIX | Cross_Lithium_Close | News_TextBlob_Polarity,False,
+lithium_hydroxide,full_multimodal,7,LSTM source sequence-major layout,0.0022000000000000006,0.00046450668688166743,7,target_2 | target_1 | target_5 | target_4 | News_FinBERT_Score | VIX | Cross_Lithium_Close,False,
+lithium_hydroxide,full_multimodal,8,LSTM source sequence-major layout,0.0015000000000000002,0.00018515820238659947,6,target_1 | target_2 | News_FinBERT_Score | VIX | Cross_Lithium_Close | News_TextBlob_Polarity,False,
+lithium_hydroxide,full_multimodal,9,LSTM source sequence-major layout,0.001,0.00012453833243077406,8,target_1 | target_2 | target_3 | target_5 | News_FinBERT_Score | News_Article_Count | Cross_Lithium_Close | VIX,False,
+lithium_carbonate,history_only,1,ARIMA observed-test apply path,0.0025000000000000005,4.6388912601021894e-07,1,target_1,False,"(1, 2, 3)"
+lithium_carbonate,history_only,2,ARIMA observed-test apply path,0.016600000000000007,5.310170293684044e-06,1,target_1,False,"(1, 2, 3)"
+lithium_carbonate,history_only,3,LSTM source sequence-major layout,0.001,2.8305536300762914e-05,2,target_1 | target_5,False,
+lithium_carbonate,history_only,4,LSTM source sequence-major layout,0.001,0.00010506181823126165,2,target_1 | target_5,False,
+lithium_carbonate,history_only,5,LSTM source sequence-major layout,0.001,0.0006594182974506342,3,target_1 | target_3 | target_4,False,
+lithium_carbonate,history_only,6,LSTM source sequence-major layout,0.001,0.0014700382215456023,5,target_2 | target_3 | target_5 | target_4 | target_1,False,
+lithium_carbonate,history_only,7,LSTM source sequence-major layout,0.001,0.002741480996884614,5,target_1 | target_2 | target_5 | target_3 | target_4,False,
+lithium_carbonate,history_only,8,LSTM source sequence-major layout,0.001,0.0026400191535668038,4,target_1 | target_2 | target_3 | target_4,False,
+lithium_carbonate,history_plus_cross_lithium,1,ARIMA observed-test apply path,0.0012000000000000001,5.419506758336649e-07,6,target_1 | Cross_Lithium_Close | target_5 | target_4 | target_3 | target_2,False,"(5, 0, 2)"
+lithium_carbonate,history_plus_cross_lithium,2,ARIMA observed-test apply path,0.016600000000000007,5.310170293684044e-06,1,target_1,False,"(1, 2, 3)"
+lithium_carbonate,history_plus_cross_lithium,3,LSTM source sequence-major layout,0.001,3.549249043116578e-05,3,target_1 | target_5 | Cross_Lithium_Close,False,
+lithium_carbonate,history_plus_cross_lithium,4,LSTM source sequence-major layout,0.001,0.00010276075936715561,3,target_1 | target_5 | Cross_Lithium_Close,False,
+lithium_carbonate,history_plus_cross_lithium,5,LSTM source sequence-major layout,0.001,0.0006564731629589641,4,target_1 | target_3 | target_4 | Cross_Lithium_Close,False,
+lithium_carbonate,history_plus_cross_lithium,6,LSTM source sequence-major layout,0.001,0.0014464072133227822,6,target_2 | target_3 | target_5 | target_4 | target_1 | Cross_Lithium_Close,False,
+lithium_carbonate,history_plus_cross_lithium,7,LSTM source sequence-major layout,0.001,0.0026919155204428403,6,target_1 | target_2 | target_5 | target_3 | target_4 | Cross_Lithium_Close,False,
+lithium_carbonate,history_plus_cross_lithium,8,LSTM source sequence-major layout,0.001,0.0025994312857488457,5,target_1 | target_2 | target_3 | target_4 | Cross_Lithium_Close,False,
+lithium_carbonate,history_plus_equities,1,ARIMA observed-test apply path,0.0026000000000000007,8.665527357197231e-07,7,target_1 | Albemarle_Close | target_5 | target_4 | target_3 | target_2 | Ganfeng_Lithium_Close,False,"(5, 0, 2)"
+lithium_carbonate,history_plus_equities,2,ARIMA observed-test apply path,0.016600000000000007,5.310170293684044e-06,1,target_1,False,"(1, 2, 3)"
+lithium_carbonate,history_plus_equities,3,LSTM source sequence-major layout,0.001,2.773659112851914e-05,3,target_1 | target_5 | Ganfeng_Lithium_Close,False,
+lithium_carbonate,history_plus_equities,4,LSTM source sequence-major layout,0.001,0.00010404602247674025,3,target_1 | target_5 | Ganfeng_Lithium_Close,False,
+lithium_carbonate,history_plus_equities,5,LSTM source sequence-major layout,0.001,0.0006600470976803553,4,target_1 | target_3 | target_4 | Ganfeng_Lithium_Close,False,
+lithium_carbonate,history_plus_equities,6,LSTM source sequence-major layout,0.001,0.001451854697314644,7,target_2 | target_3 | target_5 | target_4 | target_1 | Ganfeng_Lithium_Close | Albemarle_Close,False,
+lithium_carbonate,history_plus_equities,7,LSTM source sequence-major layout,0.001,0.0027028704233298837,6,target_1 | target_2 | target_5 | target_3 | target_4 | Ganfeng_Lithium_Close,False,
+lithium_carbonate,history_plus_equities,8,LSTM source sequence-major layout,0.001,0.0026034610796227355,5,target_1 | target_2 | target_3 | target_4 | Ganfeng_Lithium_Close,False,
+lithium_carbonate,history_plus_attention,1,ARIMA observed-test apply path,0.0025000000000000005,4.6388912601025176e-07,1,target_1,False,"(1, 2, 3)"
+lithium_carbonate,history_plus_attention,2,ARIMA observed-test apply path,0.001,1.406138847661226e-06,2,target_1 | Trends_lithium_battery,False,"(2, 1, 3)"
+lithium_carbonate,history_plus_attention,3,LSTM source sequence-major layout,0.001,2.8324590492896135e-05,2,target_1 | target_5,False,
+lithium_carbonate,history_plus_attention,4,LSTM source sequence-major layout,0.001,0.0001051265290803786,2,target_1 | target_5,False,
+lithium_carbonate,history_plus_attention,5,LSTM source sequence-major layout,0.001,0.0006592690473956674,3,target_1 | target_3 | target_4,False,
+lithium_carbonate,history_plus_attention,6,LSTM source sequence-major layout,0.001,0.0014700383790619482,5,target_2 | target_3 | target_5 | target_4 | target_1,False,
+lithium_carbonate,history_plus_attention,7,LSTM source sequence-major layout,0.001,0.002741377722910291,6,target_1 | target_2 | target_5 | target_3 | target_4 | Trends_lithium_carbonate,False,
+lithium_carbonate,history_plus_attention,8,LSTM source sequence-major layout,0.001,0.002639924788625592,5,target_1 | target_2 | target_3 | target_4 | Trends_lithium_carbonate,False,
+lithium_carbonate,history_plus_news,1,ARIMA observed-test apply path,0.0025000000000000005,4.6388912601021894e-07,1,target_1,False,"(1, 2, 3)"
+lithium_carbonate,history_plus_news,2,ARIMA observed-test apply path,0.016600000000000007,5.310170293684044e-06,1,target_1,False,"(1, 2, 3)"
+lithium_carbonate,history_plus_news,3,LSTM source sequence-major layout,0.001,2.8308220977982048e-05,2,target_1 | target_5,False,
+lithium_carbonate,history_plus_news,4,LSTM source sequence-major layout,0.001,0.00010562026281086294,3,target_1 | target_5 | News_TextBlob_Polarity,False,
+lithium_carbonate,history_plus_news,5,LSTM source sequence-major layout,0.001,0.0006377339261618148,5,target_1 | target_3 | target_4 | News_Article_Count | News_FinBERT_Score,False,
+lithium_carbonate,history_plus_news,6,LSTM source sequence-major layout,0.001,0.0015299120724945028,8,target_2 | target_3 | target_5 | target_4 | target_1 | News_FinBERT_Score | News_Article_Count | News_TextBlob_Polarity,False,
+lithium_carbonate,history_plus_news,7,LSTM source sequence-major layout,0.001,0.0027533827264733545,6,target_1 | target_2 | target_5 | target_3 | target_4 | News_FinBERT_Score,False,
+lithium_carbonate,history_plus_news,8,LSTM source sequence-major layout,0.001,0.002663894922743933,7,target_1 | target_2 | target_3 | target_4 | News_TextBlob_Polarity | News_FinBERT_Score | News_Article_Count,False,
+lithium_carbonate,history_plus_market_controls,1,ARIMA observed-test apply path,0.0013000000000000002,1.9924559927494865e-06,6,target_1 | MVIS_Critical_Minerals | target_2 | target_3 | target_4 | target_5,False,"(5, 0, 2)"
+lithium_carbonate,history_plus_market_controls,2,ARIMA observed-test apply path,0.0018000000000000004,1.0648290391078114e-06,2,target_1 | SP500,False,"(1, 2, 3)"
+lithium_carbonate,history_plus_market_controls,3,LSTM source sequence-major layout,0.001,2.5729133354834656e-05,3,target_1 | target_5 | MVIS_Critical_Minerals,False,
+lithium_carbonate,history_plus_market_controls,4,LSTM source sequence-major layout,0.001,0.00010208315845202405,4,target_1 | target_5 | MVIS_Critical_Minerals | VIX,False,
+lithium_carbonate,history_plus_market_controls,5,LSTM source sequence-major layout,0.001,0.0006526008004690314,4,target_1 | target_3 | target_4 | MVIS_Critical_Minerals,False,
+lithium_carbonate,history_plus_market_controls,6,LSTM source sequence-major layout,0.0012000000000000001,0.0015598170747807404,7,target_2 | target_3 | target_5 | target_4 | target_1 | US_Dollar_Index | MVIS_Critical_Minerals,False,
+lithium_carbonate,history_plus_market_controls,7,LSTM source sequence-major layout,0.0017000000000000003,0.002818570564125119,7,target_1 | target_2 | target_3 | target_5 | target_4 | MVIS_Critical_Minerals | US_Dollar_Index,False,
+lithium_carbonate,history_plus_market_controls,8,LSTM source sequence-major layout,0.0012000000000000001,0.002715650891957895,7,target_1 | target_2 | target_3 | target_4 | MVIS_Critical_Minerals | US_Dollar_Index | VIX,False,
+lithium_carbonate,full_multimodal,1,ARIMA observed-test apply path,0.0013000000000000002,5.826780101945081e-07,3,target_1 | Ganfeng_Lithium_Close | Cross_Lithium_Close,False,"(1, 0, 3)"
+lithium_carbonate,full_multimodal,2,ARIMA observed-test apply path,0.0018000000000000004,1.0650226749201135e-06,2,target_1 | SP500,False,"(1, 2, 3)"
+lithium_carbonate,full_multimodal,3,LSTM source sequence-major layout,0.001,2.9589077277196436e-05,4,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,False,
+lithium_carbonate,full_multimodal,4,LSTM source sequence-major layout,0.001,0.00010349487960164054,4,target_1 | target_5 | Ganfeng_Lithium_Close | VIX,False,
+lithium_carbonate,full_multimodal,5,LSTM source sequence-major layout,0.001,0.0006460442316399129,6,target_1 | target_3 | target_4 | Ganfeng_Lithium_Close | News_Article_Count | News_FinBERT_Score,False,
+lithium_carbonate,full_multimodal,6,LSTM source sequence-major layout,0.0012000000000000001,0.0015792272666158061,9,target_2 | target_3 | target_5 | target_4 | target_1 | US_Dollar_Index | Cross_Lithium_Close | News_FinBERT_Score | News_Article_Count,False,
+lithium_carbonate,full_multimodal,7,LSTM source sequence-major layout,0.0019000000000000004,0.002824752989506877,7,target_1 | target_2 | target_3 | target_5 | target_4 | Cross_Lithium_Close | US_Dollar_Index,False,
+lithium_carbonate,full_multimodal,8,LSTM source sequence-major layout,0.0012000000000000001,0.0026855881424176858,11,target_1 | target_2 | target_3 | target_4 | Cross_Lithium_Close | US_Dollar_Index | Ganfeng_Lithium_Close | News_FinBERT_Score | News_TextBlob_Polarity | News_Article_Count | VIX,False,

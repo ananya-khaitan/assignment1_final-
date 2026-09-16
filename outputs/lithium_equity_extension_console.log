@@ -1,0 +1,96 @@
+[albemarle_equity] loading aligned paper panel
+  Random Walk complete
+  ES complete
+  ARIMA complete
+  SVR complete
+  RF complete
+  MLP complete
+  ELM complete
+  LSTM complete
+Traceback (most recent call last):
+  File "C:\Users\Pratham Lahoti\Downloads\assignment1_pratham\code\run_lithium_paper_pipeline.py", line 572, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Pratham Lahoti\Downloads\assignment1_pratham\code\run_lithium_paper_pipeline.py", line 568, in main
+    run(target_set=args.target_set)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pratham Lahoti\Downloads\assignment1_pratham\code\run_lithium_paper_pipeline.py", line 487, in run
+    ) = _decomposition_predictions(target, price, exogenous, target_specs, run_dir / "adaptive_checkpoints" / target)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pratham Lahoti\Downloads\assignment1_pratham\code\run_lithium_paper_pipeline.py", line 251, in _decomposition_predictions
+    prediction, dates, record = _component_forecast(component, pd.DataFrame(index=price.index), route)
+                                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pratham Lahoti\Downloads\assignment1_pratham\code\run_lithium_paper_pipeline.py", line 197, in _component_forecast
+    prediction, order = _univariate_arima_filter(y_train, y_test, scaler_y)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pratham Lahoti\Downloads\assignment1_pratham\code\run_lithium_paper_pipeline.py", line 117, in _univariate_arima_filter
+    fitted = ARIMA(train, order=order).fit()
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\tsa\arima\model.py", line 395, in fit
+    res = super().fit(
+        return_params=return_params, low_memory=low_memory,
+        cov_type=cov_type, cov_kwds=cov_kwds, **method_kwargs)
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\tsa\statespace\mlemodel.py", line 705, in fit
+    mlefit = super().fit(start_params, method=method,
+                         fargs=fargs,
+    ...<2 lines>...
+                         disp=disp, callback=callback,
+                         skip_hessian=True, **kwargs)
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\base\model.py", line 566, in fit
+    xopt, retvals, optim_settings = optimizer._fit(f, score, start_params,
+                                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+                                                   fargs, kwargs,
+                                                   ^^^^^^^^^^^^^^
+    ...<5 lines>...
+                                                   retall=retall,
+                                                   ^^^^^^^^^^^^^^
+                                                   full_output=full_output)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\base\optimizer.py", line 245, in _fit
+    xopt, retvals = func(objective, gradient, start_params, fargs, kwargs,
+                    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         disp=disp, maxiter=maxiter, callback=callback,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         retall=retall, full_output=full_output,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         hess=hessian)
+                         ^^^^^^^^^^^^^
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\base\optimizer.py", line 665, in _fit_lbfgs
+    retvals = optimize.fmin_l_bfgs_b(
+        func,
+    ...<5 lines>...
+        **extended_kwargs
+    )
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\scipy\optimize\_lbfgsb_py.py", line 281, in fmin_l_bfgs_b
+    res = _minimize_lbfgsb(fun, x0, args=args, jac=jac, bounds=bounds,
+                           **opts)
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\scipy\optimize\_lbfgsb_py.py", line 469, in _minimize_lbfgsb
+    f, g = func_and_grad(x)
+           ~~~~~~~~~~~~~^^^
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\scipy\optimize\_differentiable_functions.py", line 403, in fun_and_grad
+    self._update_fun()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\scipy\optimize\_differentiable_functions.py", line 353, in _update_fun
+    fx = self._wrapped_fun(self.x)
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\scipy\_lib\_util.py", line 590, in __call__
+    fx = self.f(np.copy(x), *self.args)
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\base\model.py", line 534, in f
+    return -self.loglike(params, *args) / nobs
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\tsa\statespace\mlemodel.py", line 940, in loglike
+    loglike = self.ssm.loglike(complex_step=complex_step, **kwargs)
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\tsa\statespace\kalman_filter.py", line 1001, in loglike
+    kfilter = self._filter(**kwargs)
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\tsa\statespace\kalman_filter.py", line 921, in _filter
+    self._initialize_state(prefix=prefix, complex_step=complex_step)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pratham Lahoti\miniconda3\Lib\site-packages\statsmodels\tsa\statespace\representation.py", line 1058, in _initialize_state
+    self._statespaces[prefix].initialize(self.initialization,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+                                         complex_step=complex_step)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "statsmodels/tsa/statespace/_representation.pyx", line 1373, in statsmodels.tsa.statespace._representation.dStatespace.initialize
+  File "statsmodels/tsa/statespace/_representation.pyx", line 1362, in statsmodels.tsa.statespace._representation.dStatespace.initialize
+  File "statsmodels/tsa/statespace/_initialization.pyx", line 288, in statsmodels.tsa.statespace._initialization.dInitialization.initialize
+  File "statsmodels/tsa/statespace/_initialization.pyx", line 406, in statsmodels.tsa.statespace._initialization.dInitialization.initialize_stationary_stationary_cov
+  File "statsmodels/tsa/statespace/_tools.pyx", line 1626, in statsmodels.tsa.statespace._tools._dsolve_discrete_lyapunov
+numpy.linalg.LinAlgError: Schur decomposition solver error.

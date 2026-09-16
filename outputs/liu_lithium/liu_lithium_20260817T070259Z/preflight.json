@@ -1,0 +1,19 @@
+{
+  "manifest": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\source_manifest.json",
+  "targets": {
+    "lithium_hydroxide": {
+      "observations": 716,
+      "start": "2023-05-04",
+      "end": "2026-03-12",
+      "modes": 9,
+      "ablations": {
+        "history_only": {
+          "external_columns": [],
+          "complete_rows_before_component_lags": 716,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        }
+      }
+    }
+  }
+}

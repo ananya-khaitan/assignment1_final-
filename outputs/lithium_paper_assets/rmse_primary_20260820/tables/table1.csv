@@ -1,0 +1,8 @@
+Study,Research focus,Method,Role in this study
+Hochreiter and Schmidhuber (1997),Sequence learning,LSTM,Recurrent nonlinear forecasting
+Tibshirani (1996),Sparse regression,LASSO,Multimodal indicator selection
+Dragomiretskiy and Zosso (2014),Signal decomposition,VMD,Adaptive narrow-band modes
+Torres et al. (2011),Noise-assisted decomposition,CEEMDAN,Decomposition comparator
+Diebold and Mariano (1995),Predictive-accuracy testing,DM test,Pairwise loss comparison
+Box et al. (2015),Time-series forecasting,ARIMA,Linear forecasting of smooth decomposed modes
+This study,Lithium hydroxide and carbonate,Adaptive decomposition-routing ensemble,"Development-locked decomposition, route and stacking selection"

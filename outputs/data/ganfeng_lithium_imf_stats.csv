@@ -1,0 +1,6 @@
+Company,Mode,Omega,Period (days),Variance ratio,Correlation,Mean |IMF|
+Ganfeng Lithium,IMF1,0.00043,3750.0,0.9554,0.9862,3.5771
+Ganfeng Lithium,IMF2,0.00737,208.3,0.0204,0.2035,0.3783
+Ganfeng Lithium,IMF3,0.02986,35.0,0.0025,0.0775,0.1264
+Ganfeng Lithium,IMF4,0.08209,13.3,0.0005,0.0382,0.0569
+Ganfeng Lithium,IMF5,0.44457,2.3,0.0001,0.0133,0.0176

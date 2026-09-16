@@ -1,0 +1,7 @@
+Target,Nominal Coverage (%),Coverage (%),Avg Width,Calibration Error,Winkler
+lithium_carbonate,80.00,52.94,2703.6971,27.0588,14374.2201
+lithium_carbonate,90.00,59.80,3424.6967,30.1961,23738.9808
+lithium_carbonate,95.00,100.00,55769.7036,5.0000,55769.7036
+lithium_hydroxide,80.00,38.10,0.2402,41.9048,2.6397
+lithium_hydroxide,90.00,48.57,0.4251,41.4286,4.1833
+lithium_hydroxide,95.00,100.00,8.5249,5.0000,8.5249

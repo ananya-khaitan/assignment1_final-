@@ -1,0 +1,17 @@
+Parameter,Setting,Function
+Chronological split,80:20,Static training and testing sets
+Lag order,5,Lagged target and indicator features
+Reference-parity VMD modes,lithium_hydroxide: 9; lithium_carbonate: 9,Fixed-routing comparator
+Adaptive VMD search,"K ∈ {7, 8, 9, 10}; α ∈ {1500, 3000, 4500}",Development-only specification selection
+Adaptive CEEMDAN search,"maximum IMF ∈ {7, 9}",Development-only specification selection
+Adaptive route candidates,"ARIMA, LSTM, SVR, RF",Mode-level development selection
+LSTM hidden units,40,One recurrent layer
+Comparator LSTM epochs,100,Homogeneous/fixed model fitting
+Adaptive LSTM epochs,search=40; final=100,Development selection and locked-test refit
+LSTM batch size,128,Mini-batch size
+Single-model RF estimators,100,Undecomposed benchmark
+Adaptive-route RF,300 trees; leaf>=2; max_features=0.8,Component-route candidate
+Single-model SVR,RBF; C=8.1; gamma=0.1,Undecomposed benchmark
+Adaptive-route SVR,RBF; C=8.1; gamma=scale; epsilon=0.05,Component-route candidate
+Interval levels,"80%, 90%, 95%",Residual-quantile intervals
+Random seed,42,Reproducibility

@@ -1,0 +1,6 @@
+Company,Mode,Omega,Period (days),Variance ratio,Correlation,Mean |IMF|
+Freeport-McMoRan,IMF1,0.00038,3750.0,0.9073,0.9693,11.9864
+Freeport-McMoRan,IMF2,0.00499,208.3,0.0431,0.2879,2.2036
+Freeport-McMoRan,IMF3,0.01818,53.6,0.0053,0.1178,0.7415
+Freeport-McMoRan,IMF4,0.03588,31.5,0.0027,0.0807,0.5117
+Freeport-McMoRan,IMF5,0.08098,13.6,0.0009,0.0489,0.2879

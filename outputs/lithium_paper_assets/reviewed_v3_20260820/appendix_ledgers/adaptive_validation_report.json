@@ -1,0 +1,34 @@
+{
+  "run_id": "lithium_paper_20260817T204135Z",
+  "protocol_classification": "noncausal; full-sample decomposition and observed-test ARIMA filtering",
+  "targets": [
+    {
+      "target": "lithium_carbonate",
+      "proposed_rmse": 2881.468209734655,
+      "best_comparator_rmse": 3151.905932769052,
+      "best_comparator_rmse_model": "VMD-ARIMA",
+      "rmse_improvement_percent": 8.580133062435932,
+      "proposed_mae": 1959.1156033112047,
+      "best_comparator_mae": 1436.9183246639748,
+      "best_comparator_mae_model": "CEEMDAN-ARIMA",
+      "mae_improvement_percent": -36.34147255859838,
+      "beats_all_required_comparators_on_rmse_and_mae": false
+    },
+    {
+      "target": "lithium_hydroxide",
+      "proposed_rmse": 0.2736968632974272,
+      "best_comparator_rmse": 0.4466586473929143,
+      "best_comparator_rmse_model": "CEEMDAN-ARIMA",
+      "rmse_improvement_percent": 38.72348270990418,
+      "proposed_mae": 0.1979318790983997,
+      "best_comparator_mae": 0.1993887412182392,
+      "best_comparator_mae_model": "CEEMDAN-ARIMA",
+      "mae_improvement_percent": 0.730664184415963,
+      "beats_all_required_comparators_on_rmse_and_mae": true
+    }
+  ],
+  "strict_dual_target_accuracy_gate": false,
+  "proposed_dm_significant_wins": 15,
+  "proposed_dm_significant_losses": 0,
+  "claim": "The adaptive model does not clear the pre-specified dual-target RMSE-and-MAE gate; claims must remain target- and metric-specific."
+}

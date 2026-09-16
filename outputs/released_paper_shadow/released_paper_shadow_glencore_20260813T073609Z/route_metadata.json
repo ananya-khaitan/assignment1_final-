@@ -1,0 +1,143 @@
+[
+  {
+    "mode": 1,
+    "route": "ARIMA (auto-selected order; observed-test apply path)",
+    "selected_features": [
+      "target_1"
+    ],
+    "lasso_alpha": 0.001,
+    "lasso_validation_mse": 4.847441066788733e-05,
+    "arima_order": [
+      2,
+      1,
+      1
+    ],
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  },
+  {
+    "mode": 2,
+    "route": "ARIMA (auto-selected order; observed-test apply path)",
+    "selected_features": [
+      "target_1",
+      "VIX"
+    ],
+    "lasso_alpha": 0.005300000000000002,
+    "lasso_validation_mse": 0.00038815931246631146,
+    "arima_order": [
+      1,
+      0,
+      2
+    ],
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  },
+  {
+    "mode": 3,
+    "route": "LSTM (source sequence-major layout)",
+    "selected_features": [
+      "target_1",
+      "target_5"
+    ],
+    "lasso_alpha": 0.001,
+    "lasso_validation_mse": 0.00012656593053272502,
+    "arima_order": null,
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  },
+  {
+    "mode": 4,
+    "route": "LSTM (source sequence-major layout)",
+    "selected_features": [
+      "target_1",
+      "target_5",
+      "target_4",
+      "VIX"
+    ],
+    "lasso_alpha": 0.001,
+    "lasso_validation_mse": 0.0014771988301074408,
+    "arima_order": null,
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  },
+  {
+    "mode": 5,
+    "route": "LSTM (source sequence-major layout)",
+    "selected_features": [
+      "target_1",
+      "target_3"
+    ],
+    "lasso_alpha": 0.001,
+    "lasso_validation_mse": 0.0029243489975957254,
+    "arima_order": null,
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  },
+  {
+    "mode": 6,
+    "route": "LSTM (source sequence-major layout)",
+    "selected_features": [
+      "target_1",
+      "target_2",
+      "target_5",
+      "target_4"
+    ],
+    "lasso_alpha": 0.001,
+    "lasso_validation_mse": 0.004663290943074819,
+    "arima_order": null,
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  },
+  {
+    "mode": 7,
+    "route": "LSTM (source sequence-major layout)",
+    "selected_features": [
+      "target_1",
+      "target_2",
+      "target_4",
+      "target_5",
+      "VIX",
+      "mvis_critical_minerals"
+    ],
+    "lasso_alpha": 0.001,
+    "lasso_validation_mse": 0.006679675564435339,
+    "arima_order": null,
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  },
+  {
+    "mode": 8,
+    "route": "LSTM (source sequence-major layout)",
+    "selected_features": [
+      "target_2",
+      "target_4",
+      "target_1",
+      "target_5",
+      "VIX",
+      "mvis_critical_minerals",
+      "Shanghai_Index"
+    ],
+    "lasso_alpha": 0.001,
+    "lasso_validation_mse": 0.014036133322741333,
+    "arima_order": null,
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  },
+  {
+    "mode": 9,
+    "route": "LSTM (source sequence-major layout)",
+    "selected_features": [
+      "target_1",
+      "target_2",
+      "target_4",
+      "VIX",
+      "News_Sentiment",
+      "mvis_critical_minerals"
+    ],
+    "lasso_alpha": 0.001,
+    "lasso_validation_mse": 0.01004909310672393,
+    "arima_order": null,
+    "input_train_rows": 2996,
+    "input_test_rows": 749
+  }
+]

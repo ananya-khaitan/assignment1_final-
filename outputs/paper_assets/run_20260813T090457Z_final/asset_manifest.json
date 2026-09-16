@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-08-13T10:44:53.961406+00:00",
+  "paper_title": "Causal Multimodal Forecasting and Trading Evaluation for Critical-Mineral Equities",
+  "canonical_run_id": "run_20260813T090457Z",
+  "classification": "causal empirical paper assets; released-paper shadow excluded",
+  "tables": {
+    "Table 1": "Representative research and methodological references informing the study.",
+    "Table 2": "Actual parameter settings used in the causal empirical run.",
+    "Table 3": "Predictors used in the causal multimodal feature frame.",
+    "Table 4": "Descriptive statistics for the eight company closing-price series.",
+    "Table 5": "Descriptive characteristics of training-only Glencore VMD components.",
+    "Table 6": "Most frequently selected ARX predictors across scheduled causal refits.",
+    "Table 7": "Final-test forecasting errors for single-model candidates, averaged across companies.",
+    "Table 8": "Final-test forecasting errors for decomposition-based candidates, averaged across companies.",
+    "Table 9": "Diebold-Mariano comparisons of the proposed model with each benchmark across companies.",
+    "Table 10": "Final-test conformal interval quality, averaged across companies.",
+    "Table 11": "Trading performance of decomposition-model forecasts under calibrated strategies, averaged across companies.",
+    "Table 12": "Trading performance of single-model forecasts under calibrated strategies, averaged across companies."
+  },
+  "figures": {
+    "Figure 1": {
+      "caption": "Publication-record trend for a narrowly defined Crossref title query. This is a descriptive search snapshot, not a systematic review.",
+      "file": "figures/fig1_publication_trend.png"
+    },
+    "Figure 2": {
+      "caption": "Conceptual structure of the LSTM cell used as one candidate forecaster.",
+      "file": "figures/fig2_lstm_structure.png"
+    },
+    "Figure 3": {
+      "caption": "Causal one-step framework. Every operation at a forecast origin has access only to information available before the target close.",
+      "file": "figures/fig3_forecasting_framework.png"
+    },
+    "Figure 4": {
+      "caption": "Normalized closing-price paths for the eight critical-mineral equities.",
+      "file": "figures/fig4_price_series.png"
+    },
+    "Figure 5": {
+      "caption": "Word cloud of predictors repeatedly selected by the causal ARX procedure. It is not a news-headline word cloud because raw headlines are not an input to this study.",
+      "file": "figures/fig5_selected_predictor_wordcloud.png"
+    },
+    "Figure 6": {
+      "caption": "SF Fed news-sentiment index during the sample and its empirical distribution.",
+      "file": "figures/fig6_sentiment.png"
+    },
+    "Figure 7": {
+      "caption": "Illustrative VMD components fitted only to Glencore's pre-test training segment; the display is not a full-sample decomposition.",
+      "file": "figures/fig7_vmd_components.png"
+    },
+    "Figure 8": {
+      "caption": "Approximate-entropy values for the Figure 7 training-only VMD components.",
+      "file": "figures/fig8_approximate_entropy.png"
+    },
+    "Figure 9": {
+      "caption": "Illustrative final-test forecasts for Glencore using single-model candidates.",
+      "file": "figures/fig9_single_model_forecasts.png"
+    },
+    "Figure 10": {
+      "caption": "Cross-company mean final-test RMSE by model, normalized to the random-walk mean RMSE.",
+      "file": "figures/fig10_error_barplots.png"
+    },
+    "Figure 11": {
+      "caption": "Illustrative conformal interval forecasts for the proposed causal model on Glencore's final test set.",
+      "file": "figures/fig11_interval_forecasts.png"
+    },
+    "Figure 12": {
+      "caption": "Timing of the causal one-step trading evaluation.",
+      "file": "figures/fig12_trading_strategy.png"
+    },
+    "Figure 13": {
+      "caption": "Cross-company mean Sharpe ratios for directional strategies at 10 bp transaction costs.",
+      "file": "figures/fig13_trading_evaluation.png"
+    }
+  },
+  "literature_query": {
+    "provider": "Crossref Works API",
+    "query_title": "critical mineral forecasting",
+    "purpose": "descriptive candidate-record trend; not a systematic review"
+  },
+  "source_checksums": {
+    "experiment_registry.json": "c6050bb31083e535e96b88eeb0f87d5267485273b95326d5f2126636f874982f",
+    "walk_forward_metrics.csv": "7e64933be4306ae2a322d69039aac82e64464d5a75f9bbe5d7d3982b47fc816e",
+    "interval_summary.csv": "2d42f9a7217d705218d4bbc26038fc42fb0652c0fb60fbcb4a4ede5e1081ce73",
+    "trading_results.csv": "e4d13d60bb71ff9c2a7d437dba17526ef303bdcd777f475c928a47125191f1f7",
+    "dm_test_results.csv": "538b2a2f120d580a2a645fb4550a18e23f7ff0df9be62bd9090a4f6d6326caca",
+    "feature_stability.csv": "0a091216f9d518be1d26a50ab7385b87fe0216fab2796ffe2a5edfdc6c24cc22",
+    "walk_forward_forecasts.csv": "31e4abe5163dc7eac89b4849f7b1a6e104c5b5e65c5cd10dc57ea7b920a495aa"
+  }
+}

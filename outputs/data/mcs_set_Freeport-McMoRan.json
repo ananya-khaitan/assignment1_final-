@@ -1,0 +1,33 @@
+{
+  "size": 0.05,
+  "mcs_models": [
+    "ARIMA",
+    "Elastic Net",
+    "Histogram Gradient Boosting",
+    "LASSO",
+    "LightGBM",
+    "Random Forest",
+    "Random Walk",
+    "Random Walk + Drift",
+    "Selected ARX",
+    "XGBoost"
+  ],
+  "pvalues": {
+    "ARIMA": 0.163,
+    "CEEMDAN-LSTM": 0.0,
+    "Elastic Net": 0.888,
+    "GRU": 0.03,
+    "Histogram Gradient Boosting": 0.324,
+    "LASSO": 0.888,
+    "LSTM": 0.0,
+    "LightGBM": 0.163,
+    "Random Forest": 0.324,
+    "Random Walk": 1.0,
+    "Random Walk + Drift": 0.123,
+    "Selected ARX": 0.888,
+    "VMD-GRU": 0.002,
+    "VMD-LASSO-ARX/LSTM": 0.0,
+    "VMD-LSTM": 0.002,
+    "XGBoost": 0.324
+  }
+}

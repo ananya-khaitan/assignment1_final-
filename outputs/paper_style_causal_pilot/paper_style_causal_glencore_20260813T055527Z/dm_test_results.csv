@@ -1,0 +1,3 @@
+Company,Proposed Model,Benchmark,DM Statistic,p-value,Loss Difference Definition
+Glencore,Paper-Style Causal VMD-ARIMA/LSTM,ARIMA,2.304310854843776,0.04666901210034302,proposed squared loss - benchmark squared loss
+Glencore,Paper-Style Causal VMD-ARIMA/LSTM,Random Walk,2.2573875370111423,0.0503912833037381,proposed squared loss - benchmark squared loss

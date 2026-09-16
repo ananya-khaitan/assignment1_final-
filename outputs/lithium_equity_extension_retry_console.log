@@ -1,0 +1,59 @@
+[albemarle_equity] loading aligned paper panel
+  Random Walk complete
+  ES complete
+  ARIMA complete
+  SVR complete
+  RF complete
+  MLP complete
+  ELM complete
+  LSTM complete
+  albemarle_equity/adaptive: 1/14 candidates complete; last=VMD-K7-A1500; elapsed=2.1m; ETA=2026-08-30 01:41:57 India Standard Time
+  albemarle_equity/adaptive: 2/14 candidates complete; last=VMD-K7-A3000; elapsed=4.4m; ETA=2026-08-30 01:42:41 India Standard Time
+  albemarle_equity/adaptive: 3/14 candidates complete; last=VMD-K7-A4500; elapsed=6.7m; ETA=2026-08-30 01:43:17 India Standard Time
+  albemarle_equity/adaptive: 4/14 candidates complete; last=VMD-K8-A1500; elapsed=8.8m; ETA=2026-08-30 01:42:41 India Standard Time
+  albemarle_equity/adaptive: 5/14 candidates complete; last=VMD-K8-A3000; elapsed=11.3m; ETA=2026-08-30 01:43:43 India Standard Time
+  albemarle_equity/adaptive: 6/14 candidates complete; last=VMD-K8-A4500; elapsed=13.9m; ETA=2026-08-30 01:44:25 India Standard Time
+  albemarle_equity/adaptive: 7/14 candidates complete; last=VMD-K9-A1500; elapsed=16.8m; ETA=2026-08-30 01:45:33 India Standard Time
+  albemarle_equity/adaptive: 8/14 candidates complete; last=VMD-K9-A3000; elapsed=19.9m; ETA=2026-08-30 01:46:52 India Standard Time
+  albemarle_equity/adaptive: 9/14 candidates complete; last=VMD-K9-A4500; elapsed=22.9m; ETA=2026-08-30 01:47:37 India Standard Time
+  albemarle_equity/adaptive: 10/14 candidates complete; last=VMD-K10-A1500; elapsed=25.8m; ETA=2026-08-30 01:48:05 India Standard Time
+  albemarle_equity/adaptive: 11/14 candidates complete; last=VMD-K10-A3000; elapsed=28.7m; ETA=2026-08-30 01:48:32 India Standard Time
+  albemarle_equity/adaptive: 12/14 candidates complete; last=VMD-K10-A4500; elapsed=32.4m; ETA=2026-08-30 01:49:47 India Standard Time
+  albemarle_equity/adaptive: 13/14 candidates complete; last=CEEMDAN-M7; elapsed=33.8m; ETA=2026-08-30 01:48:19 India Standard Time
+  albemarle_equity/adaptive: 14/14 candidates complete; last=CEEMDAN-M9; elapsed=35.1m; ETA=2026-08-30 01:47:04 India Standard Time
+  VMD-ARIMA complete
+  VMD-LSTM complete
+  CEEMDAN-ARIMA complete
+  CEEMDAN-LSTM complete
+  Fixed VMD-LASSO-ARIMA/LSTM complete
+  Proposed Adaptive Decomposition-Routing Ensemble complete
+[ganfeng_equity] loading aligned paper panel
+  Random Walk complete
+  ES complete
+  ARIMA complete
+  SVR complete
+  RF complete
+  MLP complete
+  ELM complete
+  LSTM complete
+  ganfeng_equity/adaptive: 1/14 candidates complete; last=VMD-K7-A1500; elapsed=2.1m; ETA=2026-08-30 02:20:49 India Standard Time
+  ganfeng_equity/adaptive: 2/14 candidates complete; last=VMD-K7-A3000; elapsed=4.4m; ETA=2026-08-30 02:22:04 India Standard Time
+  ganfeng_equity/adaptive: 3/14 candidates complete; last=VMD-K7-A4500; elapsed=6.7m; ETA=2026-08-30 02:22:47 India Standard Time
+  ganfeng_equity/adaptive: 4/14 candidates complete; last=VMD-K8-A1500; elapsed=9.0m; ETA=2026-08-30 02:23:07 India Standard Time
+  ganfeng_equity/adaptive: 5/14 candidates complete; last=VMD-K8-A3000; elapsed=11.4m; ETA=2026-08-30 02:23:28 India Standard Time
+  ganfeng_equity/adaptive: 6/14 candidates complete; last=VMD-K8-A4500; elapsed=13.9m; ETA=2026-08-30 02:23:49 India Standard Time
+  ganfeng_equity/adaptive: 7/14 candidates complete; last=VMD-K9-A1500; elapsed=16.5m; ETA=2026-08-30 02:24:29 India Standard Time
+  ganfeng_equity/adaptive: 8/14 candidates complete; last=VMD-K9-A3000; elapsed=19.2m; ETA=2026-08-30 02:25:07 India Standard Time
+  ganfeng_equity/adaptive: 9/14 candidates complete; last=VMD-K9-A4500; elapsed=21.9m; ETA=2026-08-30 02:25:29 India Standard Time
+  ganfeng_equity/adaptive: 10/14 candidates complete; last=VMD-K10-A1500; elapsed=24.7m; ETA=2026-08-30 02:26:03 India Standard Time
+  ganfeng_equity/adaptive: 11/14 candidates complete; last=VMD-K10-A3000; elapsed=27.7m; ETA=2026-08-30 02:26:42 India Standard Time
+  ganfeng_equity/adaptive: 12/14 candidates complete; last=VMD-K10-A4500; elapsed=31.0m; ETA=2026-08-30 02:27:37 India Standard Time
+  ganfeng_equity/adaptive: 13/14 candidates complete; last=CEEMDAN-M7; elapsed=32.1m; ETA=2026-08-30 02:26:03 India Standard Time
+  ganfeng_equity/adaptive: 14/14 candidates complete; last=CEEMDAN-M9; elapsed=33.2m; ETA=2026-08-30 02:24:38 India Standard Time
+  VMD-ARIMA complete
+  VMD-LSTM complete
+  CEEMDAN-ARIMA complete
+  CEEMDAN-LSTM complete
+  Fixed VMD-LASSO-ARIMA/LSTM complete
+  Proposed Adaptive Decomposition-Routing Ensemble complete
+Saved complete lithium paper run to C:\Users\Pratham Lahoti\Downloads\assignment1_pratham\outputs\lithium_paper\lithium_equities_20260829T193735Z

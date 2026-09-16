@@ -1,0 +1,1811 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Causal Multimodal Forecasting and Trading Evaluation for Critical-Mineral Equities</title>
+<style>
+@page { size: Letter; margin: .65in .62in .6in; }
+@page wide { size: Letter landscape; margin: .45in .42in; }
+* { box-sizing: border-box; }
+body { color:#182430; font-family: Calibri, Arial, sans-serif; font-size:10.2pt; line-height:1.34; margin:0; }
+h1,h2,h3 { color:#0B2545; font-family: Georgia, 'Times New Roman', serif; }
+h1 { font-size:19pt; border-bottom:1px solid #9EB8CF; padding-bottom:5px; margin:24px 0 10px; break-before:page; }
+h1.first { break-before:auto; }
+h2 { font-size:13.5pt; margin:15px 0 7px; } h3 { font-size:11.2pt; margin:12px 0 4px; }
+p { margin:0 0 8px; text-align:justify; }
+.cover { min-height:8.8in; padding-top:1.15in; page-break-after:always; }
+.eyebrow { color:#2E74B5; font-weight:bold; font-size:10pt; letter-spacing:1.2px; text-transform:uppercase; }
+.cover h1 { border:0; color:#0B2545; font-size:29pt; line-height:1.12; margin:18px 0; }
+.subtitle { font-family:Georgia,serif; color:#41596F; font-size:15pt; line-height:1.35; max-width:6.4in; }
+.rule { background:#2E74B5; height:5px; width:1.5in; margin:32px 0 22px; }
+.meta { color:#526474; font-size:10pt; }
+.callout { border-left:4px solid #2E74B5; background:#F1F6FA; padding:10px 12px; margin:12px 0; color:#263B4D; }
+figure { margin:13px auto 16px; text-align:center; page-break-inside:avoid; }
+figure img { max-width:100%; max-height:6.65in; object-fit:contain; }
+figcaption { color:#445665; font-size:8.7pt; line-height:1.25; margin:4px auto 0; max-width:6.6in; text-align:left; }
+.table-block { margin:11px 0 16px; page-break-inside:avoid; }
+.table-block.landscape { page:wide; break-before:page; }
+.table-caption { color:#283D50; font-size:9pt; margin:0 0 5px; text-align:left; }
+table.results-table { border-collapse:collapse; width:100%; font-size:7.3pt; line-height:1.15; }
+table.results-table th { background:#0B2545; color:white; font-weight:bold; padding:4px 4px; text-align:left; vertical-align:bottom; }
+table.results-table td { border-bottom:1px solid #D7E0E7; padding:3px 4px; vertical-align:top; }
+table.results-table tr:nth-child(even) td { background:#F5F8FA; }
+.landscape table.results-table { font-size:6.5pt; }
+.refs p { padding-left:.25in; text-indent:-.25in; font-size:9pt; }
+.appendix { background:#F5F8FA; border-top:2px solid #2E74B5; padding:10px 12px; }
+.page-note { color:#5B6C7A; font-size:8.3pt; }
+</style></head><body>
+<section class="cover"><div class="eyebrow">Empirical research manuscript</div><h1 class="first">Causal Multimodal Forecasting and Trading Evaluation for Critical-Mineral Equities</h1><p class="subtitle">A fully causal, one-step comparison of multimodal forecasts, uncertainty intervals, and cost-aware trading signals across eight global critical-mineral companies.</p><div class="rule"></div><p class="meta">Canonical run: run_20260813T090457Z<br>Prepared 13 August 2026<br>All reported empirical outputs originate from the completed causal pipeline.</p><div class="callout"><b>Research-integrity statement.</b> The released-paper shadow reconstruction is excluded from this manuscript because it is a noncausal forensic exercise. No final-test target is used for decomposition, scaling, feature selection, tuning, calibration, or model fitting in the reported analysis.</div></section>
+
+<h1 class="first">Abstract</h1><p>Critical-mineral equity prices are influenced by commodity conditions, macroeconomic variables, market factors, search interest, and news sentiment. This paper evaluates whether multimodal forecasting systems can convert those signals into reliable one-day-ahead forecasts and transaction-cost-aware trading decisions. Eight companies are assessed with a fixed final holdout, scheduled walk-forward refits, train-only VMD or CEEMDAN decomposition, historical LASSO selection, conformal intervals, Diebold-Mariano comparisons, and calibrated trading thresholds. The contribution is an auditable causal evaluation rather than a claim that model complexity always dominates simple benchmarks. Complete company-level, model-level, interval, trading, feature-selection, and DM-test records accompany the paper.</p>
+<p><b>Keywords:</b> critical minerals; equity forecasting; VMD; LASSO; LSTM; causal walk-forward validation; conformal prediction; trading evaluation.</p>
+
+<h1>1. Introduction</h1><p>Critical-mineral producers operate at the intersection of volatile commodity demand, geopolitical supply risks, energy-transition investment, and company-specific execution. A forecasting model that is attractive in a static backtest may nevertheless fail once each decision is restricted to information that was genuinely observable before the next close. We therefore evaluate a broad single-model and decomposition-model set under a common one-step causal protocol.</p><p>The paper is inspired by Liu et al. (2025), which combines decomposition, feature selection, neural forecasting, interval prediction, and trading evaluation in carbon markets. The present application changes the target domain and, critically, carries each preprocessing and selection decision forward in time rather than deriving it from a full sample.</p><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig1_publication_trend.png" alt="Figure 1"><figcaption><b>Figure 1.</b> Publication-record trend for a narrowly defined Crossref title query. This is a descriptive search snapshot, not a systematic review.</figcaption></figure><section class="table-block"><p class="table-caption"><b>Table 1.</b> Representative research and methodological references informing the study.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Study</th>
+      <th>Focus</th>
+      <th>Methodological Contribution</th>
+      <th>Relevance to This Paper</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dragomiretskiy and Zosso (2014)</td>
+      <td>Variational mode decomposition</td>
+      <td>Signal decomposition</td>
+      <td>Introduces VMD as a variational signal-decomposition method.</td>
+    </tr>
+    <tr>
+      <td>Tibshirani (1996)</td>
+      <td>Least absolute shrinkage and selection operator</td>
+      <td>Feature selection</td>
+      <td>Provides the LASSO regularization used for sparse predictor selection.</td>
+    </tr>
+    <tr>
+      <td>Hochreiter and Schmidhuber (1997)</td>
+      <td>Long short-term memory</td>
+      <td>Sequence modelling</td>
+      <td>Introduces the recurrent architecture used by the LSTM candidates.</td>
+    </tr>
+    <tr>
+      <td>Diebold and Mariano (1995)</td>
+      <td>Comparing predictive accuracy</td>
+      <td>Forecast comparison</td>
+      <td>Provides the forecast-loss comparison framework.</td>
+    </tr>
+    <tr>
+      <td>Liu et al. (2025)</td>
+      <td>Multimodal carbon-price forecasting</td>
+      <td>VMD, LASSO, ARIMA/LSTM and trading</td>
+      <td>Methodological reference; this study changes the target domain and enforces a causal walk-forward evaluation.</td>
+    </tr>
+    <tr>
+      <td>This study</td>
+      <td>Critical-mineral equities</td>
+      <td>Causal one-step forecasting and trading</td>
+      <td>Uses scheduled train-only decomposition, historical calibration, conformal intervals and transaction-cost evaluation.</td>
+    </tr>
+  </tbody>
+</table></section>
+
+<h1>2. Methodology</h1><h2>2.1 Causal evaluation design</h2><p>For each company, historical observations up to a forecast origin are available to the model; the next closing price is the target. Calibration observations precede the final test set. All transformations, factor alignment, predictor selection, decomposition, refits, interval residuals, and trading thresholds follow this information boundary. The final test set is never used to optimize model choices.</p><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig3_forecasting_framework.png" alt="Figure 3"><figcaption><b>Figure 3.</b> Causal one-step framework. Every operation at a forecast origin has access only to information available before the target close.</figcaption></figure>
+<h2>2.2 Candidate forecasters</h2><p>Benchmarks include random walk, random walk with drift, ARIMA, sparse linear models, tree ensembles, gradient boosting, LSTM, and GRU. Decomposition candidates include VMD-LSTM, VMD-GRU, CEEMDAN-LSTM, and the proposed VMD-LASSO-ARX/LSTM model. The latter routes illustrative lower-entropy modes to a sparse autoregression and higher-entropy modes to a neural residual forecaster, then recombines the forecasts.</p><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig2_lstm_structure.png" alt="Figure 2"><figcaption><b>Figure 2.</b> Conceptual structure of the LSTM cell used as one candidate forecaster.</figcaption></figure><section class="table-block"><p class="table-caption"><b>Table 2.</b> Actual parameter settings used in the causal empirical run.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Parameter</th>
+      <th>Value</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Forecast horizon</td>
+      <td>1</td>
+      <td>One trading day</td>
+    </tr>
+    <tr>
+      <td>Final-test share</td>
+      <td>0.2</td>
+      <td>Chronological final holdout</td>
+    </tr>
+    <tr>
+      <td>Calibration observations</td>
+      <td>60</td>
+      <td>Pre-test residual and threshold calibration</td>
+    </tr>
+    <tr>
+      <td>Model refit interval</td>
+      <td>20</td>
+      <td>Trading observations</td>
+    </tr>
+    <tr>
+      <td>VMD components</td>
+      <td>5</td>
+      <td>Train-only VMD at scheduled refits</td>
+    </tr>
+    <tr>
+      <td>VMD alpha</td>
+      <td>2000</td>
+      <td>VMD penalty parameter</td>
+    </tr>
+    <tr>
+      <td>RNN epochs</td>
+      <td>5</td>
+      <td>LSTM/GRU candidate fitting</td>
+    </tr>
+    <tr>
+      <td>Conformal alpha</td>
+      <td>0.1</td>
+      <td>Two-sided interval nominal error</td>
+    </tr>
+    <tr>
+      <td>Run identifier</td>
+      <td>run_20260813T090457Z</td>
+      <td>Provenance registry</td>
+    </tr>
+  </tbody>
+</table></section><section class="table-block"><p class="table-caption"><b>Table 3.</b> Predictors used in the causal multimodal feature frame.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Variable</th>
+      <th>Construct</th>
+      <th>Feature Group</th>
+      <th>Availability Treatment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>mvis_critical_minerals</td>
+      <td>MVIS Global Rare Earth / Strategic Metals index</td>
+      <td>Sector benchmark</td>
+      <td>Lagged one trading day before use</td>
+    </tr>
+    <tr>
+      <td>SP500</td>
+      <td>S&amp;P 500</td>
+      <td>Global equity-market condition</td>
+      <td>Lagged one trading day before use</td>
+    </tr>
+    <tr>
+      <td>Shanghai_Index</td>
+      <td>Shanghai Composite</td>
+      <td>China equity-market condition</td>
+      <td>Lagged one trading day before use</td>
+    </tr>
+    <tr>
+      <td>Crude_Oil</td>
+      <td>Crude-oil futures close</td>
+      <td>Energy-market condition</td>
+      <td>Lagged one trading day before use</td>
+    </tr>
+    <tr>
+      <td>VIX</td>
+      <td>CBOE VIX</td>
+      <td>Market uncertainty</td>
+      <td>Lagged one trading day before use</td>
+    </tr>
+    <tr>
+      <td>US_Dollar_Index</td>
+      <td>US Dollar Index</td>
+      <td>Foreign-exchange condition</td>
+      <td>Lagged one trading day before use</td>
+    </tr>
+    <tr>
+      <td>Search_Index</td>
+      <td>Google Trends: rare earth</td>
+      <td>Public attention</td>
+      <td>Lagged one trading day before use</td>
+    </tr>
+    <tr>
+      <td>News_Sentiment</td>
+      <td>SF Fed news-sentiment index</td>
+      <td>News sentiment</td>
+      <td>Lagged one trading day before use</td>
+    </tr>
+  </tbody>
+</table></section>
+<h2>2.3 Evaluation, intervals, and trading</h2><p>Forecasting is evaluated with RMSE, MAE, MASE, MAPE, and directional accuracy. Pairwise DM tests compare squared forecast loss. Distribution-free conformal intervals are derived from calibration residuals. Directional and uncertainty-adjusted strategies are evaluated at zero, 10, 25, and 50 basis-point transaction costs; thresholds are selected only on calibration data.</p>
+
+<h1>3. Data</h1><p>The final panel contains daily closing prices for Glencore, BHP Group, Rio Tinto, Freeport-McMoRan, Albemarle, Zijin Mining, Ganfeng Lithium, and Anglo American, together with the MVIS strategic-metals benchmark, macro series, regional factors, Google Trends, and news sentiment. Each firm retains its observed price scale; comparison tables therefore report company-average errors and within-company ranks together.</p><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig4_price_series.png" alt="Figure 4"><figcaption><b>Figure 4.</b> Normalized closing-price paths for the eight critical-mineral equities.</figcaption></figure><section class="table-block"><p class="table-caption"><b>Table 4.</b> Descriptive statistics for the eight company closing-price series.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Company</th>
+      <th>Observations</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Mean Close</th>
+      <th>Std. Dev.</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Glencore</td>
+      <td>3751</td>
+      <td>2011-05-19</td>
+      <td>2026-03-20</td>
+      <td>4.439640</td>
+      <td>1.393771</td>
+      <td>0.970</td>
+      <td>8.320</td>
+    </tr>
+    <tr>
+      <td>BHP Group</td>
+      <td>3751</td>
+      <td>2011-05-19</td>
+      <td>2026-03-20</td>
+      <td>24.371099</td>
+      <td>6.050474</td>
+      <td>8.378</td>
+      <td>42.014</td>
+    </tr>
+    <tr>
+      <td>Rio Tinto</td>
+      <td>3751</td>
+      <td>2011-05-19</td>
+      <td>2026-03-20</td>
+      <td>62.026594</td>
+      <td>17.437341</td>
+      <td>24.026</td>
+      <td>120.150</td>
+    </tr>
+    <tr>
+      <td>Freeport-McMoRan</td>
+      <td>3751</td>
+      <td>2011-05-19</td>
+      <td>2026-03-20</td>
+      <td>28.398222</td>
+      <td>13.727060</td>
+      <td>3.740</td>
+      <td>68.820</td>
+    </tr>
+    <tr>
+      <td>Albemarle</td>
+      <td>3751</td>
+      <td>2011-05-19</td>
+      <td>2026-03-20</td>
+      <td>106.683575</td>
+      <td>60.690652</td>
+      <td>39.000</td>
+      <td>325.380</td>
+    </tr>
+    <tr>
+      <td>Zijin Mining</td>
+      <td>3751</td>
+      <td>2011-05-19</td>
+      <td>2026-03-20</td>
+      <td>0.932463</td>
+      <td>0.974705</td>
+      <td>0.177</td>
+      <td>5.912</td>
+    </tr>
+    <tr>
+      <td>Ganfeng Lithium</td>
+      <td>3751</td>
+      <td>2011-05-19</td>
+      <td>2026-03-20</td>
+      <td>4.796844</td>
+      <td>4.722544</td>
+      <td>0.309</td>
+      <td>24.324</td>
+    </tr>
+    <tr>
+      <td>Anglo American</td>
+      <td>3751</td>
+      <td>2011-05-19</td>
+      <td>2026-03-20</td>
+      <td>26.002085</td>
+      <td>9.957116</td>
+      <td>2.980</td>
+      <td>53.420</td>
+    </tr>
+  </tbody>
+</table></section><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig5_selected_predictor_wordcloud.png" alt="Figure 5"><figcaption><b>Figure 5.</b> Word cloud of predictors repeatedly selected by the causal ARX procedure. It is not a news-headline word cloud because raw headlines are not an input to this study.</figcaption></figure><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig6_sentiment.png" alt="Figure 6"><figcaption><b>Figure 6.</b> SF Fed news-sentiment index during the sample and its empirical distribution.</figcaption></figure>
+
+<h1>4. Decomposition and causal feature selection</h1><p>Figure 7 is deliberately limited to Glencore's pre-test training segment. It illustrates a VMD decomposition without exposing the model to later test observations. At every scheduled refit in the empirical run, the decomposition and feature-selection process is re-executed using the historical prefix available at that time.</p><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig7_vmd_components.png" alt="Figure 7"><figcaption><b>Figure 7.</b> Illustrative VMD components fitted only to Glencore&#x27;s pre-test training segment; the display is not a full-sample decomposition.</figcaption></figure><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig8_approximate_entropy.png" alt="Figure 8"><figcaption><b>Figure 8.</b> Approximate-entropy values for the Figure 7 training-only VMD components.</figcaption></figure><section class="table-block"><p class="table-caption"><b>Table 5.</b> Descriptive characteristics of training-only Glencore VMD components.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Mode</th>
+      <th>Variance Share (%)</th>
+      <th>Average Peak Period (obs.)</th>
+      <th>Approximate Entropy</th>
+      <th>Illustrative Route</th>
+      <th>Training Observations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VMD 1</td>
+      <td>86.339889</td>
+      <td>55.555556</td>
+      <td>0.013154</td>
+      <td>LASSO-ARX</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <td>VMD 2</td>
+      <td>5.507748</td>
+      <td>75.000000</td>
+      <td>0.125884</td>
+      <td>LASSO-ARX</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <td>VMD 3</td>
+      <td>0.710331</td>
+      <td>36.585366</td>
+      <td>0.509540</td>
+      <td>LASSO-ARX</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <td>VMD 4</td>
+      <td>0.209560</td>
+      <td>17.341040</td>
+      <td>0.621312</td>
+      <td>LSTM</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <td>VMD 5</td>
+      <td>0.080276</td>
+      <td>8.982036</td>
+      <td>0.590350</td>
+      <td>LSTM</td>
+      <td>3000</td>
+    </tr>
+  </tbody>
+</table></section><section class="table-block"><p class="table-caption"><b>Table 6.</b> Most frequently selected ARX predictors across scheduled causal refits.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Company</th>
+      <th>Feature</th>
+      <th>Selection Count</th>
+      <th>Selection Rate (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Albemarle</td>
+      <td>News_Sentiment</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Albemarle</td>
+      <td>target_lag_1</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Albemarle</td>
+      <td>SP500</td>
+      <td>29</td>
+      <td>70.731707</td>
+    </tr>
+    <tr>
+      <td>Albemarle</td>
+      <td>target_lag_5</td>
+      <td>24</td>
+      <td>58.536585</td>
+    </tr>
+    <tr>
+      <td>Albemarle</td>
+      <td>VIX</td>
+      <td>14</td>
+      <td>34.146341</td>
+    </tr>
+    <tr>
+      <td>Anglo American</td>
+      <td>target_lag_1</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Anglo American</td>
+      <td>SP500</td>
+      <td>7</td>
+      <td>17.073171</td>
+    </tr>
+    <tr>
+      <td>BHP Group</td>
+      <td>News_Sentiment</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>BHP Group</td>
+      <td>target_lag_1</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>BHP Group</td>
+      <td>SP500</td>
+      <td>30</td>
+      <td>73.170732</td>
+    </tr>
+    <tr>
+      <td>BHP Group</td>
+      <td>Crude_Oil</td>
+      <td>29</td>
+      <td>70.731707</td>
+    </tr>
+    <tr>
+      <td>BHP Group</td>
+      <td>Search_Index</td>
+      <td>1</td>
+      <td>2.439024</td>
+    </tr>
+    <tr>
+      <td>Freeport-McMoRan</td>
+      <td>target_lag_1</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Freeport-McMoRan</td>
+      <td>VIX</td>
+      <td>18</td>
+      <td>43.902439</td>
+    </tr>
+    <tr>
+      <td>Freeport-McMoRan</td>
+      <td>SP500</td>
+      <td>17</td>
+      <td>41.463415</td>
+    </tr>
+    <tr>
+      <td>Freeport-McMoRan</td>
+      <td>News_Sentiment</td>
+      <td>15</td>
+      <td>36.585366</td>
+    </tr>
+    <tr>
+      <td>Freeport-McMoRan</td>
+      <td>Shanghai_Index</td>
+      <td>12</td>
+      <td>29.268293</td>
+    </tr>
+    <tr>
+      <td>Ganfeng Lithium</td>
+      <td>Crude_Oil</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Ganfeng Lithium</td>
+      <td>SP500</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Ganfeng Lithium</td>
+      <td>US_Dollar_Index</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Ganfeng Lithium</td>
+      <td>VIX</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Ganfeng Lithium</td>
+      <td>target_lag_1</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Glencore</td>
+      <td>Crude_Oil</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Glencore</td>
+      <td>target_lag_1</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Glencore</td>
+      <td>target_lag_4</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Glencore</td>
+      <td>target_lag_5</td>
+      <td>39</td>
+      <td>95.121951</td>
+    </tr>
+    <tr>
+      <td>Glencore</td>
+      <td>target_lag_3</td>
+      <td>15</td>
+      <td>36.585366</td>
+    </tr>
+    <tr>
+      <td>Rio Tinto</td>
+      <td>target_lag_1</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Rio Tinto</td>
+      <td>SP500</td>
+      <td>40</td>
+      <td>97.560976</td>
+    </tr>
+    <tr>
+      <td>Zijin Mining</td>
+      <td>SP500</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Zijin Mining</td>
+      <td>target_lag_1</td>
+      <td>41</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <td>Zijin Mining</td>
+      <td>target_lag_4</td>
+      <td>40</td>
+      <td>97.560976</td>
+    </tr>
+    <tr>
+      <td>Zijin Mining</td>
+      <td>Search_Index</td>
+      <td>36</td>
+      <td>87.804878</td>
+    </tr>
+    <tr>
+      <td>Zijin Mining</td>
+      <td>target_lag_2</td>
+      <td>29</td>
+      <td>70.731707</td>
+    </tr>
+  </tbody>
+</table></section>
+
+<h1>5. Forecasting results</h1><p>The results are heterogeneous across firms and model families. In the cross-company descriptive averages, RMSE is 1.0515 for the random walk, 1.0546 for ARIMA, and 2.3069 for the proposed decomposition architecture. Such averages span different equity price scales, so the company-level ranks and DM results are essential complements. A negative DM statistic denotes lower squared loss for the proposed model under the documented loss-difference convention.</p><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig9_single_model_forecasts.png" alt="Figure 9"><figcaption><b>Figure 9.</b> Illustrative final-test forecasts for Glencore using single-model candidates.</figcaption></figure><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig10_error_barplots.png" alt="Figure 10"><figcaption><b>Figure 10.</b> Cross-company mean final-test RMSE by model, normalized to the random-walk mean RMSE.</figcaption></figure><section class="table-block"><p class="table-caption"><b>Table 7.</b> Final-test forecasting errors for single-model candidates, averaged across companies.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>RMSE</th>
+      <th>MAE</th>
+      <th>MASE</th>
+      <th>MAPE</th>
+      <th>Directional Accuracy</th>
+      <th>Within-Company RMSE Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Elastic Net</td>
+      <td>1.051123</td>
+      <td>0.764294</td>
+      <td>1.001644</td>
+      <td>1.786391</td>
+      <td>48.698264</td>
+      <td>3.375</td>
+    </tr>
+    <tr>
+      <td>LASSO</td>
+      <td>1.051123</td>
+      <td>0.764294</td>
+      <td>1.001644</td>
+      <td>1.786391</td>
+      <td>48.698264</td>
+      <td>3.375</td>
+    </tr>
+    <tr>
+      <td>Random Walk</td>
+      <td>1.051474</td>
+      <td>0.763758</td>
+      <td>0.999842</td>
+      <td>1.784213</td>
+      <td>48.381175</td>
+      <td>2.625</td>
+    </tr>
+    <tr>
+      <td>Random Walk + Drift</td>
+      <td>1.051719</td>
+      <td>0.764020</td>
+      <td>1.000360</td>
+      <td>1.785292</td>
+      <td>48.381175</td>
+      <td>3.375</td>
+    </tr>
+    <tr>
+      <td>Selected ARX</td>
+      <td>1.052990</td>
+      <td>0.766669</td>
+      <td>1.005828</td>
+      <td>1.797306</td>
+      <td>48.731642</td>
+      <td>3.875</td>
+    </tr>
+    <tr>
+      <td>ARIMA</td>
+      <td>1.054587</td>
+      <td>0.766267</td>
+      <td>1.003884</td>
+      <td>1.793394</td>
+      <td>48.898531</td>
+      <td>4.375</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>1.304039</td>
+      <td>0.899436</td>
+      <td>1.299465</td>
+      <td>2.226973</td>
+      <td>47.746996</td>
+      <td>7.625</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>1.308782</td>
+      <td>0.889523</td>
+      <td>1.327717</td>
+      <td>2.262900</td>
+      <td>47.429907</td>
+      <td>7.625</td>
+    </tr>
+    <tr>
+      <td>Histogram Gradient Boosting</td>
+      <td>1.412169</td>
+      <td>0.934511</td>
+      <td>1.420395</td>
+      <td>2.379430</td>
+      <td>46.194927</td>
+      <td>9.000</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>1.458301</td>
+      <td>0.977616</td>
+      <td>1.461766</td>
+      <td>2.461992</td>
+      <td>46.862483</td>
+      <td>9.750</td>
+    </tr>
+    <tr>
+      <td>GRU</td>
+      <td>1.847796</td>
+      <td>1.299777</td>
+      <td>1.972387</td>
+      <td>3.364871</td>
+      <td>48.581442</td>
+      <td>11.125</td>
+    </tr>
+    <tr>
+      <td>LSTM</td>
+      <td>1.966841</td>
+      <td>1.438012</td>
+      <td>2.120175</td>
+      <td>3.634327</td>
+      <td>48.381175</td>
+      <td>11.875</td>
+    </tr>
+  </tbody>
+</table></section><section class="table-block"><p class="table-caption"><b>Table 8.</b> Final-test forecasting errors for decomposition-based candidates, averaged across companies.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>RMSE</th>
+      <th>MAE</th>
+      <th>MASE</th>
+      <th>MAPE</th>
+      <th>Directional Accuracy</th>
+      <th>Within-Company RMSE Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>2.306859</td>
+      <td>1.719273</td>
+      <td>2.243559</td>
+      <td>4.122113</td>
+      <td>49.232310</td>
+      <td>1.875</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>2.456246</td>
+      <td>1.733511</td>
+      <td>2.357569</td>
+      <td>4.071308</td>
+      <td>48.815087</td>
+      <td>2.125</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>2.497021</td>
+      <td>1.743677</td>
+      <td>2.333639</td>
+      <td>4.038360</td>
+      <td>48.531375</td>
+      <td>2.625</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>2.715522</td>
+      <td>2.060631</td>
+      <td>2.777888</td>
+      <td>4.908894</td>
+      <td>49.332443</td>
+      <td>3.375</td>
+    </tr>
+  </tbody>
+</table></section><section class="table-block"><p class="table-caption"><b>Table 9.</b> Diebold-Mariano comparisons of the proposed model with each benchmark across companies.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Benchmark</th>
+      <th>Companies</th>
+      <th>Proposed Better (5%)</th>
+      <th>Proposed Worse (5%)</th>
+      <th>Median DM Statistic</th>
+      <th>Median p-value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>8</td>
+      <td>5</td>
+      <td>0</td>
+      <td>-3.810250</td>
+      <td>6.662634e-04</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>8</td>
+      <td>4</td>
+      <td>2</td>
+      <td>-1.961506</td>
+      <td>4.610423e-05</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>8</td>
+      <td>4</td>
+      <td>2</td>
+      <td>-2.397523</td>
+      <td>2.380809e-04</td>
+    </tr>
+    <tr>
+      <td>LSTM</td>
+      <td>8</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1.126995</td>
+      <td>2.619737e-05</td>
+    </tr>
+    <tr>
+      <td>GRU</td>
+      <td>8</td>
+      <td>3</td>
+      <td>5</td>
+      <td>5.292709</td>
+      <td>8.170270e-08</td>
+    </tr>
+    <tr>
+      <td>Histogram Gradient Boosting</td>
+      <td>8</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5.392096</td>
+      <td>8.234467e-06</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>8</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5.178992</td>
+      <td>2.054808e-05</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>8</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5.949540</td>
+      <td>7.762553e-08</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>8</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5.598017</td>
+      <td>1.638867e-06</td>
+    </tr>
+    <tr>
+      <td>ARIMA</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>10.824371</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <td>Dynamic Selected</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>10.757320</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <td>Elastic Net</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>10.801145</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <td>LASSO</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>10.801145</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <td>Random Walk</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>10.814668</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <td>Random Walk + Drift</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>10.812166</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <td>Selected ARX</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>10.825147</td>
+      <td>0.000000e+00</td>
+    </tr>
+  </tbody>
+</table></section>
+
+<h1>6. Interval forecasts and trading evaluation</h1><p>Conformal intervals quantify forecast uncertainty using only residuals observed before the final test. Trading signals are formed at the forecast origin and scored against the next realized return. The uncertainty-adjusted strategy can avoid a trade when the interval is insufficiently decisive. This timing avoids the common error of selecting a signal after the realized return is known.</p><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig11_interval_forecasts.png" alt="Figure 11"><figcaption><b>Figure 11.</b> Illustrative conformal interval forecasts for the proposed causal model on Glencore&#x27;s final test set.</figcaption></figure><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig12_trading_strategy.png" alt="Figure 12"><figcaption><b>Figure 12.</b> Timing of the causal one-step trading evaluation.</figcaption></figure><figure><img src="file:///C:/Users/Pratham%20Lahoti/Downloads/assignment1_pratham/outputs/paper_assets/run_20260813T090457Z_final_v2/figures/fig13_trading_evaluation.png" alt="Figure 13"><figcaption><b>Figure 13.</b> Cross-company mean Sharpe ratios for directional strategies at 10 bp transaction costs.</figcaption></figure><section class="table-block"><p class="table-caption"><b>Table 10.</b> Final-test conformal interval quality, averaged across companies.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Coverage (%)</th>
+      <th>Avg Width</th>
+      <th>Sharpness</th>
+      <th>Calibration Error</th>
+      <th>Winkler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Elastic Net</td>
+      <td>89.066667</td>
+      <td>3.804128</td>
+      <td>3.804128</td>
+      <td>3.166667</td>
+      <td>4.890816</td>
+    </tr>
+    <tr>
+      <td>LASSO</td>
+      <td>89.066667</td>
+      <td>3.804128</td>
+      <td>3.804128</td>
+      <td>3.166667</td>
+      <td>4.890816</td>
+    </tr>
+    <tr>
+      <td>Random Walk</td>
+      <td>89.050000</td>
+      <td>3.801959</td>
+      <td>3.801959</td>
+      <td>3.283333</td>
+      <td>4.891739</td>
+    </tr>
+    <tr>
+      <td>Random Walk + Drift</td>
+      <td>88.950000</td>
+      <td>3.801807</td>
+      <td>3.801807</td>
+      <td>3.183333</td>
+      <td>4.892073</td>
+    </tr>
+    <tr>
+      <td>Selected ARX</td>
+      <td>89.116667</td>
+      <td>3.813633</td>
+      <td>3.813633</td>
+      <td>3.250000</td>
+      <td>4.893984</td>
+    </tr>
+    <tr>
+      <td>ARIMA</td>
+      <td>88.900000</td>
+      <td>3.821954</td>
+      <td>3.821954</td>
+      <td>3.166667</td>
+      <td>4.916444</td>
+    </tr>
+    <tr>
+      <td>Dynamic Selected</td>
+      <td>88.833333</td>
+      <td>3.849221</td>
+      <td>3.849221</td>
+      <td>3.200000</td>
+      <td>4.958890</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>88.350000</td>
+      <td>4.055668</td>
+      <td>4.055668</td>
+      <td>4.250000</td>
+      <td>6.157363</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>88.466667</td>
+      <td>3.989870</td>
+      <td>3.989870</td>
+      <td>3.966667</td>
+      <td>6.223151</td>
+    </tr>
+    <tr>
+      <td>Histogram Gradient Boosting</td>
+      <td>88.416667</td>
+      <td>4.111965</td>
+      <td>4.111965</td>
+      <td>4.350000</td>
+      <td>6.812854</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>89.416667</td>
+      <td>4.461955</td>
+      <td>4.461955</td>
+      <td>4.483333</td>
+      <td>7.013176</td>
+    </tr>
+    <tr>
+      <td>GRU</td>
+      <td>88.616667</td>
+      <td>6.256394</td>
+      <td>6.256394</td>
+      <td>5.283333</td>
+      <td>8.912246</td>
+    </tr>
+    <tr>
+      <td>LSTM</td>
+      <td>89.133333</td>
+      <td>6.844858</td>
+      <td>6.844858</td>
+      <td>5.000000</td>
+      <td>9.329416</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>89.433333</td>
+      <td>8.720265</td>
+      <td>8.720265</td>
+      <td>2.966667</td>
+      <td>10.761977</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>88.800000</td>
+      <td>8.741523</td>
+      <td>8.741523</td>
+      <td>4.500000</td>
+      <td>11.714080</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>88.466667</td>
+      <td>8.396280</td>
+      <td>8.396280</td>
+      <td>3.533333</td>
+      <td>11.949767</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>89.550000</td>
+      <td>10.716001</td>
+      <td>10.716001</td>
+      <td>3.216667</td>
+      <td>12.794286</td>
+    </tr>
+  </tbody>
+</table></section><section class="table-block landscape"><p class="table-caption"><b>Table 11.</b> Trading performance of decomposition-model forecasts under calibrated strategies, averaged across companies.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Strategy</th>
+      <th>Cost</th>
+      <th>Annualized Return</th>
+      <th>Sharpe</th>
+      <th>Sortino</th>
+      <th>Calmar</th>
+      <th>Max Drawdown (%)</th>
+      <th>Turnover</th>
+      <th>Hit Rate (%)</th>
+      <th>Final Equity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0000</td>
+      <td>-0.160119</td>
+      <td>-0.335067</td>
+      <td>-0.438981</td>
+      <td>-0.233417</td>
+      <td>-61.196330</td>
+      <td>0.259333</td>
+      <td>48.150000</td>
+      <td>0.658005</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0010</td>
+      <td>-0.213956</td>
+      <td>-0.515837</td>
+      <td>-0.682159</td>
+      <td>-0.305240</td>
+      <td>-65.644963</td>
+      <td>0.259333</td>
+      <td>48.150000</td>
+      <td>0.537903</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0025</td>
+      <td>-0.288400</td>
+      <td>-0.784162</td>
+      <td>-1.035112</td>
+      <td>-0.389169</td>
+      <td>-71.876107</td>
+      <td>0.259333</td>
+      <td>48.150000</td>
+      <td>0.397660</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0050</td>
+      <td>-0.397340</td>
+      <td>-1.219644</td>
+      <td>-1.586931</td>
+      <td>-0.486039</td>
+      <td>-80.727050</td>
+      <td>0.259333</td>
+      <td>48.150000</td>
+      <td>0.240517</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0000</td>
+      <td>-0.066727</td>
+      <td>-0.075893</td>
+      <td>-0.096464</td>
+      <td>-0.108847</td>
+      <td>-40.438179</td>
+      <td>0.170000</td>
+      <td>25.200000</td>
+      <td>0.835582</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0010</td>
+      <td>-0.104286</td>
+      <td>-0.238597</td>
+      <td>-0.325394</td>
+      <td>-0.184853</td>
+      <td>-43.783550</td>
+      <td>0.170000</td>
+      <td>25.200000</td>
+      <td>0.746845</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0025</td>
+      <td>-0.157149</td>
+      <td>-0.481436</td>
+      <td>-0.659631</td>
+      <td>-0.273949</td>
+      <td>-48.380895</td>
+      <td>0.170000</td>
+      <td>25.200000</td>
+      <td>0.635879</td>
+    </tr>
+    <tr>
+      <td>CEEMDAN-LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0050</td>
+      <td>-0.236792</td>
+      <td>-0.879656</td>
+      <td>-1.186793</td>
+      <td>-0.366473</td>
+      <td>-56.874583</td>
+      <td>0.170000</td>
+      <td>25.200000</td>
+      <td>0.496186</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0000</td>
+      <td>-0.132551</td>
+      <td>-0.192233</td>
+      <td>-0.253500</td>
+      <td>-0.167687</td>
+      <td>-58.215100</td>
+      <td>0.305000</td>
+      <td>47.866667</td>
+      <td>0.725237</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0010</td>
+      <td>-0.198191</td>
+      <td>-0.405513</td>
+      <td>-0.550413</td>
+      <td>-0.275625</td>
+      <td>-62.973408</td>
+      <td>0.305000</td>
+      <td>47.866667</td>
+      <td>0.569763</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0025</td>
+      <td>-0.287404</td>
+      <td>-0.722446</td>
+      <td>-0.978304</td>
+      <td>-0.390534</td>
+      <td>-69.795023</td>
+      <td>0.305000</td>
+      <td>47.866667</td>
+      <td>0.397203</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0050</td>
+      <td>-0.414443</td>
+      <td>-1.236575</td>
+      <td>-1.638644</td>
+      <td>-0.500288</td>
+      <td>-81.696480</td>
+      <td>0.305000</td>
+      <td>47.866667</td>
+      <td>0.218569</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0000</td>
+      <td>-0.044889</td>
+      <td>-0.113575</td>
+      <td>-0.142092</td>
+      <td>-0.082528</td>
+      <td>-39.525806</td>
+      <td>0.210500</td>
+      <td>28.683333</td>
+      <td>0.908945</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0010</td>
+      <td>-0.094692</td>
+      <td>-0.303002</td>
+      <td>-0.406945</td>
+      <td>-0.182384</td>
+      <td>-43.560308</td>
+      <td>0.210500</td>
+      <td>28.683333</td>
+      <td>0.772928</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0025</td>
+      <td>-0.162768</td>
+      <td>-0.584012</td>
+      <td>-0.787416</td>
+      <td>-0.286767</td>
+      <td>-49.702967</td>
+      <td>0.210500</td>
+      <td>28.683333</td>
+      <td>0.618706</td>
+    </tr>
+    <tr>
+      <td>VMD-GRU</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0050</td>
+      <td>-0.260714</td>
+      <td>-1.038319</td>
+      <td>-1.370806</td>
+      <td>-0.385199</td>
+      <td>-60.773476</td>
+      <td>0.210500</td>
+      <td>28.683333</td>
+      <td>0.451480</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0000</td>
+      <td>0.062201</td>
+      <td>0.380839</td>
+      <td>0.603050</td>
+      <td>0.409578</td>
+      <td>-55.082533</td>
+      <td>0.836333</td>
+      <td>49.633333</td>
+      <td>1.474738</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0010</td>
+      <td>-0.133831</td>
+      <td>-0.173517</td>
+      <td>-0.198773</td>
+      <td>-0.105612</td>
+      <td>-62.600222</td>
+      <td>0.836333</td>
+      <td>49.633333</td>
+      <td>0.806371</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0025</td>
+      <td>-0.354795</td>
+      <td>-0.998403</td>
+      <td>-1.305074</td>
+      <td>-0.428333</td>
+      <td>-76.888470</td>
+      <td>0.836333</td>
+      <td>49.633333</td>
+      <td>0.357152</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0050</td>
+      <td>-0.592720</td>
+      <td>-2.331086</td>
+      <td>-2.891620</td>
+      <td>-0.637999</td>
+      <td>-90.922565</td>
+      <td>0.836333</td>
+      <td>49.633333</td>
+      <td>0.114101</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0000</td>
+      <td>0.063276</td>
+      <td>0.375126</td>
+      <td>0.593672</td>
+      <td>0.278966</td>
+      <td>-30.436447</td>
+      <td>0.364500</td>
+      <td>15.600000</td>
+      <td>1.247583</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0010</td>
+      <td>-0.032681</td>
+      <td>-0.060843</td>
+      <td>-0.055077</td>
+      <td>-0.061082</td>
+      <td>-35.414067</td>
+      <td>0.364500</td>
+      <td>15.600000</td>
+      <td>0.927075</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0025</td>
+      <td>-0.152857</td>
+      <td>-0.711307</td>
+      <td>-0.945181</td>
+      <td>-0.293842</td>
+      <td>-47.598134</td>
+      <td>0.364500</td>
+      <td>15.600000</td>
+      <td>0.640337</td>
+    </tr>
+    <tr>
+      <td>VMD-LASSO-ARX/LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0050</td>
+      <td>-0.306673</td>
+      <td>-1.763170</td>
+      <td>-2.205424</td>
+      <td>-0.455133</td>
+      <td>-63.107178</td>
+      <td>0.364500</td>
+      <td>15.600000</td>
+      <td>0.391321</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0000</td>
+      <td>-0.037373</td>
+      <td>0.060071</td>
+      <td>0.107237</td>
+      <td>0.005006</td>
+      <td>-53.665088</td>
+      <td>0.337333</td>
+      <td>48.516667</td>
+      <td>0.998844</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0010</td>
+      <td>-0.115996</td>
+      <td>-0.173208</td>
+      <td>-0.223873</td>
+      <td>-0.146107</td>
+      <td>-56.995383</td>
+      <td>0.337333</td>
+      <td>48.516667</td>
+      <td>0.773974</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0025</td>
+      <td>-0.222155</td>
+      <td>-0.520385</td>
+      <td>-0.701951</td>
+      <td>-0.298830</td>
+      <td>-64.911873</td>
+      <td>0.337333</td>
+      <td>48.516667</td>
+      <td>0.528171</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.0050</td>
+      <td>-0.371733</td>
+      <td>-1.084845</td>
+      <td>-1.441865</td>
+      <td>-0.464086</td>
+      <td>-77.190418</td>
+      <td>0.337333</td>
+      <td>48.516667</td>
+      <td>0.279786</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0000</td>
+      <td>-0.017951</td>
+      <td>0.071495</td>
+      <td>0.120317</td>
+      <td>0.048322</td>
+      <td>-34.280609</td>
+      <td>0.160833</td>
+      <td>16.983333</td>
+      <td>0.977062</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0010</td>
+      <td>-0.055696</td>
+      <td>-0.098230</td>
+      <td>-0.122372</td>
+      <td>-0.055715</td>
+      <td>-36.666352</td>
+      <td>0.160833</td>
+      <td>16.983333</td>
+      <td>0.874903</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0025</td>
+      <td>-0.108749</td>
+      <td>-0.351845</td>
+      <td>-0.476575</td>
+      <td>-0.187999</td>
+      <td>-40.046535</td>
+      <td>0.160833</td>
+      <td>16.983333</td>
+      <td>0.747139</td>
+    </tr>
+    <tr>
+      <td>VMD-LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.0050</td>
+      <td>-0.188556</td>
+      <td>-0.768383</td>
+      <td>-1.034711</td>
+      <td>-0.345079</td>
+      <td>-47.509092</td>
+      <td>0.160833</td>
+      <td>16.983333</td>
+      <td>0.585745</td>
+    </tr>
+  </tbody>
+</table></section><section class="table-block landscape"><p class="table-caption"><b>Table 12.</b> Trading performance of single-model forecasts under calibrated strategies, averaged across companies.</p><table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Strategy</th>
+      <th>Cost</th>
+      <th>Annualized Return</th>
+      <th>Sharpe</th>
+      <th>Sortino</th>
+      <th>Calmar</th>
+      <th>Max Drawdown (%)</th>
+      <th>Turnover</th>
+      <th>Hit Rate (%)</th>
+      <th>Final Equity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ARIMA</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.268768</td>
+      <td>-0.654048</td>
+      <td>-0.856853</td>
+      <td>-0.264523</td>
+      <td>-69.169294</td>
+      <td>1.069667</td>
+      <td>48.600000</td>
+      <td>0.512532</td>
+    </tr>
+    <tr>
+      <td>ARIMA</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>0.027980</td>
+      <td>0.233202</td>
+      <td>0.400106</td>
+      <td>0.369120</td>
+      <td>-15.738202</td>
+      <td>0.212500</td>
+      <td>10.266667</td>
+      <td>1.100818</td>
+    </tr>
+    <tr>
+      <td>Elastic Net</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.062631</td>
+      <td>-0.089102</td>
+      <td>-0.106201</td>
+      <td>-0.079701</td>
+      <td>-58.770792</td>
+      <td>0.195333</td>
+      <td>48.866667</td>
+      <td>0.937015</td>
+    </tr>
+    <tr>
+      <td>Elastic Net</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.102847</td>
+      <td>-0.172920</td>
+      <td>-0.233399</td>
+      <td>-0.128342</td>
+      <td>-47.606782</td>
+      <td>0.131167</td>
+      <td>37.383333</td>
+      <td>0.761233</td>
+    </tr>
+    <tr>
+      <td>GRU</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.198683</td>
+      <td>-0.435630</td>
+      <td>-0.600346</td>
+      <td>-0.300872</td>
+      <td>-65.275185</td>
+      <td>0.436667</td>
+      <td>47.750000</td>
+      <td>0.525483</td>
+    </tr>
+    <tr>
+      <td>GRU</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.015147</td>
+      <td>0.028421</td>
+      <td>0.220353</td>
+      <td>0.115981</td>
+      <td>-22.071912</td>
+      <td>0.063833</td>
+      <td>5.450000</td>
+      <td>0.976894</td>
+    </tr>
+    <tr>
+      <td>Histogram Gradient Boosting</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.204163</td>
+      <td>-0.458754</td>
+      <td>-0.626213</td>
+      <td>-0.301085</td>
+      <td>-66.650294</td>
+      <td>0.751667</td>
+      <td>48.483333</td>
+      <td>0.533981</td>
+    </tr>
+    <tr>
+      <td>Histogram Gradient Boosting</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.080370</td>
+      <td>-0.180709</td>
+      <td>-0.108374</td>
+      <td>0.028902</td>
+      <td>-31.604548</td>
+      <td>0.195833</td>
+      <td>10.033333</td>
+      <td>0.811235</td>
+    </tr>
+    <tr>
+      <td>LASSO</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.062631</td>
+      <td>-0.089102</td>
+      <td>-0.106201</td>
+      <td>-0.079701</td>
+      <td>-58.770792</td>
+      <td>0.195333</td>
+      <td>48.866667</td>
+      <td>0.937015</td>
+    </tr>
+    <tr>
+      <td>LASSO</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.102847</td>
+      <td>-0.172920</td>
+      <td>-0.233399</td>
+      <td>-0.128342</td>
+      <td>-47.606782</td>
+      <td>0.131167</td>
+      <td>37.383333</td>
+      <td>0.761233</td>
+    </tr>
+    <tr>
+      <td>LSTM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.237058</td>
+      <td>-0.620100</td>
+      <td>-0.828963</td>
+      <td>-0.327901</td>
+      <td>-66.013958</td>
+      <td>0.373000</td>
+      <td>47.433333</td>
+      <td>0.488010</td>
+    </tr>
+    <tr>
+      <td>LSTM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.066700</td>
+      <td>-0.174716</td>
+      <td>-0.195833</td>
+      <td>-0.020123</td>
+      <td>-30.932527</td>
+      <td>0.127167</td>
+      <td>12.100000</td>
+      <td>0.870847</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.187126</td>
+      <td>-0.446478</td>
+      <td>-0.594206</td>
+      <td>-0.260942</td>
+      <td>-62.332629</td>
+      <td>0.730333</td>
+      <td>48.366667</td>
+      <td>0.590098</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.039446</td>
+      <td>-0.100060</td>
+      <td>-0.102871</td>
+      <td>-0.052771</td>
+      <td>-29.573094</td>
+      <td>0.283500</td>
+      <td>16.833333</td>
+      <td>0.908622</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.162392</td>
+      <td>-0.371068</td>
+      <td>-0.490056</td>
+      <td>-0.231752</td>
+      <td>-62.974253</td>
+      <td>0.746667</td>
+      <td>48.283333</td>
+      <td>0.646732</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.045252</td>
+      <td>-0.144324</td>
+      <td>-0.173597</td>
+      <td>-0.091797</td>
+      <td>-35.469130</td>
+      <td>0.386833</td>
+      <td>21.566667</td>
+      <td>0.888196</td>
+    </tr>
+    <tr>
+      <td>Random Walk</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Random Walk</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Random Walk + Drift</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.128631</td>
+      <td>-0.261507</td>
+      <td>-0.337172</td>
+      <td>-0.089234</td>
+      <td>-63.864867</td>
+      <td>0.007333</td>
+      <td>47.633333</td>
+      <td>0.801780</td>
+    </tr>
+    <tr>
+      <td>Random Walk + Drift</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.104217</td>
+      <td>-0.201373</td>
+      <td>-0.264812</td>
+      <td>-0.064660</td>
+      <td>-48.220852</td>
+      <td>0.004333</td>
+      <td>36.183333</td>
+      <td>0.860833</td>
+    </tr>
+    <tr>
+      <td>Selected ARX</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>0.005072</td>
+      <td>0.200880</td>
+      <td>0.305773</td>
+      <td>0.112242</td>
+      <td>-49.406419</td>
+      <td>0.145667</td>
+      <td>49.016667</td>
+      <td>1.104794</td>
+    </tr>
+    <tr>
+      <td>Selected ARX</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>0.007829</td>
+      <td>0.255221</td>
+      <td>0.421971</td>
+      <td>0.214873</td>
+      <td>-45.098067</td>
+      <td>0.118500</td>
+      <td>43.733333</td>
+      <td>1.114805</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>Directional (no uncertainty)</td>
+      <td>0.001</td>
+      <td>-0.246955</td>
+      <td>-0.658888</td>
+      <td>-0.863133</td>
+      <td>-0.326543</td>
+      <td>-66.051437</td>
+      <td>0.738667</td>
+      <td>48.150000</td>
+      <td>0.499417</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>Uncertainty-adjusted</td>
+      <td>0.001</td>
+      <td>-0.062553</td>
+      <td>-0.067033</td>
+      <td>-0.032099</td>
+      <td>-0.023051</td>
+      <td>-30.811391</td>
+      <td>0.310167</td>
+      <td>18.100000</td>
+      <td>0.872009</td>
+    </tr>
+  </tbody>
+</table></section>
+
+<h1>7. Discussion and limitations</h1><p>The empirical record does not support a blanket conclusion that a complex decomposed neural architecture dominates simple forecasts. Relative performance changes by company and metric, and transaction costs can alter a directional strategy's apparent attractiveness. This motivates the retained random-walk and ARIMA benchmarks, the interval evaluation, and the model-comparison tests.</p><p>The study uses closing prices and supplied daily proxy variables. It does not model liquidity, market impact, short-selling constraints, corporate actions beyond supplied histories, or asynchronous news availability. Factor coverage is frequency-dependent for emerging-market companies. These are limitations rather than evidence of absent risk.</p>
+
+<h1>8. Conclusion</h1><p>This paper provides a transparent causal framework for critical-mineral equity forecasting and trading evaluation. Its central result is a traceable empirical record: every forecast, interval, model-comparison statistic, and cost-aware trade can be examined in the companion ledgers. The framework is therefore suitable for continued ablation, robustness testing, and peer review without relying on full-sample preprocessing.</p>
+
+<h1>References</h1><section class="refs"><p>Diebold, F.X. and Mariano, R.S. (1995). Comparing predictive accuracy. <i>Journal of Business &amp; Economic Statistics</i>, 13(3), 253-263.</p><p>Dragomiretskiy, K. and Zosso, D. (2014). Variational mode decomposition. <i>IEEE Transactions on Signal Processing</i>, 62(3), 531-544.</p><p>Hochreiter, S. and Schmidhuber, J. (1997). Long short-term memory. <i>Neural Computation</i>, 9(8), 1735-1780.</p><p>Liu, S., Li, M., Yang, K., Wei, Y. and Wang, S. (2025). From forecasting to trading: A multimodal-data-driven approach to reversing carbon market losses. <i>Energy Economics</i>, 144, 108350. https://doi.org/10.1016/j.eneco.2025.108350.</p><p>Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. <i>Journal of the Royal Statistical Society: Series B</i>, 58(1), 267-288.</p></section>
+
+<h1>Appendix: complete empirical ledgers and reproducibility</h1><section class="appendix"><p>The companion <i>appendix_ledgers</i> directory contains the complete unaggregated final-test forecast metrics, interval metrics, DM comparisons, trading metrics for every company/model/strategy/cost combination, and feature-selection records. The asset manifest records the causal run identifier, source checksums, captions, and the Crossref search snapshot used in Figure 1.</p><p class="page-note">The released-paper shadow is intentionally absent from the empirical ledgers and reported findings because it is a noncausal forensic reconstruction, not a valid forecast evaluation.</p></section>
+</body></html>

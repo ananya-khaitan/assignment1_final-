@@ -1,0 +1,9 @@
+Variable,Construct,Feature Group,Availability Treatment
+mvis_critical_minerals,MVIS Global Rare Earth / Strategic Metals index,Sector benchmark,Lagged one trading day before use
+SP500,S&P 500,Global equity-market condition,Lagged one trading day before use
+Shanghai_Index,Shanghai Composite,China equity-market condition,Lagged one trading day before use
+Crude_Oil,Crude-oil futures close,Energy-market condition,Lagged one trading day before use
+VIX,CBOE VIX,Market uncertainty,Lagged one trading day before use
+US_Dollar_Index,US Dollar Index,Foreign-exchange condition,Lagged one trading day before use
+Search_Index,Google Trends: rare earth,Public attention,Lagged one trading day before use
+News_Sentiment,SF Fed news-sentiment index,News sentiment,Lagged one trading day before use

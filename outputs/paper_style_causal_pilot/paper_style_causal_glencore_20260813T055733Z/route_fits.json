@@ -1,0 +1,2332 @@
+[
+  {
+    "target_date": "2024-08-22",
+    "fit_observations": 3351,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.875574379114518e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.734196647752718e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5"
+        ],
+        "alpha": 1.8874018048660886e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 3.626098530721861e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 3.925008398718558e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2968116963244637e-06
+      }
+    ],
+    "fit_count": 1,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2024-09-20",
+    "fit_observations": 3371,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.8782856684600267e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.930616313333126e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5"
+        ],
+        "alpha": 1.9143269077807334e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 3.6352792786144294e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 3.9254036909798996e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2851795060364222e-06
+      }
+    ],
+    "fit_count": 2,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2024-10-18",
+    "fit_observations": 3391,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.908983183840256e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.822587800077959e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Crude_Oil",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 5.272135535343953e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 4.97524188187875e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 5.38224411882012e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2813572172782616e-06
+      }
+    ],
+    "fit_count": 3,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2024-11-15",
+    "fit_observations": 3411,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.864955184573527e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.780341790619452e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "VIX"
+        ],
+        "alpha": 1.880898978859976e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 3.63115869374033e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 5.371206633530397e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.315327682704196e-06
+      }
+    ],
+    "fit_count": 4,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2024-12-13",
+    "fit_observations": 3431,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.9445702982716256e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.894938480555775e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5"
+        ],
+        "alpha": 1.8735088280769606e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 4.966570479726394e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 5.3674555114690216e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.3049480398773551e-06
+      }
+    ],
+    "fit_count": 5,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-01-15",
+    "fit_observations": 3451,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.9069635074502897e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.836903404267555e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5"
+        ],
+        "alpha": 1.861926366153534e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 4.941187281872897e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 7.359728417707333e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2993824775126051e-06
+      }
+    ],
+    "fit_count": 6,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-02-12",
+    "fit_observations": 3471,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.8960892964408608e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.816031146337621e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_5",
+          "VIX"
+        ],
+        "alpha": 1.8429261589654393e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 4.905134892864256e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index"
+        ],
+        "alpha": 7.332428645322298e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.3028788290795472e-06
+      }
+    ],
+    "fit_count": 7,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-03-12",
+    "fit_observations": 3491,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.8959992147064455e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.779756396432744e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "VIX"
+        ],
+        "alpha": 1.8634844631756532e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 4.935513270669757e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index"
+        ],
+        "alpha": 7.367683329600296e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.298517367664542e-06
+      }
+    ],
+    "fit_count": 8,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-04-09",
+    "fit_observations": 3511,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.9248929263501078e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.941340013216482e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_5"
+        ],
+        "alpha": 1.855364127681414e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.998246566048703e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index"
+        ],
+        "alpha": 7.411564874270499e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2941714660819094e-06
+      }
+    ],
+    "fit_count": 9,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-05-12",
+    "fit_observations": 3531,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.922881292067447e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.945650172844438e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 5.290126275488212e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.959000839272374e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX"
+        ],
+        "alpha": 7.343278104561754e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2929847848874381e-06
+      }
+    ],
+    "fit_count": 10,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-06-10",
+    "fit_observations": 3551,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.9252298368526722e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.802097840236704e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Crude_Oil",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 5.191041224833908e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.915211212221482e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX"
+        ],
+        "alpha": 7.312859608445809e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.289504813462102e-06
+      }
+    ],
+    "fit_count": 11,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-07-08",
+    "fit_observations": 3571,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.9226653996618e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.824555387049934e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_5"
+        ],
+        "alpha": 1.867056740283446e-05
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.9252625962681905e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX"
+        ],
+        "alpha": 7.298493588286055e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2867786012268846e-06
+      }
+    ],
+    "fit_count": 12,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-08-05",
+    "fit_observations": 3591,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.8710076828456515e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.718518467031201e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Crude_Oil",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 5.158534961533334e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.8807541749712655e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX"
+        ],
+        "alpha": 7.277928375762763e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2894391897211402e-06
+      }
+    ],
+    "fit_count": 13,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-09-03",
+    "fit_observations": 3611,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.928381496349001e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.83091303953092e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 5.210325666731375e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.879112029299481e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX"
+        ],
+        "alpha": 7.2601587735327505e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2847893385359682e-06
+      }
+    ],
+    "fit_count": 14,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-10-01",
+    "fit_observations": 3631,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.9072922823458796e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.75528583351946e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Crude_Oil",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 5.181685602619709e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.87519309930979e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index"
+        ],
+        "alpha": 7.244511398835059e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2871124819071604e-06
+      }
+    ],
+    "fit_count": 15,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-10-29",
+    "fit_observations": 3651,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.4686301294355048e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.92169460872847e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Crude_Oil",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 5.2303187715813985e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.88679591525902e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index"
+        ],
+        "alpha": 7.233248516481298e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.283420767750454e-06
+      }
+    ],
+    "fit_count": 16,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-11-26",
+    "fit_observations": 3671,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.4256262967074286e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.786374970943527e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 5.190827580203633e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.866653566156759e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX"
+        ],
+        "alpha": 7.214800601890757e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.280248205574728e-06
+      }
+    ],
+    "fit_count": 17,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2025-12-24",
+    "fit_observations": 3691,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.4077448714187735e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.729676515304152e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "SP500",
+          "Crude_Oil",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 5.1700731093447725e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.868936063323884e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX"
+        ],
+        "alpha": 7.210169647548563e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2795599688323925e-06
+      }
+    ],
+    "fit_count": 18,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2026-01-26",
+    "fit_observations": 3711,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 1.4898276513958315e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 8.856455950297483e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Crude_Oil",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 5.175058787241127e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 4.864874373100137e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX",
+          "Search_Index"
+        ],
+        "alpha": 7.223922064906475e-06
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "SP500",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.2667531400475342e-06
+      }
+    ],
+    "fit_count": 19,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  },
+  {
+    "target_date": "2026-02-23",
+    "fit_observations": 3731,
+    "low_mode_orders": [
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "high_mode_features": [
+      {
+        "mode": 3,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "VIX",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 1.5226365783850583e-05
+      },
+      {
+        "mode": 4,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "Shanghai_Index",
+          "VIX",
+          "US_Dollar_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 9.014562107211995e-06
+      },
+      {
+        "mode": 5,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_4",
+          "target_lag_5",
+          "Crude_Oil",
+          "VIX",
+          "News_Sentiment"
+        ],
+        "alpha": 5.243761542997225e-06
+      },
+      {
+        "mode": 6,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index"
+        ],
+        "alpha": 9.338799316503783e-06
+      },
+      {
+        "mode": 7,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "VIX"
+        ],
+        "alpha": 1.3734021753928568e-05
+      },
+      {
+        "mode": 8,
+        "route": "LASSO-selected multivariate LSTM",
+        "selected_features": [
+          "target_lag_1",
+          "target_lag_2",
+          "target_lag_3",
+          "target_lag_4",
+          "target_lag_5",
+          "mvis_critical_minerals",
+          "Shanghai_Index",
+          "Crude_Oil",
+          "VIX",
+          "US_Dollar_Index",
+          "Search_Index",
+          "News_Sentiment"
+        ],
+        "alpha": 5.777776719425164e-06
+      }
+    ],
+    "fit_count": 20,
+    "between_refit_component_update": "causal level-component innovation carry-forward"
+  }
+]

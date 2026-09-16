@@ -1,0 +1,481 @@
+Company,Model,Purpose,Use Exogenous,Low ARIMA Modes,LSTM Sequence Style,Origin Date,Model Fit Origin Date,Date,Origin Price,Actual,Forecast,Error,Scheduled Refit
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-11,2024-07-11,2024-07-12,6.18,6.21,6.161651800928184,-0.048348199071815756,True
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-11,2024-07-11,2024-07-12,6.18,6.21,6.16745422202989,-0.042545777970110166,True
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-11,2024-07-11,2024-07-12,6.18,6.21,6.112687373222031,-0.0973126267779687,True
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-11,2024-07-11,2024-07-12,6.18,6.21,6.15693269430398,-0.05306730569602003,True
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-12,2024-07-11,2024-07-15,6.21,6.11,6.231958502386417,0.12195850238641626,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-12,2024-07-11,2024-07-15,6.21,6.11,6.238642929316658,0.12864292931665755,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-12,2024-07-11,2024-07-15,6.21,6.11,6.1060865528341735,-0.003913447165826867,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-12,2024-07-11,2024-07-15,6.21,6.11,6.227640587513949,0.11764058751394835,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-15,2024-07-11,2024-07-16,6.11,5.95,5.937183882682994,-0.012816117317005826,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-15,2024-07-11,2024-07-16,6.11,5.95,5.94177015674183,-0.00822984325817,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-15,2024-07-11,2024-07-16,6.11,5.95,6.110953021566485,0.16095302156648472,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-15,2024-07-11,2024-07-16,6.11,5.95,5.926416601270591,-0.023583398729408955,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-16,2024-07-11,2024-07-17,5.95,5.96,5.775137256802762,-0.18486274319723783,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-16,2024-07-11,2024-07-17,5.95,5.96,5.7781006797542505,-0.1818993202457495,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-16,2024-07-11,2024-07-17,5.95,5.96,6.033574494580188,0.07357449458018817,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-16,2024-07-11,2024-07-17,5.95,5.96,5.779247083328091,-0.18075291667190907,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-17,2024-07-11,2024-07-18,5.96,5.84,5.996120227719213,0.15612022771921286,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-17,2024-07-11,2024-07-18,5.96,5.84,6.0043250499209995,0.1643250499209996,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-17,2024-07-11,2024-07-18,5.96,5.84,5.987571020784842,0.1475710207848424,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-17,2024-07-11,2024-07-18,5.96,5.84,5.973279917446343,0.13327991744634282,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-18,2024-07-11,2024-07-19,5.84,5.71,5.5864931776895626,-0.12350682231043741,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-18,2024-07-11,2024-07-19,5.84,5.71,5.584668950739291,-0.12533104926070937,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-18,2024-07-11,2024-07-19,5.84,5.71,5.8980378460542955,0.18803784605429552,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-18,2024-07-11,2024-07-19,5.84,5.71,5.56611910677986,-0.14388089322013986,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-19,2024-07-11,2024-07-22,5.71,5.73,5.620176653793188,-0.10982334620681211,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-19,2024-07-11,2024-07-22,5.71,5.73,5.621237372694336,-0.10876262730566477,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-19,2024-07-11,2024-07-22,5.71,5.73,5.785878412287143,0.055878412287142964,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-19,2024-07-11,2024-07-22,5.71,5.73,5.596073133452131,-0.13392686654786967,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-22,2024-07-11,2024-07-23,5.73,5.59,5.74010073471975,0.15010073471975005,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-22,2024-07-11,2024-07-23,5.73,5.59,5.737733095610826,0.14773309561082648,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-22,2024-07-11,2024-07-23,5.73,5.59,5.6620632006673075,0.07206320066730765,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-22,2024-07-11,2024-07-23,5.73,5.59,5.710819378031571,0.12081937803157139,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-23,2024-07-11,2024-07-24,5.59,5.59,5.34570414120265,-0.24429585879734983,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-23,2024-07-11,2024-07-24,5.59,5.59,5.341036458708244,-0.24896354129175613,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-23,2024-07-11,2024-07-24,5.59,5.59,5.542895769591266,-0.047104230408733905,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-23,2024-07-11,2024-07-24,5.59,5.59,5.315532942197319,-0.27446705780268044,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-24,2024-07-11,2024-07-25,5.59,5.56,5.691569400031717,0.1315694000317178,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-24,2024-07-11,2024-07-25,5.59,5.56,5.688956166025168,0.12895616602516835,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-24,2024-07-11,2024-07-25,5.59,5.56,5.4368168772447545,-0.12318312275524512,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-24,2024-07-11,2024-07-25,5.59,5.56,5.658267539872692,0.09826753987269221,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-25,2024-07-11,2024-07-26,5.56,5.58,5.408940955642391,-0.17105904435760877,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-25,2024-07-11,2024-07-26,5.56,5.58,5.402600885110793,-0.1773991148892069,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-25,2024-07-11,2024-07-26,5.56,5.58,5.356130648610822,-0.22386935138917785,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-25,2024-07-11,2024-07-26,5.56,5.58,5.373366718754866,-0.20663328124513392,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-26,2024-07-11,2024-07-29,5.58,5.5,5.681830661180205,0.1818306611802054,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-26,2024-07-11,2024-07-29,5.58,5.5,5.673571739383656,0.17357173938365644,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-26,2024-07-11,2024-07-29,5.58,5.5,5.299126414964472,-0.2008735850355281,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-26,2024-07-11,2024-07-29,5.58,5.5,5.644673848966543,0.14467384896654334,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-29,2024-07-11,2024-07-30,5.5,5.35,5.285695163514052,-0.06430483648594798,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-29,2024-07-11,2024-07-30,5.5,5.35,5.275843408846221,-0.0741565911537787,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-29,2024-07-11,2024-07-30,5.5,5.35,5.260698421740737,-0.08930157825926255,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-29,2024-07-11,2024-07-30,5.5,5.35,5.250293098427568,-0.09970690157243123,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-30,2024-07-11,2024-07-31,5.35,5.53,5.234754144597538,-0.2952458554024622,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-30,2024-07-11,2024-07-31,5.35,5.53,5.225161302287388,-0.3048386977126123,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-30,2024-07-11,2024-07-31,5.35,5.53,5.229920531604817,-0.3000794683951833,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-30,2024-07-11,2024-07-31,5.35,5.53,5.202526891485745,-0.3274731085142548,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-07-31,2024-07-11,2024-08-01,5.53,5.29,5.79071495984841,0.50071495984841,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-07-31,2024-07-11,2024-08-01,5.53,5.29,5.779907668319996,0.4899076683199963,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-07-31,2024-07-11,2024-08-01,5.53,5.29,5.217240426611421,-0.07275957338857886,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-07-31,2024-07-11,2024-08-01,5.53,5.29,5.760144914606196,0.47014491460619556,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-01,2024-07-11,2024-08-02,5.29,5.18,4.764883394079581,-0.415116605920419,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-01,2024-07-11,2024-08-02,5.29,5.18,4.75152206670629,-0.42847793329370987,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-01,2024-07-11,2024-08-02,5.29,5.18,5.210493849947458,0.030493849947458074,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-01,2024-07-11,2024-08-02,5.29,5.18,4.734918504537612,-0.4450814954623876,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-02,2024-07-11,2024-08-05,5.18,5.0,5.296552134493072,0.29655213449307194,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-02,2024-07-11,2024-08-05,5.18,5.0,5.281690211835921,0.2816902118359206,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-02,2024-07-11,2024-08-05,5.18,5.0,5.182959327919194,0.18295932791919434,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-02,2024-07-11,2024-08-05,5.18,5.0,5.267996572705506,0.26799657270550625,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-05,2024-07-11,2024-08-06,5.0,4.99,4.580909391771904,-0.4090906082280963,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-05,2024-07-11,2024-08-06,5.0,4.99,4.562061405068245,-0.42793859493175557,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-05,2024-07-11,2024-08-06,5.0,4.99,5.149722835013988,0.1597228350139881,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-05,2024-07-11,2024-08-06,5.0,4.99,4.549664778376363,-0.4403352216236369,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-06,2024-07-11,2024-08-07,4.99,5.13,5.1937097309032865,0.06370973090328658,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-06,2024-07-11,2024-08-07,4.99,5.13,5.17043508891032,0.04043508891032044,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-06,2024-07-11,2024-08-07,4.99,5.13,5.085591013340109,-0.04440898665989046,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-06,2024-07-11,2024-08-07,4.99,5.13,5.162058379914518,0.032058379914517765,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-07,2024-07-11,2024-08-08,5.13,5.14,5.1444652887134525,0.004465288713452864,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-07,2024-07-11,2024-08-08,5.13,5.14,5.116357935027888,-0.023642064972111854,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-07,2024-07-11,2024-08-08,5.13,5.14,5.025504078299678,-0.11449592170032208,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-07,2024-07-11,2024-08-08,5.13,5.14,5.1096694241788985,-0.030330575821101213,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-08,2024-08-08,2024-08-09,5.14,5.17,5.106802288324452,-0.06319771167554755,True
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-08,2024-08-08,2024-08-09,5.14,5.17,5.1108621397739,-0.0591378602260999,True
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-08,2024-08-08,2024-08-09,5.14,5.17,5.131395470003082,-0.03860452999691777,True
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-08,2024-08-08,2024-08-09,5.14,5.17,5.110678564304101,-0.05932143569589865,True
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-09,2024-08-08,2024-08-12,5.17,5.24,5.174924795293142,-0.0650752047068579,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-09,2024-08-08,2024-08-12,5.17,5.24,5.17790040663901,-0.06209959336099047,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-09,2024-08-08,2024-08-12,5.17,5.24,5.082265257804381,-0.15773474219561923,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-09,2024-08-08,2024-08-12,5.17,5.24,5.175919798731079,-0.06408020126892122,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-12,2024-08-08,2024-08-13,5.24,5.21,5.308626485828162,0.09862648582816202,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-12,2024-08-08,2024-08-13,5.24,5.21,5.313151982696743,0.10315198269674308,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-12,2024-08-08,2024-08-13,5.24,5.21,5.137825137855432,-0.0721748621445677,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-12,2024-08-08,2024-08-13,5.24,5.21,5.285256146594586,0.0752561465945858,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-13,2024-08-08,2024-08-14,5.21,5.17,5.07967638053112,-0.09032361946888035,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-13,2024-08-08,2024-08-14,5.21,5.17,5.074399197319025,-0.09560080268097515,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-13,2024-08-08,2024-08-14,5.21,5.17,5.118046702255502,-0.05195329774449764,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-13,2024-08-08,2024-08-14,5.21,5.17,5.087046766280486,-0.0829532337195138,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-14,2024-08-08,2024-08-15,5.17,5.25,5.088899945973605,-0.16110005402639516,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-14,2024-08-08,2024-08-15,5.17,5.25,5.084509855103914,-0.16549014489608638,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-14,2024-08-08,2024-08-15,5.17,5.25,5.1137949651643515,-0.1362050348356485,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-14,2024-08-08,2024-08-15,5.17,5.25,5.100518597464643,-0.1494814025353568,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-15,2024-08-08,2024-08-16,5.25,5.23,5.260801554326671,0.0308015543266702,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-15,2024-08-08,2024-08-16,5.25,5.23,5.248094835539412,0.01809483553941149,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-15,2024-08-08,2024-08-16,5.25,5.23,5.104630500066696,-0.1253694999333046,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-15,2024-08-08,2024-08-16,5.25,5.23,5.303798743374425,0.07379874337442427,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-16,2024-08-08,2024-08-19,5.23,5.39,5.026594357978857,-0.3634056420211431,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-16,2024-08-08,2024-08-19,5.23,5.39,5.014156115717013,-0.375843884282987,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-16,2024-08-08,2024-08-19,5.23,5.39,5.119951397990304,-0.2700486020096955,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-16,2024-08-08,2024-08-19,5.23,5.39,5.0828608342890655,-0.30713916571093414,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-19,2024-08-08,2024-08-20,5.39,5.34,5.553154151725758,0.21315415172575847,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-19,2024-08-08,2024-08-20,5.39,5.34,5.532765631334429,0.1927656313344288,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-19,2024-08-08,2024-08-20,5.39,5.34,5.157831689614799,-0.18216831038520098,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-19,2024-08-08,2024-08-20,5.39,5.34,5.61877571056413,0.27877571056412975,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-20,2024-08-08,2024-08-21,5.34,5.41,4.980268084727374,-0.429731915272626,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-20,2024-08-08,2024-08-21,5.34,5.41,4.955432478729941,-0.45456752127005906,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-20,2024-08-08,2024-08-21,5.34,5.41,5.188153706264057,-0.22184629373594333,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-20,2024-08-08,2024-08-21,5.34,5.41,5.050114818072687,-0.35988518192731345,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-21,2024-08-08,2024-08-22,5.41,5.3,5.523234326844399,0.22323432684439926,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-21,2024-08-08,2024-08-22,5.41,5.3,5.493534807642342,0.193534807642342,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-21,2024-08-08,2024-08-22,5.41,5.3,5.232852369422713,-0.06714763057728668,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-21,2024-08-08,2024-08-22,5.41,5.3,5.5984505308976145,0.29845053089761464,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-22,2024-08-08,2024-08-23,5.3,5.43,4.849321706431283,-0.5806782935687167,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-22,2024-08-08,2024-08-23,5.3,5.43,4.811752245265218,-0.6182477547347816,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-22,2024-08-08,2024-08-23,5.3,5.43,5.248947568491712,-0.18105243150828798,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-22,2024-08-08,2024-08-23,5.3,5.43,4.927823986224036,-0.5021760137759639,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-23,2024-08-08,2024-08-27,5.43,5.44,5.667074990936236,0.2270749909362353,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-23,2024-08-08,2024-08-27,5.43,5.44,5.6181813626627095,0.17818136266270912,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-23,2024-08-08,2024-08-27,5.43,5.44,5.292004842519891,-0.14799515748010972,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-23,2024-08-08,2024-08-27,5.43,5.44,5.7463627293966635,0.3063627293966631,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-27,2024-08-08,2024-08-28,5.44,5.34,5.090176206622974,-0.24982379337702554,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-27,2024-08-08,2024-08-28,5.44,5.34,5.03107266889076,-0.3089273311092402,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-27,2024-08-08,2024-08-28,5.44,5.34,5.3224023985114615,-0.017597601488538395,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-27,2024-08-08,2024-08-28,5.44,5.34,5.170087865859072,-0.16991213414092776,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-28,2024-08-08,2024-08-29,5.34,5.27,5.202647879901516,-0.06735212009848368,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-28,2024-08-08,2024-08-29,5.34,5.27,5.140483596214568,-0.1295164037854315,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-28,2024-08-08,2024-08-29,5.34,5.27,5.331924367469922,0.06192436746992236,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-28,2024-08-08,2024-08-29,5.34,5.27,5.28330200826726,0.013302008267260135,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-29,2024-08-08,2024-08-30,5.27,5.26,5.005472153032768,-0.25452784696723185,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-29,2024-08-08,2024-08-30,5.27,5.26,4.943492420278402,-0.3165075797215975,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-29,2024-08-08,2024-08-30,5.27,5.26,5.2953925111327855,0.03539251113278574,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-29,2024-08-08,2024-08-30,5.27,5.26,5.087059825637339,-0.17294017436266085,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-08-30,2024-08-08,2024-09-02,5.26,5.26,5.17805402944314,-0.08194597055685993,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-08-30,2024-08-08,2024-09-02,5.26,5.26,5.115804322081246,-0.14419567791875387,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-08-30,2024-08-08,2024-09-02,5.26,5.26,5.252226828612962,-0.007773171387038147,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-08-30,2024-08-08,2024-09-02,5.26,5.26,5.257760118506319,-0.0022398814936810396,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-02,2024-08-08,2024-09-03,5.26,5.04,5.083323773803575,0.043323773803574994,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-02,2024-08-08,2024-09-03,5.26,5.04,5.024168934845977,-0.015831065154022994,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-02,2024-08-08,2024-09-03,5.26,5.04,5.201587229948409,0.16158722994840868,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-02,2024-08-08,2024-09-03,5.26,5.04,5.1625162051362,0.12251620513619965,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-03,2024-08-08,2024-09-04,5.04,5.0,4.612273356328942,-0.3877266436710576,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-03,2024-08-08,2024-09-04,5.04,5.0,4.554925848514924,-0.445074151485076,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-03,2024-08-08,2024-09-04,5.04,5.0,5.1006905032236824,0.10069050322368245,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-03,2024-08-08,2024-09-04,5.04,5.0,4.689192167897142,-0.31080783210285823,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-04,2024-08-08,2024-09-05,5.0,5.0,4.955838043084453,-0.044161956915546696,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-04,2024-08-08,2024-09-05,5.0,5.0,4.899145225101689,-0.10085477489831085,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-04,2024-08-08,2024-09-05,5.0,5.0,4.98417810203262,-0.015821897967380316,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-04,2024-08-08,2024-09-05,5.0,5.0,5.031745412520008,0.03174541252000829,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-05,2024-08-08,2024-09-06,5.0,4.82,4.79618685580507,-0.023813144194930302,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-05,2024-08-08,2024-09-06,5.0,4.82,4.738473121636324,-0.08152687836367623,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-05,2024-08-08,2024-09-06,5.0,4.82,4.879441563707804,0.059441563707803624,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-05,2024-08-08,2024-09-06,5.0,4.82,4.870447846406039,0.05044784640603872,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-06,2024-09-06,2024-09-09,4.82,4.84,4.833774278216469,-0.006225721783530425,True
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-06,2024-09-06,2024-09-09,4.82,4.84,4.829878281310523,-0.010121718689476644,True
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-06,2024-09-06,2024-09-09,4.82,4.84,4.910349398996767,0.0703493989967674,True
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-06,2024-09-06,2024-09-09,4.82,4.84,4.828170848508802,-0.011829151491197898,True
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-09,2024-09-06,2024-09-10,4.84,4.75,4.977340088069324,0.22734008806932415,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-09,2024-09-06,2024-09-10,4.84,4.75,4.9756762638545435,0.22567626385454354,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-09,2024-09-06,2024-09-10,4.84,4.75,4.95822473945083,0.20822473945082987,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-09,2024-09-06,2024-09-10,4.84,4.75,4.965571741412032,0.21557174141203195,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-10,2024-09-06,2024-09-11,4.75,4.73,4.720374203369676,-0.009625796630324146,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-10,2024-09-06,2024-09-11,4.75,4.73,4.712514609172069,-0.017485390827931546,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-10,2024-09-06,2024-09-11,4.75,4.73,4.954404728014075,0.22440472801407463,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-10,2024-09-06,2024-09-11,4.75,4.73,4.704503548573677,-0.025496451426323397,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-11,2024-09-06,2024-09-12,4.73,4.89,4.838610283824275,-0.05138971617572441,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-11,2024-09-06,2024-09-12,4.73,4.89,4.835556142343551,-0.05444385765644899,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-11,2024-09-06,2024-09-12,4.73,4.89,4.951663124274316,0.061663124274316417,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-11,2024-09-06,2024-09-12,4.73,4.89,4.7998024358515465,-0.09019756414845315,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-12,2024-09-06,2024-09-13,4.89,4.95,5.188833737316831,0.23883373731683122,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-12,2024-09-06,2024-09-13,4.89,4.95,5.183115609039806,0.23311560903980588,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-12,2024-09-06,2024-09-13,4.89,4.95,4.95036671121436,0.00036671121435993825,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-12,2024-09-06,2024-09-13,4.89,4.95,5.158549872526927,0.2085498725269268,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-13,2024-09-06,2024-09-16,4.95,4.99,5.086868904002942,0.09686890400294157,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-13,2024-09-06,2024-09-16,4.95,4.99,5.083383406860149,0.09338340686014845,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-13,2024-09-06,2024-09-16,4.95,4.99,4.994265278276382,0.004265278276381679,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-13,2024-09-06,2024-09-16,4.95,4.99,5.042764931137639,0.052764931137638804,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-16,2024-09-06,2024-09-17,4.99,4.99,5.156124719269506,0.16612471926950612,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-16,2024-09-06,2024-09-17,4.99,4.99,5.160509761594707,0.17050976159470643,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-16,2024-09-06,2024-09-17,4.99,4.99,5.041655700986928,0.0516557009869274,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-16,2024-09-06,2024-09-17,4.99,4.99,5.100631700360682,0.11063170036068204,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-17,2024-09-06,2024-09-18,4.99,5.02,5.117660946549327,0.09766094654932722,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-17,2024-09-06,2024-09-18,4.99,5.02,5.122340717202775,0.10234071720277527,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-17,2024-09-06,2024-09-18,4.99,5.02,5.097586460062942,0.07758646006294256,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-17,2024-09-06,2024-09-18,4.99,5.02,5.045695142195225,0.025695142195225174,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-18,2024-09-06,2024-09-19,5.02,5.16,5.213591270774011,0.05359127077401116,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-18,2024-09-06,2024-09-19,5.02,5.16,5.215917966195167,0.055917966195166535,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-18,2024-09-06,2024-09-19,5.02,5.16,5.163605740203626,0.003605740203625807,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-18,2024-09-06,2024-09-19,5.02,5.16,5.126793600310732,-0.033206399689268196,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-19,2024-09-06,2024-09-20,5.16,5.04,5.486806414014756,0.4468064140147563,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-19,2024-09-06,2024-09-20,5.16,5.04,5.484118563060624,0.44411856306062436,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-19,2024-09-06,2024-09-20,5.16,5.04,5.259415518741802,0.2194155187418021,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-19,2024-09-06,2024-09-20,5.16,5.04,5.390663441945222,0.3506634419452217,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-20,2024-09-06,2024-09-23,5.04,5.14,5.019886704446966,-0.12011329555303352,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-20,2024-09-06,2024-09-23,5.04,5.14,5.015556598412538,-0.12444340158746137,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-20,2024-09-06,2024-09-23,5.04,5.14,5.326051215130752,0.1860512151307523,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-20,2024-09-06,2024-09-23,5.04,5.14,4.915224305050056,-0.22477569494994398,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-23,2024-09-06,2024-09-24,5.14,5.36,5.488283732134069,0.12828373213406863,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-23,2024-09-06,2024-09-24,5.14,5.36,5.485143851277327,0.1251438512773264,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-23,2024-09-06,2024-09-24,5.14,5.36,5.389112598797093,0.02911259879709238,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-23,2024-09-06,2024-09-24,5.14,5.36,5.379008194998355,0.01900819499835471,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-24,2024-09-06,2024-09-25,5.36,5.37,5.769887205511261,0.399887205511261,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-24,2024-09-06,2024-09-25,5.36,5.37,5.769479611799079,0.3994796117990793,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-24,2024-09-06,2024-09-25,5.36,5.37,5.483903778121189,0.11390377812118846,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-24,2024-09-06,2024-09-25,5.36,5.37,5.656809776039403,0.2868097760394033,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-25,2024-09-06,2024-09-26,5.37,5.68,5.507888096644171,-0.1721119033558285,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-25,2024-09-06,2024-09-26,5.37,5.68,5.507519321848137,-0.17248067815186285,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-25,2024-09-06,2024-09-26,5.37,5.68,5.580533433286435,-0.09946656671356457,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-25,2024-09-06,2024-09-26,5.37,5.68,5.390479432108691,-0.28952056789130864,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-26,2024-09-06,2024-09-27,5.68,5.71,6.263485114401906,0.553485114401906,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-26,2024-09-06,2024-09-27,5.68,5.71,6.2611156659073535,0.5511156659073535,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-26,2024-09-06,2024-09-27,5.68,5.71,5.696073926093591,-0.013926073906408654,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-26,2024-09-06,2024-09-27,5.68,5.71,6.143970300401416,0.43397030040141615,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-27,2024-09-06,2024-09-30,5.71,5.72,5.83584650716765,0.11584650716765044,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-27,2024-09-06,2024-09-30,5.71,5.72,5.828579894165483,0.10857989416548364,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-27,2024-09-06,2024-09-30,5.71,5.72,5.805198816400483,0.08519881640048332,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-27,2024-09-06,2024-09-30,5.71,5.72,5.713343990559022,-0.0066560094409773285,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-09-30,2024-09-06,2024-10-01,5.72,5.7,5.937733619187,0.23773361918699987,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-09-30,2024-09-06,2024-10-01,5.72,5.7,5.928223643257398,0.2282236432573974,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-09-30,2024-09-06,2024-10-01,5.72,5.7,5.912145849144813,0.21214584914481271,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-09-30,2024-09-06,2024-10-01,5.72,5.7,5.814752410503547,0.1147524105035469,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-01,2024-09-06,2024-10-02,5.7,5.75,5.85972043660037,0.10972043660037034,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-01,2024-09-06,2024-10-02,5.7,5.75,5.846864671748186,0.09686467174818603,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-01,2024-09-06,2024-10-02,5.7,5.75,5.993255161001267,0.24325516100126698,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-01,2024-09-06,2024-10-02,5.7,5.75,5.734456677295493,-0.015543322704506757,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-02,2024-09-06,2024-10-03,5.75,5.63,6.014898349549296,0.3848983495492959,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-02,2024-09-06,2024-10-03,5.75,5.63,5.998896445355931,0.36889644535593114,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-02,2024-09-06,2024-10-03,5.75,5.63,6.0835724205231445,0.4535724205231446,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-02,2024-09-06,2024-10-03,5.75,5.63,5.886882195476159,0.25688219547615887,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-03,2024-09-06,2024-10-04,5.63,5.68,5.659478933670424,-0.020521066329576065,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-03,2024-09-06,2024-10-04,5.63,5.68,5.641411530236435,-0.03858846976356478,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-03,2024-09-06,2024-10-04,5.63,5.68,6.132555648158489,0.4525556481584889,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-03,2024-09-06,2024-10-04,5.63,5.68,5.52920226635379,-0.1507977336462094,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-04,2024-10-04,2024-10-07,5.68,5.72,5.699181433620144,-0.02081856637985613,True
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-04,2024-10-04,2024-10-07,5.68,5.72,5.696493993457744,-0.023506006542255875,True
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-04,2024-10-04,2024-10-07,5.68,5.72,5.67545021653344,-0.04454978346656002,True
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-04,2024-10-04,2024-10-07,5.68,5.72,5.675957728962345,-0.04404227103765468,True
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-07,2024-10-04,2024-10-08,5.72,5.47,5.7526030580666285,0.2826030580666288,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-07,2024-10-04,2024-10-08,5.72,5.47,5.748525131922107,0.27852513192210715,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-07,2024-10-04,2024-10-08,5.72,5.47,5.675424708599484,0.2054247085994838,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-07,2024-10-04,2024-10-08,5.72,5.47,5.732548293550996,0.2625482935509966,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-08,2024-10-04,2024-10-09,5.47,5.5,5.1297938402275065,-0.3702061597724935,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-08,2024-10-04,2024-10-09,5.47,5.5,5.111125823469881,-0.3888741765301189,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-08,2024-10-04,2024-10-09,5.47,5.5,5.624445530546652,0.12444553054665164,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-08,2024-10-04,2024-10-09,5.47,5.5,5.11415065969307,-0.38584934030692963,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-09,2024-10-04,2024-10-10,5.5,5.51,5.568989136724477,0.058989136724477476,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-09,2024-10-04,2024-10-10,5.5,5.51,5.548864523791261,0.03886452379126126,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-09,2024-10-04,2024-10-10,5.5,5.51,5.541862273417998,0.031862273417997855,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-09,2024-10-04,2024-10-10,5.5,5.51,5.569560572795768,0.05956057279576843,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-10,2024-10-04,2024-10-11,5.51,5.54,5.455606588551459,-0.0843934114485414,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-10,2024-10-04,2024-10-11,5.51,5.54,5.440308080761391,-0.09969191923860876,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-10,2024-10-04,2024-10-11,5.51,5.54,5.503429987525948,-0.03657001247405223,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-10,2024-10-04,2024-10-11,5.51,5.54,5.428574991155185,-0.11142500884481521,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-11,2024-10-04,2024-10-14,5.54,5.49,5.546452588142454,0.05645258814245402,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-11,2024-10-04,2024-10-14,5.54,5.49,5.538745599023418,0.048745599023417796,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-11,2024-10-04,2024-10-14,5.54,5.49,5.485756839960198,-0.004243160039802518,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-11,2024-10-04,2024-10-14,5.54,5.49,5.517563178928592,0.027563178928591725,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-14,2024-10-04,2024-10-15,5.49,5.28,5.40446800263418,0.12446800263417934,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-14,2024-10-04,2024-10-15,5.49,5.28,5.4088513969406,0.12885139694059955,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-14,2024-10-04,2024-10-15,5.49,5.28,5.458577543171776,0.17857754317177577,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-14,2024-10-04,2024-10-15,5.49,5.28,5.353763747061877,0.07376374706187683,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-15,2024-10-04,2024-10-16,5.28,5.28,5.047581661895041,-0.23241833810495915,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-15,2024-10-04,2024-10-16,5.28,5.28,5.045399558426728,-0.23460044157327253,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-15,2024-10-04,2024-10-16,5.28,5.28,5.408615683890638,0.12861568389063738,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-15,2024-10-04,2024-10-16,5.28,5.28,4.973767613508773,-0.3062323864912271,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-16,2024-10-04,2024-10-17,5.28,5.25,5.366254827029653,0.11625482702965328,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-16,2024-10-04,2024-10-17,5.28,5.25,5.359434190007468,0.10943419000746779,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-16,2024-10-04,2024-10-17,5.28,5.25,5.35779594987325,0.1077959498732497,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-16,2024-10-04,2024-10-17,5.28,5.25,5.27664057505959,0.02664057505958972,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-17,2024-10-04,2024-10-18,5.25,5.33,5.236934941763052,-0.09306505823694788,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-17,2024-10-04,2024-10-18,5.25,5.33,5.2290983709816885,-0.10090162901831157,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-17,2024-10-04,2024-10-18,5.25,5.33,5.321876270998403,-0.00812372900159719,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-17,2024-10-04,2024-10-18,5.25,5.33,5.1343845716518075,-0.19561542834819257,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-18,2024-10-04,2024-10-21,5.33,5.28,5.487334333085234,0.20733433308523352,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-18,2024-10-04,2024-10-21,5.33,5.28,5.4794930297940905,0.19949302979409023,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-18,2024-10-04,2024-10-21,5.33,5.28,5.301247797426092,0.021247797426092063,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-18,2024-10-04,2024-10-21,5.33,5.28,5.3781964075931725,0.09819640759317227,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-21,2024-10-04,2024-10-22,5.28,5.3,5.240610645053328,-0.059389354946671524,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-21,2024-10-04,2024-10-22,5.28,5.3,5.234100413358414,-0.0658995866415859,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-21,2024-10-04,2024-10-22,5.28,5.3,5.276709817027487,-0.02329018297251295,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-21,2024-10-04,2024-10-22,5.28,5.3,5.124810709754208,-0.17518929024579144,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-22,2024-10-04,2024-10-23,5.3,5.17,5.398980316679498,0.2289803166794977,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-22,2024-10-04,2024-10-23,5.3,5.17,5.393881469704209,0.2238814697042093,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-22,2024-10-04,2024-10-23,5.3,5.17,5.262149556402461,0.09214955640246103,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-22,2024-10-04,2024-10-23,5.3,5.17,5.281359075939728,0.11135907593972849,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-23,2024-10-04,2024-10-24,5.17,5.16,5.050625710345899,-0.10937428965410145,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-23,2024-10-04,2024-10-24,5.17,5.16,5.044269213158895,-0.11573078684110527,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-23,2024-10-04,2024-10-24,5.17,5.16,5.245560208485947,0.08556020848594681,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-23,2024-10-04,2024-10-24,5.17,5.16,4.931096974023273,-0.2289030259767273,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-24,2024-10-04,2024-10-25,5.16,5.24,5.2450933267748105,0.005093326774810336,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-24,2024-10-04,2024-10-25,5.16,5.24,5.238360415214878,-0.0016395847851224943,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-24,2024-10-04,2024-10-25,5.16,5.24,5.238244826880653,-0.001755173119347475,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-24,2024-10-04,2024-10-25,5.16,5.24,5.125113471240513,-0.11488652875948713,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-25,2024-10-04,2024-10-28,5.24,5.25,5.387297656717144,0.137297656717144,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-25,2024-10-04,2024-10-28,5.24,5.25,5.379913544688583,0.1299135446885833,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-25,2024-10-04,2024-10-28,5.24,5.25,5.24144772313381,-0.008552276866190311,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-25,2024-10-04,2024-10-28,5.24,5.25,5.2663106947223355,0.016310694722335484,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-28,2024-10-04,2024-10-29,5.25,5.27,5.295745600203063,0.025745600203063823,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-28,2024-10-04,2024-10-29,5.25,5.27,5.288295296080298,0.01829529608029823,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-28,2024-10-04,2024-10-29,5.25,5.27,5.252228900400246,-0.01777109959975398,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-28,2024-10-04,2024-10-29,5.25,5.27,5.174081810996885,-0.09591818900311466,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-29,2024-10-04,2024-10-30,5.27,5.31,5.352780937609511,0.042780937609511405,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-29,2024-10-04,2024-10-30,5.27,5.31,5.34635600493438,0.036356004934380515,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-29,2024-10-04,2024-10-30,5.27,5.31,5.257117214784828,-0.052882785215171424,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-29,2024-10-04,2024-10-30,5.27,5.31,5.232622267135237,-0.0773777328647629,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-30,2024-10-04,2024-10-31,5.31,5.24,5.408037893740954,0.16803789374095413,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-30,2024-10-04,2024-10-31,5.31,5.24,5.4020382691216104,0.16203826912161023,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-30,2024-10-04,2024-10-31,5.31,5.24,5.265440079178305,0.025440079178304487,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-30,2024-10-04,2024-10-31,5.31,5.24,5.287966560778026,0.047966560778025524,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-10-31,2024-10-04,2024-11-01,5.24,5.27,5.19867327666688,-0.07132672333311962,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-10-31,2024-10-04,2024-11-01,5.24,5.27,5.191647118674477,-0.07835288132552254,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-10-31,2024-10-04,2024-11-01,5.24,5.27,5.271824629307572,0.001824629307572323,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-10-31,2024-10-04,2024-11-01,5.24,5.27,5.07681359726994,-0.19318640273005983,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-01,2024-11-01,2024-11-04,5.27,5.27,5.265920128932996,-0.00407987106700336,True
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-01,2024-11-01,2024-11-04,5.27,5.27,5.267022373821928,-0.002977626178071624,True
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-01,2024-11-01,2024-11-04,5.27,5.27,5.274645752490662,0.00464575249066268,True
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-01,2024-11-01,2024-11-04,5.27,5.27,5.271237143674851,0.001237143674851282,True
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-04,2024-11-01,2024-11-05,5.27,5.31,5.2701326328714835,-0.03986736712851613,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-04,2024-11-01,2024-11-05,5.27,5.31,5.268814509286337,-0.041185490713662176,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-04,2024-11-01,2024-11-05,5.27,5.31,5.303590847701437,-0.006409152298562759,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-04,2024-11-01,2024-11-05,5.27,5.31,5.278107432375337,-0.03189256762466286,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-05,2024-11-01,2024-11-06,5.31,5.17,5.375939400589882,0.20593940058988203,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-05,2024-11-01,2024-11-06,5.31,5.17,5.370824065543933,0.20082406554393284,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-05,2024-11-01,2024-11-06,5.31,5.17,5.309730426930157,0.13973042693015714,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-05,2024-11-01,2024-11-06,5.31,5.17,5.388194712512518,0.21819471251251787,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-06,2024-11-01,2024-11-07,5.17,5.39,5.030712510233457,-0.359287489766543,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-06,2024-11-01,2024-11-07,5.17,5.39,5.03273450753901,-0.35726549246098926,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-06,2024-11-01,2024-11-07,5.17,5.39,5.3246465099306715,-0.06535349006932822,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-06,2024-11-01,2024-11-07,5.17,5.39,5.028330476060859,-0.361669523939141,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-07,2024-11-01,2024-11-08,5.39,5.1,5.770466303374904,0.6704663033749041,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-07,2024-11-01,2024-11-08,5.39,5.1,5.765876960235016,0.6658769602350167,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-07,2024-11-01,2024-11-08,5.39,5.1,5.34154646758268,0.2415464675826806,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-07,2024-11-01,2024-11-08,5.39,5.1,5.772092307688552,0.6720923076885521,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-08,2024-11-01,2024-11-11,5.1,5.0,4.73375079910719,-0.2662492008928101,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-08,2024-11-01,2024-11-11,5.1,5.0,4.734951254792578,-0.26504874520742217,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-08,2024-11-01,2024-11-11,5.1,5.0,5.335381047665033,0.33538104766503274,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-08,2024-11-01,2024-11-11,5.1,5.0,4.720713443871086,-0.2792865561289144,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-11,2024-11-01,2024-11-12,5.0,4.8,5.065575232413911,0.26557523241391134,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-11,2024-11-01,2024-11-12,5.0,4.8,5.068616955925846,0.2686169559258458,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-11,2024-11-01,2024-11-12,5.0,4.8,5.286253586317439,0.48625358631743953,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-11,2024-11-01,2024-11-12,5.0,4.8,5.049544063459149,0.24954406345914926,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-12,2024-11-01,2024-11-13,4.8,4.78,4.638082033316616,-0.1419179666833843,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-12,2024-11-01,2024-11-13,4.8,4.78,4.643839342618071,-0.13616065738192962,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-12,2024-11-01,2024-11-13,4.8,4.78,5.183882443566622,0.40388244356662195,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-12,2024-11-01,2024-11-13,4.8,4.78,4.617577480738628,-0.16242251926137197,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-13,2024-11-01,2024-11-14,4.78,4.75,4.90156620846525,0.15156620846525026,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-13,2024-11-01,2024-11-14,4.78,4.75,4.908674019728593,0.1586740197285934,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-13,2024-11-01,2024-11-14,4.78,4.75,5.097723115670315,0.34772311567031533,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-13,2024-11-01,2024-11-14,4.78,4.75,4.880016658005237,0.13001665800523732,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-14,2024-11-01,2024-11-15,4.75,4.79,4.790300794953762,0.00030079495376167387,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-14,2024-11-01,2024-11-15,4.75,4.79,4.797641916485175,0.007641916485175315,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-14,2024-11-01,2024-11-15,4.75,4.79,4.996748143379663,0.20674814337966296,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-14,2024-11-01,2024-11-15,4.75,4.79,4.766629653987399,-0.023370346012600685,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-15,2024-11-01,2024-11-18,4.79,4.86,4.940377914822998,0.08037791482299728,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-15,2024-11-01,2024-11-18,4.79,4.86,4.947554455514611,0.08755445551461083,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-15,2024-11-01,2024-11-18,4.79,4.86,4.912058840968858,0.05205884096885782,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-15,2024-11-01,2024-11-18,4.79,4.86,4.915205098048921,0.05520509804892093,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-18,2024-11-01,2024-11-19,4.86,4.81,5.022064144418806,0.2120641444188065,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-18,2024-11-01,2024-11-19,4.86,4.81,5.02810598946117,0.21810598946117032,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-18,2024-11-01,2024-11-19,4.86,4.81,4.843351974816014,0.03335197481601426,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-18,2024-11-01,2024-11-19,4.86,4.81,4.9949655308958745,0.18496553089587486,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-19,2024-11-01,2024-11-20,4.81,4.82,4.81917596447099,-0.0008240355290105583,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-19,2024-11-01,2024-11-20,4.81,4.82,4.827388457331401,0.007388457331400922,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-19,2024-11-01,2024-11-20,4.81,4.82,4.796173379631776,-0.023826620368224027,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-19,2024-11-01,2024-11-20,4.81,4.82,4.793266285612763,-0.026733714387237484,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-20,2024-11-01,2024-11-21,4.82,4.8,4.940975534918176,0.1409755349181765,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-20,2024-11-01,2024-11-21,4.82,4.8,4.9504091544514655,0.15040915445146563,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-20,2024-11-01,2024-11-21,4.82,4.8,4.770443280541516,-0.02955671945848426,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-20,2024-11-01,2024-11-21,4.82,4.8,4.916374205209251,0.1163742052092509,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-21,2024-11-01,2024-11-22,4.8,4.77,4.854123974724215,0.08412397472421507,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-21,2024-11-01,2024-11-22,4.8,4.77,4.865431719712616,0.09543171971261621,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-21,2024-11-01,2024-11-22,4.8,4.77,4.7628489516156485,-0.0071510483843511,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-21,2024-11-01,2024-11-22,4.8,4.77,4.830505907769896,0.060505907769896616,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-22,2024-11-01,2024-11-25,4.77,4.9,4.827254751028907,-0.07274524897109291,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-22,2024-11-01,2024-11-25,4.77,4.9,4.839641160318135,-0.060358839681865284,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-22,2024-11-01,2024-11-25,4.77,4.9,4.767813173124817,-0.13218682687518335,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-22,2024-11-01,2024-11-25,4.77,4.9,4.803974890679008,-0.09602510932099229,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-25,2024-11-01,2024-11-26,4.9,4.76,5.1542450584127,0.3942450584127002,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-25,2024-11-01,2024-11-26,4.9,4.76,5.16776072810331,0.40776072810331065,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-25,2024-11-01,2024-11-26,4.9,4.76,4.792931932421081,0.03293193242108128,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-25,2024-11-01,2024-11-26,4.9,4.76,5.1319437798208165,0.3719437798208167,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-26,2024-11-01,2024-11-27,4.76,4.77,4.627217416325078,-0.14278258367492125,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-26,2024-11-01,2024-11-27,4.76,4.77,4.6417223726600865,-0.1282776273399131,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-26,2024-11-01,2024-11-27,4.76,4.77,4.807760175369689,0.03776017536968901,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-26,2024-11-01,2024-11-27,4.76,4.77,4.60586438296179,-0.16413561703820978,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-27,2024-11-01,2024-11-28,4.77,4.74,4.918285640840155,0.17828564084015497,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-27,2024-11-01,2024-11-28,4.77,4.74,4.934970629546526,0.19497062954652566,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-27,2024-11-01,2024-11-28,4.77,4.74,4.82101625803158,0.08101625803158008,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-27,2024-11-01,2024-11-28,4.77,4.74,4.8996564763124875,0.15965647631248725,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-28,2024-11-01,2024-11-29,4.74,4.84,4.764966170888357,-0.0750338291116428,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-28,2024-11-01,2024-11-29,4.74,4.84,4.783797733754238,-0.05620226624576219,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-28,2024-11-01,2024-11-29,4.74,4.84,4.8273310314729825,-0.012668968527017377,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-28,2024-11-01,2024-11-29,4.74,4.84,4.748538292124848,-0.09146170787515207,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-11-29,2024-11-29,2024-12-02,4.84,4.77,4.8159050430659,0.045905043065900486,True
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-11-29,2024-11-29,2024-12-02,4.84,4.77,4.816098872066435,0.0460988720664357,True
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-11-29,2024-11-29,2024-12-02,4.84,4.77,4.827990597383361,0.05799059738336165,True
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-11-29,2024-11-29,2024-12-02,4.84,4.77,4.826531906780088,0.056531906780088015,True
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-02,2024-11-29,2024-12-03,4.77,4.84,4.589780982149822,-0.25021901785017775,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-02,2024-11-29,2024-12-03,4.77,4.84,4.587706480902228,-0.25229351909777176,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-02,2024-11-29,2024-12-03,4.77,4.84,4.762263623679228,-0.07773637632077168,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-02,2024-11-29,2024-12-03,4.77,4.84,4.596241693757618,-0.24375830624238226,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-03,2024-11-29,2024-12-04,4.84,4.8,4.936695907277224,0.13669590727722447,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-03,2024-11-29,2024-12-04,4.84,4.8,4.932950087061094,0.13295008706109446,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-03,2024-11-29,2024-12-04,4.84,4.8,4.761857034620587,-0.03814296537941253,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-03,2024-11-29,2024-12-04,4.84,4.8,4.947809545351629,0.14780954535162927,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-04,2024-11-29,2024-12-05,4.8,4.81,4.599927826839669,-0.21007217316033078,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-04,2024-11-29,2024-12-05,4.8,4.81,4.58623764883177,-0.2237623511682294,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-04,2024-11-29,2024-12-05,4.8,4.81,4.748559589790469,-0.061440410209530505,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-04,2024-11-29,2024-12-05,4.8,4.81,4.623617212159612,-0.18638278784038764,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-05,2024-11-29,2024-12-06,4.81,4.82,4.8674207926359765,0.047420792635976206,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-05,2024-11-29,2024-12-06,4.81,4.82,4.85448383024925,0.034483830249249614,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-05,2024-11-29,2024-12-06,4.81,4.82,4.756880880857497,-0.06311911914250334,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-05,2024-11-29,2024-12-06,4.81,4.82,4.880051482022065,0.06005148202206456,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-06,2024-11-29,2024-12-09,4.82,5.03,4.719359917817423,-0.31064008218257744,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-06,2024-11-29,2024-12-09,4.82,5.03,4.703151839609621,-0.3268481603903792,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-06,2024-11-29,2024-12-09,4.82,5.03,4.749935648032611,-0.2800643519673889,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-06,2024-11-29,2024-12-09,4.82,5.03,4.734684313333111,-0.2953156866668891,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-09,2024-11-29,2024-12-10,5.03,4.93,5.319563737920886,0.38956373792088606,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-09,2024-11-29,2024-12-10,5.03,4.93,5.302867099776749,0.3728670997767489,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-09,2024-11-29,2024-12-10,5.03,4.93,4.796504893876888,-0.133495106123112,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-09,2024-11-29,2024-12-10,5.03,4.93,5.340062782484164,0.4100627824841645,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-10,2024-11-29,2024-12-11,4.93,4.89,4.545712048992619,-0.34428795100738085,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-10,2024-11-29,2024-12-11,4.93,4.89,4.530562147309762,-0.3594378526902373,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-10,2024-11-29,2024-12-11,4.93,4.89,4.828163684412642,-0.06183631558735758,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-10,2024-11-29,2024-12-11,4.93,4.89,4.572565697125316,-0.317434302874684,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-11,2024-11-29,2024-12-12,4.89,4.79,4.968094234772689,0.17809423477268904,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-11,2024-11-29,2024-12-12,4.89,4.79,4.949927685242802,0.15992768524280176,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-11,2024-11-29,2024-12-12,4.89,4.79,4.850453086238735,0.06045308623873513,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-11,2024-11-29,2024-12-12,4.89,4.79,4.999005501190589,0.20900550119058892,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-12,2024-11-29,2024-12-13,4.79,4.68,4.476966632146622,-0.20303336785337756,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-12,2024-11-29,2024-12-13,4.79,4.68,4.460551553917229,-0.2194484460827706,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-12,2024-11-29,2024-12-13,4.79,4.68,4.843513021555923,0.1635130215559233,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-12,2024-11-29,2024-12-13,4.79,4.68,4.51222259593635,-0.16777740406365016,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-13,2024-11-29,2024-12-16,4.68,4.66,4.5957404546413825,-0.06425954535861766,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-13,2024-11-29,2024-12-16,4.68,4.66,4.575676458853152,-0.0843235411468477,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-13,2024-11-29,2024-12-16,4.68,4.66,4.819966428401873,0.15996642840187292,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-13,2024-11-29,2024-12-16,4.68,4.66,4.633915307264545,-0.026084692735454773,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-16,2024-11-29,2024-12-17,4.66,4.61,4.545434247562042,-0.06456575243795815,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-16,2024-11-29,2024-12-17,4.66,4.61,4.529038407058882,-0.08096159294111871,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-16,2024-11-29,2024-12-17,4.66,4.61,4.7658881107235676,0.15588811072356723,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-16,2024-11-29,2024-12-17,4.66,4.61,4.585745872073846,-0.024254127926154112,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-17,2024-11-29,2024-12-18,4.61,4.56,4.488071750586533,-0.07192824941346654,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-17,2024-11-29,2024-12-18,4.61,4.56,4.470560532457723,-0.0894394675422765,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-17,2024-11-29,2024-12-18,4.61,4.56,4.690690916193139,0.13069091619313955,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-17,2024-11-29,2024-12-18,4.61,4.56,4.531505346861189,-0.028494653138810833,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-18,2024-11-29,2024-12-19,4.56,4.43,4.431908990590456,0.0019089905904561277,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-18,2024-11-29,2024-12-19,4.56,4.43,4.417936491304897,-0.01206350869510242,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-18,2024-11-29,2024-12-19,4.56,4.43,4.601377922156495,0.17137792215649572,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-18,2024-11-29,2024-12-19,4.56,4.43,4.482337861158522,0.0523378611585219,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-19,2024-11-29,2024-12-20,4.43,4.44,4.191672630665408,-0.24832736933459199,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-19,2024-11-29,2024-12-20,4.43,4.44,4.171847478270733,-0.2681525217292675,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-19,2024-11-29,2024-12-20,4.43,4.44,4.495469696886355,0.05546969688635439,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-19,2024-11-29,2024-12-20,4.43,4.44,4.237176111481555,-0.20282388851844502,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-20,2024-11-29,2024-12-23,4.44,4.44,4.462744210031521,0.022744210031520495,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-20,2024-11-29,2024-12-23,4.44,4.44,4.440467318785559,0.00046731878555839046,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-20,2024-11-29,2024-12-23,4.44,4.44,4.410762860703887,-0.02923713929611349,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-20,2024-11-29,2024-12-23,4.44,4.44,4.505361620243819,0.06536162024381831,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-23,2024-11-29,2024-12-24,4.44,4.46,4.301971748548809,-0.15802825145119126,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-23,2024-11-29,2024-12-24,4.44,4.46,4.282164841505867,-0.17783515849413334,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-23,2024-11-29,2024-12-24,4.44,4.46,4.343381553702768,-0.11661844629723195,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-23,2024-11-29,2024-12-24,4.44,4.46,4.345891086150378,-0.11410891384962163,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-24,2024-11-29,2024-12-27,4.46,4.46,4.454511507264537,-0.005488492735462813,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-24,2024-11-29,2024-12-27,4.46,4.46,4.43415692441682,-0.025843075583179775,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-24,2024-11-29,2024-12-27,4.46,4.46,4.297231573021704,-0.16276842697829608,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-24,2024-11-29,2024-12-27,4.46,4.46,4.49847928504691,0.03847928504691023,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-27,2024-11-29,2024-12-30,4.46,4.42,4.339338718406778,-0.08066128159322172,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-27,2024-11-29,2024-12-30,4.46,4.42,4.320007861790743,-0.09999213820925679,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-27,2024-11-29,2024-12-30,4.46,4.42,4.264768354223058,-0.15523164577694182,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-27,2024-11-29,2024-12-30,4.46,4.42,4.385058040845733,-0.03494195915426701,False
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,2024-12-30,2024-11-29,2024-12-31,4.42,4.42,4.312266582747075,-0.10773341725292518,False
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,2024-12-30,2024-11-29,2024-12-31,4.42,4.42,4.2945558125681105,-0.12544418743188945,False
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,2024-12-30,2024-11-29,2024-12-31,4.42,4.42,4.245505265734722,-0.17449473426527806,False
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,2024-12-30,2024-11-29,2024-12-31,4.42,4.42,4.359453988600081,-0.060546011399918775,False

@@ -1,0 +1,72 @@
+{
+  "run_id": "released_paper_shadow_glencore_20260813T073609Z",
+  "completed_utc": "2026-08-13T07:37:40.651350+00:00",
+  "company": "Glencore",
+  "classification": "noncausal forensic shadow; never a reportable forecasting result",
+  "source_protocol": {
+    "VMD": {
+      "scope": "full input sample",
+      "K": 9,
+      "alpha": 3000,
+      "tau": 0,
+      "DC": 0,
+      "init": 1,
+      "tol": 1e-06
+    },
+    "features": {
+      "horizon": 1,
+      "lags": 5,
+      "external_features": [
+        "mvis_critical_minerals",
+        "SP500",
+        "Shanghai_Index",
+        "Crude_Oil",
+        "VIX",
+        "US_Dollar_Index",
+        "Search_Index",
+        "News_Sentiment"
+      ],
+      "external_feature_shift": 1
+    },
+    "feature_selection": "global StandardScaler before static 80:20 outer split; inner chronological 80:20 LASSO validation",
+    "static_holdout": 0.2,
+    "routing": "modes 1-2 ARIMA; modes 3-9 LSTM",
+    "LSTM": {
+      "epochs": 100,
+      "batch_size": 128,
+      "hidden_size": 40,
+      "dropout": 0.5,
+      "layout": "(N, 1, features), batch_first=False"
+    },
+    "ARIMA": "pmdarima auto_arima with selected features to select order; statsmodels ARIMA on target only; apply(observed test targets).fittedvalues",
+    "aggregate_first_row": "discarded, as in the raw archive"
+  },
+  "repairs_required_to_execute_archive": [
+    "Set y_name='target', h=1, lag=5, test_size=0.20, K=9 from the repaired local copy.",
+    "Construct df_vmd directly from VMD components because it is undefined in raw main_forecast.py.",
+    "Implement missing pre_process using the repaired local copy: train-fitted StandardScaler for X and y, transformed static test set.",
+    "Replace undefined arima_orders with the raw code's immediately preceding auto_arima-selected order.",
+    "Flatten one-column target arrays for current pmdarima/statsmodels API compatibility.",
+    "Use raw archive's test-target ARIMA apply/fittedvalues route, rather than the repaired copy's recursive forecast route.",
+    "Resolve raw LSTM's missing drop argument and list hidden-size mismatch with the repaired copy's effective hidden_size=40 and dropout=0.5.",
+    "Keep the strongest own lag only if LASSO selects no features; raw archive would otherwise fail to create an LSTM input.",
+    "Do not write the archive's shared ./net.pth; in-memory evaluation is numerically equivalent and avoids overwriting a project file.",
+    "Align undefined true_y to the retained static-holdout feature dates after the raw archive's first-row drop."
+  ],
+  "known_noncausal_properties": [
+    "VMD decomposes the entire sample before the static split, so every component includes future test-period information.",
+    "LASSO's first scaler is fitted on the entire component sample before selection and the static split.",
+    "The LSTM receives test-period own-component lag values; those components were obtained from full-sample VMD.",
+    "ARIMA's apply path filters observed test targets rather than forecasting an unobserved target sequence."
+  ],
+  "source_compatibility": {
+    "dropped_first_odd_observation": true,
+    "scored_rows": 748
+  },
+  "seed_registry": {
+    "python": 42,
+    "numpy": 42,
+    "torch": 42
+  },
+  "progress_log": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/outputs/released_paper_shadow/released_paper_shadow_glencore_20260813T073609Z/logs/glencore.jsonl"
+}

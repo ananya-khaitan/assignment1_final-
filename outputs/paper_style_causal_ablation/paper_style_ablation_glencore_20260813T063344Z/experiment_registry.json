@@ -1,0 +1,57 @@
+{
+  "run_id": "paper_style_ablation_glencore_20260813T063344Z",
+  "completed_utc": "2026-08-13T06:55:20.940836+00:00",
+  "company": "Glencore",
+  "purpose": "development-only architecture/input/routing ablation; not a final-test result",
+  "development_start_target_date": "2024-07-12",
+  "development_end_target_date": "2024-12-31",
+  "development_origins": 120,
+  "vmd_k": 8,
+  "refit_interval": 20,
+  "lstm": {
+    "hidden": 64,
+    "window": 20,
+    "epochs": 30
+  },
+  "causal_guarantees": {
+    "scaling": "selection and LSTM scalers fit only on the scheduled historical fit slice",
+    "decomposition": "full VMD only at scheduled historical fit origins; innovation carry-forward between refits",
+    "development_cap": "2024-12-31"
+  },
+  "variants": [
+    {
+      "label": "Hybrid / Temporal LSTM / Full Exog",
+      "low_modes": 2,
+      "use_exogenous": true,
+      "sequence_style": "temporal",
+      "purpose": "reference causal paper-style architecture"
+    },
+    {
+      "label": "Hybrid / Temporal LSTM / Lag Only",
+      "low_modes": 2,
+      "use_exogenous": false,
+      "sequence_style": "temporal",
+      "purpose": "isolates the marginal value of external factors"
+    },
+    {
+      "label": "All LSTM / Temporal / Full Exog",
+      "low_modes": 0,
+      "use_exogenous": true,
+      "sequence_style": "temporal",
+      "purpose": "isolates the fixed two-ARIMA routing decision"
+    },
+    {
+      "label": "Hybrid / One-Step LSTM / Full Exog",
+      "low_modes": 2,
+      "use_exogenous": true,
+      "sequence_style": "single_step",
+      "purpose": "tests the released source archive's length-one LSTM tensor shape"
+    }
+  ],
+  "seed_registry": {
+    "python": 42,
+    "numpy": 42,
+    "torch": 42
+  },
+  "progress_log": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/outputs/paper_style_causal_ablation/paper_style_ablation_glencore_20260813T063344Z/logs/glencore.jsonl"
+}

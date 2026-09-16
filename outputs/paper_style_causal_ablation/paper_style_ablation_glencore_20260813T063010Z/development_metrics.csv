@@ -1,0 +1,5 @@
+Company,Model,Purpose,Use Exogenous,Low ARIMA Modes,LSTM Sequence Style,RMSE,MAE,MASE,MAPE,Directional Accuracy,Mean Error,Scheduled Fits
+Glencore,Hybrid / Temporal LSTM / Full Exog,reference causal paper-style architecture,True,2,temporal,0.18339087015035685,0.14715227016833893,2.7682110229166725,3.101477335401385,36.84210526315789,-0.05080869104129744,1
+Glencore,Hybrid / Temporal LSTM / Lag Only,isolates the marginal value of external factors,False,2,temporal,0.18492554542745762,0.14995033967937194,2.8208479741133328,3.1590543998951386,36.84210526315789,-0.048834643066683815,1
+Glencore,All LSTM / Temporal / Full Exog,isolates the fixed two-ARIMA routing decision,True,0,temporal,0.190190756015592,0.16621119520447505,3.126745256262983,3.6335982466616867,42.10526315789473,0.13025681101248376,1
+Glencore,Hybrid / One-Step LSTM / Full Exog,tests the released source archive's length-one LSTM tensor shape,True,2,single_step,0.20480292512424286,0.16414793725328963,3.0879314928255717,3.482965872652434,36.84210526315789,0.11031365348819815,1

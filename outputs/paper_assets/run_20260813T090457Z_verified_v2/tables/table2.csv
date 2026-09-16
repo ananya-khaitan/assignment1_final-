@@ -1,0 +1,10 @@
+Parameter,Value,Role
+Forecast horizon,1,One trading day
+Final-test share,0.2,Chronological final holdout
+Calibration observations,60,Pre-test residual and threshold calibration
+Model refit interval,20,Trading observations
+VMD components,5,Train-only VMD at scheduled refits
+VMD alpha,2000,VMD penalty parameter
+RNN epochs,5,LSTM/GRU candidate fitting
+Conformal alpha,0.1,Two-sided interval nominal error
+Run identifier,run_20260813T090457Z,Provenance registry

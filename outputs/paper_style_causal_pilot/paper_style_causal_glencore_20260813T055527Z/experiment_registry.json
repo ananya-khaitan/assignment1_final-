@@ -1,0 +1,31 @@
+{
+  "run_id": "paper_style_causal_glencore_20260813T055527Z",
+  "started_and_completed_utc": "2026-08-13T05:56:39.496703+00:00",
+  "company": "Glencore",
+  "architecture": "causal VMD (8 modes) -> first two BIC-selected ARIMA, remaining LASSO-selected multivariate LSTM",
+  "paper_inspiration": "Liu et al. (2025); released full-sample VMD/global-scaler implementation deliberately not reused",
+  "forecast_horizon": 1,
+  "calibration_origins": 12,
+  "final_test_origins": 10,
+  "refit_interval": 20,
+  "vmd_k": 8,
+  "low_modes": 2,
+  "lstm": {
+    "hidden": 64,
+    "window": 20,
+    "epochs": 1
+  },
+  "scaling_policy": "all LASSO and LSTM scalers fit only on the scheduled historical fit slice",
+  "decomposition_policy": "full VMD only at scheduled historical fit origins; between fits, causal component innovation carry-forward",
+  "thresholds": {
+    "ARIMA": 0.1,
+    "Paper-Style Causal VMD-ARIMA/LSTM": 0.5,
+    "Random Walk": 0.0
+  },
+  "seed_registry": {
+    "python": 42,
+    "numpy": 42,
+    "torch": 42
+  },
+  "progress_log": "/mnt/c/Users/Pratham Lahoti/Downloads/assignment1_pratham/outputs/paper_style_causal_pilot/paper_style_causal_glencore_20260813T055527Z/logs/glencore.jsonl"
+}

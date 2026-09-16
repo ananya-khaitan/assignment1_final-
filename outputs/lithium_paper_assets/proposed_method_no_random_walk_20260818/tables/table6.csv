@@ -1,0 +1,20 @@
+Panel,Mode,Route,Selected indicators,LASSO alpha
+lithium_hydroxide,1,ARIMA,"target_1, Cross_Lithium_Close",0.0013
+lithium_hydroxide,2,ARIMA,target_1,0.0398
+lithium_hydroxide,3,LSTM,"target_1, target_5, Cross_Lithium_Close, Ganfeng_Lithium_Close",0.001
+lithium_hydroxide,4,LSTM,"target_1, target_3, target_5, News_FinBERT_Score, News_TextBlob_Polarity, News_Article_Count, …",0.001
+lithium_hydroxide,5,LSTM,"target_1, target_2, target_4, target_5, VIX, News_TextBlob_Polarity, Cross_Lithium_Close, News_FinBERT_Score",0.0011
+lithium_hydroxide,6,LSTM,"target_2, target_4, target_3, Cross_Lithium_Close, VIX, News_Article_Count, News_TextBlob_Polarity",0.0026
+lithium_hydroxide,7,LSTM,"target_2, target_1, target_5, target_4, News_FinBERT_Score, VIX, Cross_Lithium_Close",0.0021
+lithium_hydroxide,8,LSTM,"target_1, target_2, News_FinBERT_Score, Cross_Lithium_Close, VIX, News_TextBlob_Polarity",0.0015
+lithium_hydroxide,9,LSTM,"target_1, target_3, target_2, target_5, News_FinBERT_Score, News_Article_Count, Cross_Lithium_Close",0.001
+lithium_hydroxide,Residual,LSTM,"target_1, target_5, target_3, target_2, target_4, Cross_Lithium_Close",0.0395
+lithium_carbonate,1,ARIMA,"target_1, Cross_Lithium_Close, Ganfeng_Lithium_Close",0.0014
+lithium_carbonate,2,ARIMA,"target_1, SP500",0.0018
+lithium_carbonate,3,LSTM,"target_1, target_5, Ganfeng_Lithium_Close, Cross_Lithium_Close",0.001
+lithium_carbonate,4,LSTM,"target_1, target_5, Ganfeng_Lithium_Close, News_TextBlob_Polarity",0.001
+lithium_carbonate,5,LSTM,"target_1, target_4, target_3, Ganfeng_Lithium_Close, News_Article_Count, News_FinBERT_Score",0.001
+lithium_carbonate,6,LSTM,"target_2, target_4, target_1, target_5, target_3, Ganfeng_Lithium_Close, US_Dollar_Index, Cross_Lithium_Close, …",0.001
+lithium_carbonate,7,LSTM,"target_2, target_1, target_4, target_5, Ganfeng_Lithium_Close, US_Dollar_Index, News_FinBERT_Score, …",0.001
+lithium_carbonate,8,LSTM,"target_1, target_2, target_4, target_3, Ganfeng_Lithium_Close, US_Dollar_Index, News_TextBlob_Polarity, …",0.001
+lithium_carbonate,Residual,LSTM,"target_1, target_2, target_5, target_4, Albemarle_Close, News_Article_Count, Ganfeng_Lithium_Close, US_Dollar_Index",0.0153

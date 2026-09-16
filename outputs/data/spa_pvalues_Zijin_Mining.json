@@ -1,0 +1,25 @@
+{
+  "benchmark": "Random Walk",
+  "alternatives": [
+    "ARIMA",
+    "CEEMDAN-LSTM",
+    "Elastic Net",
+    "GRU",
+    "Histogram Gradient Boosting",
+    "LASSO",
+    "LSTM",
+    "LightGBM",
+    "Random Forest",
+    "Random Walk + Drift",
+    "Selected ARX",
+    "VMD-GRU",
+    "VMD-LASSO-ARX/LSTM",
+    "VMD-LSTM",
+    "XGBoost"
+  ],
+  "pvalues": {
+    "lower": 0.596,
+    "consistent": 0.868,
+    "upper": 0.927
+  }
+}

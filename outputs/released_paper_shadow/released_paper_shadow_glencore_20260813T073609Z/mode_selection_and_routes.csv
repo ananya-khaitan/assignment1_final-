@@ -1,0 +1,10 @@
+Mode,Route,LASSO Alpha,LASSO Validation MSE,Selected Feature Count,Selected Features,Empty-selection Fallback,ARIMA Order
+1,ARIMA (auto-selected order; observed-test apply path),0.001,4.847441066788733e-05,1,target_1,False,"(2, 1, 1)"
+2,ARIMA (auto-selected order; observed-test apply path),0.005300000000000002,0.00038815931246631146,2,target_1 | VIX,False,"(1, 0, 2)"
+3,LSTM (source sequence-major layout),0.001,0.00012656593053272502,2,target_1 | target_5,False,
+4,LSTM (source sequence-major layout),0.001,0.0014771988301074408,4,target_1 | target_5 | target_4 | VIX,False,
+5,LSTM (source sequence-major layout),0.001,0.0029243489975957254,2,target_1 | target_3,False,
+6,LSTM (source sequence-major layout),0.001,0.004663290943074819,4,target_1 | target_2 | target_5 | target_4,False,
+7,LSTM (source sequence-major layout),0.001,0.006679675564435339,6,target_1 | target_2 | target_4 | target_5 | VIX | mvis_critical_minerals,False,
+8,LSTM (source sequence-major layout),0.001,0.014036133322741333,7,target_2 | target_4 | target_1 | target_5 | VIX | mvis_critical_minerals | Shanghai_Index,False,
+9,LSTM (source sequence-major layout),0.001,0.01004909310672393,6,target_1 | target_2 | target_4 | VIX | News_Sentiment | mvis_critical_minerals,False,

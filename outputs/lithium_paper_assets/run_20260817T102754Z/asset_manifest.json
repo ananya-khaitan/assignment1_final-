@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-08-17T10:41:26.088538+00:00",
+  "run_id": "lithium_paper_20260817T102754Z",
+  "protocol": "Liu-structured static 80:20 retrospective lithium experiment",
+  "classification": "noncausal; full-sample decomposition and observed-test ARIMA filtering",
+  "tables": {
+    "Table 1": "Representative research works in lithium and energy-price forecasting.",
+    "Table 2": "Parameter settings used in this study.",
+    "Table 3": "Indicators used in this study.",
+    "Table 4": "Statistical information for the forecasting targets and multimodal indicators.",
+    "Table 5": "Information on the decomposed lithium-price modes.",
+    "Table 6": "Indicators selected for the decomposed modes using LASSO regression.",
+    "Table 7": "Forecasting errors on the testing sets for single models.",
+    "Table 8": "Forecasting errors on the testing sets for decomposition models.",
+    "Table 9": "Diebold-Mariano tests comparing the proposed model with forecasting benchmarks.",
+    "Table 10": "Interval forecasting errors on the evaluation sets.",
+    "Table 11": "Performance of two trading schemes and optimized versions based on decomposition-model forecasts.",
+    "Table 12": "Performance of two trading schemes and optimized versions based on single-model forecasts."
+  },
+  "figures": {
+    "Figure 1": "Time trend of candidate publications in lithium-price forecasting.",
+    "Figure 2": "Conceptual structure of the LSTM model.",
+    "Figure 3": "Framework of this retrospective multimodal lithium-price study.",
+    "Figure 4": "Lithium-price time series used as forecasting targets.",
+    "Figure 5": "Word cloud of collected lithium-related news headlines.",
+    "Figure 6": "Lithium-news sentiment scores and distributions.",
+    "Figure 7": "VMD modes of the lithium-price series.",
+    "Figure 8": "Approximate-entropy values of decomposed modes.",
+    "Figure 9": "Forecasting results using single forecasting models.",
+    "Figure 10": "Forecasting-error metrics across models.",
+    "Figure 11": "Interval forecasting results for the proposed model.",
+    "Figure 12": "Graphical illustration of the trading strategies.",
+    "Figure 13": "Trading-evaluation metrics across forecasting models."
+  },
+  "source_checksums": {
+    "experiment_registry.json": "6071741947a382d6863f77cb9962a480695c52aef623ded81149f5cfffec17f5",
+    "forecast_ledger.csv": "20aab96a41350e76ccfe7b38b4fcf57a94ea430713aa3389727c6faad8dbd812",
+    "forecast_metrics.csv": "b1bcd2c6c8e74dc35b39690451c718472ecf3547ee520df39df5e392552b2c00",
+    "dm_tests.csv": "5440c4a8966c319a5d52730224eefd3ea9a1dbf139ef17098c9825068a322bd6",
+    "interval_ledger.csv": "c2356459b7ecc1633f22703a5d8572efe182e5e809a60a64bde8016d8e40ca36",
+    "interval_metrics.csv": "894fdd16add6fc28d0cfd43a0ebeee287c7886696b4e53e97edb600c8a0083b3",
+    "trading_metrics.csv": "c4ba3abf19d0458c55f25976b5bdaad50914297418cf311ae8564858f49021cf",
+    "mode_feature_selection.csv": "7bb77b28794b22073e96fcd640d0886e8903c3116dcd351eadc51658feba5076",
+    "component_summary.csv": "0983631586bf1f408e008ba9e00722d67371772fce87b8fa8cc0425fab17d62b"
+  },
+  "literature_query": "Crossref Works API query.title=lithium price forecasting; descriptive, not systematic"
+}

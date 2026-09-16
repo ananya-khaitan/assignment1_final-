@@ -1,0 +1,6 @@
+Company,Mode,Omega,Period (days),Variance ratio,Correlation,Mean |IMF|
+Rio Tinto,IMF1,0.00036,3750.0,0.8669,0.9551,13.7071
+Rio Tinto,IMF2,0.00503,250.0,0.067,0.3487,3.4528
+Rio Tinto,IMF3,0.02369,36.1,0.0081,0.1307,1.192
+Rio Tinto,IMF4,0.05121,18.7,0.0021,0.0757,0.6019
+Rio Tinto,IMF5,0.09749,10.9,0.0009,0.0507,0.3845

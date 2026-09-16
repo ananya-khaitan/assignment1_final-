@@ -1,0 +1,177 @@
+{
+  "manifest": "C:\\Users\\Pratham Lahoti\\Downloads\\assignment1_pratham\\code\\data\\lithium\\source_manifest.json",
+  "targets": {
+    "lithium_hydroxide": {
+      "observations": 716,
+      "start": "2023-05-04",
+      "end": "2026-03-12",
+      "modes": 9,
+      "ablations": {
+        "history_only": {
+          "external_columns": [],
+          "complete_rows_before_component_lags": 716,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_cross_lithium": {
+          "external_columns": [
+            "Cross_Lithium_Close"
+          ],
+          "complete_rows_before_component_lags": 716,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_equities": {
+          "external_columns": [
+            "Albemarle_Close",
+            "Ganfeng_Lithium_Close"
+          ],
+          "complete_rows_before_component_lags": 716,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_attention": {
+          "external_columns": [
+            "Trends_lithium",
+            "Trends_lithium_price",
+            "Trends_lithium_carbonate",
+            "Trends_lithium_hydroxide",
+            "Trends_lithium_battery"
+          ],
+          "complete_rows_before_component_lags": 714,
+          "first_complete_date": "2023-05-08",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_news": {
+          "external_columns": [
+            "News_Article_Count",
+            "News_TextBlob_Polarity",
+            "News_FinBERT_Score"
+          ],
+          "complete_rows_before_component_lags": 716,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_market_controls": {
+          "external_columns": [
+            "SP500",
+            "VIX",
+            "US_Dollar_Index",
+            "MVIS_Critical_Minerals"
+          ],
+          "complete_rows_before_component_lags": 716,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "full_multimodal": {
+          "external_columns": [
+            "Cross_Lithium_Close",
+            "Albemarle_Close",
+            "Ganfeng_Lithium_Close",
+            "Trends_lithium",
+            "Trends_lithium_price",
+            "Trends_lithium_carbonate",
+            "Trends_lithium_hydroxide",
+            "Trends_lithium_battery",
+            "News_Article_Count",
+            "News_TextBlob_Polarity",
+            "News_FinBERT_Score",
+            "SP500",
+            "VIX",
+            "US_Dollar_Index",
+            "MVIS_Critical_Minerals"
+          ],
+          "complete_rows_before_component_lags": 714,
+          "first_complete_date": "2023-05-08",
+          "last_complete_date": "2026-03-12"
+        }
+      }
+    },
+    "lithium_carbonate": {
+      "observations": 692,
+      "start": "2023-05-04",
+      "end": "2026-03-12",
+      "modes": 8,
+      "ablations": {
+        "history_only": {
+          "external_columns": [],
+          "complete_rows_before_component_lags": 692,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_cross_lithium": {
+          "external_columns": [
+            "Cross_Lithium_Close"
+          ],
+          "complete_rows_before_component_lags": 692,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_equities": {
+          "external_columns": [
+            "Albemarle_Close",
+            "Ganfeng_Lithium_Close"
+          ],
+          "complete_rows_before_component_lags": 692,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_attention": {
+          "external_columns": [
+            "Trends_lithium",
+            "Trends_lithium_price",
+            "Trends_lithium_carbonate",
+            "Trends_lithium_hydroxide",
+            "Trends_lithium_battery"
+          ],
+          "complete_rows_before_component_lags": 690,
+          "first_complete_date": "2023-05-08",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_news": {
+          "external_columns": [
+            "News_Article_Count",
+            "News_TextBlob_Polarity",
+            "News_FinBERT_Score"
+          ],
+          "complete_rows_before_component_lags": 692,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "history_plus_market_controls": {
+          "external_columns": [
+            "SP500",
+            "VIX",
+            "US_Dollar_Index",
+            "MVIS_Critical_Minerals"
+          ],
+          "complete_rows_before_component_lags": 692,
+          "first_complete_date": "2023-05-04",
+          "last_complete_date": "2026-03-12"
+        },
+        "full_multimodal": {
+          "external_columns": [
+            "Cross_Lithium_Close",
+            "Albemarle_Close",
+            "Ganfeng_Lithium_Close",
+            "Trends_lithium",
+            "Trends_lithium_price",
+            "Trends_lithium_carbonate",
+            "Trends_lithium_hydroxide",
+            "Trends_lithium_battery",
+            "News_Article_Count",
+            "News_TextBlob_Polarity",
+            "News_FinBERT_Score",
+            "SP500",
+            "VIX",
+            "US_Dollar_Index",
+            "MVIS_Critical_Minerals"
+          ],
+          "complete_rows_before_component_lags": 690,
+          "first_complete_date": "2023-05-08",
+          "last_complete_date": "2026-03-12"
+        }
+      }
+    }
+  }
+}

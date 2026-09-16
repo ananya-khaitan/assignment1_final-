@@ -1,0 +1,59 @@
+[lithium_hydroxide] loading aligned paper panel
+  Random Walk complete
+  ES complete
+  ARIMA complete
+  SVR complete
+  RF complete
+  MLP complete
+  ELM complete
+  LSTM complete
+  lithium_hydroxide/adaptive: 1/14 candidates complete; last=VMD-K7-A1500; elapsed=2.3m; ETA=2026-08-18 02:48:52 India Standard Time
+  lithium_hydroxide/adaptive: 2/14 candidates complete; last=VMD-K7-A3000; elapsed=4.7m; ETA=2026-08-18 02:49:39 India Standard Time
+  lithium_hydroxide/adaptive: 3/14 candidates complete; last=VMD-K7-A4500; elapsed=7.4m; ETA=2026-08-18 02:50:56 India Standard Time
+  lithium_hydroxide/adaptive: 4/14 candidates complete; last=VMD-K8-A1500; elapsed=9.8m; ETA=2026-08-18 02:50:38 India Standard Time
+  lithium_hydroxide/adaptive: 5/14 candidates complete; last=VMD-K8-A3000; elapsed=12.0m; ETA=2026-08-18 02:50:11 India Standard Time
+  lithium_hydroxide/adaptive: 6/14 candidates complete; last=VMD-K8-A4500; elapsed=14.4m; ETA=2026-08-18 02:49:59 India Standard Time
+  lithium_hydroxide/adaptive: 7/14 candidates complete; last=VMD-K9-A1500; elapsed=17.4m; ETA=2026-08-18 02:51:23 India Standard Time
+  lithium_hydroxide/adaptive: 8/14 candidates complete; last=VMD-K9-A3000; elapsed=20.0m; ETA=2026-08-18 02:51:24 India Standard Time
+  lithium_hydroxide/adaptive: 9/14 candidates complete; last=VMD-K9-A4500; elapsed=22.8m; ETA=2026-08-18 02:52:01 India Standard Time
+  lithium_hydroxide/adaptive: 10/14 candidates complete; last=VMD-K10-A1500; elapsed=26.1m; ETA=2026-08-18 02:53:00 India Standard Time
+  lithium_hydroxide/adaptive: 11/14 candidates complete; last=VMD-K10-A3000; elapsed=29.5m; ETA=2026-08-18 02:53:59 India Standard Time
+  lithium_hydroxide/adaptive: 12/14 candidates complete; last=VMD-K10-A4500; elapsed=33.0m; ETA=2026-08-18 02:54:57 India Standard Time
+  lithium_hydroxide/adaptive: 13/14 candidates complete; last=CEEMDAN-M7; elapsed=34.7m; ETA=2026-08-18 02:53:51 India Standard Time
+  lithium_hydroxide/adaptive: 14/14 candidates complete; last=CEEMDAN-M9; elapsed=36.4m; ETA=2026-08-18 02:52:51 India Standard Time
+  VMD-ARIMA complete
+  VMD-LSTM complete
+  CEEMDAN-ARIMA complete
+  CEEMDAN-LSTM complete
+  Fixed VMD-LASSO-ARIMA/LSTM complete
+  Proposed Adaptive Decomposition-Routing Ensemble complete
+[lithium_carbonate] loading aligned paper panel
+  Random Walk complete
+  ES complete
+  ARIMA complete
+  SVR complete
+  RF complete
+  MLP complete
+  ELM complete
+  LSTM complete
+  lithium_carbonate/adaptive: 1/14 candidates complete; last=VMD-K7-A1500; elapsed=2.2m; ETA=2026-08-18 03:28:55 India Standard Time
+  lithium_carbonate/adaptive: 2/14 candidates complete; last=VMD-K7-A3000; elapsed=4.4m; ETA=2026-08-18 03:28:06 India Standard Time
+  lithium_carbonate/adaptive: 3/14 candidates complete; last=VMD-K7-A4500; elapsed=7.1m; ETA=2026-08-18 03:30:26 India Standard Time
+  lithium_carbonate/adaptive: 4/14 candidates complete; last=VMD-K8-A1500; elapsed=10.0m; ETA=2026-08-18 03:32:33 India Standard Time
+  lithium_carbonate/adaptive: 5/14 candidates complete; last=VMD-K8-A3000; elapsed=11.9m; ETA=2026-08-18 03:30:46 India Standard Time
+  lithium_carbonate/adaptive: 6/14 candidates complete; last=VMD-K8-A4500; elapsed=14.3m; ETA=2026-08-18 03:30:58 India Standard Time
+  lithium_carbonate/adaptive: 7/14 candidates complete; last=VMD-K9-A1500; elapsed=17.3m; ETA=2026-08-18 03:32:00 India Standard Time
+  lithium_carbonate/adaptive: 8/14 candidates complete; last=VMD-K9-A3000; elapsed=19.9m; ETA=2026-08-18 03:32:15 India Standard Time
+  lithium_carbonate/adaptive: 9/14 candidates complete; last=VMD-K9-A4500; elapsed=23.0m; ETA=2026-08-18 03:33:15 India Standard Time
+  lithium_carbonate/adaptive: 10/14 candidates complete; last=VMD-K10-A1500; elapsed=25.7m; ETA=2026-08-18 03:33:28 India Standard Time
+  lithium_carbonate/adaptive: 11/14 candidates complete; last=VMD-K10-A3000; elapsed=28.5m; ETA=2026-08-18 03:33:48 India Standard Time
+  lithium_carbonate/adaptive: 12/14 candidates complete; last=VMD-K10-A4500; elapsed=31.7m; ETA=2026-08-18 03:34:27 India Standard Time
+  lithium_carbonate/adaptive: 13/14 candidates complete; last=CEEMDAN-M7; elapsed=33.4m; ETA=2026-08-18 03:33:25 India Standard Time
+  lithium_carbonate/adaptive: 14/14 candidates complete; last=CEEMDAN-M9; elapsed=35.1m; ETA=2026-08-18 03:32:34 India Standard Time
+  VMD-ARIMA complete
+  VMD-LSTM complete
+  CEEMDAN-ARIMA complete
+  CEEMDAN-LSTM complete
+  Fixed VMD-LASSO-ARIMA/LSTM complete
+  Proposed Adaptive Decomposition-Routing Ensemble complete
+Saved complete lithium paper run to C:\Users\Pratham Lahoti\Downloads\assignment1_pratham\outputs\lithium_paper\lithium_paper_20260817T204135Z

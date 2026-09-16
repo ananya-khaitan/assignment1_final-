@@ -1,0 +1,37 @@
+{
+  "run_id": "lithium_paper_20260817T102754Z",
+  "created_at_utc": "2026-08-17T10:37:29.339324+00:00",
+  "protocol": "Liu-structured static 80:20 retrospective lithium experiment",
+  "classification": "noncausal; full-sample decomposition and observed-test ARIMA filtering",
+  "targets": [
+    "lithium_hydroxide",
+    "lithium_carbonate"
+  ],
+  "single_models": [
+    "ES",
+    "ARIMA",
+    "SVR",
+    "RF",
+    "MLP",
+    "ELM",
+    "LSTM"
+  ],
+  "decomposition_models": [
+    "CEEMDAN-ARIMA",
+    "VMD-ARIMA",
+    "CEEMDAN-LSTM",
+    "VMD-LSTM",
+    "Proposed VMD-LASSO-ARIMA/LSTM"
+  ],
+  "robustness_models": [
+    "Random Walk"
+  ],
+  "lags": 5,
+  "lstm_epochs": 100,
+  "lstm_hidden_size": 64,
+  "lstm_batch_size": 64,
+  "corrections_to_raw_archive": [
+    "Low-mode ARIMA order selection is univariate because the final Statsmodels ARIMA is univariate.",
+    "The VMD reconstruction residual is explicitly forecast and recombined in the proposed model."
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "run_id": "lithium_prices_20260916T151959Z",
+  "created_at_utc": "2026-09-16T17:18:49.700294+00:00",
+  "protocol": "Reference-structured static 80:20 retrospective lithium experiment",
+  "target_set": "prices",
+  "classification": "noncausal; full-sample decomposition and observed-test ARIMA filtering",
+  "targets": [
+    "lithium_hydroxide",
+    "lithium_carbonate"
+  ],
+  "single_models": [
+    "ES",
+    "ARIMA",
+    "SVR",
+    "RF",
+    "MLP",
+    "ELM",
+    "LSTM"
+  ],
+  "decomposition_models": [
+    "CEEMDAN-ARIMA",
+    "VMD-ARIMA",
+    "CEEMDAN-LSTM",
+    "VMD-LSTM",
+    "Fixed VMD-LASSO-ARIMA/LSTM",
+    "Proposed Adaptive Decomposition-Routing Ensemble"
+  ],
+  "robustness_models": [
+    "Random Walk"
+  ],
+  "lags": 5,
+  "lstm_epochs": 100,
+  "lstm_hidden_size": 40,
+  "lstm_batch_size": 128,
+  "adaptive_selection": [
+    {
+      "target": "lithium_hydroxide",
+      "selected_candidate": "VMD-K9-A1500",
+      "stacking_weights": {
+        "VMD-K7-A1500": 0.0,
+        "VMD-K7-A3000": 0.0,
+        "VMD-K7-A4500": 0.0,
+        "VMD-K8-A1500": 0.5485037130168354,
+        "VMD-K8-A3000": 0.0,
+        "VMD-K8-A4500": 0.0,
+        "VMD-K9-A1500": 0.41849868377750044,
+        "VMD-K9-A3000": 1.7217250907697485e-18,
+        "VMD-K9-A4500": 6.252504325633001e-18,
+        "VMD-K10-A1500": 0.0,
+        "VMD-K10-A3000": 4.784601343870509e-19,
+        "VMD-K10-A4500": 1.1609892796874017e-18,
+        "CEEMDAN-M7": 0.0,
+        "CEEMDAN-M9": 0.03299760320566425
+      }
+    },
+    {
+      "target": "lithium_carbonate",
+      "selected_candidate": "VMD-K10-A1500",
+      "stacking_weights": {
+        "VMD-K7-A1500": 5.580245528584225e-17,
+        "VMD-K7-A3000": 0.0,
+        "VMD-K7-A4500": 0.0,
+        "VMD-K8-A1500": 0.0,
+        "VMD-K8-A3000": 0.0,
+        "VMD-K8-A4500": 0.025442685857187494,
+        "VMD-K9-A1500": 0.0,
+        "VMD-K9-A3000": 7.146485017875966e-17,
+        "VMD-K9-A4500": 2.2180260506005992e-18,
+        "VMD-K10-A1500": 0.9745573141428123,
+        "VMD-K10-A3000": 6.187188806112132e-18,
+        "VMD-K10-A4500": 0.0,
+        "CEEMDAN-M7": 0.0,
+        "CEEMDAN-M9": 0.0
+      }
+    }
+  ],
+  "adaptive_protocol": {
+    "route_and_stack_selection": "final 20% of the outer training sample",
+    "locked_test": "final 20% of the complete aligned sample",
+    "vmd_k": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "vmd_alpha": [
+      1500.0,
+      3000.0,
+      4500.0
+    ],
+    "ceemdan_max_imf": [
+      7,
+      9
+    ]
+  },
+  "corrections_to_raw_archive": [
+    "Low-mode ARIMA order selection is univariate because the final Statsmodels ARIMA is univariate.",
+    "The VMD reconstruction residual is explicitly forecast and recombined in the proposed model."
+  ]
+}

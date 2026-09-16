@@ -39,7 +39,7 @@ try:
     )
     from .released_paper_shadow import (
         released_feature_frame,
-        released_lasso_selection,
+        causal_lasso_selection,
         released_lstm_predictions,
         static_holdout_split,
     )
@@ -56,7 +56,7 @@ except ImportError:  # pragma: no cover - direct execution from code/.
     )
     from models.released_paper_shadow import (
         released_feature_frame,
-        released_lasso_selection,
+        causal_lasso_selection,
         released_lstm_predictions,
         static_holdout_split,
     )
@@ -99,13 +99,13 @@ def _seed(label: str) -> int:
     return (LIU_RANDOM_SEED + int(digest[:8], 16)) % (2**31 - 1)
 
 
-def _decompose(values: np.ndarray, spec: DecompositionSpec) -> np.ndarray:
+def _decompose(values: np.ndarray, spec: DecompositionSpec, train_stop: int) -> np.ndarray:
     values = np.asarray(values, dtype=float)
     if spec.method == "VMD":
         from vmdpy import VMD
 
         modes, _spectrum, _omega = VMD(
-            values,
+            values[:train_stop],
             alpha=float(spec.alpha),
             tau=0,
             K=int(spec.modes),
@@ -119,15 +119,22 @@ def _decompose(values: np.ndarray, spec: DecompositionSpec) -> np.ndarray:
 
         algorithm = CEEMDAN(trials=20, epsilon=0.01, parallel=False)
         algorithm.noise_seed(LIU_RANDOM_SEED)
-        components = np.asarray(algorithm.ceemdan(values, max_imf=int(spec.modes)), dtype=float)
+        components = np.asarray(algorithm.ceemdan(values[:train_stop], max_imf=int(spec.modes)), dtype=float)
     else:
         raise ValueError(f"Unknown decomposition method {spec.method!r}")
-    if components.ndim != 2 or components.shape[1] != len(values):
+    if components.ndim != 2 or components.shape[1] != train_stop:
         raise RuntimeError(f"Unexpected {spec.label} output shape {components.shape}")
     residual = values - components.sum(axis=0)
     if np.std(residual) > max(np.std(values) * 1e-8, 1e-10):
         components = np.vstack([components, residual])
-    return components
+    
+    # Forward fill the unseen test period
+    padded = np.full((components.shape[0], len(values)), np.nan)
+    padded[:, :train_stop] = components
+    for i in range(components.shape[0]):
+        padded[i, train_stop:] = components[i, -1]
+    return padded
+
 
 
 def _scaled_arrays(frame: pd.DataFrame, train_slice: slice, eval_slice: slice) -> tuple[np.ndarray, ...]:
@@ -325,13 +332,18 @@ def adaptive_forecast(
             if progress_callback is not None:
                 progress_callback(spec_number, len(specifications), spec.label + " [checkpoint]")
             continue
-        components = _decompose(price.to_numpy(float), spec)
+        
+        # Fix: ensure decomposition is mathematically causal.
+        # We decompose ONLY up to the end of the Dev set (the 80% mark) and ffill the Test set.
+        outer_split = static_holdout_split(len(price))
+        components = _decompose(price.to_numpy(float), spec, outer_split.train_stop)
+
         dev_parts: list[np.ndarray] = []
         test_parts: list[np.ndarray] = []
         for mode_index, component_values in enumerate(components, start=1):
             component = pd.Series(component_values, index=price.index, name="target", dtype=float)
             raw_frame = released_feature_frame(component, exogenous, lags=LIU_LAGS)
-            selection = released_lasso_selection(raw_frame)
+            selection = causal_lasso_selection(raw_frame)
             frame = raw_frame[["target", *selection.selected_columns]]
             subtrain, development, test = development_and_test_slices(len(frame))
             dev_dates = pd.DatetimeIndex(frame.index[development])

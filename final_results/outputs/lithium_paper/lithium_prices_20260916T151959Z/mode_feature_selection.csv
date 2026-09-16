@@ -1,0 +1,343 @@
+Target,Mode,Selected Features,LASSO Alpha,Validation MSE,Model,ARIMA Order,Route
+lithium_hydroxide,Undecomposed,target_1 | target_2 | Cross_Lithium_Close | Ganfeng_Lithium_Close,0.03039195382313198,0.15787642103317945,,,
+lithium_hydroxide,1,target_1 | target_2,0.041753189365604,0.022034384389351448,VMD-ARIMA,"(5, 2, 1)",
+lithium_hydroxide,2,target_1 | target_3 | target_4 | target_5 | target_2,0.0001,2.6883911076955984e-05,VMD-ARIMA,"(3, 0, 1)",
+lithium_hydroxide,3,target_1 | target_2 | target_3 | target_5,0.0001,2.4376706178509893e-05,VMD-ARIMA,"(5, 0, 5)",
+lithium_hydroxide,4,target_1 | target_2 | target_4 | target_5,0.0001,1.8248261409883756e-05,VMD-ARIMA,"(5, 0, 5)",
+lithium_hydroxide,5,target_2 | target_1 | target_5 | target_4,0.0001,2.4785007357701275e-05,VMD-ARIMA,"(4, 0, 3)",
+lithium_hydroxide,6,target_2 | target_4 | target_3 | target_5 | target_1,0.0001,2.6769692834343093e-05,VMD-ARIMA,"(4, 0, 3)",
+lithium_hydroxide,7,target_2 | target_1 | target_5 | target_4,0.0001,1.7899321114437425e-05,VMD-ARIMA,"(4, 0, 5)",
+lithium_hydroxide,8,target_1 | target_2 | target_3,0.0001,2.265782416458581e-05,VMD-ARIMA,"(3, 0, 4)",
+lithium_hydroxide,9,target_1 | target_3 | target_5,0.0001,8.94765304446217e-06,VMD-ARIMA,"(3, 0, 5)",
+lithium_hydroxide,1,target_1 | target_2,0.041753189365604,0.022034384389351448,VMD-LSTM,,
+lithium_hydroxide,2,target_1 | target_3 | target_4 | target_5 | target_2,0.0001,2.6883911076955984e-05,VMD-LSTM,,
+lithium_hydroxide,3,target_1 | target_2 | target_3 | target_5,0.0001,2.4376706178509893e-05,VMD-LSTM,,
+lithium_hydroxide,4,target_1 | target_2 | target_4 | target_5,0.0001,1.8248261409883756e-05,VMD-LSTM,,
+lithium_hydroxide,5,target_2 | target_1 | target_5 | target_4,0.0001,2.4785007357701275e-05,VMD-LSTM,,
+lithium_hydroxide,6,target_2 | target_4 | target_3 | target_5 | target_1,0.0001,2.6769692834343093e-05,VMD-LSTM,,
+lithium_hydroxide,7,target_2 | target_1 | target_5 | target_4,0.0001,1.7899321114437425e-05,VMD-LSTM,,
+lithium_hydroxide,8,target_1 | target_2 | target_3,0.0001,2.265782416458581e-05,VMD-LSTM,,
+lithium_hydroxide,9,target_1 | target_3 | target_5,0.0001,8.94765304446217e-06,VMD-LSTM,,
+lithium_hydroxide,1,target_1,0.03039195382313198,0.04058781028728915,CEEMDAN-ARIMA,"(1, 0, 2)",
+lithium_hydroxide,2,target_1 | target_2 | target_4 | target_5,0.004520353656360241,0.004396960455311719,CEEMDAN-ARIMA,"(3, 0, 3)",
+lithium_hydroxide,3,target_1 | target_2 | target_4 | target_5,0.0001,0.00015036168371975145,CEEMDAN-ARIMA,"(4, 0, 5)",
+lithium_hydroxide,4,target_1 | target_3 | target_2 | target_4 | target_5,0.0001,0.00012051816048991885,CEEMDAN-ARIMA,"(4, 0, 3)",
+lithium_hydroxide,5,target_1 | target_3 | target_4 | target_5 | target_2,0.0001,0.002089082270980149,CEEMDAN-ARIMA,"(3, 2, 0)",
+lithium_hydroxide,6,target_1,0.004520353656360241,0.002439157178030885,CEEMDAN-ARIMA,"(1, 2, 1)",
+lithium_hydroxide,7,target_1,0.0009236708571873865,0.00032867752191581415,CEEMDAN-ARIMA,"(1, 2, 0)",
+lithium_hydroxide,1,target_1,0.03039195382313198,0.04058781028728915,CEEMDAN-LSTM,,
+lithium_hydroxide,2,target_1 | target_2 | target_4 | target_5,0.004520353656360241,0.004396960455311719,CEEMDAN-LSTM,,
+lithium_hydroxide,3,target_1 | target_2 | target_4 | target_5,0.0001,0.00015036168371975145,CEEMDAN-LSTM,,
+lithium_hydroxide,4,target_1 | target_3 | target_2 | target_4 | target_5,0.0001,0.00012051816048991885,CEEMDAN-LSTM,,
+lithium_hydroxide,5,target_1 | target_3 | target_4 | target_5 | target_2,0.0001,0.002089082270980149,CEEMDAN-LSTM,,
+lithium_hydroxide,6,target_1,0.004520353656360241,0.002439157178030885,CEEMDAN-LSTM,,
+lithium_hydroxide,7,target_1,0.0009236708571873865,0.00032867752191581415,CEEMDAN-LSTM,,
+lithium_hydroxide,1,target_1 | Cross_Lithium_Close | target_2 | Ganfeng_Lithium_Close,0.011721022975334805,0.026703895334795176,Fixed VMD-LASSO-ARIMA/LSTM,"(5, 2, 1)",ARIMA
+lithium_hydroxide,2,target_1 | target_5 | Ganfeng_Lithium_Close | Trends_lithium_hydroxide,0.0009236708571873865,0.00013664021287399097,Fixed VMD-LASSO-ARIMA/LSTM,"(3, 0, 1)",ARIMA
+lithium_hydroxide,3,target_1 | target_4 | Trends_lithium | News_FinBERT_Score,0.0009236708571873865,8.436507700882774e-05,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_hydroxide,4,target_1 | target_2 | target_4 | target_5 | News_TextBlob_Polarity | Cross_Lithium_Close | VIX | Trends_lithium_battery | News_FinBERT_Score | Trends_lithium_hydroxide,0.00018873918221350977,2.2397994642735812e-05,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_hydroxide,5,target_2 | target_1 | target_5 | target_4 | Cross_Lithium_Close | News_Article_Count | Trends_lithium_hydroxide | News_TextBlob_Polarity | SP500 | News_FinBERT_Score | VIX | Trends_lithium,0.00013738237958832623,3.156704691692265e-05,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_hydroxide,6,target_2 | target_4 | target_1 | target_5 | target_3 | Cross_Lithium_Close | Trends_lithium_hydroxide | News_Article_Count | News_TextBlob_Polarity | VIX,0.00013738237958832623,3.596291679802332e-05,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_hydroxide,7,target_2 | target_1 | target_5 | Trends_lithium_price | News_FinBERT_Score | Cross_Lithium_Close,0.00018873918221350977,1.956963974449872e-05,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_hydroxide,8,target_1 | target_2 | target_3 | Trends_lithium_price | News_FinBERT_Score | Cross_Lithium_Close | Trends_lithium_battery,0.0001,2.3899982082914763e-05,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_hydroxide,9,target_1 | target_3 | target_5 | News_Article_Count,0.0001,9.260185968015185e-06,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_hydroxide,Residual,Trends_lithium_price | Trends_lithium | US_Dollar_Index | News_FinBERT_Score | Cross_Lithium_Close | Trends_lithium_carbonate,0.0001,2.5744680851063553e-05,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_hydroxide,VMD-K7-A1500 / C1,target_1 | Cross_Lithium_Close | target_5 | target_4 | target_3 | target_2,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K7-A1500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 1)",ARIMA
+lithium_hydroxide,VMD-K7-A1500 / C3,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K7-A1500 / C4,target_1 | target_2 | target_3 | target_5 | VIX | News_Article_Count | News_TextBlob_Polarity | News_FinBERT_Score | Cross_Lithium_Close | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K7-A1500 / C5,target_2 | target_1 | target_4 | target_5 | News_TextBlob_Polarity | News_Article_Count | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K7-A1500 / C6,target_2 | target_1 | target_5 | target_4 | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K7-A1500 / C7,target_1 | target_2 | target_5 | News_FinBERT_Score | News_Article_Count | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K7-A1500 / C8,target_5 | target_3 | target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K7-A3000 / C1,target_1 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 1)",ARIMA
+lithium_hydroxide,VMD-K7-A3000 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K7-A3000 / C3,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K7-A3000 / C4,target_1 | target_3 | target_2 | target_5 | News_TextBlob_Polarity | News_FinBERT_Score | News_Article_Count | Trends_lithium_carbonate | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K7-A3000 / C5,target_2 | target_4 | target_5 | target_1 | VIX | News_TextBlob_Polarity | Cross_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K7-A3000 / C6,target_2 | target_1 | target_5 | News_FinBERT_Score | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K7-A3000 / C7,target_1 | target_2 | target_5 | News_FinBERT_Score | News_Article_Count | Cross_Lithium_Close | VIX | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K7-A3000 / C8,target_1 | target_3 | target_5 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K7-A4500 / C1,target_1 | SP500 | Cross_Lithium_Close | Ganfeng_Lithium_Close | target_2,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 1, 2)",ARIMA
+lithium_hydroxide,VMD-K7-A4500 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K7-A4500 / C3,target_1 | target_2 | target_4 | target_5 | Cross_Lithium_Close | Trends_lithium_hydroxide | VIX | News_TextBlob_Polarity | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K7-A4500 / C4,target_2 | target_1 | target_5 | Cross_Lithium_Close | News_Article_Count | News_TextBlob_Polarity | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K7-A4500 / C5,target_2 | target_4 | target_3 | Cross_Lithium_Close | News_Article_Count | VIX | News_FinBERT_Score | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K7-A4500 / C6,target_2 | target_1 | target_5 | Cross_Lithium_Close | News_FinBERT_Score | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K7-A4500 / C7,target_1 | target_2 | target_3 | target_5 | Cross_Lithium_Close | News_FinBERT_Score | VIX | US_Dollar_Index | News_TextBlob_Polarity | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K7-A4500 / C8,target_1 | target_2 | target_5 | target_3 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K8-A1500 / C1,target_1 | Cross_Lithium_Close | target_4 | target_5 | target_3 | target_2,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K8-A1500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 1)",ARIMA
+lithium_hydroxide,VMD-K8-A1500 / C3,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K8-A1500 / C4,target_1 | target_3 | target_2 | target_5 | News_FinBERT_Score | News_Article_Count | VIX | News_TextBlob_Polarity | Trends_lithium_carbonate | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K8-A1500 / C5,target_1 | target_2 | target_4 | target_5 | VIX | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K8-A1500 / C6,target_2 | target_4 | target_1 | target_3 | Cross_Lithium_Close | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K8-A1500 / C7,target_1 | target_2 | target_4 | target_5 | News_FinBERT_Score | VIX | Cross_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 1)",ARIMA
+lithium_hydroxide,VMD-K8-A1500 / C8,target_1 | target_2 | target_3 | News_FinBERT_Score | News_Article_Count | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 1)",ARIMA
+lithium_hydroxide,VMD-K8-A1500 / C9,target_1 | target_5 | target_2 | target_4 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K8-A3000 / C1,target_1 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 2)",ARIMA
+lithium_hydroxide,VMD-K8-A3000 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K8-A3000 / C3,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K8-A3000 / C4,target_1 | target_3 | target_2 | target_5 | News_TextBlob_Polarity | News_FinBERT_Score | News_Article_Count | Trends_lithium_carbonate | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K8-A3000 / C5,target_2 | target_4 | target_5 | target_1 | VIX | News_TextBlob_Polarity | News_Article_Count | News_FinBERT_Score | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K8-A3000 / C6,target_2 | target_1 | target_4 | target_5 | target_3 | News_Article_Count | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K8-A3000 / C7,target_1 | target_2 | News_FinBERT_Score | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K8-A3000 / C8,target_1 | target_2 | target_3 | target_5 | News_Article_Count | News_FinBERT_Score | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K8-A3000 / C9,target_1 | target_3 | target_4 | Cross_Lithium_Close | target_2,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K8-A4500 / C1,target_1 | Cross_Lithium_Close | Ganfeng_Lithium_Close | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 2)",ARIMA
+lithium_hydroxide,VMD-K8-A4500 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K8-A4500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K8-A4500 / C4,target_1 | target_2 | target_4 | target_5 | News_TextBlob_Polarity | Trends_lithium_hydroxide | Cross_Lithium_Close | VIX | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K8-A4500 / C5,target_2 | target_4 | target_3 | target_1 | Trends_lithium_hydroxide | News_TextBlob_Polarity | Cross_Lithium_Close | VIX | News_Article_Count | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 0)",ARIMA
+lithium_hydroxide,VMD-K8-A4500 / C6,target_2 | target_1 | target_5 | target_3 | target_4 | News_Article_Count | VIX | Cross_Lithium_Close | US_Dollar_Index | News_TextBlob_Polarity | News_FinBERT_Score | Trends_lithium_hydroxide,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K8-A4500 / C7,target_1 | target_2 | target_4 | target_5 | VIX | Trends_lithium_hydroxide | News_TextBlob_Polarity | Cross_Lithium_Close | News_FinBERT_Score | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K8-A4500 / C8,target_1 | target_2 | target_3 | target_5 | News_FinBERT_Score | News_Article_Count | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K8-A4500 / C9,target_1 | target_2 | target_3 | target_4 | target_5 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K9-A1500 / C1,target_1 | Cross_Lithium_Close | target_4 | target_5 | target_3 | target_2,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A1500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 2)",ARIMA
+lithium_hydroxide,VMD-K9-A1500 / C3,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A1500 / C4,target_1 | target_3 | target_2 | target_5 | News_FinBERT_Score | News_Article_Count | VIX | News_TextBlob_Polarity | Trends_lithium_carbonate | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K9-A1500 / C5,target_1 | target_2 | target_4 | target_5 | VIX | News_TextBlob_Polarity | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A1500 / C6,target_2 | target_4 | target_5 | target_1 | VIX | Cross_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K9-A1500 / C7,target_2 | target_1 | target_5 | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K9-A1500 / C8,target_1 | target_2 | News_FinBERT_Score | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K9-A1500 / C9,target_1 | target_2 | target_3 | target_5 | News_FinBERT_Score | Cross_Lithium_Close | News_TextBlob_Polarity | News_Article_Count | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A1500 / C10,target_1 | target_5 | target_2 | target_3 | target_4 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K9-A3000 / C1,target_1 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 2, 0)",ARIMA
+lithium_hydroxide,VMD-K9-A3000 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K9-A3000 / C3,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A3000 / C4,target_1 | target_3 | target_5 | News_FinBERT_Score | News_TextBlob_Polarity | News_Article_Count | Trends_lithium_carbonate | Trends_lithium | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K9-A3000 / C5,target_1 | target_2 | target_4 | target_5 | VIX | News_TextBlob_Polarity | Cross_Lithium_Close | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K9-A3000 / C6,target_2 | target_4 | target_3 | Cross_Lithium_Close | VIX | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K9-A3000 / C7,target_2 | target_1 | target_5 | target_4 | News_FinBERT_Score | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K9-A3000 / C8,target_1 | target_2 | News_FinBERT_Score | Cross_Lithium_Close | VIX | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K9-A3000 / C9,target_1 | target_3 | target_2 | target_5 | News_FinBERT_Score | News_Article_Count | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K9-A3000 / C10,target_1 | target_5 | target_3 | target_2 | target_4 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K9-A4500 / C1,target_1 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 2)",ARIMA
+lithium_hydroxide,VMD-K9-A4500 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A4500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A4500 / C4,target_1 | target_2 | target_4 | target_5 | News_TextBlob_Polarity | Trends_lithium_hydroxide | Cross_Lithium_Close | VIX | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A4500 / C5,target_2 | target_1 | target_3 | target_4 | target_5 | Trends_lithium_hydroxide | News_TextBlob_Polarity | News_Article_Count | VIX | Cross_Lithium_Close | SP500 | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K9-A4500 / C6,target_2 | target_4 | target_3 | target_5 | Trends_lithium_hydroxide | News_TextBlob_Polarity | VIX | Cross_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K9-A4500 / C7,target_2 | target_1 | target_5 | target_4 | News_FinBERT_Score | VIX | News_TextBlob_Polarity | Cross_Lithium_Close | Trends_lithium_hydroxide | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K9-A4500 / C8,target_1 | target_2 | target_3 | News_FinBERT_Score | target_5 | Cross_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K9-A4500 / C9,target_1 | target_3 | target_2 | target_5 | News_Article_Count | News_FinBERT_Score | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K9-A4500 / C10,target_1 | target_5 | target_2 | Cross_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K10-A1500 / C1,target_1 | Cross_Lithium_Close | target_5 | target_4 | target_3 | target_2,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K10-A1500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 2)",ARIMA
+lithium_hydroxide,VMD-K10-A1500 / C3,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K10-A1500 / C4,target_1 | target_5 | Cross_Lithium_Close | VIX | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K10-A1500 / C5,target_1 | target_2 | target_3 | target_5 | VIX | News_FinBERT_Score | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K10-A1500 / C6,target_1 | target_2 | target_4 | target_5 | VIX | News_TextBlob_Polarity | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K10-A1500 / C7,target_2 | target_4 | target_5 | target_1 | VIX | Cross_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K10-A1500 / C8,target_2 | target_1 | target_5 | target_4 | News_FinBERT_Score | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K10-A1500 / C9,target_1 | target_2 | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K10-A1500 / C10,target_1 | target_2 | target_3 | target_5 | News_FinBERT_Score | News_TextBlob_Polarity | Cross_Lithium_Close | VIX | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K10-A1500 / C11,target_1 | target_5 | target_2 | target_3 | target_4 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_hydroxide,VMD-K10-A3000 / C1,target_1 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 3)",ARIMA
+lithium_hydroxide,VMD-K10-A3000 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K10-A3000 / C3,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K10-A3000 / C4,target_1 | target_3 | target_5 | News_FinBERT_Score | News_TextBlob_Polarity | News_Article_Count | Trends_lithium | Trends_lithium_carbonate | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K10-A3000 / C5,target_1 | target_2 | target_4 | target_5 | VIX | News_TextBlob_Polarity | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K10-A3000 / C6,target_2 | target_4 | target_5 | target_1 | VIX | News_FinBERT_Score | Cross_Lithium_Close | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K10-A3000 / C7,target_2 | target_1 | target_4 | target_5 | target_3 | News_Article_Count | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K10-A3000 / C8,target_2 | target_1 | target_5 | target_4 | News_FinBERT_Score | VIX | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K10-A3000 / C9,target_1 | target_2 | target_3 | target_5 | News_FinBERT_Score | Cross_Lithium_Close | VIX | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 5)",ARIMA
+lithium_hydroxide,VMD-K10-A3000 / C10,target_1 | target_3 | target_2 | target_5 | News_FinBERT_Score | News_Article_Count | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K10-A3000 / C11,target_1 | target_3 | target_4 | target_5 | Cross_Lithium_Close | News_TextBlob_Polarity | target_2,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 2)",ARIMA
+lithium_hydroxide,VMD-K10-A4500 / C1,target_1 | Cross_Lithium_Close | Ganfeng_Lithium_Close | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 0)",ARIMA
+lithium_hydroxide,VMD-K10-A4500 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K10-A4500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K10-A4500 / C4,target_1 | target_2 | target_4 | target_5 | News_TextBlob_Polarity | Trends_lithium_hydroxide | Cross_Lithium_Close | VIX | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K10-A4500 / C5,target_2 | target_1 | target_5 | target_4 | News_TextBlob_Polarity | News_Article_Count | Trends_lithium_hydroxide | Cross_Lithium_Close | VIX | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,VMD-K10-A4500 / C6,target_2 | target_4 | target_3 | Trends_lithium_hydroxide | News_Article_Count | VIX | News_TextBlob_Polarity | Cross_Lithium_Close | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K10-A4500 / C7,target_2 | target_3 | target_5 | target_1 | target_4 | News_Article_Count | VIX | US_Dollar_Index | Cross_Lithium_Close | News_TextBlob_Polarity | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K10-A4500 / C8,target_2 | target_1 | target_5 | target_4 | VIX | News_FinBERT_Score | Trends_lithium_hydroxide | Cross_Lithium_Close | News_TextBlob_Polarity | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_hydroxide,VMD-K10-A4500 / C9,target_1 | target_2 | target_3 | target_5 | News_FinBERT_Score | Cross_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,LSTM
+lithium_hydroxide,VMD-K10-A4500 / C10,target_1 | target_3 | target_5 | target_2 | News_Article_Count | Cross_Lithium_Close | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,VMD-K10-A4500 / C11,target_1 | target_3 | target_2 | target_5 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 2)",ARIMA
+lithium_hydroxide,CEEMDAN-M7 / C1,target_1 | target_2 | News_FinBERT_Score | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,LSTM
+lithium_hydroxide,CEEMDAN-M7 / C2,target_1 | target_3,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,CEEMDAN-M7 / C3,target_1 | target_2 | target_4 | target_5 | News_Article_Count | US_Dollar_Index | VIX | News_TextBlob_Polarity | Albemarle_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 3)",ARIMA
+lithium_hydroxide,CEEMDAN-M7 / C4,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close | Trends_lithium_hydroxide | SP500 | US_Dollar_Index | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,CEEMDAN-M7 / C5,target_1 | Cross_Lithium_Close | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 1)",ARIMA
+lithium_hydroxide,CEEMDAN-M7 / C6,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,CEEMDAN-M7 / C7,target_1 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,CEEMDAN-M9 / C1,target_1 | target_2 | News_FinBERT_Score | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,LSTM
+lithium_hydroxide,CEEMDAN-M9 / C2,target_1 | target_3,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_hydroxide,CEEMDAN-M9 / C3,target_1 | target_2 | target_4 | target_5 | News_Article_Count | US_Dollar_Index | VIX | News_TextBlob_Polarity | Albemarle_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 3)",ARIMA
+lithium_hydroxide,CEEMDAN-M9 / C4,target_1 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close | Trends_lithium_hydroxide | SP500 | US_Dollar_Index | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,CEEMDAN-M9 / C5,target_1 | Cross_Lithium_Close | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 1)",ARIMA
+lithium_hydroxide,CEEMDAN-M9 / C6,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_hydroxide,CEEMDAN-M9 / C7,target_1 | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,Undecomposed,target_1 | target_5 | target_4 | target_2 | target_3 | Cross_Lithium_Close | Albemarle_Close | Ganfeng_Lithium_Close | Trends_lithium_battery | MVIS_Critical_Minerals | Trends_lithium | US_Dollar_Index | VIX | SP500 | Trends_lithium_price | Trends_lithium_hydroxide | Trends_lithium_carbonate | News_Article_Count | News_TextBlob_Polarity | News_FinBERT_Score,1.0,14985424.307610428,,,
+lithium_carbonate,1,target_1 | target_2 | target_3 | target_5 | target_4,0.0001,879727.1319447316,VMD-ARIMA,"(4, 2, 5)",
+lithium_carbonate,2,target_1 | target_2 | target_3 | target_4 | target_5,0.0001,1660.4590409626846,VMD-ARIMA,"(0, 0, 0)",
+lithium_carbonate,3,target_1 | target_2 | target_3 | target_4 | target_5,0.0001,688.3923229174371,VMD-ARIMA,"(3, 0, 2)",
+lithium_carbonate,4,target_1 | target_2 | target_3 | target_4 | target_5,0.0001,548.6556517550621,VMD-ARIMA,"(4, 0, 5)",
+lithium_carbonate,5,target_1 | target_2 | target_3 | target_5 | target_4,0.0001,634.831800483596,VMD-ARIMA,"(1, 0, 0)",
+lithium_carbonate,6,target_2 | target_3 | target_1 | target_4 | target_5,0.0001,138.4299513329035,VMD-ARIMA,"(1, 0, 0)",
+lithium_carbonate,7,target_2 | target_3 | target_4 | target_5 | target_1,0.0001,108.7215704143434,VMD-ARIMA,"(0, 0, 1)",
+lithium_carbonate,8,target_2 | target_1 | target_5 | target_3 | target_4,0.0001,111.60504345411712,VMD-ARIMA,"(2, 0, 2)",
+lithium_carbonate,9,target_1 | target_3 | target_2 | target_5 | target_4,0.008531678524172805,47.022081048223484,VMD-ARIMA,"(3, 0, 4)",
+lithium_carbonate,1,target_1 | target_2 | target_3 | target_5 | target_4,0.0001,879727.1319447316,VMD-LSTM,,
+lithium_carbonate,2,target_1 | target_2 | target_3 | target_4 | target_5,0.0001,1660.4590409626846,VMD-LSTM,,
+lithium_carbonate,3,target_1 | target_2 | target_3 | target_4 | target_5,0.0001,688.3923229174371,VMD-LSTM,,
+lithium_carbonate,4,target_1 | target_2 | target_3 | target_4 | target_5,0.0001,548.6556517550621,VMD-LSTM,,
+lithium_carbonate,5,target_1 | target_2 | target_3 | target_5 | target_4,0.0001,634.831800483596,VMD-LSTM,,
+lithium_carbonate,6,target_2 | target_3 | target_1 | target_4 | target_5,0.0001,138.4299513329035,VMD-LSTM,,
+lithium_carbonate,7,target_2 | target_3 | target_4 | target_5 | target_1,0.0001,108.7215704143434,VMD-LSTM,,
+lithium_carbonate,8,target_2 | target_1 | target_5 | target_3 | target_4,0.0001,111.60504345411712,VMD-LSTM,,
+lithium_carbonate,9,target_1 | target_3 | target_2 | target_5 | target_4,0.008531678524172805,47.022081048223484,VMD-LSTM,,
+lithium_carbonate,1,target_2 | target_5 | target_3 | target_4 | target_1,0.0001,53230.655006774934,CEEMDAN-ARIMA,"(4, 0, 3)",
+lithium_carbonate,2,target_1 | target_2 | target_3 | target_4,1.0,71093.66751238932,CEEMDAN-ARIMA,"(2, 0, 2)",
+lithium_carbonate,3,target_1 | target_2 | target_3 | target_4 | target_5,0.0001,6876.282972996562,CEEMDAN-ARIMA,"(3, 1, 1)",
+lithium_carbonate,4,target_1 | target_2 | target_3 | target_4 | target_5,0.05736152510448681,3321.466728321827,CEEMDAN-ARIMA,"(0, 0, 0)",
+lithium_carbonate,5,target_1 | target_5 | target_4 | target_3 | target_2,0.0001,1060.7562451998522,CEEMDAN-ARIMA,"(2, 2, 2)",
+lithium_carbonate,6,target_1 | target_5 | target_4 | target_3 | target_2,0.0001,5484.466580437159,CEEMDAN-ARIMA,"(0, 2, 0)",
+lithium_carbonate,7,target_1,1.0,18975.60667823596,CEEMDAN-ARIMA,"(1, 2, 0)",
+lithium_carbonate,1,target_2 | target_5 | target_3 | target_4 | target_1,0.0001,53230.655006774934,CEEMDAN-LSTM,,
+lithium_carbonate,2,target_1 | target_2 | target_3 | target_4,1.0,71093.66751238932,CEEMDAN-LSTM,,
+lithium_carbonate,3,target_1 | target_2 | target_3 | target_4 | target_5,0.0001,6876.282972996562,CEEMDAN-LSTM,,
+lithium_carbonate,4,target_1 | target_2 | target_3 | target_4 | target_5,0.05736152510448681,3321.466728321827,CEEMDAN-LSTM,,
+lithium_carbonate,5,target_1 | target_5 | target_4 | target_3 | target_2,0.0001,1060.7562451998522,CEEMDAN-LSTM,,
+lithium_carbonate,6,target_1 | target_5 | target_4 | target_3 | target_2,0.0001,5484.466580437159,CEEMDAN-LSTM,,
+lithium_carbonate,7,target_1,1.0,18975.60667823596,CEEMDAN-LSTM,,
+lithium_carbonate,1,target_1 | target_3 | target_5 | target_4 | Cross_Lithium_Close | target_2 | Albemarle_Close | MVIS_Critical_Minerals | Ganfeng_Lithium_Close | SP500 | Trends_lithium_battery | VIX | Trends_lithium_hydroxide | Trends_lithium | Trends_lithium_price | US_Dollar_Index | News_Article_Count | News_FinBERT_Score | News_TextBlob_Polarity,0.7278953843983146,1537121.5113540618,Fixed VMD-LASSO-ARIMA/LSTM,"(4, 2, 5)",ARIMA
+lithium_carbonate,2,target_1 | target_3 | target_4 | target_5 | target_2 | Albemarle_Close | SP500 | Trends_lithium_battery | US_Dollar_Index | Trends_lithium | Ganfeng_Lithium_Close | VIX | MVIS_Critical_Minerals | Trends_lithium_carbonate | Trends_lithium_hydroxide | News_Article_Count | News_FinBERT_Score,1.0,17527.516628733385,Fixed VMD-LASSO-ARIMA/LSTM,"(0, 0, 0)",ARIMA
+lithium_carbonate,3,target_1 | target_4 | target_5 | Albemarle_Close | SP500 | Trends_lithium | Trends_lithium_battery | VIX | US_Dollar_Index | Trends_lithium_hydroxide | News_Article_Count | Trends_lithium_price,1.0,2465.8716863585655,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_carbonate,4,target_1 | target_3 | target_4 | target_5 | Albemarle_Close | SP500 | Trends_lithium | Trends_lithium_battery | VIX | Trends_lithium_hydroxide | News_Article_Count,1.0,5022.442137608584,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_carbonate,5,target_1 | target_2 | target_3 | target_5 | Trends_lithium | MVIS_Critical_Minerals | Cross_Lithium_Close | Albemarle_Close | Trends_lithium_battery | SP500 | Trends_lithium_hydroxide | News_FinBERT_Score | Trends_lithium_price | News_Article_Count | VIX | Trends_lithium_carbonate | News_TextBlob_Polarity,0.20433597178569415,1248.9010850195546,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_carbonate,6,target_2 | target_1 | target_5 | Ganfeng_Lithium_Close | News_FinBERT_Score | Trends_lithium_price | target_4 | US_Dollar_Index | Trends_lithium | Cross_Lithium_Close | News_Article_Count,0.7278953843983146,410.27335938587305,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_carbonate,7,target_2 | target_3 | target_4 | Ganfeng_Lithium_Close | Trends_lithium_price,1.0,190.20680660674248,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_carbonate,8,target_1 | target_2 | target_3 | Ganfeng_Lithium_Close | Trends_lithium_price | News_FinBERT_Score,0.7278953843983146,156.57641891673603,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_carbonate,9,target_1 | target_3 | target_5 | Ganfeng_Lithium_Close | Trends_lithium_price | News_FinBERT_Score | News_Article_Count | Trends_lithium,0.2807216203941176,55.56985107241279,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_carbonate,Residual,MVIS_Critical_Minerals | Albemarle_Close | Trends_lithium_price | Cross_Lithium_Close | Trends_lithium_battery | Trends_lithium | SP500 | US_Dollar_Index | Ganfeng_Lithium_Close | Trends_lithium_carbonate | target_3 | target_4 | News_TextBlob_Polarity | target_5 | target_2 | Trends_lithium_hydroxide | target_1 | News_Article_Count | News_FinBERT_Score | VIX,0.0001,19780.219780219784,Fixed VMD-LASSO-ARIMA/LSTM,,LSTM
+lithium_carbonate,VMD-K7-A1500 / C1,target_1 | Cross_Lithium_Close | target_2 | target_3 | target_4 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K7-A1500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 3)",ARIMA
+lithium_carbonate,VMD-K7-A1500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K7-A1500 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K7-A1500 / C5,target_1 | target_3 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 2)",ARIMA
+lithium_carbonate,VMD-K7-A1500 / C6,target_1 | target_2 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 5)",ARIMA
+lithium_carbonate,VMD-K7-A1500 / C7,target_2 | target_1 | target_4 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | Cross_Lithium_Close | Albemarle_Close | News_TextBlob_Polarity | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_carbonate,VMD-K7-A1500 / C8,target_1 | target_4 | target_2 | Ganfeng_Lithium_Close | target_3 | target_5 | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,VMD-K7-A3000 / C1,target_1 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 2)",ARIMA
+lithium_carbonate,VMD-K7-A3000 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 5)",ARIMA
+lithium_carbonate,VMD-K7-A3000 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 2)",ARIMA
+lithium_carbonate,VMD-K7-A3000 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K7-A3000 / C5,target_1 | target_4 | target_3 | Ganfeng_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 0)",ARIMA
+lithium_carbonate,VMD-K7-A3000 / C6,target_2 | target_1 | target_4 | target_5 | target_3 | Ganfeng_Lithium_Close | Cross_Lithium_Close | Albemarle_Close | US_Dollar_Index | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_carbonate,VMD-K7-A3000 / C7,target_1 | target_2 | target_4 | Ganfeng_Lithium_Close | target_3 | US_Dollar_Index | Cross_Lithium_Close | News_TextBlob_Polarity | News_Article_Count | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 0)",ARIMA
+lithium_carbonate,VMD-K7-A3000 / C8,target_1 | target_2 | target_5 | target_4 | Ganfeng_Lithium_Close | Albemarle_Close | News_Article_Count | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 1, 4)",ARIMA
+lithium_carbonate,VMD-K7-A4500 / C1,target_1 | Ganfeng_Lithium_Close | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 2)",ARIMA
+lithium_carbonate,VMD-K7-A4500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 2, 4)",ARIMA
+lithium_carbonate,VMD-K7-A4500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 5)",ARIMA
+lithium_carbonate,VMD-K7-A4500 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K7-A4500 / C5,target_1 | target_4 | target_3 | Ganfeng_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_carbonate,VMD-K7-A4500 / C6,target_2 | target_1 | target_5 | target_3 | target_4 | Ganfeng_Lithium_Close | Albemarle_Close | US_Dollar_Index | Cross_Lithium_Close | SP500 | News_Article_Count | News_FinBERT_Score | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 4)",ARIMA
+lithium_carbonate,VMD-K7-A4500 / C7,target_1 | target_2 | target_3 | target_4 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | News_TextBlob_Polarity | News_FinBERT_Score | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 1)",ARIMA
+lithium_carbonate,VMD-K7-A4500 / C8,target_1 | target_2 | target_5 | target_4 | Albemarle_Close | News_Article_Count | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 1, 3)",ARIMA
+lithium_carbonate,VMD-K8-A1500 / C1,target_1 | Cross_Lithium_Close | target_2 | target_3 | target_4 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K8-A1500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 3)",ARIMA
+lithium_carbonate,VMD-K8-A1500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 4)",ARIMA
+lithium_carbonate,VMD-K8-A1500 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K8-A1500 / C5,target_1 | target_3 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_carbonate,VMD-K8-A1500 / C6,target_1 | target_2 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 5)",ARIMA
+lithium_carbonate,VMD-K8-A1500 / C7,target_2 | target_4 | target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close | Albemarle_Close | News_Article_Count | News_TextBlob_Polarity | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 4)",ARIMA
+lithium_carbonate,VMD-K8-A1500 / C8,target_1 | target_2 | target_3 | target_5 | Ganfeng_Lithium_Close | Trends_lithium | Cross_Lithium_Close | US_Dollar_Index | News_TextBlob_Polarity | VIX | Albemarle_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 4)",ARIMA
+lithium_carbonate,VMD-K8-A1500 / C9,target_1 | target_4 | target_2 | target_5 | Ganfeng_Lithium_Close | target_3 | News_Article_Count | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 1, 1)",ARIMA
+lithium_carbonate,VMD-K8-A3000 / C1,target_1 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 2)",ARIMA
+lithium_carbonate,VMD-K8-A3000 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 5)",ARIMA
+lithium_carbonate,VMD-K8-A3000 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K8-A3000 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K8-A3000 / C5,target_1 | target_4 | target_3 | Ganfeng_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K8-A3000 / C6,target_2 | target_4 | target_1 | target_5 | target_3 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | News_Article_Count | News_FinBERT_Score | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 3)",ARIMA
+lithium_carbonate,VMD-K8-A3000 / C7,target_2 | target_1 | target_4 | target_5 | Ganfeng_Lithium_Close | US_Dollar_Index | News_FinBERT_Score | Albemarle_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 5)",ARIMA
+lithium_carbonate,VMD-K8-A3000 / C8,target_1 | target_2 | target_4 | target_3 | Ganfeng_Lithium_Close | US_Dollar_Index | News_TextBlob_Polarity | News_FinBERT_Score | Cross_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 1)",ARIMA
+lithium_carbonate,VMD-K8-A3000 / C9,target_1 | target_2 | target_5 | target_4 | Albemarle_Close | News_Article_Count | Ganfeng_Lithium_Close | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 1, 5)",ARIMA
+lithium_carbonate,VMD-K8-A4500 / C1,target_1 | Ganfeng_Lithium_Close | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 3)",ARIMA
+lithium_carbonate,VMD-K8-A4500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 3)",ARIMA
+lithium_carbonate,VMD-K8-A4500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 5)",ARIMA
+lithium_carbonate,VMD-K8-A4500 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K8-A4500 / C5,target_1 | target_4 | target_3 | Ganfeng_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_carbonate,VMD-K8-A4500 / C6,target_2 | target_1 | target_4 | target_3 | target_5 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | News_FinBERT_Score | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_carbonate,VMD-K8-A4500 / C7,target_1 | target_2 | target_3 | target_5 | target_4 | Ganfeng_Lithium_Close | US_Dollar_Index | News_FinBERT_Score | Cross_Lithium_Close | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 3)",ARIMA
+lithium_carbonate,VMD-K8-A4500 / C8,target_1 | target_3 | target_2 | target_4 | Ganfeng_Lithium_Close | US_Dollar_Index | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 4)",ARIMA
+lithium_carbonate,VMD-K8-A4500 / C9,target_1 | target_2 | target_4 | target_5 | Albemarle_Close | News_Article_Count | Ganfeng_Lithium_Close | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(0, 1, 4)",ARIMA
+lithium_carbonate,VMD-K9-A1500 / C1,target_1 | Cross_Lithium_Close | target_3 | target_2 | target_4 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K9-A1500 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K9-A1500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 3)",ARIMA
+lithium_carbonate,VMD-K9-A1500 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_carbonate,VMD-K9-A1500 / C5,target_1 | target_3 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,VMD-K9-A1500 / C6,target_1 | target_2 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_carbonate,VMD-K9-A1500 / C7,target_2 | target_4 | target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close | Albemarle_Close | US_Dollar_Index | News_Article_Count | VIX | News_TextBlob_Polarity | News_FinBERT_Score | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_carbonate,VMD-K9-A1500 / C8,target_1 | target_2 | target_4 | target_5 | target_3 | Ganfeng_Lithium_Close | Albemarle_Close | Cross_Lithium_Close | US_Dollar_Index | News_FinBERT_Score | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_carbonate,VMD-K9-A1500 / C9,target_1 | target_4 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 4)",ARIMA
+lithium_carbonate,VMD-K9-A1500 / C10,target_1 | target_2 | target_4 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | Cross_Lithium_Close | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K9-A3000 / C1,target_1 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 1)",ARIMA
+lithium_carbonate,VMD-K9-A3000 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 3)",ARIMA
+lithium_carbonate,VMD-K9-A3000 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 3)",ARIMA
+lithium_carbonate,VMD-K9-A3000 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K9-A3000 / C5,target_1 | target_4 | target_3 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,VMD-K9-A3000 / C6,target_1 | target_2 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,VMD-K9-A3000 / C7,target_2 | target_1 | target_4 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close | US_Dollar_Index | Albemarle_Close | News_TextBlob_Polarity | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_carbonate,VMD-K9-A3000 / C8,target_1 | target_2 | target_5 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | News_TextBlob_Polarity | Trends_lithium_carbonate | SP500 | VIX | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 3)",ARIMA
+lithium_carbonate,VMD-K9-A3000 / C9,target_1 | target_5 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 3)",ARIMA
+lithium_carbonate,VMD-K9-A3000 / C10,target_1 | target_2 | target_3 | target_5 | Ganfeng_Lithium_Close | target_4 | Cross_Lithium_Close | News_Article_Count | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 1, 3)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C1,target_1 | Ganfeng_Lithium_Close | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 2, 0)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 3)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(0, 0, 0)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K9-A4500 / C5,target_1 | target_4 | target_3 | Ganfeng_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 0, 0)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C6,target_1 | target_2 | target_5 | target_4 | Ganfeng_Lithium_Close | News_Article_Count | US_Dollar_Index | News_FinBERT_Score | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C7,target_2 | target_1 | target_4 | target_3 | target_5 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C8,target_1 | target_2 | target_3 | target_5 | target_4 | Ganfeng_Lithium_Close | US_Dollar_Index | News_FinBERT_Score | SP500 | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 5)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C9,target_1 | target_3 | target_2 | Ganfeng_Lithium_Close | News_FinBERT_Score | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_carbonate,VMD-K9-A4500 / C10,target_1 | target_2 | target_5 | target_4 | Albemarle_Close | News_Article_Count | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 1, 5)",ARIMA
+lithium_carbonate,VMD-K10-A1500 / C1,target_1 | Cross_Lithium_Close | target_3 | target_2 | target_4 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K10-A1500 / C2,target_1,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K10-A1500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 2)",ARIMA
+lithium_carbonate,VMD-K10-A1500 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K10-A1500 / C5,target_1 | target_3 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,VMD-K10-A1500 / C6,target_1 | target_2 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 2)",ARIMA
+lithium_carbonate,VMD-K10-A1500 / C7,target_2 | target_1 | target_5 | target_4 | Ganfeng_Lithium_Close | News_Article_Count | US_Dollar_Index | Trends_lithium_hydroxide | VIX | News_TextBlob_Polarity | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 4)",ARIMA
+lithium_carbonate,VMD-K10-A1500 / C8,target_2 | target_4 | target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close | Albemarle_Close | US_Dollar_Index | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 4)",ARIMA
+lithium_carbonate,VMD-K10-A1500 / C9,target_1 | target_2 | target_5 | target_3 | Ganfeng_Lithium_Close | Albemarle_Close | Cross_Lithium_Close | News_FinBERT_Score | US_Dollar_Index | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_carbonate,VMD-K10-A1500 / C10,target_1 | target_4 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 1)",ARIMA
+lithium_carbonate,VMD-K10-A1500 / C11,target_1 | target_4 | target_2 | target_5 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,VMD-K10-A3000 / C1,target_1 | Cross_Lithium_Close | Ganfeng_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 5)",ARIMA
+lithium_carbonate,VMD-K10-A3000 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 2)",ARIMA
+lithium_carbonate,VMD-K10-A3000 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 3)",ARIMA
+lithium_carbonate,VMD-K10-A3000 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K10-A3000 / C5,target_1 | target_4 | target_3 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,VMD-K10-A3000 / C6,target_1 | target_2 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,SVR
+lithium_carbonate,VMD-K10-A3000 / C7,target_2 | target_1 | target_4 | target_5 | target_3 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 2)",ARIMA
+lithium_carbonate,VMD-K10-A3000 / C8,target_2 | target_1 | target_5 | target_4 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | News_Article_Count | Albemarle_Close | News_FinBERT_Score | Trends_lithium_carbonate | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 2)",ARIMA
+lithium_carbonate,VMD-K10-A3000 / C9,target_1 | target_2 | target_4 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | News_FinBERT_Score | News_TextBlob_Polarity | Trends_lithium_carbonate | SP500 | VIX,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 2)",ARIMA
+lithium_carbonate,VMD-K10-A3000 / C10,target_1 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 4)",ARIMA
+lithium_carbonate,VMD-K10-A3000 / C11,target_1 | target_2 | target_4 | target_5 | target_3 | Albemarle_Close | Ganfeng_Lithium_Close | Cross_Lithium_Close | News_Article_Count | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 1, 2)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C1,target_1 | Ganfeng_Lithium_Close | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 2)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C2,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(1, 2, 3)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C3,target_1 | target_5 | Ganfeng_Lithium_Close | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 3)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C4,target_1 | target_5 | Ganfeng_Lithium_Close | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K10-A4500 / C5,target_1 | target_4 | target_3 | Ganfeng_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,VMD-K10-A4500 / C6,target_1 | target_2 | target_5 | target_4 | Ganfeng_Lithium_Close | News_Article_Count | US_Dollar_Index | News_FinBERT_Score | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 0, 5)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C7,target_2 | target_1 | target_4 | target_3 | target_5 | Ganfeng_Lithium_Close | US_Dollar_Index | Cross_Lithium_Close | News_Article_Count | News_FinBERT_Score,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 0, 1)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C8,target_1 | target_2 | target_3 | target_5 | target_4 | Ganfeng_Lithium_Close | US_Dollar_Index | VIX | News_FinBERT_Score | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 0, 3)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C9,target_1 | target_3 | target_2 | target_4 | Ganfeng_Lithium_Close | News_FinBERT_Score | News_TextBlob_Polarity | US_Dollar_Index | News_Article_Count | Cross_Lithium_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 5)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C10,target_1 | target_5 | Ganfeng_Lithium_Close | News_Article_Count | News_TextBlob_Polarity,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 0, 2)",ARIMA
+lithium_carbonate,VMD-K10-A4500 / C11,target_1 | target_2 | target_5 | target_4 | Albemarle_Close | News_Article_Count | Cross_Lithium_Close | US_Dollar_Index,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(0, 1, 4)",ARIMA
+lithium_carbonate,CEEMDAN-M7 / C1,target_2 | target_3 | target_1 | target_5 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,LSTM
+lithium_carbonate,CEEMDAN-M7 / C2,target_1 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,LSTM
+lithium_carbonate,CEEMDAN-M7 / C3,target_1 | target_3 | target_5 | target_2 | Ganfeng_Lithium_Close | News_FinBERT_Score | VIX | News_Article_Count | Cross_Lithium_Close | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 1, 1)",ARIMA
+lithium_carbonate,CEEMDAN-M7 / C4,target_1 | target_5 | Cross_Lithium_Close | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 1, 0)",ARIMA
+lithium_carbonate,CEEMDAN-M7 / C5,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 4)",ARIMA
+lithium_carbonate,CEEMDAN-M7 / C6,target_1 | Cross_Lithium_Close | SP500 | VIX | target_2 | target_3 | target_4 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 3)",ARIMA
+lithium_carbonate,CEEMDAN-M7 / C7,target_1 | Cross_Lithium_Close | target_2 | target_3 | target_4 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF
+lithium_carbonate,CEEMDAN-M9 / C1,target_2 | target_3 | target_1 | target_5 | target_4 | Ganfeng_Lithium_Close | News_Article_Count,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,LSTM
+lithium_carbonate,CEEMDAN-M9 / C2,target_1 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,LSTM
+lithium_carbonate,CEEMDAN-M9 / C3,target_1 | target_3 | target_5 | target_2 | Ganfeng_Lithium_Close | News_FinBERT_Score | VIX | News_Article_Count | Cross_Lithium_Close | Albemarle_Close,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(4, 1, 1)",ARIMA
+lithium_carbonate,CEEMDAN-M9 / C4,target_1 | target_5 | Cross_Lithium_Close | Trends_lithium_carbonate,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(5, 1, 0)",ARIMA
+lithium_carbonate,CEEMDAN-M9 / C5,target_1 | SP500,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(2, 2, 4)",ARIMA
+lithium_carbonate,CEEMDAN-M9 / C6,target_1 | Cross_Lithium_Close | SP500 | VIX | target_2 | target_3 | target_4 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,"(3, 2, 3)",ARIMA
+lithium_carbonate,CEEMDAN-M9 / C7,target_1 | Cross_Lithium_Close | target_2 | target_3 | target_4 | target_5,development-locked,,Proposed Adaptive Decomposition-Routing Ensemble,,RF

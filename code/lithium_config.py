@@ -29,39 +29,96 @@ LITHIUM_NEWS_FILE = LITHIUM_EXTERNAL_DIR / "lithium_news_headlines.csv"
 USD_CNY_FILE = LITHIUM_EXTERNAL_DIR / "usd_cny_fred_dexchus.csv"
 
 TARGETS = {
-    "lithium_hydroxide": {
-        "label": "COMEX Lithium Hydroxide CIF CJK continuation close",
-        "workbook": HYDROXIDE_WORKBOOK,
-        "processed": LITHIUM_PROCESSED_DIR / "lithium_hydroxide_liu_panel.csv",
+    "MSFT_O": {
+        "label": "MSFT.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "MSFT_O_panel.csv",
         "modes": 9,
     },
-    "lithium_carbonate": {
-        "label": "SMM battery-grade lithium carbonate domestic spot close",
-        "workbook": CARBONATE_WORKBOOK,
-        "processed": LITHIUM_PROCESSED_DIR / "lithium_carbonate_liu_panel.csv",
-        # The released reference protocol fixes K=9 for every target.  Keep
-        # the parity comparator at nine modes; the adaptive experiment searches
-        # alternative K values using the development segment only.
+    "GOOGL_O": {
+        "label": "GOOGL.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "GOOGL_O_panel.csv",
+        "modes": 9,
+    },
+    "AMZN_O": {
+        "label": "AMZN.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "AMZN_O_panel.csv",
+        "modes": 9,
+    },
+    "TSLA_O": {
+        "label": "TSLA.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "TSLA_O_panel.csv",
+        "modes": 9,
+    },
+    "NVDA_O": {
+        "label": "NVDA.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "NVDA_O_panel.csv",
+        "modes": 9,
+    },
+    "META_O": {
+        "label": "META.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "META_O_panel.csv",
+        "modes": 9,
+    },
+    "ORCL_K": {
+        "label": "ORCL.K Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "ORCL_K_panel.csv",
+        "modes": 9,
+    },
+    "IBM": {
+        "label": "IBM Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "IBM_panel.csv",
         "modes": 9,
     },
 }
+
 
 # The equity extension is deliberately kept separate from the two physical
 # lithium-price targets.  It uses the same retrospective 80:20 protocol and
 # model suite, but each listed producer is forecast against its own set of
 # equity-appropriate inputs and benchmarks.
 EQUITY_TARGETS = {
-    "albemarle_equity": {
-        "label": "Albemarle (ALB) adjusted close proxy",
-        "processed": LITHIUM_PROCESSED_DIR / "albemarle_equity_liu_panel.csv",
+    "MSFT_O": {
+        "label": "MSFT.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "MSFT_O_panel.csv",
         "modes": 9,
     },
-    "ganfeng_equity": {
-        "label": "Ganfeng Lithium (002460.SZ) close",
-        "processed": LITHIUM_PROCESSED_DIR / "ganfeng_equity_liu_panel.csv",
+    "GOOGL_O": {
+        "label": "GOOGL.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "GOOGL_O_panel.csv",
+        "modes": 9,
+    },
+    "AMZN_O": {
+        "label": "AMZN.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "AMZN_O_panel.csv",
+        "modes": 9,
+    },
+    "TSLA_O": {
+        "label": "TSLA.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "TSLA_O_panel.csv",
+        "modes": 9,
+    },
+    "NVDA_O": {
+        "label": "NVDA.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "NVDA_O_panel.csv",
+        "modes": 9,
+    },
+    "META_O": {
+        "label": "META.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "META_O_panel.csv",
+        "modes": 9,
+    },
+    "ORCL_K": {
+        "label": "ORCL.K Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "ORCL_K_panel.csv",
+        "modes": 9,
+    },
+    "IBM": {
+        "label": "IBM Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "IBM_panel.csv",
         "modes": 9,
     },
 }
+
 
 EQUITY_TICKERS = {
     "ALB": "Albemarle",

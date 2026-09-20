@@ -124,8 +124,8 @@ def _decompose(values: np.ndarray, spec: DecompositionSpec, train_stop: int) -> 
         raise ValueError(f"Unknown decomposition method {spec.method!r}")
     if components.ndim != 2 or components.shape[1] != train_stop:
         raise RuntimeError(f"Unexpected {spec.label} output shape {components.shape}")
-    residual = values - components.sum(axis=0)
-    if np.std(residual) > max(np.std(values) * 1e-8, 1e-10):
+    residual = values[:train_stop] - components.sum(axis=0)
+    if np.std(residual) > max(np.std(values[:train_stop]) * 1e-8, 1e-10):
         components = np.vstack([components, residual])
     
     # Forward fill the unseen test period

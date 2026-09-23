@@ -16,8 +16,8 @@ df_close.rename(columns={df_close.columns[0]: 'Date'}, inplace=True)
 df_close['Date'] = pd.to_datetime(df_close['Date'])
 df_close = df_close.sort_values('Date').reset_index(drop=True)
 
-# Only keep data from 1st Jan 2020 onwards
-df_close = df_close[df_close['Date'] >= '2020-01-01'].reset_index(drop=True)
+# Only keep data from 1st Jan 2023 onwards
+df_close = df_close[df_close['Date'] >= '2023-01-01'].reset_index(drop=True)
 
 start_date = df_close['Date'].min().strftime('%Y-%m-%d')
 end_date = (df_close['Date'].max() + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
@@ -35,7 +35,7 @@ df_merged = pd.merge(df_close, macro_data, on='Date', how='left').ffill().bfill(
 df_merged = df_merged.set_index('Date')
 
 # 4. Generate CSVs and config
-companies = ['MSFT.O', 'GOOGL.O', 'AMZN.O', 'TSLA.O', 'NVDA.O', 'META.O', 'ORCL.K', 'IBM']
+companies = ['NVDA.O']
 exogenous = ['.NQROBO', '.SOLUSAIT', '.IAIQ', 'NASDAQ_100', 'VIX', '10Y_Treasury', 'Tech_ETF_XLK']
 
 config_targets = 'TARGETS = {\n'

@@ -29,47 +29,14 @@ LITHIUM_NEWS_FILE = LITHIUM_EXTERNAL_DIR / "lithium_news_headlines.csv"
 USD_CNY_FILE = LITHIUM_EXTERNAL_DIR / "usd_cny_fred_dexchus.csv"
 
 TARGETS = {
-    "MSFT_O": {
-        "label": "MSFT.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "MSFT_O_panel.csv",
-        "modes": 9,
-    },
-    "GOOGL_O": {
-        "label": "GOOGL.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "GOOGL_O_panel.csv",
-        "modes": 9,
-    },
-    "AMZN_O": {
-        "label": "AMZN.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "AMZN_O_panel.csv",
-        "modes": 9,
-    },
-    "TSLA_O": {
-        "label": "TSLA.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "TSLA_O_panel.csv",
-        "modes": 9,
-    },
     "NVDA_O": {
         "label": "NVDA.O Stock Price",
         "processed": LITHIUM_PROCESSED_DIR / "NVDA_O_panel.csv",
         "modes": 9,
     },
-    "META_O": {
-        "label": "META.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "META_O_panel.csv",
-        "modes": 9,
-    },
-    "ORCL_K": {
-        "label": "ORCL.K Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "ORCL_K_panel.csv",
-        "modes": 9,
-    },
-    "IBM": {
-        "label": "IBM Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "IBM_panel.csv",
-        "modes": 9,
-    },
 }
+
+
 
 
 # The equity extension is deliberately kept separate from the two physical
@@ -77,47 +44,14 @@ TARGETS = {
 # model suite, but each listed producer is forecast against its own set of
 # equity-appropriate inputs and benchmarks.
 EQUITY_TARGETS = {
-    "MSFT_O": {
-        "label": "MSFT.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "MSFT_O_panel.csv",
-        "modes": 9,
-    },
-    "GOOGL_O": {
-        "label": "GOOGL.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "GOOGL_O_panel.csv",
-        "modes": 9,
-    },
-    "AMZN_O": {
-        "label": "AMZN.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "AMZN_O_panel.csv",
-        "modes": 9,
-    },
-    "TSLA_O": {
-        "label": "TSLA.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "TSLA_O_panel.csv",
-        "modes": 9,
-    },
     "NVDA_O": {
         "label": "NVDA.O Stock Price",
         "processed": LITHIUM_PROCESSED_DIR / "NVDA_O_panel.csv",
         "modes": 9,
     },
-    "META_O": {
-        "label": "META.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "META_O_panel.csv",
-        "modes": 9,
-    },
-    "ORCL_K": {
-        "label": "ORCL.K Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "ORCL_K_panel.csv",
-        "modes": 9,
-    },
-    "IBM": {
-        "label": "IBM Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "IBM_panel.csv",
-        "modes": 9,
-    },
 }
+
+
 
 
 EQUITY_TICKERS = {

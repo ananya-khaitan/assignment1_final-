@@ -122,17 +122,20 @@ def _decompose(values: np.ndarray, spec: DecompositionSpec, train_stop: int) -> 
         components = np.asarray(algorithm.ceemdan(values[:train_stop], max_imf=int(spec.modes)), dtype=float)
     else:
         raise ValueError(f"Unknown decomposition method {spec.method!r}")
-    if components.ndim != 2 or components.shape[1] != train_stop:
+    if components.ndim != 2:
         raise RuntimeError(f"Unexpected {spec.label} output shape {components.shape}")
-    residual = values[:train_stop] - components.sum(axis=0)
-    if np.std(residual) > max(np.std(values[:train_stop]) * 1e-8, 1e-10):
+    # vmdpy can return 1 fewer column than requested for certain input lengths;
+    # use the actual output length as the effective train boundary.
+    effective_train = components.shape[1]
+    residual = values[:effective_train] - components.sum(axis=0)
+    if np.std(residual) > max(np.std(values[:effective_train]) * 1e-8, 1e-10):
         components = np.vstack([components, residual])
-    
+
     # Forward fill the unseen test period
     padded = np.full((components.shape[0], len(values)), np.nan)
-    padded[:, :train_stop] = components
+    padded[:, :effective_train] = components
     for i in range(components.shape[0]):
-        padded[i, train_stop:] = components[i, -1]
+        padded[i, effective_train:] = components[i, -1]
     return padded
 
 

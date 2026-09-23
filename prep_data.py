@@ -35,7 +35,7 @@ df_merged = pd.merge(df_close, macro_data, on='Date', how='left').ffill().bfill(
 df_merged = df_merged.set_index('Date')
 
 # 4. Generate CSVs and config
-companies = ['NVDA.O']
+companies = ['META.O', 'ORCL.K', 'IBM']
 exogenous = ['.NQROBO', '.SOLUSAIT', '.IAIQ', 'NASDAQ_100', 'VIX', '10Y_Treasury', 'Tech_ETF_XLK']
 
 config_targets = 'TARGETS = {\n'

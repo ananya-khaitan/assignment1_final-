@@ -29,12 +29,23 @@ LITHIUM_NEWS_FILE = LITHIUM_EXTERNAL_DIR / "lithium_news_headlines.csv"
 USD_CNY_FILE = LITHIUM_EXTERNAL_DIR / "usd_cny_fred_dexchus.csv"
 
 TARGETS = {
-    "NVDA_O": {
-        "label": "NVDA.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "NVDA_O_panel.csv",
+    "META_O": {
+        "label": "META.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "META_O_panel.csv",
+        "modes": 9,
+    },
+    "ORCL_K": {
+        "label": "ORCL.K Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "ORCL_K_panel.csv",
+        "modes": 9,
+    },
+    "IBM": {
+        "label": "IBM Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "IBM_panel.csv",
         "modes": 9,
     },
 }
+
 
 
 
@@ -44,12 +55,23 @@ TARGETS = {
 # model suite, but each listed producer is forecast against its own set of
 # equity-appropriate inputs and benchmarks.
 EQUITY_TARGETS = {
-    "NVDA_O": {
-        "label": "NVDA.O Stock Price",
-        "processed": LITHIUM_PROCESSED_DIR / "NVDA_O_panel.csv",
+    "META_O": {
+        "label": "META.O Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "META_O_panel.csv",
+        "modes": 9,
+    },
+    "ORCL_K": {
+        "label": "ORCL.K Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "ORCL_K_panel.csv",
+        "modes": 9,
+    },
+    "IBM": {
+        "label": "IBM Stock Price",
+        "processed": LITHIUM_PROCESSED_DIR / "IBM_panel.csv",
         "modes": 9,
     },
 }
+
 
 
 
